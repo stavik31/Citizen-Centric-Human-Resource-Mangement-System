@@ -17,6 +17,6 @@ Meeting Objective: Start brainstorming possible project ideas
  
 - Decided for the next meeting to be on April 10th
     - Goals to acheive by then:
-        - Brainstorm more ideas by reading the given text
-        - Set up website and get started on intial edits (Andi & Satvik)  
+        - Brainstorm more ideas by reading the given text (Everyone)
+        - Set up website (Andi & Satvik)  
 
