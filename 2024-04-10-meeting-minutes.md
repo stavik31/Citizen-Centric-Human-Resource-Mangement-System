@@ -18,6 +18,7 @@ Meeting Objective 02: Brianstorm possible project ideas and filter down to viabl
   - Using chat GPT
     - Only need to make GPT understand key words for both sides to suggest job openings
     - Need to think about where and what kind of job opening data we can get
+    - Research phase until friday
          - Satvik, Sushaant, Hiroyuki: Research general solutions, feasibility,  how its unique, who would use it and how it can help people (who)
        
   
