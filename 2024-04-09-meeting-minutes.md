@@ -14,4 +14,9 @@ Meeting Objective: Start brainstorming possible project ideas
      - In the end decided that it was not complex enough to add new ideas on top of what was already done
 - Ride share
   - Good idea but question of if it is viable or complex enough. Not enough data points -> where to get the data points from.
+ 
+- Decided for the next meeting to be on April 10th
+    - Goals to acheive by then:
+        - Brainstorm more ideas by reading the given text
+        - Set up website and get started on intial edits (Andi & Satvik)  
 
