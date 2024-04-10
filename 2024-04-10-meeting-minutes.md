@@ -22,12 +22,12 @@ Meeting Objective 02: Brianstorm possible project ideas and filter down to viabl
          - Satvik, Sushaant, Hiroyuki: Research general solutions, feasibility,  how its unique, who would use it and how it can help people etc
      
 - Next meeting to be on April 12th
-	- Goals to achieve by then
- 		- Gather research based on assigned topic
-   		- Accumalate all the info and put it onto the website
-     		- Set up Jekyll to customize website setup (Andi)
-       		- Research about selected topic (Everyone)
-        	- Put info gathered onto the website (Andi & Satvik)    	 
+  - Goals to achieve by then
+  	- Gather research based on assigned topic
+   	- Accumalate all the info and put it onto the website
+    	- Set up Jekyll to customize website setup (Andi)
+	- Research about selected topic (Everyone)
+	- Put info gathered onto the website (Andi & Satvik)    	 
        
   
 
