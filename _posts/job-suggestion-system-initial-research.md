@@ -32,6 +32,19 @@ Possible Benefits
 - Provides a well-defined career path
 - Companies can acquire more people who have the skills and knowledge they require. Students can maximize their skills to get their dream jobs.
 
+Sources for Data
+- Data from Manaba
+  - Course title and course information (Description and Requirements)
+- Data of job opportunities found in government databases (public datasets)
+  - Information Of Top 3 most frequent career paths after choosing a course 
+- Data from job search websites like Linkedin or Glassdoor providing information job opportunities along with requirements.
+  - Job title and job information (Description and Requirements)
+ 
+Similar Services
+- Career Explorer: suggests required skills for different job paths
+- Eightfold AI: analyzes a person’s skills and suggests relevant job choices
+ 
+
 
 
 
