@@ -1,3 +1,5 @@
+# Planning
+
 ## Schedule of Meetings
 
 | Date       | Event                |
