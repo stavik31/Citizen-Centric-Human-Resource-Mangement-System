@@ -10,10 +10,10 @@ based on what classes a person has taken requires more specific data about the
 correlation between what a person studies and what job they have.
 
 
--While there are many services that suggest career paths based on a person’s skills, however, 
+- While there are many services that suggest career paths based on a person’s skills, however, 
 there hasn’t been any service that is focused on school classes.
 
--It gives a personalized search for job suggestions based on the inputted criteria. It utilizes 
+- It gives a personalized search for job suggestions based on the inputted criteria. It utilizes 
 chatgpt which may improve quality of suggestions. Uses data from manaba which can improve search results. 
 
 
