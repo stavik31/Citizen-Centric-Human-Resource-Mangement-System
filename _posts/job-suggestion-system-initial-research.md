@@ -36,6 +36,7 @@ Sources for Data
 Similar Services
 - Career Explorer: suggests required skills for different job paths
 - Eightfold AI: analyzes a person’s skills and suggests relevant job choices
+  - Allows for companies to find, screen, and hire employees as well. Has a  
  
 
 
