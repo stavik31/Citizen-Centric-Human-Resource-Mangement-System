@@ -10,6 +10,7 @@
 #### correlation between what a person studies and what job they have.
 
 
+
 ##### Uniqueness
 - While there are many services that suggest career paths based on a person’s skills, however, 
 there hasn’t been any service that is focused on school classes.
