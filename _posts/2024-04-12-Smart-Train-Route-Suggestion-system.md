@@ -2,7 +2,6 @@ Research Prototype - Planning Optimization Problem
 Goal: Make a prototype of a smart train route suggestion systems that optimize travel based on picked destinations
 features: 
 - [ ] Optimize the routes based on time taken between destinations based on train schedule information
-- [ ] Optimize the routes based on crowdedness data
 - [ ] Suggest additional destinations along the route taken
 - [ ] Suggest additional destinations based on picked destinations
 - [ ] Suggest additional destinations based on crowdedness data
