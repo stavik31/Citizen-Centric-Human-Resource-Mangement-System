@@ -6,7 +6,7 @@ features:
 - [ ] Suggest additional destinations along the route taken
 - [ ] Suggest additional destinations based on picked destinations
 - [ ] Suggest additional destinations based on crowdedness data
-- [ ] User filtering of said jobs
+- [ ] User filtering of said destination types
 
 Keywords:
 Octo optimize
