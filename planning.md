@@ -14,11 +14,8 @@
 | 2024-04-17 | P4 Scheduled Meeting |
 | 2024-04-19 | P4 Scheduled Meeting |
 
-{% for item in site.stories %}
-## {{ item.title }}
+{% for item in site.planning %}
 
-{{ item.description }}
-
-[{{ item.title }}]({{ item.url }})
+- [{{ item.title }}]({{ item.url }})
 
 {% endfor %}
