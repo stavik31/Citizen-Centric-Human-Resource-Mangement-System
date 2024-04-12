@@ -35,7 +35,14 @@ plugins:
 collections:
   planning:
     output: true
-    layout: default
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "planning" 
+    values:
+      layout: "default"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
