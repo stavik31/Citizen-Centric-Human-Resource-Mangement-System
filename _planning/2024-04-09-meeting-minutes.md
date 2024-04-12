@@ -1,7 +1,6 @@
 ---
+title: April 9th Meeting Minutes
 ---
-
-# April 9th Meeting Minutes
 
 Atendees: Everyone
 
