@@ -2,6 +2,11 @@
 title: April 12th Meeting Minutes
 ---
 
+Atendees: Jesse, Andi, Satvik, Jerry, Hiro, Hikaru
+
+Meeting Objectives: Discuss both project ideas and get a solid understanding of both
+
+
 - Ask professors for the possibility of officially asking the Public Transportation Data Center for the license for train schedules 
 - Or ask Japanese teammates to write an official request 
 - Suggestion based on previous searches might be too complicated, put that away for now (depending on if we can find google search API)
