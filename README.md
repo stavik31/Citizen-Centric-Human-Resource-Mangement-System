@@ -9,3 +9,5 @@
 [Job Suggestion System Intial Research](/job-suggestion-system-initial-research.md)
 
 [Smart Train Route Suggestion System](/Smart-Train-Route-Suggestion-system.md)
+
+[Job Suggestion System Project Proposal Draft](/job-suggestion-system-project-proposal-draft.md)
