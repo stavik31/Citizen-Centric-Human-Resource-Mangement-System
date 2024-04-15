@@ -22,6 +22,6 @@
   * Documentation regarding each step of the process including meetings that ensures the smooth progression of the product
   * A website that involves all the documentation and the system architecture
   * Two presentations that provides the progress made and the final overview of the entire product prototype
- 
-  5. Plan and Project Schedule
+
+5. Plan and Project Schedule
  
