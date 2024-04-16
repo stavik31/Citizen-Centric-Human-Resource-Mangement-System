@@ -9,7 +9,6 @@
 
 - [Keyword extraction: Issues and methods](https://www.cambridge.org/core/journals/natural-language-engineering/article/abs/keyword-extraction-issues-and-methods/84BFD5221E2CA86326E5430D03299711)
 - [LLM-TAKE: Theme-Aware Keyword Extraction Using Large Language Models](https://ieeexplore.ieee.org/abstract/document/10386476)
-- [Job and Course Recommendation System using Collaborative Filtering and Naive Bayes algorithms](https://ieeexplore.ieee.org/document/10200758/authors#authors)
 
 ### API Documentation
 
