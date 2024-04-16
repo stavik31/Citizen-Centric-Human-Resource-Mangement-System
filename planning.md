@@ -1,9 +1,11 @@
 ---
+title: Schedule and Planning
+has_children: true
+nav_order: 1
+child_nav_order: reversed
 ---
 
-# Planning
-
-## Schedule of Meetings
+# Schedule of Meetings
 
 | Date       | Event                |
 |------------|----------------------|
@@ -13,9 +15,3 @@
 | 2024-04-16 | In-Class Meeting     |
 | 2024-04-17 | P4 Scheduled Meeting |
 | 2024-04-19 | P4 Scheduled Meeting |
-
-{% for item in site.planning %}
-
-- [{{ item.title }}]({{ item.url }})
-
-{% endfor %}

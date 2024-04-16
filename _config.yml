@@ -32,17 +32,28 @@ theme: just-the-docs
 plugins:
   - jekyll-feed
 
-collections:
-  planning:
-    output: true
+color_scheme: dark
 
+collections:
+  notes:
+    output: true
 defaults:
   -
     scope:
       path: ""
-      type: "planning" 
+      type: "notes"
     values:
       layout: "default"
+just_the_docs:
+  collections:
+    notes:
+      name: Notes and References
+      nav_fold: true
+nav_external_links:
+  - title: GitHub
+    url: https://github.com/PBL3-2024
+    hide_icon: false
+    opens_in_new_tab: false
 
 # Exclude from processing.
 # The following items will not be processed, by default.

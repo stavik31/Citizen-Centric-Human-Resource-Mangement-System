@@ -1,5 +1,7 @@
 ---
 title: April 12th Meeting Minutes
+parent: Schedule and Planning
+nav_order: 3
 ---
 
 Atendees: Jesse, Andi, Satvik, Jerry, Hiro, Hikaru

@@ -1,5 +1,7 @@
 ---
 title: April 10th Meeting Minutes
+parent: Schedule and Planning
+nav_order: 2
 ---
 
 Atendees: Everyone
