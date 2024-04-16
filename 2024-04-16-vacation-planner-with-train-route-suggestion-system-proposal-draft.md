@@ -1,5 +1,14 @@
 # Vacation Planner project Proposal
 
+flowchart LR
+
+A[Hard] -->|Text| B(Round)
+B --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]
+
+
+
 1. Vision: To create a user-friendly vacation planner app specifically for Japan that empowers travelers to design efficient and enjoyable itineraries.
 
 2. Problem: Vacation in Japan usually incentivize tourists to use Japan's extensive railway system which can be over-whelming, researching timetables, and factoring in crowdedness becomes a time-consuming task. This often leads to suboptimal travel schedules, missed opportunities, and more work.
