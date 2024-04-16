@@ -1,3 +1,6 @@
+---
+---
+
 # Project Proposal: Vacation Planning Application
 
 ## Vision:
