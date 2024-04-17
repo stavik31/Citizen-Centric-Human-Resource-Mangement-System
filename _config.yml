@@ -43,7 +43,7 @@ defaults:
       path: ""
       type: "notes"
     values:
-      layout: "default"
+      layout: "notes"
 just_the_docs:
   collections:
     notes:

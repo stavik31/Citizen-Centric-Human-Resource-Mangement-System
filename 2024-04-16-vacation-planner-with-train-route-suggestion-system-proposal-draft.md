@@ -1,16 +1,5 @@
 # Vacation Planner project Proposal
 
-```mermaid
-flowchart TD
-    A[Christmas] -->|Get money| B(Go shopping)
-    B --> C{Let me think}
-    C -->|One| D[Laptop]
-    C -->|Two| E[iPhone]
-    C -->|Three| F[fa:fa-car Car]
-```
-
-
-
 1. Vision: To create a user-friendly vacation planner app specifically for Japan that empowers travelers to design efficient and enjoyable itineraries.
 
 2. Problem: Vacation in Japan usually incentivize tourists to use Japan's extensive railway system which can be over-whelming, researching timetables, and factoring in crowdedness becomes a time-consuming task. This often leads to suboptimal travel schedules, missed opportunities, and more work.
