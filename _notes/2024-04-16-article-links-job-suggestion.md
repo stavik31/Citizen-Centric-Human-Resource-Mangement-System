@@ -16,3 +16,7 @@ Awareness of the factors that facilitate or hinder career success can help junio
 https://www.researchgate.net/publication/357311952_Model_of_Social_Entrepreneurship_Career_Readiness_among_Malaysian_Public_University_Students
 
 Nowadays, entrepreneurship and social entrepreneurship are considered viable work options and the career readiness elements do not only help improve the abilities and skills of prospective graduates but also increase the confidence of these graduates when entering the working world. 
+
+https://ieeexplore.ieee.org/document/10200758
+
+In recent years, the education system has undergone a significant transformation due to technological advancements. With the emergence of online learning platforms, students can now access an enormous amount of course materials, resources, and lectures online. However, the abundance of options can also create confusion and make it difficult for students to decide on courses to be taken, especially when considering their career aspirations. 
