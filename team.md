@@ -1,6 +1,6 @@
 ---
 title: About Team Members
-nav-order: 1
+nav-order: 2
 --- 
 # Member Profiles
 
