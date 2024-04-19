@@ -19,8 +19,10 @@
 ### Academic Papers
 
 - [Traveling salesman problem](https://seor.vse.gmu.edu/~khoffman/TSP_Hoffman_Padberg_Rinaldi.pdf)
-- [Information management for travelers: Towards better route and leisure suggestion](https://ieeexplore.ieee.org/document/7733273)gi
--[Point of Interest Assisted Dynamic Travel Route Suggestion Model using Keyword Representation Logic](https://ieeexplore.ieee.org/document/9753822)
+- [Information management for travelers: Towards better route and leisure suggestion](https://ieeexplore.ieee.org/document/7733273)
+- [Point of Interest Assisted Dynamic Travel Route Suggestion Model using Keyword Representation Logic](https://ieeexplore.ieee.org/document/9753822)
+- [Smart Travel Planner: A mashup of travel-related web services](https://ieeexplore.ieee.org/document/6749499)
+
 ### API Documentation
 
 - [Train delay aggregation API (paid - 10000/mo)](https://rti-giken.jp/fhc/api/train_tetsudo/)
