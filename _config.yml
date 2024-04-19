@@ -43,7 +43,7 @@ defaults:
       path: ""
       type: "notes"
     values:
-      layout: "default"
+      layout: "notes"
 just_the_docs:
   collections:
     notes:
@@ -54,7 +54,8 @@ nav_external_links:
     url: https://github.com/PBL3-2024
     hide_icon: false
     opens_in_new_tab: false
-
+mermaid:
+  version: "10.9.0"
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
