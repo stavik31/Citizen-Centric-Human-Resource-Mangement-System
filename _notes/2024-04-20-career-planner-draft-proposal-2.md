@@ -4,10 +4,10 @@
 #Project Proposal #2: Career Planning System
 
 Vision:
-- Our vision is to develop a smart job suggestion system that utilizes data from Manaba, our university's course management platform, to provide personalized career guidance and recommendations to students. By utilizing course enrollment data, the system aims to assist students in making informed decisions about their academic and career paths, ultimately enhancing their employability and shaping their future career paths.
-
+- Our vision is to develop a smart job suggestion system that utilizes data from Manaba, our university's course management platform, to provide personalized career guidance and recommendations to students. By utilizing course enrollment data, the system aims to assist students in making informed decisions about their academic and career paths, shaping their future paths in sectors such as social entreprenuership and corporate jobs
+ 
 Problem Statement:
-- Transitioning from university education to the workforce can be a struggle for students, who often lack clarity on which courses and skills are most relevant to their desired career paths. Students may also struggle to identify the connections between their academic coursework and potential job opportunities. Our job suggestion system aims to address these challenges by leveraging data from Manaba to offer recommendations on courses, skills, and career pathways that align with each student's interests, strengths, and aspirations.
+- Transitioning from university education to the workforce can be a struggle for students, who often lack clarity on which courses and skills are most relevant to their desired career paths. Students may also struggle to identify the connections between their academic coursework and potential job opportunities. On the other hand, social workers and corporate companies tend to have their own system for recruting employees but struggle to find their techinical abilties that is required to do certain jobs. Our career planning system aims to address these challenges by leveraging data from Manaba to offer recommendations on courses, skills, and career pathways that align with each student's interests, strengths, and aspirations. Furthermore, people or companies already in the workforce would also benefit from this system by being able to understand intricate details regarding future employees. 
 
 Objectives:
 - To Develop an intuitive user interface for the job suggestion system, ensuring ease of navigation and interaction for students.
