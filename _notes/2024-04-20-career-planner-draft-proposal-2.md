@@ -1,4 +1,5 @@
 ---
+nav_order: 1
 ---
 
 #Project Proposal #2: Career Planning System
