@@ -1,5 +1,6 @@
 ---
 nav_order: 1
+author: Satvik, Sushaan, Hiro
 ---
 
 #Project Proposal #2: Career Planning System

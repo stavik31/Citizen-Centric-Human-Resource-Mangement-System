@@ -1,5 +1,6 @@
 ---
 title: 'Project Proposal: Vacation Planner'
+author: Andy, Hikaru, Jerry
 nav_order: 1
 ---
 
