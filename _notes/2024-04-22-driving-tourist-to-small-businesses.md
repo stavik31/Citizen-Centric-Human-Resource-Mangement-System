@@ -1,8 +1,9 @@
 ---
+title: 'Project Proposal: Driving Tourist to small businesses'
 nav_order: 1
 ---
 
-#Project Proposal: Driving Tourist to small businesses
+# Project Proposal: Driving Tourist to small businesses
 
 Abstract
 Advanced business and socio-cultural attractiveness is a key element of smart cities (Kourtit et al.). Tourism is an important aspect in local economies, and as such efficiently connecting tourists to businesses is an essential role of a smart city. In this project, we propose a system that assists users in planning a vacation while suggesting local businesses as detours to fill gaps in their schedules.
@@ -10,7 +11,7 @@ Advanced business and socio-cultural attractiveness is a key element of smart ci
 I want the software to suggest stops between the route of destinations (train routes) that tourists input to the software, these stops would be small businesses/local businesses in the area (maybe even specialty to the area because there are those in japan). These businesses can register to our software on their own, or via the government registering to us for them as part of a government program to promote a city/ local businesses in a city. We have had similar ones in small town in japan. Therefore from that, complete and fix the problem statement, visions, and objectives below:
 
 Problem Statement:
-- 
+
 
 Vision:
 - To allow cities to become a more welcoming environment for new businesses by offering visibility to low-traffic businesses area to visiting tourists, and therefore stimulating additional ecomonic growth in the city and its benefits to the locals.
