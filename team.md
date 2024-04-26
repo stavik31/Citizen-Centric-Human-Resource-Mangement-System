@@ -2,9 +2,7 @@
 title: About Team Members
 nav-order: 2
 --- 
-## Member Profiles of Team E
-
-### Current Member & Roles
+# Member Profiles of Team Agile
 
 ### Grabowski Jesse Charles - Project Manager, Literature Reviewer
 ### Konda Satvik Reddy - Documentation Lead, Literature Reviewer
