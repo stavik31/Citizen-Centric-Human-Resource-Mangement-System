@@ -1,7 +1,7 @@
 ---
 title: 2024-04-16 Problem Statements and Proposals
 author: Jesse
-nav_order: 1
+
 ---
 
 ## University Course and Career Identity Matcher

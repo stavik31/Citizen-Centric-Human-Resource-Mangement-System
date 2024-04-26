@@ -1,4 +1,6 @@
 ---
+title: 2024-04-16 Vacation Planning Proposal Draft
+author: Jerry, Andy, Hikaru
 ---
 
 # Project Proposal: Vacation Planning Application
@@ -32,18 +34,3 @@ The scope of the project includes:
 # Overview of the Chosen Problem Area within Smart Cities:
 
 In the context of smart cities, our vacation planning application contributes to the enhancement of tourism experiences by leveraging technology to streamline the process of planning and booking vacations. By providing users with a centralized platform that offers personalized recommendations and seamless booking capabilities, the application promotes efficient use of resources and supports sustainable tourism practices within smart city environments.
-
-# Possible APIs and Datasets:
-
-Google Maps API:for location-based services, routing, and navigation.
-https://developers.google.com/maps?hl=ja
-
-Expedia API:for accessing a wide range of travel-related data including flights, hotels, car rentals, and activities.
-https://partner.expediagroup.com/en-us/solutions/build-your-travel-experience/rapid-api
-
-Weather API:for providing real-time weather forecasts and updates for destinations.
-https://developer.yahoo.co.jp/webapi/map/openlocalplatform/v1/weather.html
-
-TripAdvisor API:for user reviews, ratings, and recommendations on accommodations, restaurants, and attractions. 
-https://www.tripadvisor.com/developers
-

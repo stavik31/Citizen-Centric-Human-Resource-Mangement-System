@@ -1,5 +1,5 @@
 ---
-nav_order: 1
+title: 2024-04-20 Career Planning Project Proposal
 author: Satvik, Sushaan, Hiro
 ---
 

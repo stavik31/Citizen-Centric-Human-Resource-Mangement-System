@@ -1,7 +1,9 @@
 ---
+title: 2024-04-15 Job Suggestion System Project Proposal Draft
+author: Satvik, Hiro, Sushaant
 ---
 
-# Job Suggestion System project Proposal
+# Job Suggestion System Project Proposal
 
 1. The Problem
 * Students who are confused regarding what they want in the future can find it hard to choose the right classes to take for the proffesion they aspire for. On the opposite side, students in some senarios take classes not knowing their heading direction for job hunting.

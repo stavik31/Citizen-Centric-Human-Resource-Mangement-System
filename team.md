@@ -10,4 +10,4 @@ nav-order: 2
 ### Yamabe Hiroyuki - Literature Reviewer
 ### Kathirvel Murugan Sushaant - Literature Reviewer
 ### Tokuyama Hikaru - Literature Reviewer
-### Lin Jie - Literature Reviewer
+### Lin Jie (Jerry) - Literature Reviewer

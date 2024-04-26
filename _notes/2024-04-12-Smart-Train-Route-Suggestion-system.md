@@ -1,4 +1,6 @@
 ---
+title: 2024-04-12 Train Route Suggestio System Initial Notes
+author: Andy
 ---
 
 Research Prototype - Planning Optimization Problem

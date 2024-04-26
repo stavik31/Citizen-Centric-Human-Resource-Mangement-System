@@ -1,7 +1,6 @@
 ---
-title: 'Project Proposal: Vacation Planner'
+title: 2024-04-22 Driving Tourist To Small Businesses Project Proposal
 author: Andy, Hikaru, Jerry
-nav_order: 1
 ---
 
 # Project Proposal: Vacation Route Detourer: Driving Tourist to small businesses
