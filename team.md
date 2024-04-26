@@ -1,6 +1,6 @@
 ---
 title: About Team Members
-nav-order: 2
+nav-order: 0
 --- 
 # Member Profiles of Team Agile
 
