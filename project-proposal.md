@@ -1,5 +1,5 @@
 ---
-title: Team Agile Project Proposal 
+title: Project Proposal 
 nav_order: 1
 ---
 
@@ -22,7 +22,7 @@ This system aims to empower cities to leverage agile principles in utilizing hum
 ## Objectives - Features to be Realized
 
 Engage citizenry by allowing them to explore available opportunities
-: Develop an interface that will allow citizens to explore their current capabilities. By sharing their current job title, certifications, and CVs, the system will attempt to categorize them into an occupation (using a standard classification system, such as US SOC codes). Once the user has confirmed that it is correct, it will then display opportunities relating to their current job. With user consent, this cleanly labeled data can be fed back into the system to train its models.
+: Develop an interface that will allow citizens to explore their current capabilities. By sharing their current job title, certifications, and CVs, the system will attempt to categorize them into an occupation (using a standard classification system, such as [US SOC codes](https://www.bls.gov/soc/2018/major_groups.htm)). Once the user has confirmed that it is correct, it will then display opportunities relating to their current job. With user consent, this cleanly labeled data can be fed back into the system to train its models.
 
 Provide a data-driven approach to human resource management in smart cities
 : Measurability is an important part of agile processes. In agile software development, teams assign points to individual tasks and use historic data to determine their future workload capabilities. To effectively guide human capital reallocation, smart city managers must also have access to such metrics. By combining publicly available occupational statistics and input from the managers themselves, this system will predict future human capital requirements and use them to guide the citizenry towards filling potential gaps.
@@ -30,10 +30,15 @@ Provide a data-driven approach to human resource management in smart cities
 Encourage reskilling and upskilling by gamifying the process
 : When a gap in the city's workforce is identified, the system will select individuals that possess skills related to the newly needed capabilities and offer them the option to exploring reskilling. Once a user has expressed interest in changing their occupation, the system will provide a roadmap that they can follow to reach their new goal. As users complete educational material or certifications recommended by the system, their progress will be tracked and can be viewed at any time. For particularly in-demand skills, smart city managers will have the option to place bounties on educational content that they want to drive more engagement towards.
 
-## Scope and Limitations
+## Scope
 
 * A single metropolitan area will be covered for the prototype.
 * A limited subset of occupational segments will be covered based on available data for the prototype.
+
+## Limitations and Risks
+
+* While datasets are readily available that map certifications to occupations, such datasets are less available for job descriptions and titles.
+* Due to limited development time, certain features may need to be excluded or delivered in a minimal form. Extension points will be included in the software design to allow for future implementations of these missing features.
 
 ## Sustainability
 
@@ -44,6 +49,14 @@ The initial version of this system will be built with limited data. As citizens 
 The system will follow the principle of least privilege to ensure that users do not have access to private data of their fellow citizens. Individuals will have access to only their own personal data, while smart city planners will only have access to anonymized details about individual citizens unless further access is consented to.
 
 Additionally, the system will follow relevant regulations relating to user consent revocation. On request, citizens will be able to have their personal data purged from the system.
+
+## Existing Solutions
+
+[Eightfold AI](https://eightfold.ai/solutions/public-sector/)
+: AI driven recruiting platform that offers many of our proposed features to the private sector. While it does have a public offering, it mainly targets recruiting and not upskilling. Follows a top-down approach.
+
+Traditional HRM Systems (e.g., PeopleSoft, ADP, etc)
+: Offers many of our proposed features to the private sector. Generally no public offering. Follows a top-down approach.
 
 ## Reference
 - Arendt, L. (2015). The Digital Economy, ICT and economic growth in the CEE countries. Olsztyn Economic Journal, 10(3), 247–262. <https://doi.org/10.31648/oej.3150/>
