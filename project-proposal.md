@@ -1,7 +1,6 @@
 ---
-title: Project Proposal
+title: Team Agile (Formerly E) Project Proposal 
 nav_order: 0
-author : Team Agile (Formerly E)
 ---
 
 # PBL3 Project Proposal
@@ -10,7 +9,7 @@ author : Team Agile (Formerly E)
 ### Overview 
 In today’s rapidly changing world, traditional bureaucratic governance processes are often inadequate for handling human capital in modern societies. Smart cities, however, have the potential to revolutionize this dynamic by eschewing top-down command structures and instead utilizing agile governance principles to engage their citizenry directly in human resource management. This document proposes a system that will encourage collaboration between smart city managers and their populace to explore and enhance competencies available in the city’s workforce. The system aims to utilize users’ occupational information along with current job openings to guide users toward the best career path for them as individuals and the city as a whole. By combining labor statistics and input from smart city managers, this system would also predict future demand for city projects and encourage citizens to upskill or reskill to aid in them.
 
-Keywords:
+Keywords
 Smart city; Smart city manager; Human resource management; Agile governance;
 
 ### Problem statement - Background

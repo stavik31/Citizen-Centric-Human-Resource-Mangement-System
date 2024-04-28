@@ -1,4 +1,4 @@
-# Team E Project Website
+# Team Agile Project Website
 
 [April 9th Meeting Minutes](/2024-04-09-meeting-minutes.md)
 

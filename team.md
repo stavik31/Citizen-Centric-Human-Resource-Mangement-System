@@ -2,12 +2,12 @@
 title: About Team Members
 nav-order: 0
 --- 
-# Member Profiles of Team Agile
+# Member Profiles & Special Roles of Team Agile
 
-### Grabowski Jesse Charles - Project Manager, Literature Reviewer
-### Konda Satvik Reddy - Documentation Lead, Literature Reviewer
-### Andifallih Noor Malela - Website Coordinator, Literature Reviewer
-### Yamabe Hiroyuki - Literature Reviewer
-### Kathirvel Murugan Sushaant - Literature Reviewer
-### Tokuyama Hikaru - Literature Reviewer
-### Lin Jie (Jerry) - Literature Reviewer
+### Grabowski Jesse Charles - Project Manager
+### Konda Satvik Reddy - Documentation Lead
+### Andifallih Noor Malela - Website Coordinator
+### Yamabe Hiroyuki
+### Kathirvel Murugan Sushaant
+### Tokuyama Hikaru
+### Lin Jie (Jerry)
