@@ -10,7 +10,7 @@ child_nav_order: reversed
 ```mermaid
 gantt
     dateFormat YYYY-MM-DD
-    axisFormat %Y-%m-%d
+    axisFormat %m/%d
     Class starts : milestone, m1, 2024-04-09,
     Project Initiation :s1, 2024-04-09, until s2
     Submit Proposal : milestone, m2, 2024-04-29,
