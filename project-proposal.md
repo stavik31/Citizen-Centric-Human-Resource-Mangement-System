@@ -13,7 +13,7 @@ In today’s rapidly changing world, traditional bureaucratic governance process
 > Smart city; Smart city manager; Human resource management; Agile governance;
 
 ## Problem Statement - Background
-In today's fast-paced world shaped by technological progress, the value of human skills is increasingly crucial for navigating these shifts. In city management, individual education plays a role at the micro (individual skills) and macro (human resource availability) levels. Traditional city management approaches, however, often have a significant lead time before they can embrace a new technology (Arendt, 2015). Though these methods contribute to positive outcomes of advancements, they focus on the top-down approach, giving most of the decision power to companies and cities themselves on how goals will be achieved. To combat this, by allowing citizens to steer their career paths, agile practitioners can introduce more flexible governance techniques that allow the city to “respond to public changes efficiently” (Mergel, 2020).
+In today's fast-paced world shaped by technological progress, the value of human skills is increasingly crucial for navigating these shifts. In city management, individual education plays a role at the micro (individual skills) and macro (human resource availability) levels. Traditional city management approaches, however, often have a significant lead time before they can embrace a new technology (Arendt, 2015). Though these methods contribute to positive outcomes of advancements, they focus on the top-down approach, giving most of the decision power to companies and cities themselves on how goals will be achieved. To combat this, by allowing citizens to steer their career paths, agile practitioners can introduce more flexible governance techniques that allow the city to “respond to public changes efficiently” (Mergel et al., 2020).
 
 ## Vision - Goals
 
@@ -28,7 +28,7 @@ Provide a data-driven approach to human resource management in smart cities
 : Measurability is an important part of agile processes. In agile software development, teams assign points to individual tasks and use historic data to determine their future workload capabilities. To effectively guide human capital reallocation, smart city managers must also have access to such metrics. By combining publicly available occupational statistics and input from the managers themselves, this system will predict future human capital requirements and use them to guide the citizenry towards filling potential gaps.
 
 Encourage reskilling and upskilling by gamifying the process
-: When a gap in the city's workforce is identified, the system will select individuals that possess skills related to the newly needed capabilities and offer them the option to exploring reskilling. Once a user has expressed interest in changing their occupation, the system will provide a roadmap that they can follow to reach their new goal. As users complete educational material or certifications recommended by the system, their progress will be tracked and can be viewed at any time. For particularly in-demand skills, smart city managers will have the option to place bounties on educational content that they want to drive more engagement towards.
+: When a gap in the city's workforce is identified, the system will select individuals that possess skills related to the newly needed capabilities and offer them the option to explore reskilling. Once a user has expressed interest in changing their occupation, the system will provide a roadmap that they can follow to reach their new goal. As users complete educational material or certifications recommended by the system, their progress will be tracked and can be viewed at any time. For particularly in-demand skills, smart city managers will have the option to place bounties on educational content that they want to drive more engagement towards.
 
 ## Scope
 
@@ -59,8 +59,8 @@ Traditional HRM Systems (e.g., PeopleSoft, ADP, etc)
 : Offers many of our proposed features to the private sector. Generally no public offering. Follows a top-down approach.
 
 ## Reference
-- Arendt, L. (2015). The Digital Economy, ICT and economic growth in the CEE countries. Olsztyn Economic Journal, 10(3), 247–262. <https://doi.org/10.31648/oej.3150/>
-- Guenduez, A. A., Mergel, I., Schedler, K., Fuchs, S., & Douillet, C. (2024). Institutional work in Smart Cities: Interviews with smart city managers. Urban Governance, 4(1), 80–90. <https://doi.org/10.1016/j.ugj.2024.01.003/>
-- Mergel, I., Ganapati, S., & Whitford, A. B. (2020). Agile: A new way of governing. Public Administration Review, 81(1), 161–165. <https://doi.org/10.1111/puar.13202/> 
+- Arendt, L. (2015). The Digital Economy, ICT and economic growth in the CEE countries. Olsztyn Economic Journal, 10(3), 247–262. <https://doi.org/10.31648/oej.3150>
+- Guenduez, A. A., Mergel, I., Schedler, K., Fuchs, S., & Douillet, C. (2024). Institutional work in Smart Cities: Interviews with smart city managers. Urban Governance, 4(1), 80–90. <https://doi.org/10.1016/j.ugj.2024.01.003>
+- Mergel, I., Ganapati, S., & Whitford, A. B. (2020). Agile: A new way of governing. Public Administration Review, 81(1), 161–165. <https://doi.org/10.1111/puar.13202> 
 
 
