@@ -18,4 +18,6 @@ Atendees: Everyone
   - Connect the two by suggesting jobs and ways aditional skills can be aquired (HOW?)
 - Goal for next meeting is to use todays undertanding and continue to improve upon the project proposal (find more papers)
 
+![Career planner Project Framwork](/diagrams/project_framework.jpg)
+
 
