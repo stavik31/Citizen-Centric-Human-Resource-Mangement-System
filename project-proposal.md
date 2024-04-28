@@ -1,6 +1,6 @@
 ---
-title: Team Agile (Formerly E) Project Proposal 
-nav_order: 0
+title: Team Agile Project Proposal 
+nav_order: 1
 ---
 
 # PBL3 Project Proposal

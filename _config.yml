@@ -23,17 +23,19 @@ title: Team Agile PBL3
 description: >- # this means to ignore newlines until "baseurl:"
   Testing
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://pbl3-2024.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  PBL3-2024
+repository: PBL3-2024/PBL3-2024.github.io
+
+permalink: pretty
 
 # Build settings
 theme: just-the-docs
 plugins:
   - jekyll-feed
-
+favicon_ico: "/favicon.ico"
 color_scheme: dark
-
 collections:
   notes:
     output: true
@@ -47,7 +49,7 @@ defaults:
 just_the_docs:
   collections:
     notes:
-      name: Notes and References
+      name: Notes and References Kitchen Sink
       nav_fold: true
 nav_external_links:
   - title: GitHub
@@ -56,6 +58,16 @@ nav_external_links:
     opens_in_new_tab: false
 mermaid:
   version: "10.9.0"
+
+aux_links:
+  "Team Agile PBL3 on GitHub":
+    - "https://github.com/PBL3-2024/PBL3-2024.github.io"
+
+# Makes Aux links open in a new tab. Default is false
+aux_links_new_tab: false
+
+heading_anchors: true
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
@@ -75,3 +87,38 @@ mermaid:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+# Back to top link
+
+# Footer "Edit this page on GitHub" link text
+footer_content: "Copyright content goes here"
+
+back_to_top: true
+back_to_top_text: "Back to top"
+
+last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
+last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
+
+gh_edit_link: true # show or hide edit this page link
+gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_repository: "https://github.com/PBL3-2024/PBL3-2024.github.io" # the github URL for your repo
+gh_edit_branch: "main" # the branch that your docs is served from
+# gh_edit_source: docs # the source that your files originate from
+gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-github-metadata
+  - jekyll-include-cache
+
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
