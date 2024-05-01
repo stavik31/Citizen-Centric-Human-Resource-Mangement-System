@@ -25,6 +25,7 @@ author: Andy
 - Continuous integration for merging branches
 - Automated testing - 60% automated test coverage
 - Continuous delivery/deployment CI/CD
+- All interfaces should be defined with OpenAPI Specification v3
 
 ### Requirements (Non-Functional):
 - Aim for 99.9% uptime of server
