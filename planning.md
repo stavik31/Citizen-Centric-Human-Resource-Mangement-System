@@ -41,3 +41,6 @@ gantt
 | 2024-04-30 | In-Class Meeting           |
 | 2024-05-01 | P4 Scheduled Meeting       |
 | 2024-05-03 | Off - Happy Golden Week    |
+| 2024-05-07 | In-Class Meeting           |
+| 2024-05-08 | P4 Scheduled Meeting       |
+| 2024-05-10 | P4 Scheduled Meeting       |
