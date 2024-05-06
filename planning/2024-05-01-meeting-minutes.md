@@ -18,3 +18,5 @@ Operational Requirements
 - Automated testing
 - files will only be able to be pushed and pulled with approval from multiple people
 - Organize overall structure to development and deployment can become seamless
+
+More specific information given in "Requirements Specification"
