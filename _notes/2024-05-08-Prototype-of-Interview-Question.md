@@ -14,11 +14,20 @@ We are proposing a system that will assist in the process of reskilling citizens
 
 For the purpose of occupation categorization, we are looking to use US SOC codes, which are a hierarchical system for classifying jobs. For example:
 
-00-0000 - Top level code, all occupations
-15-0000 - Computer and mathematical occupations (first 2 digits, major group)
-15-2000 - Mathematical science occupations (third digit, minor group)
-15-2050 - Data Scientists (fourth and fifth digit, broad occupation)
-15-2051 - Data Scientists (sixth digit, detailed occupation)
+00-0000
+: Top level code, all occupations
+
+15-0000
+: Computer and mathematical occupations (first 2 digits, major group)
+
+15-2000
+: Mathematical science occupations (third digit, minor group)
+
+15-2050
+: Data Scientists (fourth and fifth digit, broad occupation)
+
+15-2051
+: Data Scientists (sixth digit, detailed occupation)
 
 Each level comes with detailed descriptions and short titles that we believe are applicable and complete for all countries, not just the US. For further reference, the 2018 standard is described [here](https://www.bls.gov/soc/2018/)
 
