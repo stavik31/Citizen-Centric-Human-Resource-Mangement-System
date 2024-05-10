@@ -25,7 +25,7 @@ Functional requirements will be prefixed with "FREQ-". Non-functional requiremen
 Requirement identifiers will be proceeded by a short title. This title should be applicable to the requirement, but should not be construed as part of the requirement and exists only to improve the navigability and searchability of this document.
 
 FREQ-0 Example User Requirement
-: This denotes a functional requirement with the id of 0
+: This denotes a functional user requirement with the id of 0
 
 NREQ-0.0 Example System Requirement
 : This denotes a non-functional system requirement with the id of 0.0. This requirement is implicitly a dependency of the non-functional user requirement NREQ-0.
