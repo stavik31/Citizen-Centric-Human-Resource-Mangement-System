@@ -87,7 +87,10 @@ System Administrator
 
 ### Functional Requirements
 
-#### FREQ-1 - Short Name
+#### FREQ-1 - Create Account
+#### FREQ-2 - Administer Account
+#### FREQ-3 - Select Job Goal
+#### FREQ-4 - Edit Citizen Profile
 
 Natural language description of the functional requirement, one or two sentences.
 
