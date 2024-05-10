@@ -6,15 +6,13 @@ nav_order: 2
 # Software Requirements Specification
 {: .no_toc }
 
-## Table of Contents
-{: .no_toc }
+## Preface
 
-1. TOC
-{:toc}
+### Version History
 
-## Introduction
-
-### Purpose
+| Version | Date       | Description |
+| ------- | ---------- | ----------- |
+| 1.0     | 2024-05-20 | Initial     |
 
 ### Document Conventions
 
@@ -31,13 +29,17 @@ Which sections of this document are relevant to each of the following
 * Testers
 * Documentation Writers
 
+## Table of Contents
+{: .no_toc }
+
+. TOC
+{:toc}
+
+## Introduction
+
 ### Product Scope
 
 Short description of objectives/goals
-
-### References
-
-## Overall Description
 
 ### Product Perspective
 
@@ -47,109 +49,83 @@ How does this fit in to the wider smart city's systems, if at all
 
 bullet point list of major features
 
+### Use Cases
+
+Use case diagram here
+
+## Glossary
+
+### General Terms
+
+Term
+: Definition
+
 ### User Classes and Characteristics
 
-#### Citizen
+Citizen
+: Definition
 
-#### Smart City Manager
+Smart City Manager
+: Definition
 
-### Operating Environment
+System Administrator
+: Definition
 
-### Design and Implementation Constraints
+## User Requirements
 
-### User Documentation
+### Functional Requirements
 
-List documentation we plan to provide to the users, if any
+#### FREQ-1 - Short Name
 
-### Assumptions and Dependencies
+Natural language description of the functional requirement, one or two sentences.
 
-## External Interfaces and Requirements
+System Requirements
+: FREQ-1.1, FREQ-1.2, ...
 
-### User Interface
+#### FREQ-2 - Short Name
 
-Explain the various pages we plan to support, potentially UI mockups
+Natural language description of the functional requirement, one or two sentences.
 
-### Software Interfaces
+System Requirements
+: FREQ-2.1, FREQ-2.2, ...
 
-Third party interfaces we plan to expose (APIs), limited details
+### Non-Functional Requirements
 
-### Communication Interfaces
+#### NREQ-1 - Short Name
 
-Communication standards we plan to use. HTTP, security/encryption/etc.
+Natural language description of the functional requirement, one or two sentences.
+
+System Requirements
+: NREQ-1.1, NREQ-1.2, ...
+
+## System Architecture
+
+High level architecture diagram, brief description
 
 ## System Requirements
 
 ### Functional Requirements
 
-#### FREQ-1
+#### FREQ-1.1
 
 The system should...
 
-Description
-: Describe the requirement
-
-User Priority
-: x/5 - why
-
-Technical Priority
-: x/5 - why
+Description and supporting materials...
 
 ### Non-Functional Requirements
 
-#### NREQ-1
+#### NREQ-1.1
 
 The system should...
 
-Description
-: Describe the requirement
+Description and supporting materials...
 
-User Priority
-: x/5 - why
+## System Models
 
-Technical Priority
-: x/5 - why
+C4 Models Here
 
-## Scenarios
+## System Evolution
 
-### Use Case Diagrams
+### Assumptions
 
-UML Use Case Diagram Here
-
-### Scenarios
-
-#### SCN-1
-
-FREQ References
-: FREQ-1
-
-NREQ References
-: NREQ-1
-
-Short Description
-: Up to three lines of text about this requirement
-
-Activation Action
-: How does a user enter this scenario
-
-Precondition
-: Is anything required for this scenario to trigger?
-
-##### Basic Flow
-
-1. Something happens
-2. Something else happens
-3. ???
-4. Profit
-
-##### Scenario Diagram
-
-UML Activity Diagram Here
-
-## Appendix A: Glossary
-
-Term
-: Definition
-
-## Appendix B: Analysis Models
-
-If we get any detailed information during requirements elicitation, put it here
+### Anticipated Changes
