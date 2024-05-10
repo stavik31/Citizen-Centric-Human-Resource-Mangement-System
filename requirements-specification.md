@@ -32,7 +32,7 @@ Which sections of this document are relevant to each of the following
 ## Table of Contents
 {: .no_toc }
 
-. TOC
+- TOC
 {:toc}
 
 ## Introduction
