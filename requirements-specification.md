@@ -141,3 +141,7 @@ C4 Models Here
 ### Assumptions
 
 ### Anticipated Changes
+
+## Appendix A: References
+
+* [2018 Standard Occupational Classification System (SOC)](https://www.bls.gov/soc/2018/)
