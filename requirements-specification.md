@@ -16,7 +16,17 @@ nav_order: 2
 
 ### Document Conventions
 
-Fonts, highlights, special verbiage, requirement nesting behaviour
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119).
+
+Requirements in this specification are classified at three levels of aggregation to suit the needs of various readers of this document: functional or non-functional, user requirement identifier, and an optional trailing system requirement subidentifier. Unless otherwise stated, it is to be assumed that each requirement is hierarchical and that stated user-level requirements implicitly depend on the system requirements sharing the same identifier.
+
+Functional requirements will be prefixed with "FREQ-". Non-functional requirements will be prefixed with "NREQ-".
+
+FREQ-0 Example User Requirement
+: This denotes a functional requirement with the id of 0
+
+NREQ-0.0
+: This denotes a non-functional system requirement with the id of 0.0. This requirement is implicitly a dependency of the non-functional user requirement NREQ-0.
 
 ### Intended Audience and Reading Suggestions
 
