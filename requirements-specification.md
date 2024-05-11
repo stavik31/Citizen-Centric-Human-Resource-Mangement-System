@@ -94,24 +94,23 @@ System Administrator
 
 Natural language description of the functional requirement, one or two sentences.
 
-System Requirements
-: FREQ-1.1, FREQ-1.2, ...
-
 #### FREQ-2 - Short Name
 
 Natural language description of the functional requirement, one or two sentences.
 
-System Requirements
-: FREQ-2.1, FREQ-2.2, ...
-
 ### Non-Functional Requirements
 
-#### NREQ-1 - Short Name
+#### NREQ-1 - WCAG 2 AA Compliance
 
-Natural language description of the functional requirement, one or two sentences.
+The system MUST adhere to the Web Content Accessibility Guidelines (WCAG) 2.2, meeting a minimum of AA level success criteria outlined in the guidelines. Please refer to Appendix A for further details.
 
-System Requirements
-: NREQ-1.1, NREQ-1.2, ...
+#### NREQ-2 - Supported Devices
+
+The system MUST provide equivalent experiences for both mobile and desktop clients.
+
+#### NREQ-3 - Internationalization
+
+The system MUST be able to translate displayed content into one or more languages as selected by the user.
 
 ## System Architecture
 
@@ -121,28 +120,68 @@ High level architecture diagram, brief description
 
 ### Functional Requirements
 
-#### FREQ-1.1: Citizens must be able to register for a profile in the system
-#### FREQ-1.2: Citizen must initiate the signing up process
-#### FREQ-1.3: Citizen must be prompted for their email, password, and legal name
-#### FREQ-1.4: Citizen must consent to our terms of use (eg. Must be older than 18)
-#### FREQ-1.5: Citizen must verify their identity
+FREQ-1.1
+: Citizens must be able to register for a profile in the system
 
-#### FREQ-2.1: Admins should be able to create users to put in the system
-#### FREQ-2.2: Admins should be able to create a profile with an email and legal name
-#### FREQ-2.3: Admins must be able to assign security rules to the users
-#### FREQ-2.4: Citizens must be emailed a one-time link to reset their password
+FREQ-1.2
+: Citizen must initiate the signing up process
 
-#### FREQ-3.1: Citizens must be able to select a SOC code/Job title
-#### FREQ-3.2: Citizens must be shown SOC codes recommended from their current job
-#### FREQ-3.3: Citizens must be able to select a SOC code as a goal from a list
-#### FREQ-3.4: Selected goal should be saved to the user profile
+FREQ-1.3
+: Citizen must be prompted for their email, password, and legal name
 
-#### FREQ-4.1: Citizens must be able to select their current job
-#### FREQ-4.2: Citizens must be shown a list of high level SOC codes (titles and descriptions) and select one of them
-#### FREQ-4.3: Citizens must be able to drill down and select a low level SOC code and be shown related SOC codes as a possible choice
-#### FREQ-4.4: Selected SOC code should be saved to the user profile
+FREQ-1.4
+: Citizen must consent to our terms of use (eg. Must be older than 18)
 
+FREQ-1.5
+: Citizen must verify their identity
 
+FREQ-2.1
+: Admins should be able to create users to put in the system
+
+FREQ-2.2
+: Admins should be able to create a profile with an email and legal name
+
+FREQ-2.3
+: Admins must be able to assign security rules to the users
+
+FREQ-2.4
+: Citizens must be emailed a one-time link to reset their password
+
+FREQ-3.1
+: Citizens must be able to select a SOC code/Job title
+
+FREQ-3.2
+: Citizens must be shown SOC codes recommended from their current job
+
+FREQ-3.3
+: Citizens must be able to select a SOC code as a goal from a list
+
+FREQ-3.4
+: Selected goal should be saved to the user profile
+
+FREQ-4.1
+: Citizens must be able to select their current job
+
+FREQ-4.2
+: Citizens must be shown a list of high level SOC codes (titles and descriptions) and select one of them
+
+FREQ-4.3
+: Citizens must be able to drill down and select a low level SOC code and be shown related SOC codes as a possible choice
+
+FREQ-4.4
+: Selected SOC code should be saved to the user profile
+
+NREQ-3.1
+: The system MUST expose a control that allows users to select a language or locale for the user interface.
+
+NREQ-3.2
+: The system MUST at minimum support the generic English locale (en).
+
+NREQ-3.3
+: The system MUST display all static text, such as labels or prompts, in the language or locale selected by the user.
+
+NREQ-3.4
+: The system MAY display alternate dynamic content, such as news articles or job postings, in the language or locale selected by the user.
 
 The system should...
 
@@ -169,3 +208,4 @@ C4 Models Here
 ## Appendix A: References
 
 * [2018 Standard Occupational Classification System (SOC)](https://www.bls.gov/soc/2018/)
+* [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG22/)
