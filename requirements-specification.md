@@ -156,6 +156,10 @@ All communication between a user and the system MUST utilize end-to-end encrypti
 
 All personally identifiable information related to citizens MUST be encrypted at rest.
 
+#### NREQ-15 - Clickstream Analytics
+
+The system MUST collect and ingest clickstream data for use in reports specified in FREQ-XXXX.
+
 ## System Architecture
 
 High level architecture diagram, brief description
@@ -312,6 +316,15 @@ NREQ-14.1
 
 NREQ-14.2
 : Encryption keys MUST NOT be accessible to developers of the system.
+
+NREQ-15.1
+: The system MUST expose an API for the collection of clickstream data. This data should contain at minimum the citizen's profile ID, current occupation SOC code, and identifying information about the content they interacted with.
+
+NREQ-15.2
+: Clickstream data SHOULD be indexed and aggregated for efficient querying and reporting.
+
+NREQ-15.3
+: Client-side components MUST, with citizen consent, publish clickstream data for all citizen actions in the system to the API described in NREQ-15.1.
 
 ## System Models
 
