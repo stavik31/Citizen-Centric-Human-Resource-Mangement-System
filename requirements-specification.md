@@ -171,6 +171,8 @@ FREQ-4.3
 FREQ-4.4
 : Selected SOC code should be saved to the user profile
 
+### Non-Functional Requirements
+
 NREQ-3.1
 : The system MUST expose a control that allows users to select a language or locale for the user interface.
 
@@ -183,17 +185,6 @@ NREQ-3.3
 NREQ-3.4
 : The system MAY display alternate dynamic content, such as news articles or job postings, in the language or locale selected by the user.
 
-The system should...
-
-Description and supporting materials...
-
-### Non-Functional Requirements
-
-#### NREQ-1.1
-
-The system should...
-
-Description and supporting materials...
 
 ## System Models
 
