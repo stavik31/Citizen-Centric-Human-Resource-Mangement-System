@@ -102,7 +102,7 @@ Natural language description of the functional requirement, one or two sentences
 
 #### NREQ-1 - WCAG 2 AA Compliance
 
-The system MUST adhere to the Web Content Accessibility Guidelines (WCAG) 2.2, meeting a minimum of AA level success criteria outlined in the guidelines. Please refer to Appendix A for further details.
+The system MUST adhere to the Web Content Accessibility Guidelines (WCAG) 2.2, meeting a minimum of AA level success criteria outlined in the guidelines. Refer to Appendix A for further details.
 
 #### NREQ-2 - Supported Devices
 
@@ -111,6 +111,30 @@ The system MUST provide equivalent experiences for both mobile and desktop clien
 #### NREQ-3 - Internationalization
 
 The system MUST be able to translate displayed content into one or more languages as selected by the user.
+
+#### NREQ-4 - Client Performance
+
+The system MUST be usable on low-end to medium-end devices.
+
+#### NREQ-5 - Server Performance
+
+Any APIs presented by the system MUST be able to handle peak load without degraded performance.
+
+#### NREQ-6 - Availability and Uptime
+
+The system MUST achieve three nines of availability (99.9% uptime) during standard operating hours. Maintenance downtime scheduled in advance is excluded from this requirement.
+
+#### NREQ-7 - Development Practices
+
+The system MUST be developed using processes that follow industry standard best practices.
+
+#### NREQ-8 - Continuous Deployment
+
+The system SHOULD be deployed using processes that minimize human involvement.
+
+#### NREQ-9 - Observability and Monitoring
+
+The system SHOULD expose diagnostic logging and metrics to aide in measuring performance and business indicators.
 
 ## System Architecture
 
@@ -173,6 +197,12 @@ FREQ-4.4
 
 ### Non-Functional Requirements
 
+NREQ-2.1
+: The system MUST provide a web interface with responsive capabilities as defined by the MDN web docs (See Appendix A).
+
+NREQ-2.2
+: The system MAY provide alternative clients, such as iOS or Android native apps.
+
 NREQ-3.1
 : The system MUST expose a control that allows users to select a language or locale for the user interface.
 
@@ -185,6 +215,47 @@ NREQ-3.3
 NREQ-3.4
 : The system MAY display alternate dynamic content, such as news articles or job postings, in the language or locale selected by the user.
 
+NREQ-4.1
+: The system MUST limit the bundle size of the web interface's static content to no more than 10MB.
+
+NREQ-4.2
+: The system SHOULD support responsive images as defined by the MDN web docs (See Appendix A).
+
+NREQ-4.3
+: The system MUST achieve a Google PageSpeed **Performance** score of 80 or higher for its web interface.
+
+NREQ-5.1
+: All HTTP APIs presented by the system MUST maintain P95 latency not exceeding 1000ms.
+
+NREQ-5.2
+: All server-side components of the system MUST be capable of starting up in less than 60 seconds to allow for sufficient elasticity when deployed in autoscale-capable environments.
+
+NREQ-7.1
+: All system source code MUST be persisted in a git repository.
+
+NREQ-7.2
+: Each source code repository MUST follow trunk-based development. The `main` branch should always be in a deployable state; all feature work should take place on auxiliary branches.
+
+NREQ-7.3
+: The `main` branch of each git repository MUST enforce change controls preventing direct modification or merges.
+
+NREQ-7.4
+: Each source code repository MUST achieve at least 60% test coverage.
+
+NREQ-7.5
+: Changes to the `main` branch of each source code repository MUST be made via pull request. 
+
+NREQ-7.6
+: Pull requests SHOULD require at least two peer approvals and the successful execution of the component's test suite before being merged.
+
+NREQ-9.1
+: Server-side components MUST expose operational logs via STDOUT for collection by external log aggregation systems.
+
+NREQ-9.2
+: Server-side components SHOULD expose performance and operational metrics using a standardized format (e.g., Prometheus) for collection by external metrics ingestion systems.
+
+NREQ-9.3
+: Client-side components SHOULD integrate with a web or mobile monitoring solution (e.g., Raygun).
 
 ## System Models
 
@@ -200,3 +271,5 @@ C4 Models Here
 
 * [2018 Standard Occupational Classification System (SOC)](https://www.bls.gov/soc/2018/)
 * [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG22/)
+* [MDN Web Docs - Responsive Design](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
+* [MDN Web Docs - Responsive Images](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
