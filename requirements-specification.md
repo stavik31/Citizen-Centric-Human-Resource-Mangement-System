@@ -136,6 +136,26 @@ The system SHOULD be deployed using processes that minimize human involvement.
 
 The system SHOULD expose diagnostic logging and metrics to aide in measuring performance and business indicators.
 
+#### NREQ-10 - Authentication
+
+The system MUST require users to authenticate using an externalized authentication scheme, such as OAuth 2, OIDC, or SAML.
+
+#### NREQ-11 - Authorization
+
+The system MUST enforce Role Based Access Control (RBAC) to limit interactions with system components to only users that are authorized to do so.
+
+#### NREQ-12 - Personally Identifiable Information
+
+The system MUST manage citizen data in compliance with the terms of the General Data Protection Regulation (GDPR), California Consumer Protection Act (CCPA), and other similar legislation.
+
+#### NREQ-13 - Encryption in Transit
+
+All communication between a user and the system MUST utilize end-to-end encryption.
+
+#### NREQ-14 - Encryption at Rest
+
+All personally identifiable information related to citizens MUST be encrypted at rest.
+
 ## System Architecture
 
 High level architecture diagram, brief description
@@ -256,6 +276,42 @@ NREQ-9.2
 
 NREQ-9.3
 : Client-side components SHOULD integrate with a web or mobile monitoring solution (e.g., Raygun).
+
+NREQ-10.1
+: The system MUST NOT have any knowledge of user credentials, such as passwords.
+
+NREQ-11.1
+: The system MUST define a role for citizens and limit their access to only their own profile and public educational content.
+
+NREQ-11.2
+: The system MUST define a role for smart city managers and limit their access to only citizen aggregate data reports and demand management tooling.
+
+NREQ-12.1
+: The system MUST limit personally identifiable information collection to only that which is required for system operation.
+
+NREQ-12.2
+: The system MUST acquire citizen consent before collecting any analytics data on their usage of the system.
+
+NREQ-12.3
+: The system MUST provide the capability for citizens to retrieve a complete copy of all data that the system has collected about them.
+
+NREQ-12.4
+: The system MUST provide the capability for citizens to request deletion of all data that the system has collected about them.
+
+NREQ-12.5
+: Upon receiving a data deletion request, the system MUST complete it within 30 days in compliance with the terms of the GDPR.
+
+NREQ-13.1
+: All HTTP APIs MUST utilize TLS 1.3 or newer.
+
+NREQ-13.2
+: Private keys MUST NOT be accessible to developers of the system.
+
+NREQ-14.1
+: All databases containing personally identifiable information relating to a citizen MUST utilize some form of encryption at rest, either at the filesystem level or, if supported, in the database itself.
+
+NREQ-14.2
+: Encryption keys MUST NOT be accessible to developers of the system.
 
 ## System Models
 
