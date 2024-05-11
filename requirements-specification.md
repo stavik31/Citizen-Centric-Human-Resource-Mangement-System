@@ -227,6 +227,8 @@ NREQ-2.1
 NREQ-2.2
 : The system MAY provide alternative clients, such as iOS or Android native apps.
 
+---
+
 NREQ-3.1
 : The system MUST expose a control that allows users to select a language or locale for the user interface.
 
@@ -239,6 +241,8 @@ NREQ-3.3
 NREQ-3.4
 : The system MAY display alternate dynamic content, such as news articles or job postings, in the language or locale selected by the user.
 
+---
+
 NREQ-4.1
 : The system MUST limit the bundle size of the web interface's static content to no more than 10MB.
 
@@ -248,11 +252,15 @@ NREQ-4.2
 NREQ-4.3
 : The system MUST achieve a Google PageSpeed **Performance** score of 80 or higher for its web interface.
 
+---
+
 NREQ-5.1
 : All HTTP APIs presented by the system MUST maintain P95 latency not exceeding 1000ms.
 
 NREQ-5.2
 : All server-side components of the system MUST be capable of starting up in less than 60 seconds to allow for sufficient elasticity when deployed in autoscale-capable environments.
+
+---
 
 NREQ-7.1
 : All system source code MUST be persisted in a git repository.
@@ -272,6 +280,8 @@ NREQ-7.5
 NREQ-7.6
 : Pull requests SHOULD require at least two peer approvals and the successful execution of the component's test suite before being merged.
 
+---
+
 NREQ-9.1
 : Server-side components MUST expose operational logs via STDOUT for collection by external log aggregation systems.
 
@@ -281,14 +291,20 @@ NREQ-9.2
 NREQ-9.3
 : Client-side components SHOULD integrate with a web or mobile monitoring solution (e.g., Raygun).
 
+---
+
 NREQ-10.1
 : The system MUST NOT have any knowledge of user credentials, such as passwords.
+
+---
 
 NREQ-11.1
 : The system MUST define a role for citizens and limit their access to only their own profile and public educational content.
 
 NREQ-11.2
 : The system MUST define a role for smart city managers and limit their access to only citizen aggregate data reports and demand management tooling.
+
+---
 
 NREQ-12.1
 : The system MUST limit personally identifiable information collection to only that which is required for system operation.
@@ -305,17 +321,23 @@ NREQ-12.4
 NREQ-12.5
 : Upon receiving a data deletion request, the system MUST complete it within 30 days in compliance with the terms of the GDPR.
 
+---
+
 NREQ-13.1
 : All HTTP APIs MUST utilize TLS 1.3 or newer.
 
 NREQ-13.2
 : Private keys MUST NOT be accessible to developers of the system.
 
+---
+
 NREQ-14.1
 : All databases containing personally identifiable information relating to a citizen MUST utilize some form of encryption at rest, either at the filesystem level or, if supported, in the database itself.
 
 NREQ-14.2
 : Encryption keys MUST NOT be accessible to developers of the system.
+
+---
 
 NREQ-15.1
 : The system MUST expose an API for the collection of clickstream data. This data should contain at minimum the citizen's profile ID, current occupation SOC code, and identifying information about the content they interacted with.
