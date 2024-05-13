@@ -183,6 +183,8 @@ FREQ-1.4
 FREQ-1.5
 : Citizen must verify their identity
 
+---
+
 FREQ-2.1
 : Admins should be able to create users to put in the system
 
@@ -195,6 +197,8 @@ FREQ-2.3
 FREQ-2.4
 : Citizens must be emailed a one-time link to reset their password
 
+---
+
 FREQ-3.1
 : Citizens must be able to select a SOC code/Job title
 
@@ -206,6 +210,8 @@ FREQ-3.3
 
 FREQ-3.4
 : Selected goal should be saved to the user profile
+
+---
 
 FREQ-4.1
 : Citizens must be able to select their current job
