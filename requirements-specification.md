@@ -88,11 +88,20 @@ System Administrator
 ### Functional Requirements
 
 #### FREQ-1 - Create Account
+
+Citizens must be able to register for a profile by initiating the signup process, providing necessary information, consenting to terms of use, and verifying their identity.
+
 #### FREQ-2 - Administer Account
+
+This system must be able to allow administrators to set or create a variety or rules or accounts while allowing users to reset their accounts personal details themselves.
+
 #### FREQ-3 - Select Job Goal
+
+Citizens must be shown specific information regarding their desired goals compared to their current job
+
 #### FREQ-4 - Edit Citizen Profile
 
-Natural language description of the functional requirement, one or two sentences.
+Citizens must be able to edit their current profile to accomodate for changes in their desired goals
 
 #### FREQ-2 - Short Name
 
