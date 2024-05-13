@@ -89,19 +89,19 @@ System Administrator
 
 #### FREQ-1 - Create Account
 
-Citizens must be able to register for a profile by initiating the signup process, providing necessary information, consenting to terms of use, and verifying their identity.
+Citizens MUST be able to register for a profile by initiating the signup process, providing necessary information, consenting to terms of use, and verifying their identity.
 
 #### FREQ-2 - Administer Account
 
-This system must be able to allow administrators to set or create a variety or rules or accounts while allowing users to reset their accounts personal details themselves.
+This system MUST be able to allow administrators to set or create a variety or rules or accounts while allowing users to reset their accounts personal details themselves.
 
 #### FREQ-3 - Select Job Goal
 
-Citizens must be shown specific information regarding their desired goals compared to their current job
+Citizens MUST be shown information regarding their desired occupational goal reccomended from their current job title and choose which to pursue
 
 #### FREQ-4 - Edit Citizen Profile
 
-Citizens must be able to edit their current profile to accomodate for changes in their desired goals
+Citizens MUST be able to edit their current profile to accomodate for changes in their desired goals
 
 #### FREQ-2 - Short Name
 
@@ -178,61 +178,61 @@ High level architecture diagram, brief description
 ### Functional Requirements
 
 FREQ-1.1
-: Citizens must be able to register for a profile in the system
+: Citizens MUST be able to register for a profile in the system
 
 FREQ-1.2
-: Citizen must initiate the signing up process
+: Citizen MUST initiate the signing up process
 
 FREQ-1.3
-: Citizen must be prompted for their email, password, and legal name
+: Citizen MUST be prompted for their email, password, and legal name
 
 FREQ-1.4
-: Citizen must consent to our terms of use (eg. Must be older than 18)
+: Citizen MUST consent to our terms of use (eg. Must be older than 18)
 
 FREQ-1.5
-: Citizen must verify their identity
+: Citizen MUST verify their identity
 
 ---
 
 FREQ-2.1
-: Admins should be able to create users to put in the system
+: Admins SHOULD be able to create users to put in the system
 
 FREQ-2.2
-: Admins should be able to create a profile with an email and legal name
+: Admins SHOULD be able to create a profile with an email and legal name
 
 FREQ-2.3
-: Admins must be able to assign security rules to the users
+: Admins MUST be able to assign security rules to the users
 
 FREQ-2.4
-: Citizens must be emailed a one-time link to reset their password
+: Citizens MUST be emailed a one-time link to reset their password
 
 ---
 
 FREQ-3.1
-: Citizens must be able to select a SOC code/Job title
+: Citizens MUST be able to select an occupational title
 
 FREQ-3.2
-: Citizens must be shown SOC codes recommended from their current job
+: Citizens MUST be shown occupational titles recommended from their current job
 
 FREQ-3.3
-: Citizens must be able to select a SOC code as a goal from a list
+: Citizens MUST be able to select an occupational title as a goal from a list
 
 FREQ-3.4
-: Selected goal should be saved to the user profile
+: Selected goal SHOULD be saved to the user profile
 
 ---
 
 FREQ-4.1
-: Citizens must be able to select their current job
+: Citizens MUST be able to select their current job
 
 FREQ-4.2
-: Citizens must be shown a list of high level SOC codes (titles and descriptions) and select one of them
+: Citizens MUST be shown a list of high level SOC codes (titles and descriptions) and select one of them
 
 FREQ-4.3
-: Citizens must be able to drill down and select a low level SOC code and be shown related SOC codes as a possible choice
+: Citizens MUST be able to drill down and select a low level SOC code and be shown related SOC codes as a possible choice
 
 FREQ-4.4
-: Selected SOC code should be saved to the user profile
+: Selected SOC code SHOULD be saved to the user profile
 
 ### Non-Functional Requirements
 
