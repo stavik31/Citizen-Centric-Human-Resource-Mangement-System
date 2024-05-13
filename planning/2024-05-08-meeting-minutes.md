@@ -1,5 +1,5 @@
 ---
-title: May 8st Meeting Minutes
+title: May 8th Meeting Minutes
 parent: Schedule and Planning
 nav_order: 12
 ---
