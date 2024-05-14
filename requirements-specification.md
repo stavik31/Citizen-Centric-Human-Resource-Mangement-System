@@ -226,13 +226,13 @@ FREQ-4.1
 : Citizens MUST be able to select their current job
 
 FREQ-4.2
-: Citizens MUST be shown a list of high level SOC codes (titles and descriptions) and select one of them
+: Citizens MUST be shown a list of job titles and their descriptions and select one of them
 
 FREQ-4.3
-: Citizens MUST be able to drill down and select a low level SOC code and be shown related SOC codes as a possible choice
+: Citizens MUST be able to drill down and select a low level job title and be shown related jobs as a possible choice
 
 FREQ-4.4
-: Selected SOC code SHOULD be saved to the user profile
+: Selected job title SHOULD be saved to the user profile
 
 ### Non-Functional Requirements
 
