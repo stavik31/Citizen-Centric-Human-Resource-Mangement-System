@@ -209,13 +209,13 @@ FREQ-2.4
 ---
 
 FREQ-3.1
-: Citizens MUST be able to select an occupational title
+: Citizens MUST be able to select a detailed occupation
 
 FREQ-3.2
-: Citizens MUST be shown occupational titles recommended from their current job
+: Citizens MUST be shown broad occupations and detailed occupations from the major group and minor recommended from their current job
 
 FREQ-3.3
-: Citizens MUST be able to select an occupational title as a goal from a list
+: Citizens MUST be able to select a detailed occupatioons as a goal from a list
 
 FREQ-3.4
 : Selected goal SHOULD be saved to the user profile
@@ -226,13 +226,13 @@ FREQ-4.1
 : Citizens MUST be able to select their current job
 
 FREQ-4.2
-: Citizens MUST be shown a list of job titles and their descriptions and select one of them
+: Citizens MUST be shown a list of major/minor groups of jobs and their descriptions and select one of them
 
 FREQ-4.3
-: Citizens MUST be able to drill down and select a low level job title and be shown related jobs as a possible choice
+: Citizens MUST be able to drill down and select a detailed occupationo and be shown related occupations as a possible choice
 
 FREQ-4.4
-: Selected job title SHOULD be saved to the user profile
+: Selected detailed occupation SHOULD be saved to the user profile
 
 ### Non-Functional Requirements
 
