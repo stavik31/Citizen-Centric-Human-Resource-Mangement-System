@@ -107,6 +107,16 @@ User MUST be able to select a detailed occupation as their desired goal
 
 Citizens MUST be able to edit their current profile to accomodate for changes in their desired goals
 
+#### FREQ-6 - View Unemployment Data
+
+Smart city managers MUST be able to view unemployment data across all citizens
+
+#### FREQ-7 - Major Group Unemployment
+
+Smart City managers SHOULD be able to view unemployment data by major group
+
+
+
 
 ### Non-Functional Requirements
 
@@ -207,15 +217,17 @@ FREQ-2.5
 ---
 
 FREQ-3.1
-: Citizens MUST be able to select a detailed occupation
+: Citizens MUST be shown broad occupations and detailed occupations from the major group and minor group recommended from their current job
 
 FREQ-3.2
-: Citizens MUST be shown broad occupations and detailed occupations from the major group and minor recommended from their current job
+: Citizens MUST select a major or minor group and then be shown its related broad and detailed occupation 
 
-FREQ-3.3
+---
+
+FREQ-4.1
 : Citizens MUST be able to select a detailed occupations as a goal from a list
 
-FREQ-3.4
+FREQ-4.2
 : Selected goal MUST be saved to the user profile
 
 ---
@@ -228,6 +240,22 @@ FREQ-5.3
 
 FREQ-5.4
 : Selected detailed occupation SHOULD be saved to the user profile
+
+---
+
+FREQ-6.1
+: Smart city managers MUST be able to press a control which can show unemployment data of all citizens
+
+FREQ-6.2
+: The system MUST display unemployment data retreived from a government of all citizens 
+
+---
+
+FREQ-7.1
+: Smart city mangers MUST be shown and be able to select a list of major groups along with the unemployment data of all citizens
+
+FREQ-7.2
+: Smart city managers must be able to select a major group to view their unemployement data of citizens
 
 ### Non-Functional Requirements
 
