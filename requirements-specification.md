@@ -107,6 +107,26 @@ User MUST be able to select a detailed occupation as their desired goal
 
 Citizens MUST be able to edit their current profile to accomodate for changes in their desired goals
 
+#### FREQ-6 - View Educational MAterial by SOC
+
+Citizens MUST Be able to
+search the SOC code or Job
+name and retrieve relevant
+educational information
+
+#### FREQ-7 - 
+
+#### FREQ-8 - 
+
+#### FREQ-9 - 
+
+#### FREQ-10 - 
+
+
+
+#### FREQ-2 - Short Name
+
+Natural language description of the functional requirement, one or two sentences.
 
 ### Non-Functional Requirements
 
@@ -226,6 +246,17 @@ FREQ-5.2
 FREQ-5.3
 : Citizens MUST be able to drill down and select a detailed occupation and be shown related occupations as a possible choice
 
+FREQ-4.4
+: Selected job title SHOULD be saved to the user profile
+
+---
+
+FREQ-6.1
+: System MUST be able to access SOC occupation records
+database from Bureau of Labor Statistics.
+
+FREQ-6.2
+: 
 FREQ-5.4
 : Selected detailed occupation SHOULD be saved to the user profile
 
