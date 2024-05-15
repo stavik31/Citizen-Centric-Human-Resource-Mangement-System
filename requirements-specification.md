@@ -107,6 +107,13 @@ User MUST be able to select a detailed occupation as their desired goal
 
 Citizens MUST be able to edit their current profile to accomodate for changes in their desired goals
 
+#### FREQ-13 - View Trend By SOC
+
+User MUST be able to see job trends proposed by the system 
+
+#### FREQ-14 - Delete Account
+
+Citizen MUST be able to delete their account any time they want
 #### FREQ-6 - View Unemployment Data
 
 Smart city managers MUST be able to view unemployment data across all citizens
@@ -269,6 +276,20 @@ FREQ-6.2
 : 
 FREQ-5.4
 : Selected detailed occupation SHOULD be saved to the user profile
+
+
+---
+
+FREQ-13.1
+: Citizen MUST be logged in for their account to be deleted
+
+FREQ-13.2
+: If the citizen has no access to the account, the person shall contact the service via email or customer support and the person then provide information to verify their identity
+
+FREQ-13.3
+: 
+
+
 
 ---
 
