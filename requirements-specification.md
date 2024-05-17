@@ -57,6 +57,8 @@ Short description of objectives/goals
 
 How does this fit in to the wider smart city's systems, if at all
 
+![C4 System Context Digram](/diagrams/PBL3-2024-system-context-diagram.svg)
+
 ### Product Functions
 
 bullet point list of major features
@@ -438,7 +440,7 @@ NREQ-15.3
 
 ## System Models
 
-C4 Models Here
+![C4 System Container Digram](/diagrams/PBL3-2024-system-container-diagram.svg)
 
 ## System Evolution
 
