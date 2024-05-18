@@ -61,18 +61,20 @@ A limited subset of occupational segments will be covered based on available dat
 
 ### Product Perspective
 
+![C4 System Context Digram](/diagrams/PBL3-2024-system-context-diagram.svg)
+
 In the context of a smart city, this system is an asset for optimizing human resource management. By integrating this system into the city's infrastructure through data-driven insights (demand predictions) and citizen engagement (suggestions of educational material) , it enhances the city's capacity to anticipate and meet evolving labor demands. Ultimately, this product contributes to the overarching objective of creating a more efficient and citizen-centric urban environment.
 
 ### Product Functions
-Allowing citizens to choose their desired occupational goal and receive different data regarding their choice
-View News on their current or desired occupation
-View Demand data from previous years and future predictions
-View Job postings 
-View potential educational material for their desired goal
-Allowing smart city managers to view different data on citizens and creating demand
-Post number of employees needed for a job
-View unemployment data based of groups of occupations and location
-Post educational material for citizens 
+- Allowing citizens to choose their desired occupational goal and receive different data regarding their choice
+- View News on their current or desired occupation
+- View Demand data from previous years and future predictions
+- View Job postings 
+- View potential educational material for their desired goal
+- Allowing smart city managers to view different data on citizens and creating demand
+- Post number of employees needed for a job
+- View unemployment data based of groups of occupations and location
+- Post educational material for citizens 
 
 ### Use Cases
 
@@ -82,7 +84,7 @@ Use case diagram here
 
 ### General Terms
 
-Term
+City Managers
 : Definition
 
 ### User Classes and Characteristics
