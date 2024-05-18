@@ -32,27 +32,26 @@ NREQ-0.0 Example System Requirement
 
 ### Intended Audience and Reading Suggestions
 
-This SRS document is intended for various stakeholders involved in the development, deployment, and use of the system. Each section of the document contains information pertinent to different groups, as outlined below:
+This software requirement specification is intended for various stakeholders involved in the development, deployment, and use of the system. Each section of the document contains information pertinent to different groups, as outlined below:
 
-- **Developers**: 
-  - Relevant Sections: System Features, External Interface Requirements, Non-Functional Requirements, System Evolution.
+Developers
+: System Features, External Interface Requirements, Functional Requirements, Non-Functional Requirements, System Evolution.
 
-- **Project Managers**: 
-  - Relevant Sections: Introduction, Overall Description, System Features, System Evolution.
+Project Managers
+: Introduction, Overall Description, System Features, System Evolution.
 
-- **Marketing Staff**: 
-  - Relevant Sections: Introduction, Overall Description.
+Marketing Staff
+: Introduction, Overall Description, Functional Requirements.
 
-- **End Users**: 
-  - Relevant Sections: Introduction, System Features, User Requirements.
+End Users 
+: Introduction, System Features, Functional Requirements.
 
-- **Testers**: 
-  - Relevant Sections: System Features, External Interface Requirements, Non-Functional Requirements.
+Test Engineers
+: System Features, External Interface Requirements, Functional Requirements, Non-Functional Requirements.
  
-- **Documentation Writers**: 
-  - Relevant Sections: Overall Description, System Features, External Interface Requirements.
+Documentation Writers
+: Overall Description, System Features, External Interface Requirements.
  
-
 ## Table of Contents
 {: .no_toc }
 
@@ -134,6 +133,8 @@ FREQ-1.2
 FREQ-1.3
 : System MUST collect citizens consent to our terms of use
 
+---
+
 ### FREQ-2 - Administer Account
 
 This system MUST allow administrators to create user accounts and assign a role to them
@@ -155,6 +156,8 @@ FREQ-2.4
 FREQ-2.5
 : The system SHOULD email the user to a one-time password setup link
 
+---
+
 ### FREQ-3 - View Occupations
 
 User MUST be able to view information regarding different major/minor groups and broad/detailed occupations
@@ -167,6 +170,8 @@ FREQ-3.1
 FREQ-3.2
 : Citizens MUST select a major or minor group and then be shown its related broad and detailed occupation
 
+---
+
 ### FREQ-4 - Select Job Goal
 
 User MUST be able to select a detailed occupation as their desired goal
@@ -178,6 +183,8 @@ FREQ-4.1
 
 FREQ-4.2
 : Selected goal MUST be saved to the user profile.
+
+---
 
 ### FREQ-5 - Edit Citizen Profile
 
@@ -194,6 +201,8 @@ FREQ-5.2
 FREQ-5.3
 : Selected detailed occupation SHOULD be saved to the user profile.
 
+---
+
 ### FREQ-6 - View Unemployment Data
 
 Smart city managers MUST be able to view unemployment data across all citizens
@@ -202,6 +211,8 @@ Smart city managers MUST be able to view unemployment data across all citizens
 
 FREQ-6.1
 : System MUST be able to access SOC occupation records database from the Bureau of Labor Statistics to show unemployment data across all citizens
+
+---
 
 ### FREQ-7 - Major Group Unemployment
 
@@ -214,6 +225,8 @@ FREQ-7.1
 
 FREQ-7.2
 : Smart city managers MUST be able to select a major group to view their unemployment data of citizens
+
+---
 
 ### FREQ-8 - View Trend By SOC
 
@@ -230,6 +243,8 @@ FREQ-8.2
 FREQ-8.3
 : System MUST display trends
 
+---
+
 ### FREQ-9 - Delete Account
 
 Citizen MUST be able to delete their account any time they want
@@ -241,6 +256,8 @@ FREQ-9.1
 
 FREQ-9.2
 : If the citizen has no access to the account, the person shall contact the service via email or customer support and the person then provide information to verify their identity and then system MUST delete user profile
+
+---
 
 ### FREQ-10 - User Authentication
 
@@ -266,6 +283,8 @@ FREQ-10.5
 FREQ-10.6
 : Users SHOULD have the option to log in using email/password or through social media accounts
 
+---
+
 ### FREQ-11 - Search Functionality
 
 The system MUST enable users to efficiently search for job listings by SOC codes or keywords, with advanced filtering and autocomplete suggestions to enhance the search experience
@@ -281,6 +300,8 @@ FREQ-11.2
 FREQ-11.3  
 : The system MUST provide autocomplete suggestions as users type in the search bar to improve user experience
 
+---
+
 ### FREQ-12 - Job Listing Display
 
 The system MUST present job listings in a clear, organized manner, allowing users to easily access detailed job information by clicking on each listing
@@ -292,6 +313,8 @@ FREQ-12.1
 
 FREQ-12.2
 : Each job listing MUST be clickable, allowing users to view more details about the job
+
+---
 
 ### FREQ-13 - Detailed Job Information
 
@@ -305,6 +328,8 @@ FREQ-13.1
 FREQ-13.2  
 : Users MUST have the option to save or bookmark job listings for future reference
 
+---
+
 ### FREQ-14 - User Feedback and Ratings
 
 The system MUST facilitate user feedback and ratings on job listings, enabling users to provide and view aggregated reviews to assess job suitability
@@ -316,6 +341,8 @@ FREQ-14.1
 
 FREQ-14.2  
 : Users MUST be able to view aggregated ratings and reviews left by other users for each job listing
+
+---
 
 ### FREQ-15 - Recover Password
 
@@ -353,63 +380,6 @@ FREQ-15.9
 FREQ-15.10
 : Users MUST be redirected to the login page to log in with their new password
 
-### FREQ-16 - View Educational Material by SOC
-
-Citizens MUST Be able to search the SOC code or Job name and retrieve relevant educational information
-
-#### System Requirements
-
-FREQ-16.1
-: System MUST be able to access SOC occupation records database from Bureau of Labor Statistics.
-
-FREQ-16.2
-: System SHOULD accept search input from the user and retrieve the relevant records that match the input.
-
-FREQ-16.3
-: System SHOULD Display the information in an organized manner that the user can understand.
-
-FREQ-16.4
-: In case of video or documents, it MAY be able to playback the video or allow users to download
-
-### FREQ-17 - Edit Educational Material
-
-Smart City Managers MUST be able to add information and delete information
-
-#### System Requirements
-
-FREQ-17.1
-: System MUST require login before files can be uploaded.
-
-FREQ-17.2
-: System MUST allow smart-city managers and MAY allow users to add content (via a built-in text editor). Also, they MUST be able to upload files or videos.
-
-FREQ-17.3
-: System MUST allow smart-city managers to delete content
-
-### FREQ-18 - View History, Bookmark
-
-Citizens MAY be able to view their search history, bookmark searches and view them later.
-
-#### System Requirements
-
-FREQ-18.1
-: System MAY be able to store each user's search history in a database.
-
-FREQ-18.2
-: System MAY allow users to bookmark content they are interested in.
-
-FREQ-18.3
-: System MUST store and display user bookmarks with job titles and material titles.
-
-FREQ-18.4
-: System MUST be an option to delete the bookmark.
-
-FREQ-18.5
-: System MAY be an option to make folders of bookmarks.
-
-FREQ-18.6
-: When accessing bookmarked content, the system MUST check if the content has been updated, changed or removed.
-
 ---
 
 ### FREQ-19 - Reporting (Citizen Current Occupation)
@@ -441,6 +411,8 @@ FREQ-19.7
 
 FREQ-19.8
 : The system SHALL provide real-time updates to the aggregated data as new information is added or updated.
+
+---
 
 ### FREQ-20 - Reporting (Citizen Location)
 
@@ -504,6 +476,8 @@ FREQ-21.7
 FREQ-21.8
 : The system SHALL provide real-time updates to the aggregated data as new information is added or updated.
 
+---
+
 ### FREQ-22 - Reporting (Citizen Current Occupation based on Location)
 
 City managers SHALL be able to view a report on aggregated data of citizens' selected current occupation based on their locations.
@@ -537,6 +511,8 @@ FREQ-22.8
 FREQ-22.9
 : The system SHALL provide real-time updates to the aggregated data as new information is added or updated.
 
+---
+
 ### FREQ-23 - Reporting (Citizen Goal Job based on Location)
 
 City managers SHALL be able to view a report on aggregated data of citizens' selected job goals based on their locations.
@@ -569,6 +545,8 @@ FREQ-23.8
 
 FREQ-23.9
 : The system SHALL provide real-time updates to the aggregated data as new information is added or updated.
+
+---
 
 ### FREQ-24 - Reporting (Citizen Job Goal based on Current Occupation)
 
@@ -623,6 +601,8 @@ FREQ-25.3
 FREQ-25.4
 : The system SHALL generate a heatmap based on the aggregated data.
 
+---
+
 ### FREQ-26 - Reporting (Content Engagement between Job Listings and Citizen Location)
 
 City managers SHALL be able to view engagement analytics of the job listing information viewed by citizens based on the citizen's general location.
@@ -640,6 +620,8 @@ FREQ-26.3
 
 FREQ-26.4
 : The system SHALL generate a heatmap based on the aggregated data.
+
+---
 
 ### FREQ-27 - Reporting (Content Engagement between Job Listings and Selected Goal Job)
 
@@ -679,6 +661,8 @@ FREQ-28.3
 FREQ-28.4
 : The system SHALL generate a heatmap based on the aggregated data.
 
+---
+
 ### FREQ-29 - Reporting (Content Engagement between News Content and Citizen Location)
 
 City managers SHALL be able to view engagement analytics of the news content viewed by citizens based on the citizen's general location.
@@ -696,6 +680,8 @@ FREQ-29.3
 
 FREQ-29.4
 : The system SHALL generate a heatmap based on the aggregated data.
+
+---
 
 ### FREQ-30 - Reporting (Content Engagement between News Content and Selected Goal Job)
 
@@ -735,6 +721,8 @@ FREQ-31.3
 FREQ-31.4
 : The system SHALL generate a heatmap based on the aggregated data.
 
+---
+
 ### FREQ-32 - Reporting (Content Engagement between Certifications and Citizen Location)
 
 City managers SHALL be able to view engagement analytics of the certification information viewed by citizens based on the citizen's general location.
@@ -752,6 +740,8 @@ FREQ-32.3
 
 FREQ-32.4
 : The system SHALL generate a heatmap based on the aggregated data.
+
+---
 
 ### FREQ-33 - Reporting (Content Engagement between Certifications and Selected Goal Job)
 
@@ -780,17 +770,21 @@ User MUST be able to filter content based on occupation
 #### System Requirements
 
 FREQ-34.1 
- : User MUST be able to filter content hierarchially using major groups, minor groups, broad occupations, and detailed occupations as defined in the 2018 SOC standard.
+: User MUST be able to filter content hierarchially using major groups, minor groups, broad occupations, and detailed occupations as defined in the 2018 SOC standard.
 
 FREQ-34.2 
- : User MUST be able to filter content by typing in an occupation name or title.
+: User MUST be able to filter content by typing in an occupation name or title.
 
 FREQ-34.3 
- : User MUST be able to filter content by typing in an occupation SOC code.
+: User MUST be able to filter content by typing in an occupation SOC code.
+
+---
 
 ### FREQ-35 - Certification Filter
 
 User MUST be able to search for certifications using the filter described in FREQ-34
+
+---
 
 ### FREQ-36 - Certification
 
@@ -799,11 +793,15 @@ User MUST be able to view information on a specific certification
 #### System Requirements
 
 FREQ-36.1
- : The system MUST provide a unique URL for each certification to allow for browser capabilities such as bookmarking and history to function.
+: The system MUST provide a unique URL for each certification to allow for browser capabilities such as bookmarking and history to function.
+
+---
 
 ### FREQ-37 - Learning Material Filter
 
 User MUST be able to search for online learning material using the filter described in FREQ-1
+
+---
 
 ### FREQ-38 - Learning Material Information
 
@@ -812,11 +810,15 @@ User MUST be able to view information on a specific piece of learning material
 #### System Requirements
 
 FREQ-38.1 
- : The system MUST provide a unique URL for each piece of learning material to allow for browser capabilities such as bookmarking and history to function.
+: The system MUST provide a unique URL for each piece of learning material to allow for browser capabilities such as bookmarking and history to function.
+
+---
 
 ### FREQ-39 - News Filter
 
 User MUST be able to search for news using the filter described in FREQ-1
+
+---
 
 ### FREQ-40 - Certification Loading
 
@@ -830,7 +832,10 @@ FREQ-40.1
 FREQ-40.2 
  : System SHOULD display the creation and update timestamp for each certification
 
+---
+
 ### FREQ-41 - Learning Material Loading
+
 Smart city managers MUST be able to create, update, and delete online learning material from the system.
 
 #### System Requirements
@@ -841,6 +846,8 @@ FREQ-41.1
 FREQ-41.2 
  : System SHOULD display the creation and update timestamp for each piece of learning material
 
+---
+
 ### FREQ-42 News Data
 
 System MUST be able to aggregate news from various sources and associate it with its related occupation / SOC codes.
@@ -850,9 +857,15 @@ System MUST be able to aggregate news from various sources and associate it with
 FREQ-42.1 
  : System SHOULD display the date each news article was posted to its original source
 
+---
+
+## Non-Functional Requirements
+
 ### NREQ-1 - WCAG 2 AA Compliance
 
 The system MUST adhere to the Web Content Accessibility Guidelines (WCAG) 2.2, meeting a minimum of AA level success criteria outlined in the guidelines. Refer to Appendix A for further details.
+
+---
 
 ### NREQ-2 - Supported Devices
 
@@ -865,6 +878,8 @@ NREQ-2.1
 
 NREQ-2.2
 : The system MAY provide alternative clients, such as iOS or Android native apps.
+
+---
 
 ### NREQ-3 - Internationalization
 
@@ -884,6 +899,8 @@ NREQ-3.3
 NREQ-3.4
 : The system MAY display alternate dynamic content, such as news articles or job postings, in the language or locale selected by the user.
 
+---
+
 ### NREQ-4 - Client Performance
 
 The system MUST be usable on low-end to medium-end devices.
@@ -899,6 +916,8 @@ NREQ-4.2
 NREQ-4.3
 : The system MUST achieve a Google PageSpeed **Performance** score of 80 or higher for its web interface.
 
+---
+
 ### NREQ-5 - Server Performance
 
 Any APIs presented by the system MUST be able to handle peak load without degraded performance.
@@ -911,9 +930,13 @@ NREQ-5.1
 NREQ-5.2
 : All server-side components of the system MUST be capable of starting up in less than 60 seconds to allow for sufficient elasticity when deployed in autoscale-capable environments.
 
+---
+
 ### NREQ-6 - Availability and Uptime
 
 The system MUST achieve three nines of availability (99.9% uptime) during standard operating hours. Maintenance downtime scheduled in advance is excluded from this requirement.
+
+---
 
 ### NREQ-7 - Development Practices
 
@@ -939,9 +962,13 @@ NREQ-7.5
 NREQ-7.6
 : Pull requests SHOULD require at least two peer approvals and the successful execution of the component's test suite before being merged.
 
+---
+
 ### NREQ-8 - Continuous Deployment
 
 The system SHOULD be deployed using processes that minimize human involvement.
+
+---
 
 ### NREQ-9 - Observability and Monitoring
 
@@ -958,6 +985,8 @@ NREQ-9.2
 NREQ-9.3
 : Client-side components SHOULD integrate with a web or mobile monitoring solution (e.g., Raygun).
 
+---
+
 ### NREQ-10 - Authentication
 
 The system MUST require users to authenticate using an externalized authentication scheme, such as OAuth 2, OIDC, or SAML.
@@ -966,6 +995,8 @@ The system MUST require users to authenticate using an externalized authenticati
 
 NREQ-10.1
 : The system MUST NOT have any knowledge of user credentials, such as passwords.
+
+---
 
 ### NREQ-11 - Authorization
 
@@ -978,6 +1009,8 @@ NREQ-11.1
 
 NREQ-11.2
 : The system MUST define a role for smart city managers and limit their access to only citizen aggregate data reports and demand management tooling.
+
+---
 
 ### NREQ-12 - Personally Identifiable Information
 
@@ -1000,6 +1033,8 @@ NREQ-12.4
 NREQ-12.5
 : Upon receiving a data deletion request, the system MUST complete it within 30 days in compliance with the terms of the GDPR.
 
+---
+
 ### NREQ-13 - Encryption in Transit
 
 All communication between a user and the system MUST utilize end-to-end encryption.
@@ -1012,6 +1047,8 @@ NREQ-13.1
 NREQ-13.2
 : Private keys MUST NOT be accessible to developers of the system.
 
+---
+
 ### NREQ-14 - Encryption at Rest
 
 All personally identifiable information related to citizens MUST be encrypted at rest.
@@ -1023,6 +1060,8 @@ NREQ-14.1
 
 NREQ-14.2
 : Encryption keys MUST NOT be accessible to developers of the system.
+
+---
 
 ### NREQ-15 - Clickstream Analytics
 
@@ -1039,17 +1078,17 @@ NREQ-15.2
 NREQ-15.3
 : Client-side components MUST, with citizen consent, publish clickstream data for all citizen actions in the system to the API described in NREQ-15.1.
 
+---
+
 ### NREQ-16 - SOC Occupation Description
 
 The system MUST provide functionality to load SOC occupation definitions and descriptions from a government dataset
 
 ## System Architecture
 
-High level diagram and description
+![C4 System Container Diagram](/diagrams/PBL3-2024-system-container-diagram.svg)
 
 ## System Models
-
-![C4 System Container Diagram](/diagrams/PBL3-2024-system-container-diagram.svg)
 
 ## System Evolution
 
