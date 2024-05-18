@@ -12,7 +12,7 @@ nav_order: 2
 
 | Version | Date       | Description |
 | ------- | ---------- | ----------- |
-| 1.0     | 2024-05-20 | Initial     |
+| 1.0     | 2024-05-20 | Late     |
 
 ### Document Conventions
 
