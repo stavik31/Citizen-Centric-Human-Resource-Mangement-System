@@ -52,12 +52,12 @@ Which sections of this document are relevant to each of the following
 ### Product Objectives and Scope
 
 Objectives
-Engage citizenry by allowing them to explore available opportunities (Link to project proposal)
-Provide a data-driven approach to human resource management in smart cities (Link to project proposal)
-Encourage reskilling and upskilling by gamifying the process (Link to project proposal)
+- Engage citizenry by allowing them to explore available opportunities (Link to project proposal)
+- Provide a data-driven approach to human resource management in smart cities (Link to project proposal)
+- Encourage reskilling and upskilling by gamifying the process (Link to project proposal)
 Scope
-A single metropolitan area will be covered for the prototype
-A limited subset of occupational segments will be covered based on available data for the prototype
+- A single metropolitan area will be covered for the prototype
+- A limited subset of occupational segments will be covered based on available data for the prototype
 
 ### Product Perspective
 
