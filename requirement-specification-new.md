@@ -928,7 +928,7 @@ The system MUST provide functionality to load SOC occupation definitions and des
 
 ## System Architecture
 
-![High level Diagram](/diagrams/PBL3-2024-system-context-diagram.svg)
+High level diagram and description
 
 ## System Requirements
 
