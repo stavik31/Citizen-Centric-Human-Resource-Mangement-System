@@ -32,14 +32,26 @@ NREQ-0.0 Example System Requirement
 
 ### Intended Audience and Reading Suggestions
 
-Which sections of this document are relevant to each of the following
+This SRS document is intended for various stakeholders involved in the development, deployment, and use of the system. Each section of the document contains information pertinent to different groups, as outlined below:
 
-* Developers
-* Project Managers
-* Marketing Staff
-* End users
-* Testers
-* Documentation Writers
+- **Developers**: 
+  - Relevant Sections: System Features, External Interface Requirements, Non-Functional Requirements, System Evolution.
+
+- **Project Managers**: 
+  - Relevant Sections: Introduction, Overall Description, System Features, System Evolution.
+
+- **Marketing Staff**: 
+  - Relevant Sections: Introduction, Overall Description.
+
+- **End Users**: 
+  - Relevant Sections: Introduction, System Features, User Requirements.
+
+- **Testers**: 
+  - Relevant Sections: System Features, External Interface Requirements, Non-Functional Requirements.
+ 
+- **Documentation Writers**: 
+  - Relevant Sections: Overall Description, System Features, External Interface Requirements.
+ 
 
 ## Table of Contents
 {: .no_toc }
@@ -49,23 +61,28 @@ Which sections of this document are relevant to each of the following
 
 ## Introduction
 
+This document serves as the Software Requirements Specification (SRS) for the 'System for Citizen-centric Human Resource Management in Smart Cities'. It outlines the functional and non-functional requirements of the system, providing a detailed description of the software's expected behavior and features. This SRS is intended for use by the project development team, project managers, marketing staff, end users, testers, and documentation writers to ensure a common understanding of the system requirements.
+
 ### Product Objectives and Scope
 
 Objectives
+
 - Engage citizenry by allowing them to explore available opportunities (Link to project proposal)
 - Provide a data-driven approach to human resource management in smart cities (Link to project proposal)
 - Encourage reskilling and upskilling by gamifying the process (Link to project proposal)
+
 Scope
-- A single metropolitan area will be covered for the prototype
-- A limited subset of occupational segments will be covered based on available data for the prototype
+
+The system is designed to optimize human resource management in a smart city context, providing data-driven insights and engaging citizens in exploring job opportunities and educational materials. The prototype will cover a single metropolitan area and a limited subset of occupational segments based on available data.
 
 ### Product Perspective
 
-![C4 System Context Digram](/diagrams/PBL3-2024-system-context-diagram.svg)
+![C4 System Context Diagram](/diagrams/PBL3-2024-system-context-diagram.svg)
 
 In the context of a smart city, this system is an asset for optimizing human resource management. By integrating this system into the city's infrastructure through data-driven insights (demand predictions) and citizen engagement (suggestions of educational material) , it enhances the city's capacity to anticipate and meet evolving labor demands. Ultimately, this product contributes to the overarching objective of creating a more efficient and citizen-centric urban environment.
 
 ### Product Functions
+
 - Allowing citizens to choose their desired occupational goal and receive different data regarding their choice
 - View News on their current or desired occupation
 - View Demand data from previous years and future predictions
@@ -84,19 +101,27 @@ Use case diagram here
 
 ### General Terms
 
-City Managers
-: Definition
+The following are terminologies and their definitions used in the document.
+
+City Manager
+: The official appointed administrative manager of a city government responsible for administrative operations of the city municipality.
+
+SOC Codes
+: Standard Occupational Classification (SOC) codes is a federal statistical standard classification used by federal agencies to classify workers into occupational categories for the purpose of collecting, calculating, or disseminating data. 
+
+User
+: In this document, when 'User' is mentioned, it encompasses both 'Citizen' and 'Smart City Manager' defined in User Classes and Characteristics.
 
 ### User Classes and Characteristics
 
 Citizen
-: Definition
+: Direct user of the system that is from the citizenry. Citizens use the system to view job opportunities, acquire educational materials, and gain insights into their skillsets and job market trends to transition into new employment opportunities.
 
 Smart City Manager
-: Definition
+: Direct end user of the system from the government. Smart City Managers utilize the system to analyze and manage the workforce within the city, using data-driven insights to predict labor demands, assess workforce skills, and plan for future urban development needs.
 
 System Administrator
-: Definition
+: An individual responsible for managing, maintaining, and overseeing the system's technical aspects. This role includes administrating accounts for city managers, maintaining system, troubleshooting issues, and supporting users.
 
 ## User Requirements
 
@@ -157,25 +182,25 @@ User MUST be able to select a detailed occupation as their desired goal
 ##### System Requirements
 
 FREQ-4.1
-: Citizens MUST be able to select a detailed occupations as a goal from a list
+: Citizens MUST be able to select a detailed occupations as a goal from a list.
 
 FREQ-4.2
-: Selected goal MUST be saved to the user profile
+: Selected goal MUST be saved to the user profile.
 
 #### FREQ-5 - Edit Citizen Profile
 
-Citizens MUST be able to edit their current profile to accommodate for changes in their desired goals
+Citizens MUST be able to edit their current profile to accommodate for changes in their desired goals.
 
 ##### System Requirements
 
 FREQ-5.1
-: Citizens MUST be shown a list of major/minor groups of jobs and their descriptions and select one of them
+: Citizens MUST be shown a list of major/minor groups of jobs and their descriptions and select one of them.
 
 FREQ-5.2
-: Citizens MUST be able to drill down and select a detailed occupation and be shown related occupations as a possible choice
+: Citizens MUST be able to drill down and select a detailed occupation and be shown related occupations as a possible choice.
 
 FREQ-5.3
-: Selected detailed occupation SHOULD be saved to the user profile
+: Selected detailed occupation SHOULD be saved to the user profile.
 
 #### FREQ-6 - View Unemployment Data
 
@@ -903,7 +928,7 @@ The system MUST provide functionality to load SOC occupation definitions and des
 
 ## System Architecture
 
-High level architecture diagram, brief description
+![High level Diagram](/diagrams/PBL3-2024-system-context-diagram.svg)
 
 ## System Requirements
 
@@ -1038,7 +1063,7 @@ NREQ-15.3
 
 ## System Models
 
-![C4 System Container Digram](/diagrams/PBL3-2024-system-container-diagram.svg)
+![C4 System Container Diagram](/diagrams/PBL3-2024-system-container-diagram.svg)
 
 ## System Evolution
 
