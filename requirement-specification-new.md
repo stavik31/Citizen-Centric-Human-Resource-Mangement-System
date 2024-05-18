@@ -393,6 +393,8 @@ FREQ-18.5
 FREQ-18.6
 : When accessing bookmarked content, the system MUST check if the content has been updated, changed or removed.
 
+---
+
 #### FREQ-19 - Reporting (Citizen Current Occupation)
 
 City managers SHALL be able to view a report on aggregated data of citizens' current occupation.
@@ -452,6 +454,8 @@ FREQ-20.7
 
 FREQ-20.8
 : The system SHALL provide real-time updates to the aggregated data as new information is added or updated.
+
+---
 
 #### FREQ-21 - Reporting (Citizen Job Goals)
 
@@ -582,6 +586,8 @@ FREQ-24.8
 FREQ-24.9
 : The system SHALL provide real-time updates to the aggregated data as new information is added or updated.
 
+---
+
 #### FREQ-25 - Reporting (Content Engagement between Job Listings and Occupation)
 
 City managers SHALL be able to view engagement analytics of the job listing information viewed by citizens based on the citizen's occupation.
@@ -635,6 +641,8 @@ FREQ-27.3
 
 FREQ-27.4
 : The system SHALL generate a heatmap based on the aggregated data.
+
+---
 
 #### FREQ-28 - Reporting (Content Engagement between News Content and Occupation)
 
@@ -690,6 +698,8 @@ FREQ-30.3
 FREQ-30.4
 : The system SHALL generate a heatmap based on the aggregated data.
 
+---
+
 #### FREQ-31 - Reporting (Content Engagement between Certifications and Occupation)
 
 City managers SHALL be able to view engagement analytics of the certification information viewed by citizens based on the citizen's occupation.
@@ -744,18 +754,86 @@ FREQ-33.3
 FREQ-33.4
 : The system SHALL generate a heatmap based on the aggregated data.
 
+---
 
+#### FREQ-34 - Content Filter
 
+User MUST be able to filter content based on occupation
 
+##### System Requirements
 
+FREQ-34.1 
+ : User MUST be able to filter content hierarchially using major groups, minor groups, broad occupations, and detailed occupations as defined in the 2018 SOC standard.
 
+FREQ-34.2 
+ : User MUST be able to filter content by typing in an occupation name or title.
 
+FREQ-34.3 
+ : User MUST be able to filter content by typing in an occupation SOC code.
 
+#### FREQ-35 - Certification Filter
 
+User MUST be able to search for certifications using the filter described in FREQ-34
 
+#### FREQ-36 - Certification
 
+User MUST be able to view information on a specific certification
 
+##### System Requirements
 
+FREQ-36.1
+ : The system MUST provide a unique URL for each certification to allow for browser capabilities such as bookmarking and history to function.
+
+#### FREQ-37 - Learning Material Filter
+
+User MUST be able to search for online learning material using the filter described in FREQ-1
+
+#### FREQ-38 - Learning Material Information
+
+User MUST be able to view information on a specific piece of learning material
+
+##### System Requirements
+
+FREQ-38.1 
+ : The system MUST provide a unique URL for each piece of learning material to allow for browser capabilities such as bookmarking and history to function.
+
+#### FREQ-39 - News Filter
+
+User MUST be able to search for news using the filter described in FREQ-1
+
+#### FREQ-40 - Certification Loading
+
+Smart city managers MUST be able to create, update, and delete certifications from the system.
+
+##### System Requirements
+
+FREQ-40.1 
+ : Smart city managers SHOULD be able to attach files and videos to a certification
+
+FREQ-40.2 
+ : System SHOULD display the creation and update timestamp for each certification
+
+#### FREQ-41 - Learning Material Loading
+Smart city managers MUST be able to create, update, and delete online learning material from the system.
+
+##### System Requirements
+
+FREQ-41.1 
+ : Smart city managers SHOULD be able to attach files and videos to learning material
+
+FREQ-41.2 
+ : System SHOULD display the creation and update timestamp for each piece of learning material
+
+#### FREQ-42 News Data
+
+System MUST be able to aggregate news from various sources and associate it with its related occupation / SOC codes.
+
+##### System Requirements
+
+FREQ-42.1 
+ : System SHOULD display the date each news article was posted to its original source
+
+---
 
 ### Non-Functional Requirements
 
@@ -818,6 +896,10 @@ All personally identifiable information related to citizens MUST be encrypted at
 #### NREQ-15 - Clickstream Analytics
 
 The system MUST collect and ingest clickstream data for use in reports specified in FREQ-XXXX.
+
+#### NREQ-16 - SOC Occupation Description
+
+The system MUST provide functionality to load SOC occupation definitions and descriptions from a government dataset
 
 ## System Architecture
 
