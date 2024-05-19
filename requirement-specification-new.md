@@ -475,7 +475,11 @@ System MUST be able to aggregate news from various sources and associate it with
 #### System Requirements
 
 FREQ-14.1
-: System SHOULD display the date each news article was posted to its original source
+: System SHOULD display the title, date, source of news article of its original source.
+
+FREQ-14.2
+: The system SHOULD be able to assess keywords of SOC code job descriptions and news articles to assess similarly in text analysis with methods such as cosine similarity
+
 
 ---
 
