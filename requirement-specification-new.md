@@ -377,15 +377,12 @@ Smart city managers MUST be able to view historical unemployment data.
 #### System Requirements
 
 FREQ-9.1
-: System MUST be able to ingest unemployment data from the Bureau of Labor Statistics.
-
-FREQ-9.2
 : System MUST display aggregate unemployment data to smart city managers as a line chart.
 
-FREQ-9.3
+FREQ-9.2
 : System MUST display aggregate unemployment data to smart city managers as a table.
 
-FREQ-9.4
+FREQ-9.3
 : System MAY display specific occupation unemployment data in the associated SOC view (as described in FREQ-6) when available.
 
 ---
@@ -397,18 +394,15 @@ Users MUST be able to see employment trends for the occupation they are currentl
 #### System Requirements
 
 FREQ-10.1
-: The system MUST be able to ingest occupation data from the Bureau of Labor Statistics.
+: The system MUST apply time series analysis to historical employment data to forecast future trends.
 
 FREQ-10.2
-: The system MUST apply time series analysis to forecast future trends.
-
-FREQ-10.3
 : The system MUST display historical and forecasted employment trends for the occupation currently being viewed.
 
-FREQ-10.4
+FREQ-10.3
 : The system SHOULD display historical and forecasted employment trends for occupations related to the occupation currently being viewed (as described in FREQ-6.2, FREQ-6.5, FREQ-6.8, FREQ-6.11, and FREQ-6.14)
 
-FREQ-10.5
+FREQ-10.4
 : The system SHOULD clearly denote which trend data is historical and which is forecasted. This may be done using colors, symbols, or other visual techniques.
 
 ---
@@ -443,21 +437,18 @@ Users MUST be able to view certifications applicable to the occupation they are 
 #### System Requirements
 
 FREQ-12.1
-: The system MUST ingest data from careeronestop to obtain a list of certifications.
-
-FREQ-12.2
 : The system MUST display relevant information about each certification, such as a title and description.
 
-FREQ-12.3
+FREQ-12.2
 : Each certification MUST be clickable, allowing users to view more detailed information on a separate page.
 
-FREQ-12.4
+FREQ-12.3
 : This detailed certification page must contain the title, description, links to external resources, and any other relevant information obtained in the careeronestop dataset.
 
-FREQ-12.5
+FREQ-12.4
 : The system MUST provide a unique URL for each detailed certification page to allow for browser capabilities such as bookmarking and history to function.
 
-FREQ-12.6
+FREQ-12.5
 : The system SHOULD provide sorting and filtering capability for certifications.
 
 ---
@@ -1238,4 +1229,18 @@ Vendor Independence
 * [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG22/)
 * [MDN Web Docs - Responsive Design](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
 * [MDN Web Docs - Responsive Images](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+
+## Appendix B: Datasets
+
+| ID | Title                | Source                        | URL                                                                                         |
+|----|----------------------|-------------------------------|---------------------------------------------------------------------------------------------|
+| D1 | 2018 SOC Definitions | US Bureau of Labor Statistics | <https://www.bls.gov/soc/2018/#materials>                                                   |
+| D2 | Employment           | US Bureau of Labor Statistics | <https://www.bls.gov/emp/tables/emp-by-detailed-occupation.htm>                             |
+| D3 | Unemployment         | US Bureau of Labor Statistics | <https://www.bls.gov/cps/lfcharacteristics.htm#unemp>                                       |
+| D4 | Certifications       | careeronestop (US partner)    | <https://www.careeronestop.org/Developers/Data/certifications.aspx> (Requires US-based VPN) |
+| D5 | Account              | IdAM Provider                 | N/A                                                                                         |
+| D6 | Profile              | Internal                      | N/A                                                                                         |
+| D7 | Learning Material    | Internal                      | N/A                                                                                         |
+| D8 | Occupational Demand  | Internal                      | N/A                                                                                         |
+| D9 | News                 | Internal / Scraped            | N/A                                                                                         |
 
