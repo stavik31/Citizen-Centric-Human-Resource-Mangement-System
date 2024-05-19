@@ -96,6 +96,15 @@ In the context of a smart city, this system is an asset for optimizing human res
 
 The following are terminologies and their definitions used in the document.
 
+Account
+: A set of credentials used to access the system, with associated roles and permissions.
+
+Control
+: A form control. This may be an input, a button, a link, or any other interactable element that the user may utilize to complete some action.
+
+Profile
+: A collection of user information such as name or location, used for reporting and personalization.
+
 SOC Broad Occupation
 : Denoted by the fourth and fifth characters of a SOC code. Provides a more granular aggregation level than SOC Minor Groups, but does not yet refer to individual occupations.
 
