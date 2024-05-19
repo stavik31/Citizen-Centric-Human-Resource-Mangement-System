@@ -100,14 +100,14 @@ In the context of a smart city, this system is an asset for optimizing human res
 | U6     | View Occupation Information     | View general information about each occupation, such as a title, description, and illustrative examples                 | FREQ-6 - FREQ-7   |
 | U7     | Select Goal Job                 | Select an occupation as the preferred goal job                                                                          | FREQ-8            |
 | U8     | View Unemployment Data          | View historical unemployment data                                                                                       | FREQ-9            |
-| U9     | View Occupation Trend           | View historical data and estimated trend forecast for a given occupation                                                | FREQ-10           |
-| U10    | View Job Postings               | View job postings for a given occupation                                                                                | FREQ-11           |
-| U11    | View Certifications Information | View applicable certifications for a given occupation                                                                   | FREQ-12           |
-| U12    | View Learning Material          | View applicable online learning material for a given occupation                                                         | FREQ-13           |
-| U13    | Manage Learning Material        | Create, update, remove online learning material for a given occupation on the system                                    | FREQ-14           |
-| U14    | View Occupation Demands         | View the targeted change in employment for a given occupation                                                           | FREQ-16           |
-| U15    | View Occupation News            | View news from various sources associated with a given occupation                                                       | FREQ-15           |
-| U16    | Manage Occupation Demands       | Set demand targets for a given occupation                                                                               | FREQ-17           |
+| U9     | View Occupation Trend           | View historical data and estimated trend forecast for a given occupation                                                | FREQ-10, FREQ-6   |
+| U10    | View Job Postings               | View job postings for a given occupation                                                                                | FREQ-11, FREQ-6   |
+| U11    | View Certifications Information | View applicable certifications for a given occupation                                                                   | FREQ-12, FREQ-6   |
+| U12    | View Learning Material          | View applicable online learning material for a given occupation                                                         | FREQ-13, FREQ-6   |
+| U13    | Manage Learning Material        | Create, update, remove online learning material for a given occupation on the system                                    | FREQ-14, FREQ-6   |
+| U14    | View Occupation Demands         | View the targeted change in employment for a given occupation                                                           | FREQ-16, FREQ-6   |
+| U15    | View Occupation News            | View news from various sources associated with a given occupation                                                       | FREQ-15, FREQ-6   |
+| U16    | Manage Occupation Demands       | Set demand targets for a given occupation                                                                               | FREQ-17, FREQ-6   |
 | U17    | View Analytics Report           | View a generated report on aggregated data of citizens' information and engagement activity with content on the website | FREQ-18 - FREQ-32 |
 
 ## Glossary
