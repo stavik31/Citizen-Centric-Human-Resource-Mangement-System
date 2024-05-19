@@ -1129,7 +1129,7 @@ NREQ-14.2
 
 ### NREQ-15 - Clickstream Analytics
 
-The system MUST collect and ingest clickstream data for use in reports specified in FREQ-XXXX.
+The system MUST collect and ingest clickstream data for use in reports specified in FREQ-17 - FREQ-31.
 
 #### System Requirements
 
