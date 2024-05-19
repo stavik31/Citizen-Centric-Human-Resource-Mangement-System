@@ -11,7 +11,7 @@ nav_order: 2
 ### Version History
 
 | Version | Date       | Description      |
-| ------- | ---------- | ---------------- |
+|---------|------------|------------------|
 | 1.0     | 2024-05-20 | Initial revision |
 
 ### Document Conventions
@@ -118,9 +118,9 @@ System Administrator
 
 ## Functional Requirements
 
-### FREQ-1 - Create Account
+### FREQ-1 - Account Creation
 
-Citizens MUST be able to register for an account by initiating the signup process, providing necessary information, consenting to terms of use, and verifying their identity.
+Citizens MUST be able to register for an account by initiating the signup process, providing necessary information, and consenting to terms of use.
 
 #### System Requirements
 
@@ -128,734 +128,702 @@ FREQ-1.1
 : System MUST provide a control to initiate the signup process
 
 FREQ-1.2
-: System MUST collect the citizen's email, password, legal name, and their broad location
+: System MUST collect the citizen's email, password, legal name, and postal code
+
+FREQ-1.3
+: The system MUST enforce password strength requirements. This may be achieved by either enforcing character restrictions (a mix of uppercase letters, lowercase letters, numbers, and symbols) or by measuring complexity (using a tool such as zxcvbn).
+
+FREQ-1.4
+: Users MUST receive feedback on the strength of their password as they enter it
 
 FREQ-1.3
 : System MUST collect citizens consent to our terms of use
 
 ---
 
-### FREQ-2 - Administer Account
+### FREQ-2 - Account Administration
 
-This system MUST allow administrators to create user accounts and assign a role to them
+This system MUST allow System Administrators to create user accounts and assign a role to them.
 
 #### System Requirements
 
 FREQ-2.1
-: Admins MUST be able to create users to put in the system
+: System must provide an interface for System Administrators to create new user accounts.
 
 FREQ-2.2
-: Admins MUST be able to associate an account with an email, legal name
+: System Administrators MUST be able to associate an account with an email, legal name, and optionally a postal code.
 
 FREQ-2.3
-: Admins MUST be able associate an account with an OPTIONAL location
+: System Administrators MUST be able to assign security roles to the users, such as "citizen" or "smart city manager".
 
 FREQ-2.4
-: Admins MUST be able to assign security roles to the users
-
-FREQ-2.5
-: The system SHOULD email the user to a one-time password setup link
+: The system SHOULD email users created in this fashion a one-time password reset link. This link should function as described in FREQ-4.
 
 ---
 
-### FREQ-3 - View Occupations
+### FREQ-3 - Edit Profile
 
-User MUST be able to view information regarding different major/minor groups and broad/detailed occupations
+Users must be able to edit their profile to change important information about themselves, such as their legal name or location.
 
 #### System Requirements
 
 FREQ-3.1
-: Citizens MUST be shown broad occupations and detailed occupations from the major group and minor group recommended from their current job
+: The system MUST provide the capability for existing users to modify their legal name.
 
 FREQ-3.2
-: Citizens MUST select a major or minor group and then be shown its related broad and detailed occupation
+: The system MUST provide the capability for existing users to modify their postal code.
+
+FREQ-3.3
+: The system MUST provide the capability for existing users to change their password. This may utilize the functionality described in FREQ-4.
+
+FREQ-3.3
+: The system MAY provide the capability for existing users to change their email. This may require additional verification steps depending on the IdAM provider being used.
 
 ---
 
-### FREQ-4 - Select Job Goal
-
-User MUST be able to select a detailed occupation as their desired goal
-
-#### System Requirements
-
-FREQ-4.1
-: Citizens MUST be able to select a detailed occupations as a goal from a list.
-
-FREQ-4.2
-: Selected goal MUST be saved to the user profile.
-
----
-
-### FREQ-5 - Edit Citizen Profile
-
-Citizens MUST be able to edit their current profile to accommodate for changes in their desired goals.
-
-#### System Requirements
-
-FREQ-5.1
-: Citizens MUST be shown a list of major/minor groups of jobs and their descriptions and select one of them.
-
-FREQ-5.2
-: Citizens MUST be able to drill down and select a detailed occupation and be shown related occupations as a possible choice.
-
-FREQ-5.3
-: Selected detailed occupation SHOULD be saved to the user profile.
-
----
-
-### FREQ-6 - View Unemployment Data
-
-Smart city managers MUST be able to view unemployment data across all citizens
-
-#### System Requirements
-
-FREQ-6.1
-: System MUST be able to access SOC occupation records database from the Bureau of Labor Statistics to show unemployment data across all citizens
-
----
-
-### FREQ-7 - Major Group Unemployment
-
-Smart City managers SHOULD be able to view unemployment data by major group
-
-#### System Requirements
-
-FREQ-7.1
-: Smart city managers MUST be shown and be able to select a list of major groups along with the unemployment data of all citizens
-
-FREQ-7.2
-: Smart city managers MUST be able to select a major group to view their unemployment data of citizens
-
----
-
-### FREQ-8 - View Trend By SOC
-
-User MUST be able to see job trends proposed by the system
-
-#### System Requirements
-
-FREQ-8.1
-: System MUST be able to ingest occupation data from the Bureau of Labor Statistics
-
-FREQ-8.2
-: Using SOC and statistical methods, the system MUST be able to determine trends regarding employment
-
-FREQ-8.3
-: System MUST display trends
-
----
-
-### FREQ-9 - Delete Account
-
-Citizen MUST be able to delete their account any time they want
-
-#### System Requirements
-
-FREQ-9.1
-: Citizen MUST be logged in for their account to be deleted
-
-FREQ-9.2
-: If the citizen has no access to the account, the person shall contact the service via email or customer support and the person then provide information to verify their identity and then system MUST delete user profile
-
----
-
-### FREQ-10 - User Authentication
-
-Citizens MUST be able to register for a profile by initiating the signup process, providing necessary information, consenting to terms of use, and verifying their identity
-
-#### System Requirements
-
-FREQ-10.1
-: The system MUST require users to log in before accessing job listings by SOC
-
-FREQ-10.2
-: Users MUST be able to create an account if they don't have one already
-
-FREQ-10.3
-: Users MUST be prompted for their email, password, and legal name during account creation
-
-FREQ-10.4
-: Users MUST consent to the terms of use (e.g., MUST be older than 18)
-
-FREQ-10.5
-: Users MUST verify their identity during the sign-up process
-
-FREQ-10.6
-: Users SHOULD have the option to log in using email/password or through social media accounts
-
----
-
-### FREQ-11 - Search Functionality
-
-The system MUST enable users to efficiently search for job listings by SOC codes or keywords, with advanced filtering and autocomplete suggestions to enhance the search experience
-
-#### System Requirements
-
-FREQ-11.1
-: Users MUST be able to search for jobs by entering SOC codes or keywords related to job titles or descriptions
-
-FREQ-11.2  
-: The search functionality MUST support filtering options such as location, industry, salary range, etc
-
-FREQ-11.3  
-: The system MUST provide autocomplete suggestions as users type in the search bar to improve user experience
-
----
-
-### FREQ-12 - Job Listing Display
-
-The system MUST present job listings in a clear, organized manner, allowing users to easily access detailed job information by clicking on each listing
-
-#### System Requirements
-
-FREQ-12.1  
-: The system MUST display job listings in a clear and organized manner, showing relevant information such as job title, company name, location, and application deadline
-
-FREQ-12.2
-: Each job listing MUST be clickable, allowing users to view more details about the job
-
----
-
-### FREQ-13 - Detailed Job Information
-
-Citizens MUST be able to view comprehensive details about job listings and have the option to save or bookmark these listings for future reference
-
-#### System Requirements
-
-FREQ-13.1  
-: When users click on a job listing, the system MUST display detailed information about the job, including job description, required qualifications, responsibilities, benefits, etc
-
-FREQ-13.2  
-: Users MUST have the option to save or bookmark job listings for future reference
-
----
-
-### FREQ-14 - User Feedback and Ratings
-
-The system MUST facilitate user feedback and ratings on job listings, enabling users to provide and view aggregated reviews to assess job suitability
-
-#### System Requirements
-
-FREQ-14.1  
-: The system MUST allow users to provide feedback and ratings for job listings based on their experience or suitability
-
-FREQ-14.2  
-: Users MUST be able to view aggregated ratings and reviews left by other users for each job listing
-
----
-
-### FREQ-15 - Recover Password
+### FREQ-4 - Recover Password
 
 Citizens MUST be able to recover their accounts by using a "Forgot Password" link, receiving a password reset email, and creating a new, secure password within a limited time frame.
 
 #### System Requirements
 
-FREQ-15.1  
+FREQ-4.1
 : The system MUST provide a "Forgot Password" link on the login page for users who have forgotten their passwords
 
-FREQ-15.2  
+FREQ-4.2
 : When users click on the "Forgot Password" link, they MUST be directed to a password recovery page
 
-FREQ-15.3  
+FREQ-4.3
 : Users MUST be prompted to enter their email address or username associated with their account
 
-FREQ-15.4  
+FREQ-4.4
 : After entering their email address or username, the system MUST send a password reset link to the user's registered email address
 
-FREQ-15.5
-: The password reset link sent to the user's email MUST be unique and valid for a limited time (e.g., 2 hours)
+FREQ-4.5
+: The password reset link sent to the user's email MUST be unique and valid for 2 hours, after which it should cease functioning.
 
-FREQ-15.6  
+FREQ-4.6
 : Clicking on the password reset link MUST redirect the user to a page where they can create a new password for their account
 
-FREQ-15.7  
-: The system MUST enforce password strength requirements (e.g., minimum length, combination of uppercase and lowercase letters, numbers, and special characters) to enhance security
+FREQ-4.7
+: The system MUST enforce password strength requirements. This may be achieved by either enforcing character restrictions (a mix of uppercase letters, lowercase letters, numbers, and symbols) or by measuring complexity (using a tool such as zxcvbn).
 
-FREQ-15.8  
+FREQ-4.8
 : Users MUST receive feedback on the strength of their new password as they enter it
 
-FREQ-15.9
+FREQ-4.9
 : After successfully resetting their password, users MUST receive a confirmation message informing them that their password has been changed
 
-FREQ-15.10
+FREQ-4.10
 : Users MUST be redirected to the login page to log in with their new password
 
 ---
 
-### FREQ-19 - Reporting (Citizen Current Occupation)
+### FREQ-5 - Delete Account
+
+Citizen MUST be able to delete their account any time they want
+
+#### System Requirements
+
+FREQ-5.1
+: Citizen MUST be logged in for their account to be deleted
+
+FREQ-5.2
+: If the citizen has no access to the account, the person shall contact the service via email or customer support and the person then provide information to verify their identity and then system MUST delete user profile
+
+---
+
+### FREQ-6 - Occupation Views
+
+The system MUST present content to users in hierarchical views mirroring the structure described in the 2018 Standard Occupational Classification System (Appendix A).
+
+#### System Requirements
+
+FREQ-6.1
+: The system MUST provide a root view aggregating content for all occupations.
+
+FREQ-6.2
+: The root view MUST contain navigational links and informative content for each SOC major group. 
+
+FREQ-6.3
+: The root view MAY contain additional content depending on the role of the currently signed-in user.
+
+FREQ-6.4
+: The system MUST provide a SOC major group view aggregating content for all occupations in that major group.
+
+FREQ-6.5
+: The SOC major group view MUST contain navigational links and informative content for each SOC minor group.
+
+FREQ-6.6
+: The SOC major group view MAY contain additional content depending on the role of the currently signed-in user.
+
+FREQ-6.7
+: The system MUST provide a SOC minor group view aggregating content for all occupations in that minor group.
+
+FREQ-6.8
+: The SOC minor group view MUST contain navigational links and informative content for each SOC broad occupation.
+
+FREQ-6.9
+: The SOC minor group view MAY contain additional content depending on the role of the currently signed-in user.
+
+FREQ-6.10
+: The system MUST provide a SOC broad occupation view aggregating content for all occupations in that broad occupation.
+
+FREQ-6.11
+: The SOC broad occupation view MUST contain navigational links and informative content for each SOC detailed occupation.
+
+FREQ-6.12
+: The SOC broad occupation view MAY contain additional content depending on the role of the currently signed-in user.
+
+FREQ-6.13
+: The system MUST provide a SOC detailed occupation view displaying content for a specific detailed occupation.
+
+FREQ-6.14
+: The SOC detailed occupation view SHOULD contain navigational links and informative content for other detailed occupations in the same minor group.
+
+FREQ-6.15
+: Citizens that have selected a career goal as defined in FREQ-4 SHOULD be automatically navigated to the SOC detailed occupation view for that occupation upon signing in to the system.
+
+FREQ-6.16
+: Users SHOULD be able to navigate to a specific occupation (at any level) by typing the occupation name or title into a search control.
+
+FREQ-6.17
+: Users SHOULD be able to navigate to a specific occupation (at any level) by typing the SOC code into a search control.
+
+FREQ-6.18
+: Each SOC view should have a dedicated URL to allow standard browser functionality, such as bookmarking and history, to function as expected.
+
+---
+
+### FREQ-7 - Select Career Goal
+
+Citizens MUST be able to select a detailed occupation as their career goal.
+
+#### System Requirements
+
+FREQ-7.1
+: The SOC detailed occupation view should present a control that, when interacted with, sets the citizen's career goal to the current detailed occupation.
+
+FREQ-7.2
+: Selected career goal MUST be saved to the citizen's profile.
+
+---
+
+### FREQ-8 - Unemployment Data
+
+Smart city managers MUST be able to view historical unemployment data.
+
+#### System Requirements
+
+FREQ-8.1
+: System MUST be able to ingest unemployment data from the Bureau of Labor Statistics.
+
+FREQ-8.2
+: System MUST display aggregate unemployment data to smart city managers as a line chart.
+
+FREQ-8.3
+: System MUST display aggregate unemployment data to smart city managers as a table.
+
+FREQ-8.4
+: System MAY display specific occupation unemployment data in the associated SOC view (as described in FREQ-6) when available.
+
+---
+
+### FREQ-9 - Employment Trends
+
+Users MUST be able to see employment trends for the occupation they are currently viewing.
+
+#### System Requirements
+
+FREQ-9.1
+: The system MUST be able to ingest occupation data from the Bureau of Labor Statistics.
+
+FREQ-9.2
+: The system MUST apply time series analysis to forecast future trends.
+
+FREQ-9.3
+: The system MUST display historical and forecasted employment trends for the occupation currently being viewed.
+
+FREQ-9.4
+: The system SHOULD display historical and forecasted employment trends for occupations related to the occupation currently being viewed (as described in FREQ-6.2, FREQ-6.5, FREQ-6.8, FREQ-6.11, and FREQ-6.14)
+
+FREQ-9.5
+: The system SHOULD clearly denote which trend data is historical and which is forecasted. This may be done using colors, symbols, or other visual techniques.
+
+---
+
+### FREQ-10 - Job Postings
+
+Users MUST be able to view job postings for the occupation they are currently viewing.
+
+#### System Requirements
+
+FREQ-10.1
+: The system MUST integrate with an external job posting API to retrieve this data.
+
+FREQ-10.2  
+: The system MUST display job listings in a clear and organized manner, showing relevant information such as job title, company name, salary range, location, and application deadline
+
+FREQ-10.3
+: Each job listing MUST be clickable, allowing users to view more details about the job on an external web page.
+
+FREQ-10.4
+: If available in the dataset, the system MAY additionally display user reviews and ratings for each job posting.
+
+FREQ-10.5
+: The system SHOULD provide sorting and filtering capability for job posting.
+
+---
+
+### FREQ-11 - Certifications
+
+Users MUST be able to view certifications applicable to the occupation they are currently viewing.
+
+#### System Requirements
+
+FREQ-11.1
+: The system MUST ingest data from careeronestop to obtain a list of certifications.
+
+FREQ-11.2
+: The system MUST display relevant information about each certification, such as a title and description.
+
+FREQ-11.3
+: Each certification MUST be clickable, allowing users to view more detailed information on a separate page.
+
+FREQ-11.4
+: This detailed certification page must contain the title, description, links to external resources, and any other relevant information obtained in the careeronestop dataset.
+
+FREQ-11.5
+: The system MUST provide a unique URL for each detailed certification page to allow for browser capabilities such as bookmarking and history to function.
+
+FREQ-11.6
+: The system SHOULD provide sorting and filtering capability for certifications.
+
+---
+
+### FREQ-12 - Online Learning Material
+
+Users MUST be able to view online learning material applicable to the occupation they are currently viewing.
+
+#### System Requirements
+
+FREQ-12.1
+: The system MUST display relevant information about each material, such as a title and description.
+
+FREQ-12.2
+: Each material MUST be clickable, allowing users to view more detailed information on a separate page.
+
+FREQ-12.3
+: This detailed learning material page MUST contain the title, description, links to external resources, and any other relevant information about the learning material.
+
+FREQ-12.4
+: The system MUST provide a unique URL for each detailed learning material page to allow for browser capabilities such as bookmarking and history to function.
+
+FREQ-12.5
+: The system SHOULD provide sorting and filtering capability for learning material.
+
+---
+
+### FREQ-13 - Online Learning Material Management
+
+Smart city managers MUST be able to create, update, and delete online learning material from the system.
+
+#### System Requirements
+
+FREQ-13.1
+: Smart city managers SHOULD be able to attach files and videos to learning material
+
+---
+
+### FREQ-14 News
+
+System MUST be able to aggregate news from various sources and associate it with its related occupation / SOC codes.
+
+#### System Requirements
+
+FREQ-14.1
+: System SHOULD display the date each news article was posted to its original source
+
+---
+
+### FREQ-15 - Reporting (Citizen Current Occupation)
 
 City managers SHALL be able to view a report on aggregated data of citizens' current occupation.
 
 #### System Requirements
 
-FREQ-19.1
+FREQ-15.1
 : The system SHALL retrieve current occupation data of citizens from the existing database.
 
-FREQ-19.2
+FREQ-15.2
 : The system SHALL aggregate occupation data of citizens.
 
-FREQ-19.3
+FREQ-15.3
 : The system SHALL generate reports which include statistics of the aggregated data such as total number of citizens per occupation.
 
-FREQ-19.4
+FREQ-15.4
 : The system SHALL generate a bar chart and/or pie chart based on the aggregated occupation data.
 
-FREQ-19.5
+FREQ-15.5
 : The system SHALL provide city managers with access to these reports through a dedicated dashboard.
 
-FREQ-19.6
+FREQ-15.6
 : The system SHALL ensure data privacy by anonymizing individual citizens' data in the aggregated reports.
 
-FREQ-19.7
+FREQ-15.7
 : The system SHALL allow city managers to export the aggregated data to an Excel sheet format.
 
-FREQ-19.8
+FREQ-15.8
 : The system SHALL provide real-time updates to the aggregated data as new information is added or updated.
 
 ---
 
-### FREQ-20 - Reporting (Citizen Location)
+### FREQ-16 - Reporting (Citizen Location)
 
 City managers SHALL be able to view a report on aggregated data of citizens' general location.
 
 #### System Requirements
 
-FREQ-20.1
+FREQ-16.1
 : The system SHALL retrieve location data of citizens from the existing database.
 
-FREQ-20.2
+FREQ-16.2
 : The system SHALL aggregate location data of citizens.
 
-FREQ-20.3
+FREQ-16.3
 : The system SHALL generate reports which include statistics of the aggregated data such as total number of citizens in a given location.
 
-FREQ-20.4
+FREQ-16.4
 : The system SHALL generate a map chart based on the aggregated location data.
 
-FREQ-20.5
+FREQ-16.5
 : The system SHALL provide city managers with access to these reports through a dedicated dashboard.
 
-FREQ-20.6
+FREQ-16.6
 : The system SHALL ensure data privacy by anonymizing individual citizens' data in the aggregated reports.
 
-FREQ-20.7
+FREQ-16.7
 : The system SHALL allow city managers to export the aggregated data to an Excel sheet format.
 
-FREQ-20.8
+FREQ-16.8
 : The system SHALL provide real-time updates to the aggregated data as new information is added or updated.
 
 ---
 
-### FREQ-21 - Reporting (Citizen Job Goals)
+### FREQ-17 - Reporting (Citizen Job Goals)
 
 City managers SHALL be able to view a report on aggregated data of citizens' selected job goals.
 
 #### System Requirements
 
-FREQ-21.1
+FREQ-17.1
 : The system SHALL retrieve selected job goals of citizens from the existing database.
 
-FREQ-21.2
+FREQ-17.2
 : The system SHALL aggregate job goals data of citizens.
 
-FREQ-21.3
+FREQ-17.3
 : The system SHALL generate reports which include statistics of the aggregated data such as total number of citizens per job goal.
 
-FREQ-21.4
+FREQ-17.4
 : The system SHALL generate a bar chart and/or pie chart based on the aggregated job goal data.
 
-FREQ-21.5
+FREQ-17.5
 : The system SHALL provide city managers with access to these reports through a dedicated dashboard.
 
-FREQ-21.6
+FREQ-17.6
 : The system SHALL ensure data privacy by anonymizing individual citizens' data in the aggregated reports.
 
-FREQ-21.7
+FREQ-17.7
 : The system SHALL include a feature for city managers to export the aggregated data to an Excel sheet format.
 
-FREQ-21.8
+FREQ-17.8
 : The system SHALL provide real-time updates to the aggregated data as new information is added or updated.
 
 ---
 
-### FREQ-22 - Reporting (Citizen Current Occupation based on Location)
+### FREQ-18 - Reporting (Citizen Current Occupation based on Location)
 
 City managers SHALL be able to view a report on aggregated data of citizens' selected current occupation based on their locations.
 
 #### System Requirements
 
-FREQ-22.1
+FREQ-18.1
 : The system SHALL retrieve both location and selected occupation data of citizens from the existing database.
 
-FREQ-22.2
+FREQ-18.2
 : The system SHALL aggregate occupation and location data of citizens.
 
-FREQ-22.3
+FREQ-18.3
 : The system SHALL generate reports which include statistics of the aggregated data such as the quantitative and qualitative data of occupation for a given location and vice versa.
 
-FREQ-22.4
+FREQ-18.4
 : The system SHALL generate a heatmap based on the aggregated occupation data by location.
 
-FREQ-22.5
+FREQ-18.5
 : The system SHALL provide city managers with access to these reports through a dedicated dashboard.
 
-FREQ-22.6
+FREQ-18.6
 : The system SHALL allow city managers to filter and sort the aggregated data by different occupation and location categories.
 
-FREQ-22.7
+FREQ-18.7
 : The system SHALL ensure data privacy by anonymizing individual citizens' data in the aggregated reports.
 
-FREQ-22.8
+FREQ-18.8
 : The system SHALL allow city managers to export the aggregated data to an Excel sheet format.
 
-FREQ-22.9
+FREQ-18.9
 : The system SHALL provide real-time updates to the aggregated data as new information is added or updated.
 
 ---
 
-### FREQ-23 - Reporting (Citizen Goal Job based on Location)
+### FREQ-19 - Reporting (Citizen Goal Job based on Location)
 
 City managers SHALL be able to view a report on aggregated data of citizens' selected job goals based on their locations.
 
 #### System Requirements
 
-FREQ-23.1
+FREQ-19.1
 : The system SHALL retrieve both location and selected goal job data of citizens from the existing database.
 
-FREQ-23.2
+FREQ-19.2
 : The system SHALL aggregate job goals and location data of citizens.
 
-FREQ-23.3
+FREQ-19.3
 : The system SHALL generate reports which include statistics of the aggregated data such as the quantitative and qualitative data of job goals for a given location and vice versa.
 
-FREQ-23.4
+FREQ-19.4
 : The system SHALL generate a heatmap based on the aggregated job goals data by location.
 
-FREQ-23.5
+FREQ-19.5
 : The system SHALL provide city managers with access to these reports through a dedicated dashboard.
 
-FREQ-23.6
+FREQ-19.6
 : The system SHALL allow city managers to filter and sort the aggregated data by different job goals and location categories.
 
-FREQ-23.7
+FREQ-19.7
 : The system SHALL ensure data privacy by anonymizing individual citizens' data in the aggregated reports.
 
-FREQ-23.8
+FREQ-19.8
 : The system SHALL allow city managers to export the aggregated data to an Excel sheet format.
 
-FREQ-23.9
+FREQ-19.9
 : The system SHALL provide real-time updates to the aggregated data as new information is added or updated.
 
 ---
 
-### FREQ-24 - Reporting (Citizen Job Goal based on Current Occupation)
+### FREQ-20 - Reporting (Citizen Job Goal based on Current Occupation)
 
 City managers SHOULD be able to view a report on aggregated data of selected job goals of citizens based on their current occupation.
 
 #### System Requirements
 
-FREQ-24.1
+FREQ-20.1
 : The system SHALL retrieve both current occupation and selected goal job data of citizens from the existing database.
 
-FREQ-24.2
+FREQ-20.2
 : The system SHALL aggregate job goals and current occupation data of citizens.
 
-FREQ-24.3
+FREQ-20.3
 : The system SHALL generate reports which include statistics of the aggregated data such as the quantitative and qualitative data of job goals for a given occupation and vice versa.
 
-FREQ-24.4
+FREQ-20.4
 : The system SHALL generate a heatmap based on the aggregated job goals data by occupation.
 
-FREQ-24.5
+FREQ-20.5
 : The system SHALL provide city managers with access to these reports through a dedicated dashboard.
 
-FREQ-24.6
+FREQ-20.6
 : The system SHALL allow city managers to filter and sort the aggregated data by different job goals and current occupation categories.
 
-FREQ-24.7
+FREQ-20.7
 : The system SHALL ensure data privacy by anonymizing individual citizens' data in the aggregated reports.
 
-FREQ-24.8
+FREQ-20.8
 : The system SHALL allow city managers to export the aggregated data to an Excel sheet format.
 
-FREQ-24.9
+FREQ-20.9
 : The system SHALL provide real-time updates to the aggregated data as new information is added or updated.
 
 ---
 
-### FREQ-25 - Reporting (Content Engagement between Job Listings and Occupation)
+### FREQ-21 - Reporting (Content Engagement between Job Listings and Occupation)
 
 City managers SHALL be able to view engagement analytics of the job listing information viewed by citizens based on the citizen's occupation.
 
 #### System Requirements
 
-FREQ-25.1
+FREQ-21.1
 : The system SHALL capture and log clickstream data that includes the job listing viewed whenever a citizen views job listing information.
+
+FREQ-21.2
+: The system SHALL aggregate the collected data.
+
+FREQ-21.3
+: The system SHALL generate reports which include analytics on the type of job listing viewed by occupation.
+
+FREQ-21.4
+: The system SHALL generate a heatmap based on the aggregated data.
+
+---
+
+### FREQ-22 - Reporting (Content Engagement between Job Listings and Citizen Location)
+
+City managers SHALL be able to view engagement analytics of the job listing information viewed by citizens based on the citizen's general location.
+
+#### System Requirements
+
+FREQ-22.1
+: The system SHALL capture and log clickstream data that includes the job listing viewed and the citizen's location whenever a citizen views job listing information.
+
+FREQ-22.2
+: The system SHALL aggregate the collected data.
+
+FREQ-22.3
+: The system SHALL generate reports which include analytics on the type of job listing viewed by citizen location.
+
+FREQ-22.4
+: The system SHALL generate a heatmap based on the aggregated data.
+
+---
+
+### FREQ-23 - Reporting (Content Engagement between Job Listings and Selected Goal Job)
+
+City managers SHALL be able to view engagement analytics of the job listing information viewed by citizens based on the citizen's selected goal job.
+
+#### System Requirements
+
+FREQ-23.1
+: The system SHALL capture and log clickstream data that includes the job listing viewed and the citizen's selected goal job whenever a citizen views job listing information.
+
+FREQ-23.2
+: The system SHALL aggregate the collected data.
+
+FREQ-23.3
+: The system SHALL generate reports which include analytics on the type of job listing viewed by selected goal job.
+
+FREQ-23.4
+: The system SHALL generate a heatmap based on the aggregated data.
+
+---
+
+### FREQ-24 - Reporting (Content Engagement between News Content and Occupation)
+
+City managers SHALL be able to view engagement analytics of the news content viewed by citizens based on the citizen's occupation.
+
+#### System Requirements
+
+FREQ-24.1
+: The system SHALL capture and log clickstream data that includes the news content viewed and the citizen's occupation whenever a citizen views news content.
+
+FREQ-24.2
+: The system SHALL aggregate the collected data.
+
+FREQ-24.3
+: The system SHALL generate reports which include analytics on the type of news content viewed by occupation.
+
+FREQ-24.4
+: The system SHALL generate a heatmap based on the aggregated data.
+
+---
+
+### FREQ-25 - Reporting (Content Engagement between News Content and Citizen Location)
+
+City managers SHALL be able to view engagement analytics of the news content viewed by citizens based on the citizen's general location.
+
+#### System Requirements
+
+FREQ-25.1
+: The system SHALL capture and log clickstream data that includes the news content viewed and the citizen's location whenever a citizen views news content.
 
 FREQ-25.2
 : The system SHALL aggregate the collected data.
 
 FREQ-25.3
-: The system SHALL generate reports which include analytics on the type of job listing viewed by occupation.
+: The system SHALL generate reports which include analytics on the type of news content viewed by citizen location.
 
 FREQ-25.4
 : The system SHALL generate a heatmap based on the aggregated data.
 
 ---
 
-### FREQ-26 - Reporting (Content Engagement between Job Listings and Citizen Location)
+### FREQ-26 - Reporting (Content Engagement between News Content and Selected Goal Job)
 
-City managers SHALL be able to view engagement analytics of the job listing information viewed by citizens based on the citizen's general location.
+City managers SHALL be able to view engagement analytics of the news content viewed by citizens based on the citizen's selected goal job.
 
 #### System Requirements
 
 FREQ-26.1
-: The system SHALL capture and log clickstream data that includes the job listing viewed and the citizen's location whenever a citizen views job listing information.
+: The system SHALL capture and log clickstream data that includes the news content viewed and the citizen's selected goal job whenever a citizen views news content.
 
 FREQ-26.2
 : The system SHALL aggregate the collected data.
 
 FREQ-26.3
-: The system SHALL generate reports which include analytics on the type of job listing viewed by citizen location.
+: The system SHALL generate reports which include analytics on the type of news content viewed by selected goal job.
 
 FREQ-26.4
 : The system SHALL generate a heatmap based on the aggregated data.
 
 ---
 
-### FREQ-27 - Reporting (Content Engagement between Job Listings and Selected Goal Job)
+### FREQ-27 - Reporting (Content Engagement between Certifications and Occupation)
 
-City managers SHALL be able to view engagement analytics of the job listing information viewed by citizens based on the citizen's selected goal job.
+City managers SHALL be able to view engagement analytics of the certification information viewed by citizens based on the citizen's occupation.
 
 #### System Requirements
 
 FREQ-27.1
-: The system SHALL capture and log clickstream data that includes the job listing viewed and the citizen's selected goal job whenever a citizen views job listing information.
+: The system SHALL capture and log clickstream data that includes the certification information viewed and the citizen's occupation whenever a citizen views certification information.
 
 FREQ-27.2
 : The system SHALL aggregate the collected data.
 
 FREQ-27.3
-: The system SHALL generate reports which include analytics on the type of job listing viewed by selected goal job.
+: The system SHALL generate reports which include analytics on the type of certification information viewed by occupation.
 
 FREQ-27.4
 : The system SHALL generate a heatmap based on the aggregated data.
 
 ---
 
-### FREQ-28 - Reporting (Content Engagement between News Content and Occupation)
+### FREQ-28 - Reporting (Content Engagement between Certifications and Citizen Location)
 
-City managers SHALL be able to view engagement analytics of the news content viewed by citizens based on the citizen's occupation.
+City managers SHALL be able to view engagement analytics of the certification information viewed by citizens based on the citizen's general location.
 
 #### System Requirements
 
 FREQ-28.1
-: The system SHALL capture and log clickstream data that includes the news content viewed and the citizen's occupation whenever a citizen views news content.
+: The system SHALL capture and log clickstream data that includes the certification information viewed and the citizen's location whenever a citizen views certification information.
 
 FREQ-28.2
 : The system SHALL aggregate the collected data.
 
 FREQ-28.3
-: The system SHALL generate reports which include analytics on the type of news content viewed by occupation.
+: The system SHALL generate reports which include analytics on the type of certification information viewed by citizen location.
 
 FREQ-28.4
 : The system SHALL generate a heatmap based on the aggregated data.
 
 ---
 
-### FREQ-29 - Reporting (Content Engagement between News Content and Citizen Location)
-
-City managers SHALL be able to view engagement analytics of the news content viewed by citizens based on the citizen's general location.
-
-#### System Requirements
-
-FREQ-29.1
-: The system SHALL capture and log clickstream data that includes the news content viewed and the citizen's location whenever a citizen views news content.
-
-FREQ-29.2
-: The system SHALL aggregate the collected data.
-
-FREQ-29.3
-: The system SHALL generate reports which include analytics on the type of news content viewed by citizen location.
-
-FREQ-29.4
-: The system SHALL generate a heatmap based on the aggregated data.
-
----
-
-### FREQ-30 - Reporting (Content Engagement between News Content and Selected Goal Job)
-
-City managers SHALL be able to view engagement analytics of the news content viewed by citizens based on the citizen's selected goal job.
-
-#### System Requirements
-
-FREQ-30.1
-: The system SHALL capture and log clickstream data that includes the news content viewed and the citizen's selected goal job whenever a citizen views news content.
-
-FREQ-30.2
-: The system SHALL aggregate the collected data.
-
-FREQ-30.3
-: The system SHALL generate reports which include analytics on the type of news content viewed by selected goal job.
-
-FREQ-30.4
-: The system SHALL generate a heatmap based on the aggregated data.
-
----
-
-### FREQ-31 - Reporting (Content Engagement between Certifications and Occupation)
-
-City managers SHALL be able to view engagement analytics of the certification information viewed by citizens based on the citizen's occupation.
-
-#### System Requirements
-
-FREQ-31.1
-: The system SHALL capture and log clickstream data that includes the certification information viewed and the citizen's occupation whenever a citizen views certification information.
-
-FREQ-31.2
-: The system SHALL aggregate the collected data.
-
-FREQ-31.3
-: The system SHALL generate reports which include analytics on the type of certification information viewed by occupation.
-
-FREQ-31.4
-: The system SHALL generate a heatmap based on the aggregated data.
-
----
-
-### FREQ-32 - Reporting (Content Engagement between Certifications and Citizen Location)
-
-City managers SHALL be able to view engagement analytics of the certification information viewed by citizens based on the citizen's general location.
-
-#### System Requirements
-
-FREQ-32.1
-: The system SHALL capture and log clickstream data that includes the certification information viewed and the citizen's location whenever a citizen views certification information.
-
-FREQ-32.2
-: The system SHALL aggregate the collected data.
-
-FREQ-32.3
-: The system SHALL generate reports which include analytics on the type of certification information viewed by citizen location.
-
-FREQ-32.4
-: The system SHALL generate a heatmap based on the aggregated data.
-
----
-
-### FREQ-33 - Reporting (Content Engagement between Certifications and Selected Goal Job)
+### FREQ-29 - Reporting (Content Engagement between Certifications and Selected Goal Job)
 
 City managers SHALL be able to view engagement analytics of the certification information viewed by citizens based on the citizen's selected goal job.
 
 #### System Requirements
 
-FREQ-33.1
+FREQ-29.1
 : The system SHALL capture and log clickstream data that includes the certification information viewed and the citizen's selected goal job whenever a citizen views certification information.
 
-FREQ-33.2
+FREQ-29.2
 : The system SHALL aggregate the collected data.
 
-FREQ-33.3
+FREQ-29.3
 : The system SHALL generate reports which include analytics on the type of certification information viewed by selected goal job.
 
-FREQ-33.4
+FREQ-29.4
 : The system SHALL generate a heatmap based on the aggregated data.
-
----
-
-### FREQ-34 - Content Filter
-
-User MUST be able to filter content based on occupation
-
-#### System Requirements
-
-FREQ-34.1 
-: User MUST be able to filter content hierarchially using major groups, minor groups, broad occupations, and detailed occupations as defined in the 2018 SOC standard.
-
-FREQ-34.2 
-: User MUST be able to filter content by typing in an occupation name or title.
-
-FREQ-34.3 
-: User MUST be able to filter content by typing in an occupation SOC code.
-
----
-
-### FREQ-35 - Certification Filter
-
-User MUST be able to search for certifications using the filter described in FREQ-34
-
----
-
-### FREQ-36 - Certification
-
-User MUST be able to view information on a specific certification
-
-#### System Requirements
-
-FREQ-36.1
-: The system MUST provide a unique URL for each certification to allow for browser capabilities such as bookmarking and history to function.
-
----
-
-### FREQ-37 - Learning Material Filter
-
-User MUST be able to search for online learning material using the filter described in FREQ-1
-
----
-
-### FREQ-38 - Learning Material Information
-
-User MUST be able to view information on a specific piece of learning material
-
-#### System Requirements
-
-FREQ-38.1 
-: The system MUST provide a unique URL for each piece of learning material to allow for browser capabilities such as bookmarking and history to function.
-
----
-
-### FREQ-39 - News Filter
-
-User MUST be able to search for news using the filter described in FREQ-1
-
----
-
-### FREQ-40 - Certification Loading
-
-Smart city managers MUST be able to create, update, and delete certifications from the system.
-
-#### System Requirements
-
-FREQ-40.1 
- : Smart city managers SHOULD be able to attach files and videos to a certification
-
-FREQ-40.2 
- : System SHOULD display the creation and update timestamp for each certification
-
----
-
-### FREQ-41 - Learning Material Loading
-
-Smart city managers MUST be able to create, update, and delete online learning material from the system.
-
-#### System Requirements
-
-FREQ-41.1 
- : Smart city managers SHOULD be able to attach files and videos to learning material
-
-FREQ-41.2 
- : System SHOULD display the creation and update timestamp for each piece of learning material
-
----
-
-### FREQ-42 News Data
-
-System MUST be able to aggregate news from various sources and associate it with its related occupation / SOC codes.
-
-#### System Requirements
-
-FREQ-42.1 
- : System SHOULD display the date each news article was posted to its original source
 
 ---
 
