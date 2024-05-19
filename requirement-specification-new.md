@@ -128,7 +128,7 @@ FREQ-1.1
 : System MUST provide a control to initiate the signup process
 
 FREQ-1.2
-: System MUST collect the citizen's email, password, legal name, and postal code
+: System MUST collect the citizen's email, password, legal name, current occupation, and postal code
 
 FREQ-1.3
 : The system MUST enforce password strength requirements. This may be achieved by either enforcing character restrictions (a mix of uppercase letters, lowercase letters, numbers, and symbols) or by measuring complexity (using a tool such as zxcvbn).
@@ -163,7 +163,7 @@ FREQ-2.4
 
 ### FREQ-3 - Edit Profile
 
-Users must be able to edit their profile to change important information about themselves, such as their legal name or location.
+Users must be able to edit their profile to change important information about themselves, such as their legal name, current occupation, or location.
 
 #### System Requirements
 
@@ -171,12 +171,15 @@ FREQ-3.1
 : The system MUST provide the capability for existing users to modify their legal name.
 
 FREQ-3.2
+: The system MUST provide the capability for existing users to modify their current occupation.
+
+FREQ-3.3
 : The system MUST provide the capability for existing users to modify their postal code.
 
-FREQ-3.3
+FREQ-3.4
 : The system MUST provide the capability for existing users to change their password. This may utilize the functionality described in FREQ-4.
 
-FREQ-3.3
+FREQ-3.5
 : The system MAY provide the capability for existing users to change their email. This may require additional verification steps depending on the IdAM provider being used.
 
 ---
