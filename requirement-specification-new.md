@@ -96,14 +96,23 @@ In the context of a smart city, this system is an asset for optimizing human res
 
 The following are terminologies and their definitions used in the document.
 
-City Manager
-: The official appointed administrative manager of a city government responsible for administrative operations of the city municipality.
+SOC Broad Occupation
+: Denoted by the fourth and fifth characters of a SOC code. Provides a more granular aggregation level than SOC Minor Groups, but does not yet refer to individual occupations.
 
-SOC Codes
-: Standard Occupational Classification (SOC) codes is a federal statistical standard classification used by federal agencies to classify workers into occupational categories for the purpose of collecting, calculating, or disseminating data. 
+SOC Code(s)
+: Standard Occupational Classification (SOC) codes are a standardized system used to hierarchically classify occupations. These code consist of a major group identifier (`MM`), minor group identifier (`m`), broad occupation identifier (`bb`), and detailed occupation identifier (`d`) and are formatted as `MM-mbbd` (e.g., `29-1020` for the broad occupution of dentists). For more information, refer to the 2018 Standard Occupational Classification System (SOC) specification in Appendix A.
+
+SOC Detailed Occupation
+: Denoted by the sixth character of a SOC code. This refers to a specific occupation. Note that the SOC standard does not capture job titles but seeks only to classify the work done, so in practice more granular classifications may be possible but are out of scope for this standard and our system. 
+
+SOC Major Group
+: Denoted by the first two character of a SOC code. The highest level of aggregation, composed of roughly 25 categories encompassing all jobs.
+
+SOC Minor Group
+: Denoted by the third character of a SOC code. Provides a more granular aggregation level than SOC Major Groups, but does not yet refer to individual occupations.
 
 User
-: In this document, when 'User' is mentioned, it encompasses both 'Citizen' and 'Smart City Manager' defined in User Classes and Characteristics.
+: In this document, when 'User' is mentioned, it encompasses both 'Citizen' and 'Smart City Manager' defined in User Classes and Characteristics. If a requirement only applies to one class of user, that class will be mentioned specifically.
 
 ### User Classes and Characteristics
 
@@ -769,7 +778,7 @@ FREQ-25.4
 
 ### FREQ-26 - Reporting (Content Engagement between News Content and Occupation)
 
-City managers SHALL be able to view engagement analytics of the news content viewed by citizens based on the citizen's occupation.
+City managers MAY be able to view engagement analytics of the news content viewed by citizens based on the citizen's occupation.
 
 #### System Requirements
 
@@ -789,7 +798,7 @@ FREQ-26.4
 
 ### FREQ-27 - Reporting (Content Engagement between News Content and Citizen Location)
 
-City managers SHALL be able to view engagement analytics of the news content viewed by citizens based on the citizen's general location.
+City managers MAY be able to view engagement analytics of the news content viewed by citizens based on the citizen's general location.
 
 #### System Requirements
 
@@ -809,7 +818,7 @@ FREQ-27.4
 
 ### FREQ-28 - Reporting (Content Engagement between News Content and Selected Goal Job)
 
-City managers SHALL be able to view engagement analytics of the news content viewed by citizens based on the citizen's selected goal job.
+City managers MAY be able to view engagement analytics of the news content viewed by citizens based on the citizen's selected goal job.
 
 #### System Requirements
 
@@ -1033,10 +1042,10 @@ The system MUST enforce Role Based Access Control (RBAC) to limit interactions w
 #### System Requirements
 
 NREQ-11.1
-: The system MUST define a role for citizens and limit their access to only their own profile and public educational content.
+: The system MUST define a role for citizens and limit their access to only functions designated for "user" or "citizen" access.
 
 NREQ-11.2
-: The system MUST define a role for smart city managers and limit their access to only citizen aggregate data reports and demand management tooling.
+: The system MUST define a role for smart city managers and limit their access to only functions designated for "user" or "smart city manager" access.
 
 ---
 
