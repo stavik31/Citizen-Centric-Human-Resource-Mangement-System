@@ -35,22 +35,22 @@ NREQ-0.0 Example System Requirement
 This software requirement specification is intended for various stakeholders involved in the development, deployment, and use of the system. Each section of the document contains information pertinent to different groups, as outlined below:
 
 Developers
-: System Features, External Interface Requirements, Functional Requirements, Non-Functional Requirements, System Evolution.
+: System Features, Functional Requirements, Non-Functional Requirements, System Design Architecture, System Evolution.
 
 Project Managers
-: Introduction, Overall Description, System Features, System Evolution.
+: Introduction, Overall Product Description, System Features, System Evolution.
 
 Marketing Staff
-: Introduction, Overall Description, Functional Requirements.
+: Introduction, Overall Product Description, Functional Requirements.
 
 End Users 
-: Introduction, System Features, Functional Requirements.
+: Introduction, Overall Product Description, System Features, Functional Requirements.
 
 Test Engineers
-: System Features, External Interface Requirements, Functional Requirements, Non-Functional Requirements.
+: System Features, Functional Requirements, Non-Functional Requirements.
  
 Documentation Writers
-: Overall Description, System Features, External Interface Requirements.
+: Introduction, Overall Product Description, System Features.
  
 ## Table of Contents
 {: .no_toc }
@@ -478,7 +478,7 @@ FREQ-14.1
 : System SHOULD display the title, date, source of news article of its original source.
 
 FREQ-14.2
-: The system SHOULD be able to assess keywords of SOC code job descriptions and news articles to assess similarly in text analysis with methods such as cosine similarity
+: The system SHOULD be able to assess keywords of SOC code job descriptions and news articles to assess similarly in text analysis with methods such as cosine similarity.
 
 
 ---
