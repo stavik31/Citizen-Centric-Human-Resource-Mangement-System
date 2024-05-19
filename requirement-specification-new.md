@@ -528,7 +528,7 @@ FREQ-17.6
 : The system SHALL ensure data privacy by anonymizing individual citizens' data in the aggregated reports.
 
 FREQ-17.7
-: The system SHALL allow city managers to export the aggregated data to an Excel sheet format.
+: The system SHALL allow city managers to export the aggregated data to an CSV format.
 
 FREQ-17.8
 : The system SHALL provide real-time updates to the aggregated data as new information is added or updated.
@@ -560,7 +560,7 @@ FREQ-18.6
 : The system SHALL ensure data privacy by anonymizing individual citizens' data in the aggregated reports.
 
 FREQ-18.7
-: The system SHALL allow city managers to export the aggregated data to an Excel sheet format.
+: The system SHALL allow city managers to export the aggregated data to an CSV format.
 
 FREQ-18.8
 : The system SHALL provide real-time updates to the aggregated data as new information is added or updated.
@@ -592,7 +592,7 @@ FREQ-19.6
 : The system SHALL ensure data privacy by anonymizing individual citizens' data in the aggregated reports.
 
 FREQ-19.7
-: The system SHALL include a feature for city managers to export the aggregated data to an Excel sheet format.
+: The system SHALL include a feature for city managers to export the aggregated data to an CSV format.
 
 FREQ-19.8
 : The system SHALL provide real-time updates to the aggregated data as new information is added or updated.
@@ -627,7 +627,7 @@ FREQ-20.7
 : The system SHALL ensure data privacy by anonymizing individual citizens' data in the aggregated reports.
 
 FREQ-20.8
-: The system SHALL allow city managers to export the aggregated data to an Excel sheet format.
+: The system SHALL allow city managers to export the aggregated data to an CSV format.
 
 FREQ-20.9
 : The system SHALL provide real-time updates to the aggregated data as new information is added or updated.
@@ -662,7 +662,7 @@ FREQ-21.7
 : The system SHALL ensure data privacy by anonymizing individual citizens' data in the aggregated reports.
 
 FREQ-21.8
-: The system SHALL allow city managers to export the aggregated data to an Excel sheet format.
+: The system SHALL allow city managers to export the aggregated data to an CSV format.
 
 FREQ-21.9
 : The system SHALL provide real-time updates to the aggregated data as new information is added or updated.
@@ -697,7 +697,7 @@ FREQ-22.7
 : The system SHALL ensure data privacy by anonymizing individual citizens' data in the aggregated reports.
 
 FREQ-22.8
-: The system SHALL allow city managers to export the aggregated data to an Excel sheet format.
+: The system SHALL allow city managers to export the aggregated data to an CSV format.
 
 FREQ-22.9
 : The system SHALL provide real-time updates to the aggregated data as new information is added or updated.
