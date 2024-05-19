@@ -463,6 +463,9 @@ FREQ-13.7
 FREQ-13.8
 : The system MUST provide the capability for smart city managers to attach files and videos to the learning material.
 
+FREQ-13.9
+: The system MUST provide the capability for smart city managers to add external URLs.
+
 ---
 
 ### FREQ-14 News
