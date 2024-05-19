@@ -1236,7 +1236,7 @@ NREQ-15.3
 
 ![Simplified logical DFD](/diagrams/pbl3-logical-dfd.svg)
 
-This simplified logical data flow diagram shows how users of the system interact with its datasets through their various use cases. Note that reporting use cases were omitted for clarity.
+This simplified logical data flow diagram shows how users of the system interact with its datasets through their various use cases. Note that reporting use cases were omitted for clarity. Refer to Appendix B for a list of datasets and more information on their contents.
 
 ## System Evolution
 
