@@ -1123,29 +1123,29 @@ The system MUST provide functionality to load SOC occupation definitions and des
 ### Assumptions
 
 SOC Code Sufficiency
-: It is assumed for the system that the existing SOC codes are comprehensive enough to cover all required localities and job classifications. It is also assumed that when SOC standards evolve over time, it will retain a level of backward compatibility, allowing for incremental updates rather than complete overhauls.
+* It is assumed for the system that the existing SOC codes are comprehensive enough to cover all required localities and job classifications. It is also assumed that when SOC standards evolve over time, it will retain a level of backward compatibility, allowing for incremental updates rather than complete overhauls.
 
 User Adoption and Technical Proficiency
-: We assume that the primary user base will have a basic level of technical proficiency necessary to effectively use the web application without extensive training or support.
+* It is assumed that the primary user base will have a basic level of technical proficiency necessary to effectively use the web application without extensive training or support.
 
 API Stability and Versioning
-: We assume that third-party APIs used by the system will follow standard versioning practices, providing backward compatibility and advance notice of deprecations.
+* It is assumed that third-party APIs used by the system will follow standard versioning practices, providing backward compatibility and advance notice of deprecations.
 
 End-User Device Compatibility
-: We assume that the majority of end-users will access the web application using devices and operating systems that are compatible with modern web technologies.
+* It is assumed that the majority of end-users will access the web application using devices and operating systems that are compatible with modern web technologies.
 
 Data Growth and Scalability
-: We assume that the volume of data generated and processed by the system will grow at a predictable rate, allowing for planned scalability measures.
+* It is assumed that the volume of data generated and processed by the system will grow at a predictable rate, allowing for planned scalability measures.
 
 Network Infrastructure Reliability
-: We assume that internet and network infrastructure will continue to be reliable and accessible to the majority of users, ensuring consistent access to the web application.
+* It is assumed that internet and network infrastructure will continue to be reliable and accessible to the majority of users, ensuring consistent access to the web application.
 
 ### Anticipated Changes
 
 #### SOC Standard
 
 Adaptation
-: The system will implement necessary changes to maintain new compliance and functionality in the even of new SOC standard being introduced. While ensuring that SOC standards updates that we utilize do not disrupt existing functionality by maintaining support for previous versions where feasible.
+: The system will implement necessary changes to maintain new compliance and functionality in the even of new SOC standard being introduced. While ensuring that SOC standards updates that are utilized do not disrupt existing functionality by maintaining support for previous versions where feasible.
 
 #### Browser Integration
 
