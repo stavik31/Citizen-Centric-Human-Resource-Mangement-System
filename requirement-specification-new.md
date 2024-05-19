@@ -440,7 +440,28 @@ Smart city managers MUST be able to create, update, and delete online learning m
 #### System Requirements
 
 FREQ-13.1
-: Smart city managers SHOULD be able to attach files and videos to learning material
+: The system MUST provide the capability for smart city managers to define prerequisites for the learning material.
+
+FREQ-13.2
+: The system MUST provide the capability for smart city managers to define the title of the learning material.
+
+FREQ-13.3
+: The system MUST provide the capability for smart city managers to define the description of the learning material.
+
+FREQ-13.4
+: The system MUST provide the capability for smart city managers to define the category of the learning material.
+
+FREQ-13.5
+: The system MUST provide the capability for smart city managers to define the target applicable occupation of the learning material.
+
+FREQ-13.6
+: The system MUST provide the capability for smart city managers to define the content type of the learning material.
+
+FREQ-13.7
+: The system MUST provide the capability for smart city managers to define keywords for the learning material.
+
+FREQ-13.8
+: The system MUST provide the capability for smart city managers to attach files and videos to the learning material.
 
 ---
 
