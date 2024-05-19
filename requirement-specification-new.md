@@ -47,7 +47,7 @@ End Users
 : Introduction, Product Objectives and Scope, Product Functions, Functional Requirements.
 
 Test Engineers
-: Product Objectives and Scope, Product Perspective, Use Cases, User Classes and Characteristics, Functional Requirements, Non-Functional Requirements.
+: Introduction, Product Objectives and Scope, Product Perspective, Use Cases, User Classes and Characteristics, Functional Requirements, Non-Functional Requirements.
  
 Documentation Writers
 : Introduction, Product Functions, System Evolution.
@@ -470,16 +470,15 @@ FREQ-13.9
 
 ### FREQ-14 News
 
-System MUST be able to aggregate news from various sources and associate it with its related occupation / SOC codes.
+Users MUST be able to view aggregated news from various sources and associate it with its related occupation / SOC codes.
 
 #### System Requirements
 
 FREQ-14.1
-: System SHOULD display the title, date, source of news article of its original source.
+: System SHOULD display the title, date, source of news article of its original source to Users.
 
 FREQ-14.2
 : The system SHOULD be able to assess keywords of SOC code job descriptions and news articles to assess similarly in text analysis with methods such as cosine similarity.
-
 
 ---
 
