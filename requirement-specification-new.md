@@ -1123,7 +1123,7 @@ The system MUST provide functionality to load SOC occupation definitions and des
 ### Assumptions
 
 SOC Code Sufficiency
-: It is assumed for the system that the existing SOC codes are comprehensive enough to cover all required localities and job classifications
+: It is assumed for the system that the existing SOC codes are comprehensive enough to cover all required localities and job classifications. It is also assumed that when SOC standards evolve over time, it will retain a level of backward compatibility, allowing for incremental updates rather than complete overhauls.
 
 User Adoption and Technical Proficiency
 : We assume that the primary user base will have a basic level of technical proficiency necessary to effectively use the web application without extensive training or support.
@@ -1145,7 +1145,7 @@ Network Infrastructure Reliability
 #### SOC Standard
 
 Adaptation
-: The system will monitor for updates to the SOC standards and implement necessary changes to maintain new compliance and functionality. While ensuring that SOC standards updates that we utilize do not disrupt existing functionality by maintaining support for previous versions where feasible.
+: The system will implement necessary changes to maintain new compliance and functionality in the even of new SOC standard being introduced. While ensuring that SOC standards updates that we utilize do not disrupt existing functionality by maintaining support for previous versions where feasible.
 
 #### Browser Integration
 
