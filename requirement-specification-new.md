@@ -88,7 +88,7 @@ In the context of a smart city, this system is an asset for optimizing human res
 
 ### Use Cases
 
-![Use Case Diagram](/diagrams/use-case-diagram-SRS.svg)
+![Use Case Diagram](/diagrams/new-use-case-diagram-SRS.svg)
 
 ## Glossary
 
