@@ -240,6 +240,12 @@ FREQ-5.2
 
 The system MUST present content to users in hierarchical views mirroring the structure described in the 2018 Standard Occupational Classification System (Appendix A).
 
+#### Mockup
+
+![An example detailed occupation view](/diagrams/pbl3-hierarchical-view-mockup.svg)
+
+The above figure shows an example of what these hierarchical views may look like. In this case, a detailed occupational view for SOC 29-1022 is shown.
+
 #### System Requirements
 
 FREQ-6.1
