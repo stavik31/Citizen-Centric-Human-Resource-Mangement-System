@@ -1122,7 +1122,59 @@ The system MUST provide functionality to load SOC occupation definitions and des
 
 ### Assumptions
 
+SOC Code Sufficiency
+: It is assumed for the system that the existing SOC codes are comprehensive enough to cover all required localities and job classifications
+
+User Adoption and Technical Proficiency
+: We assume that the primary user base will have a basic level of technical proficiency necessary to effectively use the web application without extensive training or support.
+
+API Stability and Versioning
+: We assume that third-party APIs used by the system will follow standard versioning practices, providing backward compatibility and advance notice of deprecations.
+
+End-User Device Compatibility
+: We assume that the majority of end-users will access the web application using devices and operating systems that are compatible with modern web technologies.
+
+Data Growth and Scalability
+: We assume that the volume of data generated and processed by the system will grow at a predictable rate, allowing for planned scalability measures.
+
+Network Infrastructure Reliability
+: We assume that internet and network infrastructure will continue to be reliable and accessible to the majority of users, ensuring consistent access to the web application.
+
 ### Anticipated Changes
+
+#### SOC Standard
+
+Adaptation
+: The system will monitor for updates to the SOC standards and implement necessary changes to maintain new compliance and functionality. While ensuring that SOC standards updates that we utilize do not disrupt existing functionality by maintaining support for previous versions where feasible.
+
+#### Browser Integration
+
+Compatibility 
+: As a web application, the system will avoid reliance on browser-specific or proprietary APIs to ensure compatibility across different web browsers. 
+
+Browser Evolution 
+: The system will implement progressive enhancement to leverage new browser features when available while providing fallbacks for older browsers.
+
+#### Cloud Hosting Evolution
+
+Provider-Agnostic Design
+: The backend will be designed to avoid dependencies on specific cloud provider features, ensuring ease of migration between different providers.
+
+Infrastructure as Code
+: The system will utilize infrastructure as code (IaC) practices to automate deployment and configuration, facilitating quick adaptation to new cloud environments.
+
+#### Containerization
+
+Container Application
+: The system runs as containerized apps to ensure portability and consistency to eliminate dependence on the underlying VMs.
+
+OCI Compliance
+: Maintain compliance with OCI container image standards to ensure portability across different container orchestration platforms.
+
+#### Standard Interfaces
+
+Vendor Independence
+: The system prioritize standard interfaces (e.g., SMTP for email, OAuth for authentication) over vendor-specific APIs when possible to ensure flexibility to switch providers without significant changes in code.
 
 ## Appendix A: References
 
