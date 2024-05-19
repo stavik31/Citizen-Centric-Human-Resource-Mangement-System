@@ -35,22 +35,22 @@ NREQ-0.0 Example System Requirement
 This software requirement specification is intended for various stakeholders involved in the development, deployment, and use of the system. Each section of the document contains information pertinent to different groups, as outlined below:
 
 Developers
-: System Features, Functional Requirements, Non-Functional Requirements, System Design Architecture, System Evolution.
+: Product Objectives and Scope, Product Perspective, Use Cases, User Classes and Characteristics, Functional Requirements, Non-Functional Requirements, System Design Architecture, System Evolution.
 
 Project Managers
-: Introduction, Overall Product Description, System Features, System Evolution.
+: Introduction, Product Objectives and Scope, Product Perspective, User Classes and Characteristics, Product Functions, System Evolution.
 
 Marketing Staff
-: Introduction, Overall Product Description, Functional Requirements.
+: Introduction, Product Objectives and Scope, Product Functions, Functional Requirements.
 
 End Users 
-: Introduction, Overall Product Description, System Features, Functional Requirements.
+: Introduction, Product Objectives and Scope, Product Functions, Functional Requirements.
 
 Test Engineers
-: System Features, Functional Requirements, Non-Functional Requirements.
+: Product Objectives and Scope, Product Perspective, Use Cases, User Classes and Characteristics, Functional Requirements, Non-Functional Requirements.
  
 Documentation Writers
-: Introduction, Overall Product Description, System Features.
+: Introduction, Product Functions, System Evolution.
  
 ## Table of Contents
 {: .no_toc }
