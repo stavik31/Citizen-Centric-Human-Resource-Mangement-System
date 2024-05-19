@@ -934,6 +934,79 @@ FREQ-32.4
 
 ---
 
+### FREQ-33 - Load SOC Definition Dataset
+
+The system MUST provide functionality to load SOC definitions and descriptions from a government dataset.
+
+#### System Requirements
+
+FREQ-33.1
+: The system MUST pull SOC definition data from the Bureau of Labor Statistics API on the first of each month.
+
+FREQ-33.2
+: The system MUST internally store SOC definition data for use within the system. It MUST NOT call an external API each time this data is used.
+
+---
+
+### FREQ-34 - Load Employment Dataset
+
+The system MUST provide functionality to load employment data from a government dataset.
+
+#### System Requirements
+
+FREQ-34.1
+: The system MUST pull employment data from the Bureau of Labor Statistics API on the first of each month.
+
+FREQ-34.2
+: The system MUST internally store employment data for use within the system. It MUST NOT call an external API each time this data is used.
+
+---
+
+### FREQ-35 - Load Employment Dataset
+
+The system MUST provide functionality to load unemployment data from a government dataset.
+
+#### System Requirements
+
+FREQ-35.1
+: The system MUST pull unemployment data from the Bureau of Labor Statistics API on the first of each month.
+
+FREQ-35.2
+: The system MUST internally store unemployment data for use within the system. It MUST NOT call an external API each time this data is used.
+
+---
+
+### FREQ-36 - Load Certification Dataset
+
+The system MUST provide functionality to load certification data from a government partner dataset.
+
+#### System Requirements
+
+FREQ-36.1
+: The system MUST maintain a SQL-compatible database with a table structure matching that provided by careeronestop.
+
+FREQ-36.2
+: The system MUST allow Administrators to directly push this dataset to the database.
+
+---
+
+### FREQ-37 - Load Certification Dataset
+
+The system MUST periodically scrape news sources, identify relevant news articles, and aggregate links to be displayed in the system.
+
+#### System Requirements
+
+FREQ-37.1
+: The system MUST run a daily automated job to scrape news articles that were posted in the last 24 hours.
+
+FREQ-37.2
+: The system MUST utilize NLP or similar techniques to determine the relevance of each news article in relation to each SOC code.
+
+FREQ-37.3
+: The system MUST persist links to each news article along with their SOC mappings.
+
+---
+
 ## Non-Functional Requirements
 
 ### NREQ-1 - WCAG 2 AA Compliance
@@ -1152,12 +1225,6 @@ NREQ-15.2
 
 NREQ-15.3
 : Client-side components MUST, with citizen consent, publish clickstream data for all citizen actions in the system to the API described in NREQ-15.1.
-
----
-
-### NREQ-16 - SOC Occupation Description
-
-The system MUST provide functionality to load SOC occupation definitions and descriptions from a government dataset
 
 ## System Architecture
 
