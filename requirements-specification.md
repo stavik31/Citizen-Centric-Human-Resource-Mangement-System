@@ -32,7 +32,7 @@ NREQ-0.0 Example System Requirement
 
 ### Intended Audience and Reading Suggestions
 
-This software requirement specification is intended for various stakeholders involved in the development, deployment, and use of the system. Each section of the document contains information pertinent to different groups, as outlined below:
+This software requirement specification is intended for various people involved in the development, deployment, and use of the system. Sections of the document contains information relevant different groups, as outlined below:
 
 Developers
 : Product Objectives and Scope, Product Perspective, Use Cases, User Classes and Characteristics, Functional Requirements, Non-Functional Requirements, System Design Architecture, System Evolution.
@@ -60,7 +60,7 @@ Documentation Writers
 
 ## Introduction
 
-This document serves as the Software Requirements Specification (SRS) for the 'System for Citizen-centric Human Resource Management in Smart Cities'. It outlines the functional and non-functional requirements of the system, providing a detailed description of the software's expected behavior and features. This SRS is intended for use by the project development team, project managers, marketing staff, end users, testers, and documentation writers to ensure a common understanding of the system requirements.
+This Software Requirements Specification (SRS) is intrended for the 'System for Citizen-centric Human Resource Management in Smart Cities' project. The document outlines the functional and non-functional requirements of the system, providing a detailed description of the software's expected behavior and features. T
 
 ### Product Objectives and Scope
 
@@ -1243,19 +1243,16 @@ This simplified logical data flow diagram shows how users of the system interact
 ### Assumptions
 
 SOC Code Sufficiency
-* It is assumed for the system that the existing SOC codes are comprehensive enough to cover all required localities and job classifications. It is also assumed that when SOC standards evolve over time, it will retain a level of backward compatibility, allowing for incremental updates rather than complete overhauls.
+* It is assumed for the system that the existing SOC codes adequately covers all required occupation and job classifications. It is also assumed that when SOC standards evolve over time, it will retain a level of backward compatibility, allowing for incremental updates rather than complete overhauls.
 
-User Adoption and Technical Proficiency
-* It is assumed that the primary user base will have a basic level of technical proficiency necessary to effectively use the web application without extensive training or support.
+User Proficiency
+* It is assumed that the end users (citizens and city managers) will have the basics technical proficiency necessary to utilize the web application without extensive training or support.
 
 API Stability and Versioning
 * It is assumed that third-party APIs used by the system will follow standard versioning practices, providing backward compatibility and advance notice of deprecations.
 
 End-User Device Compatibility
 * It is assumed that the majority of end-users will access the web application using devices and operating systems that are compatible with modern web technologies.
-
-Data Growth and Scalability
-* It is assumed that the volume of data generated and processed by the system will grow at a predictable rate, allowing for planned scalability measures.
 
 Network Infrastructure Reliability
 * It is assumed that internet and network infrastructure will continue to be reliable and accessible to the majority of users, ensuring consistent access to the web application.
@@ -1264,37 +1261,34 @@ Network Infrastructure Reliability
 
 #### SOC Standard
 
-Adaptation
+SOC Standard Changes
 : The system will implement necessary changes to maintain new compliance and functionality in the even of new SOC standard being introduced. While ensuring that SOC standards updates that are utilized do not disrupt existing functionality by maintaining support for previous versions where feasible.
 
 #### Browser Integration
 
-Compatibility 
-: As a web application, the system will avoid reliance on browser-specific or proprietary APIs to ensure compatibility across different web browsers. 
+Browser Compatibility 
+: The system is a web application and will avoid reliance on browser-specific or proprietary APIs to ensure compatibility across different web browsers. 
 
-Browser Evolution 
+Browser Updates 
 : The system will implement progressive enhancement to leverage new browser features when available while providing fallbacks for older browsers.
 
 #### Cloud Hosting Evolution
 
 Provider-Agnostic Design
-: The backend will be designed to avoid dependencies on specific cloud provider features, ensuring ease of migration between different providers.
+: The system's backend will be designed to avoid dependencies on specific cloud provider features, ensuring ease of migration between different providers.
 
 Infrastructure as Code
-: The system will utilize infrastructure as code (IaC) practices to automate deployment and configuration, facilitating quick adaptation to new cloud environments.
+: The system will utilize infrastructure as code (IaC) practices to automate deployment and configuration.
 
 #### Containerization
 
-Container Application
-: The system runs as containerized apps to ensure portability and consistency to eliminate dependence on the underlying VMs.
+System as Containerized Application
+: The system runs as containerized apps to eliminate dependence on the underlying VMs. Furthermore, the system aims to maintain compliance with OCI container image standards to ensure portability across different container platforms.
 
-OCI Compliance
-: Maintain compliance with OCI container image standards to ensure portability across different container orchestration platforms.
-
-#### Standard Interfaces
+#### Interfaces
 
 Vendor Independence
-: The system prioritize standard interfaces (e.g., SMTP for email, OAuth for authentication) over vendor-specific APIs when possible to ensure flexibility to switch providers without significant changes in code.
+: The system prioritize standard interfaces over vendor-specific APIs when possible to ensure flexibility to switch providers without overhauls in the system code.
 
 ## Appendix A: References
 
