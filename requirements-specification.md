@@ -25,7 +25,7 @@ Functional requirements will be prefixed with "FREQ-". Non-functional requiremen
 Requirement identifiers will be proceeded by a short title. This title should be applicable to the requirement, but should not be construed as part of the requirement and exists only to improve the navigability and searchability of this document.
 
 FREQ-0 Example User Requirement
-: This denotes a functional user requirement with the id of 0
+: This denotes a functional user requirement with the id of 0.
 
 NREQ-0.0 Example System Requirement
 : This denotes a non-functional system requirement with the id of 0.0. This requirement is implicitly a dependency of the non-functional user requirement NREQ-0.
@@ -84,7 +84,7 @@ In the context of a smart city, this system is an asset for optimizing human res
 
 ### Product Functions
 
-- Allow citizens to select a career goal and receive customized resources based on it
+- Allow citizens to select a career goal and receive customized resources based on it.
 - Allow citizens to explore news, educational material, job postings, employment trends, employment forecasts, and projected demand for each occupation.
 - Provide engagement data and employment trend forecasts to assist smart city managers in predicting future demand.
 
@@ -165,19 +165,19 @@ Citizens MUST be able to register for an account by initiating the signup proces
 #### System Requirements
 
 FREQ-1.1
-: System MUST provide a control to initiate the signup process
+: System MUST provide a control to initiate the signup process.
 
 FREQ-1.2
-: System MUST collect the citizen's email, password, legal name, current occupation, and postal code
+: System MUST collect the citizen's email, password, legal name, current occupation, and postal code.
 
 FREQ-1.3
 : The system MUST enforce password strength requirements. This may be achieved by either enforcing character restrictions (a mix of uppercase letters, lowercase letters, numbers, and symbols) or by measuring complexity (using a tool such as zxcvbn).
 
 FREQ-1.4
-: Users MUST receive feedback on the strength of their password as they enter it
+: Users MUST receive feedback on the strength of their password as they enter it.
 
 FREQ-1.3
-: System MUST collect citizens consent to our terms of use
+: System MUST collect citizens consent to our terms of use.
 
 ---
 
@@ -231,48 +231,48 @@ Citizens MUST be able to recover their accounts by using a "Forgot Password" lin
 #### System Requirements
 
 FREQ-4.1
-: The system MUST provide a "Forgot Password" link on the login page for users who have forgotten their passwords
+: The system MUST provide a "Forgot Password" link on the login page for users who have forgotten their passwords.
 
 FREQ-4.2
-: When users click on the "Forgot Password" link, they MUST be directed to a password recovery page
+: When users click on the "Forgot Password" link, they MUST be directed to a password recovery page.
 
 FREQ-4.3
-: Users MUST be prompted to enter their email address or username associated with their account
+: Users MUST be prompted to enter their email address or username associated with their account.
 
 FREQ-4.4
-: After entering their email address or username, the system MUST send a password reset link to the user's registered email address
+: After entering their email address or username, the system MUST send a password reset link to the user's registered email address.
 
 FREQ-4.5
 : The password reset link sent to the user's email MUST be unique and valid for 2 hours, after which it should cease functioning.
 
 FREQ-4.6
-: Clicking on the password reset link MUST redirect the user to a page where they can create a new password for their account
+: Clicking on the password reset link MUST redirect the user to a page where they can create a new password for their account.
 
 FREQ-4.7
 : The system MUST enforce password strength requirements. This may be achieved by either enforcing character restrictions (a mix of uppercase letters, lowercase letters, numbers, and symbols) or by measuring complexity (using a tool such as zxcvbn).
 
 FREQ-4.8
-: Users MUST receive feedback on the strength of their new password as they enter it
+: Users MUST receive feedback on the strength of their new password as they enter it.
 
 FREQ-4.9
-: After successfully resetting their password, users MUST receive a confirmation message informing them that their password has been changed
+: After successfully resetting their password, users MUST receive a confirmation message informing them that their password has been changed.
 
 FREQ-4.10
-: Users MUST be redirected to the login page to log in with their new password
+: Users MUST be redirected to the login page to log in with their new password.
 
 ---
 
 ### FREQ-5 - Delete Account
 
-Citizen MUST be able to delete their account any time they want
+Citizen MUST be able to delete their account any time they want.
 
 #### System Requirements
 
 FREQ-5.1
-: Citizen MUST be logged in for their account to be deleted
+: Citizen MUST be logged in for their account to be deleted.
 
 FREQ-5.2
-: If the citizen has no access to the account, the person shall contact the service via email or customer support and the person then provide information to verify their identity and then system MUST delete user profile
+: If the citizen has no access to the account, the person shall contact the service via email or customer support and the person then provide information to verify their identity and then system MUST delete user profile.
 
 ---
 
@@ -351,7 +351,7 @@ Users MUST be able to view general information about each occupation, such as a 
 #### System Requirements
 
 FREQ-7.1
-: The system MUST display the title, brief description, and illustrated examples of each occupation as defined in the 2018 SOC specification (Appendix A)
+: The system MUST display the title, brief description, and illustrated examples of each occupation as defined in the 2018 SOC specification (Appendix A).
 
 FREQ-7.2
 : The system SHOULD display the most recent average salary of each occupation as reported by the Bureau of Labor Statistics, if available.
@@ -402,7 +402,7 @@ FREQ-10.2
 : The system MUST display historical and forecasted employment trends for the occupation currently being viewed.
 
 FREQ-10.3
-: The system SHOULD display historical and forecasted employment trends for occupations related to the occupation currently being viewed (as described in FREQ-6.2, FREQ-6.5, FREQ-6.8, FREQ-6.11, and FREQ-6.14)
+: The system SHOULD display historical and forecasted employment trends for occupations related to the occupation currently being viewed (as described in FREQ-6.2, FREQ-6.5, FREQ-6.8, FREQ-6.11, and FREQ-6.14).
 
 FREQ-10.4
 : The system SHOULD clearly denote which trend data is historical and which is forecasted. This may be done using colors, symbols, or other visual techniques.
@@ -419,7 +419,7 @@ FREQ-11.1
 : The system MUST integrate with an external job posting API to retrieve this data.
 
 FREQ-11.2  
-: The system MUST display job listings in a clear and organized manner, showing relevant information such as job title, company name, salary range, location, and application deadline
+: The system MUST display job listings in a clear and organized manner, showing relevant information such as job title, company name, salary range, location, and application deadline.
 
 FREQ-11.3
 : Each job listing MUST be clickable, allowing users to view more details about the job on an external web page.
