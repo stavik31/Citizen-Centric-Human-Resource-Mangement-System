@@ -176,7 +176,7 @@ FREQ-1.3
 FREQ-1.4
 : Users MUST receive feedback on the strength of their password as they enter it.
 
-FREQ-1.3
+FREQ-1.5
 : System MUST collect citizens consent to our terms of use.
 
 ---
