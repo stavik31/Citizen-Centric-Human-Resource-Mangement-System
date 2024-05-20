@@ -1232,7 +1232,7 @@ SOC Code Sufficiency
 User Proficiency
 * It is assumed that the end users (citizens and city managers) will have the basics technical proficiency necessary to utilize the web application without extensive training or support.
 
-API Stability and Versioning
+API Stability
 * It is assumed that third-party APIs used by the system will follow standard versioning practices, providing backward compatibility and advance notice of deprecations.
 
 End-User Device Compatibility
