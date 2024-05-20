@@ -32,7 +32,7 @@ NREQ-0.0 Example System Requirement
 
 ### Intended Audience and Reading Suggestions
 
-This software requirement specification is intended for various people involved in the development, deployment, and use of the system. Sections of the document contains information relevant different groups, as outlined below:
+This document is relevant for various audience involved in the development, deployment, and use of the system as outlined below:
 
 Developers
 : Product Objectives and Scope, Product Perspective, Use Cases, User Classes and Characteristics, Functional Requirements, Non-Functional Requirements, System Design Architecture, System Evolution.
@@ -60,19 +60,21 @@ Documentation Writers
 
 ## Introduction
 
-This Software Requirements Specification (SRS) is intrended for the 'System for Citizen-centric Human Resource Management in Smart Cities' project. The document outlines the functional and non-functional requirements of the system, providing a detailed description of the software's expected behavior and features. T
+This document is written as a Software Requirements Specification (SRS) for the "System for Citizen-centric Human Resource Management in Smart Cities" project.
 
 ### Product Objectives and Scope
 
-Objectives
+#### Objectives
 
-- Engage citizenry by allowing them to explore available opportunities (Link to project proposal)
-- Provide a data-driven approach to human resource management in smart cities (Link to project proposal)
-- Encourage reskilling and upskilling by gamifying the process (Link to project proposal)
+The system is designed to optimize human resource management in a smart city context, providing data-driven insights and engaging citizens in exploring job opportunities and educational materials.
 
-Scope
+- Engage citizenry by allowing them to explore available opportunities.
+- Provide a data-driven approach to human resource management in smart cities.
+- Encourage reskilling and upskilling by gamifying the process.
 
-The system is designed to optimize human resource management in a smart city context, providing data-driven insights and engaging citizens in exploring job opportunities and educational materials. The prototype will cover a single metropolitan area and a limited subset of occupational segments based on available data.
+#### Scope
+
+The prototype will cover a single metropolitan area and a limited subset of occupational segments based on available data.
 
 ### Product Perspective
 
@@ -572,15 +574,12 @@ FREQ-18.4
 : The system SHALL generate a bar chart and/or pie chart based on the aggregated occupation data.
 
 FREQ-18.5
-: The system SHALL provide city managers with access to these reports through a dedicated dashboard.
+: The system SHALL ensure privacy by aggregating citizens' data in the reports.
 
 FREQ-18.6
-: The system SHALL ensure data privacy by anonymizing individual citizens' data in the aggregated reports.
-
-FREQ-18.7
 : The system SHALL allow city managers to export the aggregated data to an CSV format.
 
-FREQ-18.8
+FREQ-18.7
 : The system SHALL provide real-time updates to the aggregated data as new information is added or updated.
 
 ---
@@ -604,15 +603,12 @@ FREQ-19.4
 : The system SHALL generate a map chart based on the aggregated location data.
 
 FREQ-19.5
-: The system SHALL provide city managers with access to these reports through a dedicated dashboard.
+: The system SHALL ensure privacy by aggregating citizens' data in the reports.
 
 FREQ-19.6
-: The system SHALL ensure data privacy by anonymizing individual citizens' data in the aggregated reports.
-
-FREQ-19.7
 : The system SHALL allow city managers to export the aggregated data to an CSV format.
 
-FREQ-19.8
+FREQ-19.7
 : The system SHALL provide real-time updates to the aggregated data as new information is added or updated.
 
 ---
@@ -636,15 +632,12 @@ FREQ-20.4
 : The system SHALL generate a bar chart and/or pie chart based on the aggregated job goal data.
 
 FREQ-20.5
-: The system SHALL provide city managers with access to these reports through a dedicated dashboard.
+: The system SHALL ensure privacy by aggregating citizens' data in the reports.
 
 FREQ-20.6
-: The system SHALL ensure data privacy by anonymizing individual citizens' data in the aggregated reports.
-
-FREQ-20.7
 : The system SHALL include a feature for city managers to export the aggregated data to an CSV format.
 
-FREQ-20.8
+FREQ-20.7
 : The system SHALL provide real-time updates to the aggregated data as new information is added or updated.
 
 ---
@@ -668,15 +661,12 @@ FREQ-21.4
 : The system SHALL generate a heatmap based on the aggregated occupation data by location.
 
 FREQ-21.5
-: The system SHALL provide city managers with access to these reports through a dedicated dashboard.
-
-FREQ-21.6
 : The system SHALL allow city managers to filter and sort the aggregated data by different occupation and location categories.
 
-FREQ-21.7
-: The system SHALL ensure data privacy by anonymizing individual citizens' data in the aggregated reports.
+FREQ-21.6
+: The system SHALL ensure privacy by aggregating citizens' data in the reports.
 
-FREQ-21.8
+FREQ-21.7
 : The system SHALL allow city managers to export the aggregated data to an CSV format.
 
 FREQ-21.9
@@ -703,15 +693,12 @@ FREQ-22.4
 : The system SHALL generate a heatmap based on the aggregated job goals data by location.
 
 FREQ-22.5
-: The system SHALL provide city managers with access to these reports through a dedicated dashboard.
-
-FREQ-22.6
 : The system SHALL allow city managers to filter and sort the aggregated data by different job goals and location categories.
 
-FREQ-22.7
-: The system SHALL ensure data privacy by anonymizing individual citizens' data in the aggregated reports.
+FREQ-22.6
+: The system SHALL ensure privacy by aggregating citizens' data in the reports.
 
-FREQ-22.8
+FREQ-22.7
 : The system SHALL allow city managers to export the aggregated data to an CSV format.
 
 FREQ-22.9
@@ -738,15 +725,12 @@ FREQ-23.4
 : The system SHALL generate a heatmap based on the aggregated job goals data by occupation.
 
 FREQ-23.5
-: The system SHALL provide city managers with access to these reports through a dedicated dashboard.
-
-FREQ-23.6
 : The system SHALL allow city managers to filter and sort the aggregated data by different job goals and current occupation categories.
 
-FREQ-23.7
-: The system SHALL ensure data privacy by anonymizing individual citizens' data in the aggregated reports.
+FREQ-23.6
+: The system SHALL ensure privacy by aggregating citizens' data in the reports.
 
-FREQ-23.8
+FREQ-23.7
 : The system SHALL allow city managers to export the aggregated data to an CSV format.
 
 FREQ-23.9
@@ -1269,12 +1253,12 @@ SOC Standard Changes
 Browser Compatibility 
 : The system is a web application and will avoid reliance on browser-specific or proprietary APIs to ensure compatibility across different web browsers. 
 
-Browser Updates 
+Browser Updates
 : The system will implement progressive enhancement to leverage new browser features when available while providing fallbacks for older browsers.
 
 #### Cloud Hosting Evolution
 
-Provider-Agnostic Design
+Cloud Provider Dependence
 : The system's backend will be designed to avoid dependencies on specific cloud provider features, ensuring ease of migration between different providers.
 
 Infrastructure as Code
