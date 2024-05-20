@@ -60,7 +60,7 @@ Documentation Writers
 
 ## Introduction
 
-This document is written as a Software Requirements Specification (SRS) for the "System for Citizen-centric Human Resource Management in Smart Cities" project.
+This document is written as a Software Requirements Specification (SRS) for the "System for Citizen-centric Human Resource Management in Smart Cities" project. It aims to outline what the system will do and how it will be expected to perform. It will also define any high-level constraints that may affect deployment of the system.
 
 ### Product Objectives and Scope
 
