@@ -1256,13 +1256,10 @@ Browser Compatibility
 Browser Updates
 : The system will implement progressive enhancement to leverage new browser features when available while providing fallbacks for older browsers.
 
-#### Cloud Hosting Evolution
+#### Cloud Hosting
 
 Cloud Provider Dependence
 : The system's backend will be designed to avoid dependencies on specific cloud provider features, ensuring ease of migration between different providers.
-
-Infrastructure as Code
-: The system will utilize infrastructure as code (IaC) practices to automate deployment and configuration.
 
 #### Containerization
 
