@@ -40,3 +40,10 @@ Esotoric
 - Graphs, Timeseries Analytics, Maps (ex. Heat Maps)
 
 VIEW BELOW IMAGES FOR FURTHER INFORMATION (OVERALL DESIGN STRUCTURE BELOW AS WELL)  
+
+
+![Overall Design Structure](/diagrams/design.jpg)
+
+![Database Brainstorming](/diagrams/database.jpg)
+
+![Java Frameworks Brainstorming](/diagrams/frameworks.jpg)
