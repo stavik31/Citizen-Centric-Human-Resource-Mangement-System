@@ -946,7 +946,7 @@ FREQ-34.2
 
 ---
 
-### FREQ-35 - Load Employment Dataset
+### FREQ-35 - Load Unemployment Dataset
 
 The system MUST provide functionality to load unemployment data from a government dataset.
 
