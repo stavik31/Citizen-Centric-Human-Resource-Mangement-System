@@ -68,6 +68,10 @@ stateDiagram-v2
   unclassified --> new : if article changes  
 ```
 
+#### News Classification
+
+![Activity diagram showing the process flow for news classification using doc2vec](/diagrams/pbl3-news-classification-activity-diagram.svg)
+
 ## Reporting
 
 ### U17 - View Analytics Reports
