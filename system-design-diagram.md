@@ -49,6 +49,25 @@ nav_order: 3
 
 ### U15 - View Occupation News
 
+### Load News
+
+#### State Diagram
+
+```mermaid
+stateDiagram-v2
+  new : NEW
+  classified : CLASSIFIED
+  unclassified : UNCLASSIFIED
+  state if_success <<choice>>
+
+  [*] --> new
+  new --> if_success
+  if_success --> classified : if classification successful
+  if_success --> unclassified : if classification failed
+  classified --> new : if article changes
+  unclassified --> new : if article changes  
+```
+
 ## Reporting
 
 ### U17 - View Analytics Reports
