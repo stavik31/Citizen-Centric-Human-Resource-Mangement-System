@@ -62,6 +62,10 @@ stateDiagram-v2
   unsynchronized --> new : after 5 minutes  
 ```
 
+#### Using Contentful
+
+![Activity diagram showing the process flow for managing learning content](/diagrams/pbl3-manage-learning-material-activity-diagram.svg)
+
 ## News
 
 ### U15 - View Occupation News
