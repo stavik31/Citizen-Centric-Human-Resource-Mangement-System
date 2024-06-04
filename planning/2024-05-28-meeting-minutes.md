@@ -1,7 +1,7 @@
 ---
-title: April 28th & 31st Meeting Minutes
+title: May 28th & 31st Meeting Minutes
 parent: Schedule and Planning
-nav_order: 1
+nav_order: 18
 ---
 
 Atendees: Everyone
