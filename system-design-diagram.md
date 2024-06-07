@@ -8,6 +8,7 @@ nav_order: 3
 ## Accounts / Profiles
 
 ### U1 - Create Account
+![Create Account](CreateProfile.jpg)
 
 ### U2 - Administer Account
 
