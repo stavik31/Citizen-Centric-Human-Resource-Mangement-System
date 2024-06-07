@@ -8,42 +8,66 @@ nav_order: 3
 ## Accounts / Profiles
 
 ### U1 - Create Account
-activity diagram
+#### Activity Diagram
 ![Create Account](/diagrams/CreateProfile.jpg)
 
 ### U2 - Administer Account
+#### Activity Diagram
+![Administer Account](/diagrams/AdministerAccount.jpg)
 
 ### U3 - Edit Account Profile
+#### Activity Diagram
+![Edit Account Profile](/diagrams/EditAccountProfile.jpg)
 
 ### U4 - Reset Account Password
 
 ### U5 - Delete Account
+#### Activity Diagram
+![Delete Account](/diagrams/DeleteAccount.jpg)
 
 ### U7 - Select Job Goal
+#### Activity Diagram
+![Select Job Goal](/diagrams/SelectJobGoal.jpg)
 
 ## Occupations
 
 ### U6 - View Occupation Information
+#### Activity Diagram
+![View Occupation Information](/diagrams/ViewOcupationalInformation.jpg)
 
 ### U8 - View Unemployment Data
+#### Activity Diagram
+![View Unemployment Data](/diagrams/ViewUnemploymentData.jpg)
 
 ### U9 - View Occupation Trend
+#### Activity Diagram
+![View Occupation Trend](/diagrams/ViewOccupationTrend.jpg)
 
 ### U14 - View Occupation Demand
+#### Activity Diagram
+![View Occupation Demand](/diagrams/ViewOccupationDemand.jpg)
 
 ### U16 - Manage Occupation Demand
+#### Activity Diagram
+![Manage Occupation Demand](/diagrams/ManageOccupationDemand.jpg)
 
 ## Job Postings
 
 ### U10 - View Job Postings
+#### Activity Diagram
+![View Job Postings](/diagrams/ViewJobPosting.jpg)
 
 ## Certifications
 
 ### U11 - View Certifications
+#### Activity Diagram
+![View Certifications](/diagrams/ViewCertifications.jpg)
 
 ## Learning Material
 
 ### U12 - View Learning Material
+#### Activity Diagram
+![View Learning Material](/diagrams/ViewLearningMaterial.jpg)
 
 ### U13 - Manage Learning Material
 
@@ -98,3 +122,6 @@ stateDiagram-v2
 ## Reporting
 
 ### U17 - View Analytics Reports
+#### Activity Diagram
+![View Analytics Reports](/diagrams/ViewAnalyticsReports.jpg)
+
