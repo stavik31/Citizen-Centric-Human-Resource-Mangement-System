@@ -1,0 +1,25 @@
+@startuml
+
+autoactivate on
+
+actor UI
+boundary LearningMaterialController
+participant LearningMaterialService
+participant LearningMaterialDAO
+database Database
+
+UI -> LearningMaterialController : getLearningMaterial
+LearningMaterialController -> LearningMaterialService : getLearningMaterial
+alt query includes contentType
+    LearningMaterialService -> LearningMaterialDAO : getBySocAndContentType
+    LearningMaterialDAO -> Database
+    return
+    return
+else query does not include contentType
+    LearningMaterialService -> LearningMaterialDAO : getBySoc
+    return
+end
+return
+return
+
+@enduml

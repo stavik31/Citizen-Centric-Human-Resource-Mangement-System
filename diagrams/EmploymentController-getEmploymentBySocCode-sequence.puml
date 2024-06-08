@@ -1,0 +1,23 @@
+@startuml
+
+autoactivate on
+
+actor UI
+boundary EmploymentController
+participant EmploymentService
+participant ForecastingService
+participant EmploymentDAO
+database Database
+
+UI -> EmploymentController : getEmploymentBySocCode
+EmploymentController -> EmploymentService : getEmploymentBySocCode
+EmploymentService -> EmploymentDAO : getEmploymentBySocCode
+EmploymentDAO -> Database
+return
+return
+EmploymentService -> ForecastingService : forecast
+return
+return
+return
+
+@enduml
