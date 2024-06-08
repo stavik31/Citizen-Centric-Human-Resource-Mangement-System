@@ -5,65 +5,61 @@ nav_order: 3
 
 # System Design Diagrams
 
-## UI
+## Operations
 
-## Backend
-
-### Operations
-
-#### getCertifications
+### getCertifications
 
 ![getCertifications sequence diagram](/diagrams/CertificationController-getCertifications-sequence.svg)
 
-#### notifyEntryPublished
+### notifyEntryPublished
 
 ![notifyEntryPublished sequence diagram](/diagrams/ContentfulController-notifyEntryPublished-sequence.svg)
 
-#### notifyEntryUnpublished
+### notifyEntryUnpublished
 
 ![notifyEntryUnpublished sequence diagram](/diagrams/ContentfulController-notifyEntryUnpublished-sequence.svg)
 
-#### getEmploymentBySocCode
+### getEmploymentBySocCode
 
 ![getEmploymentBySocCode sequence diagram](/diagrams/EmploymentController-getEmploymentBySocCode-sequence.svg)
 
-#### getJobPosting
+### getJobPosting
 
 ![getJobPosting sequence diagram](/diagrams/JobPostingController-getJobPosting-sequence.svg)
 
-#### getLearningMaterial
+### getLearningMaterial
 
 ![getLearningMaterial sequence diagram](/diagrams/LearningMaterialController-getLearningMaterial-sequence.svg)
 
-#### getNews
+### getNews
 
 ![getNews sequence diagram](/diagrams/NewsController-getNews-sequence.svg)
 
-#### getOccupationsBySocCode
+### getOccupationsBySocCode
 
 ![getOccupationsBySocCode sequence diagram](/diagrams/OccupationController-getOccupationsBySocCode-sequence.svg)
 
-#### getUnemploymentBySocCode
+### getUnemploymentBySocCode
 
 ![getUnemploymentBySocCode sequence diagram](/diagrams/UnemploymentController-getUnemploymentBySocCode-sequence.svg)
 
-#### deleteCurrentUserProfile
+### deleteCurrentUserProfile
 
 ![deleteCurrentUserProfile sequence diagram](/diagrams/UserController-deleteCurrentUserProfile-sequence.svg)
 
-#### getCurrentUserProfile
+### getCurrentUserProfile
 
 ![getCurrentUserProfile sequence diagram](/diagrams/UserController-getCurrentUserProfile-sequence.svg)
 
-#### updateUserProfile
+### updateUserProfile
 
 ![updateUserProfile sequence diagram](/diagrams/UserController-updateUserProfile-sequence.svg)
 
-#### getDemand
+### getDemand
 
 ![getDemand sequence diagram](/diagrams/ViewDemandController-getDemand-sequence.svg)
 
-#### setDemand
+### setDemand
 
 ![setDemand sequence diagram](/diagrams/ViewDemandController-setDemand-sequence.svg)
 
