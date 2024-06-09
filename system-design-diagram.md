@@ -32,19 +32,25 @@ This document is written as a Software Design Document for the "System for Citiz
 
 ### Bounded Contexts
 
-Due to our relatively wide set of functionality, this system design loosely follows the practices of Domain-Driven-Design (DDD) to avoid the complexities presented by using a single unified model. The system is structured as a series of "vertical slices", each one dealing primarily with a single bounded context. It is unavoidable that some functionalities will require these domains to interact, but such interactions are strictly limited to a single architectural layer. The following table documents these bounded contexts.
+Due to our relatively wide set of functionality, this system design loosely follows the practices of Domain-Driven-Design (DDD) to avoid the complexities presented by using a single unified model. The system is structured as a series of "vertical slices", each one dealing primarily with a single bounded context. The following table documents these bounded contexts.
 
 | Context           | Description                                                   |
 |-------------------|---------------------------------------------------------------|
 | Analytics         | Primarily deals with clickstream analytics and reporting.     |
-| Learning Material | CMS-managed learning content for citizen consumption.         |
 | Certifications    | Similar to learning material, utilizes careeronestop dataset. |
+| Demand            | Employment target for a given occupation.                     |
+| Employment        | Number of people employed in an occupation for a given year.  |
+| Job Postings      | Feed of job postings relating to an occupation.               |
+| Learning Material | CMS-managed learning content for citizen consumption.         |
 | News              | Aggregated news articles from various open RSS feeds.         |
 | Occupations       | Occupation descriptions and metadata from 2018 SOC.           |
-| Job Postings      | Feed of job postings relating to an occupation.               |
-| Employment        | Number of people employed in an occupation for a given year.  |
 | Unemployment      | Unemployment level for a given year.                          |
-| Demand            | Employment target for a given occupation.                     |
+
+### Vertical Slice Architecture
+
+Mirroring the bounded contexts described above, the system will be composed of a series of "vertical slices", each of which spans the traditional presentation, business, and service application layers. This aims to reduce dependencies between each bounded context to allow for independent development and testing.
+
+![Architecture diagram displaying vertical slice architecture](/diagrams/PBL3-vertical-slice-architecture.svg)
 
 ## Operations
 
