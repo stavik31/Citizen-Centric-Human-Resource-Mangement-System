@@ -28,7 +28,17 @@ This document is written as a Software Design Document for the "System for Citiz
 
 ### System Context
 
+![System context diagram](/diagrams/PBL3-2024-system-context-diagram.svg)
+
 ## System Architecture
+
+The system will follow a three-tier architecture, splitting the user interface (presentation tier), backend services (application tier), and database (data tier) across three different logical host groups.
+
+![Three-tier architecture](/diagrams/PBL3-three-tier-architecture.svg)
+
+Additionally, the system will interact with a variety of external actors and systems. This document contains a detailed description of each of these integrations, but the following diagram may be used as a summary view.
+
+![System container diagram](/diagrams/PBL3-2024-system-container-diagram.svg)
 
 ### Bounded Contexts
 
@@ -46,11 +56,48 @@ Due to our relatively wide set of functionality, this system design loosely foll
 | Occupations       | Occupation descriptions and metadata from 2018 SOC.           |
 | Unemployment      | Unemployment level for a given year.                          |
 
-### Vertical Slice Architecture
+These boundaries span all three of the application tiers, but are most heavily relied upon in the application tier, where they heavily shaped the design of the system.
 
-Mirroring the bounded contexts described above, the system will be composed of a series of "vertical slices", each of which spans the traditional presentation, business, and service application layers. This aims to reduce dependencies between each bounded context to allow for independent development and testing.
+### Presentation Tier
+
+The presentation tier of this system consists of a Vue single page application deployed to and served directly from a CDN.
+
+| Purpose              | Library or Framework |
+|----------------------|----------------------|
+| Programming Language | Typescript           |
+| App Framework        | Vue                  |
+| Test Framework       | Vitest               |
+| Build System         | Vite                 |
+
+#### Component Architecture
+
+The presentation tier is structured as a set of reusable components, which are composed into individual views that the user may interact with. A complete catalogue of components and views is available in the UI section of this document.
+
+### Application Tier
+
+The application tier of this system consists of a single Spring Boot service bundled as an OCI image and deployed to a managed kubernetes-based container orchestration platform.
+
+| Purpose              | Library or Framework |
+|----------------------|----------------------|
+| Programming Language | Java                 |
+| App Framework        | Spring + Spring Boot |
+| Test Framework       | JUnit                |
+| Build System         | Apache Maven         |
+
+#### Vertical Slice Architecture
+
+Mirroring the bounded contexts described above, the application tier will be composed of a series of "vertical slices", each of which spans the traditional presentation, business, and data layers. This aims to reduce dependencies between each bounded context to allow for independent development and testing.
 
 ![Architecture diagram displaying vertical slice architecture](/diagrams/PBL3-vertical-slice-architecture.svg)
+
+### Data Tier
+
+The data tier of this system consists of a single instance of Postgres managed by a cloud provider. Schema migrations will be handled using a code-based approach; the database structure will be embedded in the application-tier container and automatically applied at startup using liquibase.
+
+| Purpose           | Library or Framework |
+|-------------------|----------------------|
+| Database Platform | Postgres             |
+| Management Tool   | Liquibase            |
 
 ## Operations
 
