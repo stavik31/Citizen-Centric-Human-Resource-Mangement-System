@@ -32,7 +32,7 @@ This document is written as a Software Design Document for the "System for Citiz
 
 ## System Architecture
 
-The system will follow a three-tier architecture, splitting the user interface (presentation tier), backend services (application tier), and database (data tier) across three different logical host groups.
+The system will follow a three-tier architecture, splitting the user interface (presentation tier), backend services (application tier), and database (data tier) across three different logical host groups. Communication between the presentation and application tiers will take place using REST over HTTP.
 
 ![Three-tier architecture](/diagrams/PBL3-three-tier-architecture.svg)
 
@@ -98,6 +98,28 @@ The data tier of this system consists of a single instance of Postgres managed b
 |-------------------|----------------------|
 | Database Platform | Postgres             |
 | Management Tool   | Liquibase            |
+
+## Presentation Tier Design
+
+## REST API Design
+
+{% include apidocs.md %}
+
+{% for controller in site.apidocs_controllers %}
+### {{ controller.title }}
+{{ controller.content }}
+{% endfor %}
+
+### Models
+
+{% for model in site.apidocs_models %}
+#### {{ model.title }}
+{{ model.content }}
+{% endfor %}
+
+## Application Tier Design
+
+## Data Tier Design
 
 ## Operations
 
@@ -276,4 +298,3 @@ stateDiagram-v2
 ### U17 - View Analytics Reports
 #### Activity Diagram
 ![View Analytics Reports](/diagrams/ViewAnalyticsReports.jpg)
-
