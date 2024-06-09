@@ -34,6 +34,10 @@ permalink: pretty
 theme: just-the-docs
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-github-metadata
+  - jekyll-include-cache
+
 favicon_ico: "/favicon.ico"
 color_scheme: dark
 collections:
@@ -98,7 +102,8 @@ heading_anchors: true
 # Back to top link\
 exclude:
   - apidocs/
-  # Footer "Edit this page on GitHub" link text
+
+# Footer "Edit this page on GitHub" link text
 footer_content: "Copyright content goes here"
 
 back_to_top: true
