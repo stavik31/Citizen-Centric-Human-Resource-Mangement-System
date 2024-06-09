@@ -3,7 +3,48 @@ title: System Design Diagrams
 nav_order: 3
 ---
 
-# System Design Diagrams
+# System Design Document
+{: .no_toc }
+
+## Preface
+
+### Version History
+
+| Version | Date       | Description      |
+|---------|------------|------------------|
+| 1.0     | 2024-06-17 | Initial revision |
+
+## Table of Contents
+{: .no_toc }
+
+- TOC
+{:toc}
+
+## Introduction
+
+This document is written as a Software Design Document for the "System for Citizen-centric Human Resource Management in Smart Cities" project. It aims to describe how the functional and non-functional requirements documented in the [Requirements Specification](/requirements-specification.md) can be transformed into a working application by specifying both the high-level system design and low-level detailed design.
+
+## General Overview
+
+### System Context
+
+## System Architecture
+
+### Bounded Contexts
+
+Due to our relatively wide set of functionality, this system design loosely follows the practices of Domain-Driven-Design (DDD) to avoid the complexities presented by using a single unified model. The system is structured as a series of "vertical slices", each one dealing primarily with a single bounded context. It is unavoidable that some functionalities will require these domains to interact, but such interactions are strictly limited to a single architectural layer. The following table documents these bounded contexts.
+
+| Context           | Description                                                   |
+|-------------------|---------------------------------------------------------------|
+| Analytics         | Primarily deals with clickstream analytics and reporting.     |
+| Learning Material | CMS-managed learning content for citizen consumption.         |
+| Certifications    | Similar to learning material, utilizes careeronestop dataset. |
+| News              | Aggregated news articles from various open RSS feeds.         |
+| Occupations       | Occupation descriptions and metadata from 2018 SOC.           |
+| Job Postings      | Feed of job postings relating to an occupation.               |
+| Employment        | Number of people employed in an occupation for a given year.  |
+| Unemployment      | Unemployment level for a given year.                          |
+| Demand            | Employment target for a given occupation.                     |
 
 ## Operations
 

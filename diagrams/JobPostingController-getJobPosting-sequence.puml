@@ -7,7 +7,7 @@ boundary JobPostingController
 participant JobPostingService
 participant OccupationService
 participant OccupationTrie
-participant JobPostingClient
+boundary JobPostingClient
 actor JobPostingApi
 
 UI -> JobPostingController : getJobPosting
