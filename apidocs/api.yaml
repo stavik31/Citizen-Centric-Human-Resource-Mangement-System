@@ -29,7 +29,28 @@ tags:
     description: Access reports and publish clickstream analytics
 paths:
   /analytics: {}
-  /certifications: {}
+  /certifications:
+    get:
+      summary: Get certifications
+      description: '![sequence diagram](/diagrams/CertificationController-getCertifications-sequence.svg)'
+      operationId: getCertifications
+      security:
+        - auth0: []
+      tags:
+        - Certification
+      parameters:
+        - name: query
+          in: query
+          description: Filters for certifications
+          schema:
+            $ref: '#/components/schemas/CertificationQuery'
+      responses:
+        200:
+          description: Certification response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CertificationResponse'
   /demand:
     get:
       summary: Get demand for a given SOC code
@@ -52,7 +73,50 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Demand'
-  /employment: {}
+    post:
+      summary: Update demand for a given SOC code
+      description: '![sequence diagram](/diagrams/DemandController-setDemand-sequence.svg)'
+      operationId: setDemand
+      security:
+        - auth0: [ ]
+      tags:
+        - Demand
+      requestBody:
+        required: true
+        description: Updated demand value
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Demand'
+      responses:
+        200:
+          description: Demand response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Demand'
+  /employment:
+    get:
+      summary: Get employment for a given SOC code
+      description: '![sequence diagram](/diagrams/EmploymentController-getEmploymentBySocCode-sequence.svg)'
+      operationId: getEmploymentBySocCode
+      security:
+        - auth0: [ ]
+      tags:
+        - Employment
+      parameters:
+        - name: socCode
+          in: query
+          description: Desired soc code
+          schema:
+            $ref: '#/components/schemas/SocCode'
+      responses:
+        200:
+          description: Employment response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmploymentResponse'
   /jobs: {}
   /learning: {}
   /news: {}
@@ -92,6 +156,13 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ExternalLink'
+    CertificationQuery:
+      type: object
+      properties:
+        socCode:
+          $ref: '#/components/schemas/SocCode'
+        organization:
+          type: string
     Chart:
       type: object
       properties:
