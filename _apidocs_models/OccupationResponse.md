@@ -5,4 +5,4 @@ title: OccupationResponse
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **data** | **List** |  | [optional] [default to null] |
+| **data** | List&lt;Occupation&gt; |  | [optional] [default to null] |

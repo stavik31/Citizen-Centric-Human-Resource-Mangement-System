@@ -5,13 +5,6 @@ Insert description here
 #### auth0
 
 - **Type**: OAuth
-- **Flow**: implicit
-- **Authorization URL**: https://petstore3.swagger.io/oauth/authorize
-- **Scopes**: 
-  - write:pets: modify pets in your account
-  - read:pets: read your pets
-#### api_key
-
-- **Type**: API key
-- **API key parameter name**: api_key
-- **Location**: HTTP header
+- **Flow**: accessCode
+- **Authorization URL**: https://dev-2rwfim8h3qzkydvj.us.auth0.com/authorize
+- **Scopes**: N/A

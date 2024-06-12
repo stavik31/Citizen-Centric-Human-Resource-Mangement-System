@@ -2,6 +2,8 @@
 title: LearningContentType
 ---
 
+##### Allowed Values
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
+* VIDEO
+* COURSE
+* READING

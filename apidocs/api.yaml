@@ -27,13 +27,45 @@ tags:
     description: Access certifications
   - name: Analytics
     description: Access reports and publish clickstream analytics
-paths: {}
+paths:
+  /analytics: {}
+  /certifications: {}
+  /demand:
+    get:
+      summary: Get demand for a given SOC code
+      description: '![sequence diagram](/diagrams/DemandController-getDemand-sequence.svg)'
+      operationId: getDemand
+      security:
+        - auth0: []
+      tags:
+        - Demand
+      parameters:
+        - name: query
+          in: query
+          description: Filters for demand
+          schema:
+            $ref: '#/components/schemas/DemandQuery'
+      responses:
+        200:
+          description: Demand response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Demand'
+  /employment: {}
+  /jobs: {}
+  /learning: {}
+  /news: {}
+  /occupations: {}
+  /profile: {}
+  /unemployment: {}
 components:
   schemas:
     SocCode:
       type: string
     LocalDateTime:
       type: string
+      format: datetime
     AnalyticsQuery:
       type: object
       properties:
@@ -63,7 +95,7 @@ components:
     Chart:
       type: object
       properties:
-        title: 
+        title:
           type: string
         type:
           type: string
@@ -143,13 +175,13 @@ components:
     JobPosting:
       type: object
       properties:
-        id: 
+        id:
           type: string
-        title: 
+        title:
           type: string
-        description: 
+        description:
           type: string
-        company: 
+        company:
           type: string
         salaryRange:
           type: string
@@ -301,17 +333,12 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Chart'
-      
+
   securitySchemes:
     auth0:
       type: oauth2
       flows:
-        implicit:
-          authorizationUrl: https://petstore3.swagger.io/oauth/authorize
-          scopes:
-            write:pets: modify pets in your account
-            read:pets: read your pets
-    api_key:
-      type: apiKey
-      name: api_key
-      in: header
+        authorizationCode:
+          authorizationUrl: https://dev-2rwfim8h3qzkydvj.us.auth0.com/authorize
+          tokenUrl: https://dev-2rwfim8h3qzkydvj.us.auth0.com/oauth/token
+          scopes: {}

@@ -5,4 +5,4 @@ title: NewsResponse
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **data** | **List** |  | [optional] [default to null] |
+| **data** | List&lt;News&gt; |  | [optional] [default to null] |

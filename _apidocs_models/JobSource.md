@@ -2,6 +2,6 @@
 title: JobSource
 ---
 
+##### Allowed Values
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
+* USA_JOBS

@@ -5,4 +5,4 @@ title: EmploymentResponse
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **data** | **List** |  | [optional] [default to null] |
+| **data** | List&lt;Employment&gt; |  | [optional] [default to null] |

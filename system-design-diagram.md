@@ -101,7 +101,7 @@ The data tier of this system consists of a single instance of Postgres managed b
 
 ## Presentation Tier Design
 
-## REST API Design
+## Application Tier Operations
 
 {% include apidocs.md %}
 
@@ -173,11 +173,11 @@ The data tier of this system consists of a single instance of Postgres managed b
 
 ### getDemand
 
-![getDemand sequence diagram](/diagrams/ViewDemandController-getDemand-sequence.svg)
+![getDemand sequence diagram](/diagrams/DemandController-getDemand-sequence.svg)
 
 ### setDemand
 
-![setDemand sequence diagram](/diagrams/ViewDemandController-setDemand-sequence.svg)
+![setDemand sequence diagram](/diagrams/DemandController-setDemand-sequence.svg)
 
 ## Accounts / Profiles
 
