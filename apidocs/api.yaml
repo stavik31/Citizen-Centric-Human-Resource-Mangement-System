@@ -71,6 +71,8 @@ components:
         - $ref: '#/components/schemas/LineChart'
         - $ref: '#/components/schemas/PieChart'
         - $ref: '#/components/schemas/MapChart'
+      discriminator:
+        propertyName: type
     ClickData:
       type: object
       properties:
