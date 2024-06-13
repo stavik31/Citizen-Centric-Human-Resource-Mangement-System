@@ -101,6 +101,133 @@ The data tier of this system consists of a single instance of Postgres managed b
 
 ## Presentation Tier Design
 
+### View Transition State Diagram
+
+![view transition state diagram](/diagrams/UI_State_Diagram/UI_State_Diagram.jpg)
+
+### View Catalogue
+
+#### CertificationInformationView
+
+![component diagram](/diagrams/componentDiagrams/views/CertificationInformationView.jpg)
+
+#### CertificationView
+
+![component diagram](/diagrams/componentDiagrams/views/CertificationView.jpg)
+
+#### DeleteAccountView
+
+![component diagram](/diagrams/componentDiagrams/views/DeleteAccountView.jpg)
+
+#### DownloadReportDataView
+
+![component diagram](/diagrams/componentDiagrams/views/DownloadReportDataView.jpg)
+
+#### ExploreAllOccupationView
+
+![component diagram](/diagrams/componentDiagrams/views/ExploreAllOccupationView.jpg)
+
+#### ExploreOccupationsView
+
+![component diagram](/diagrams/componentDiagrams/views/ExploreOccupationsView.jpg)
+
+#### HomePageView
+
+![component diagram](/diagrams/componentDiagrams/views/HomePageView.jpg)
+
+#### InformationView
+
+![component diagram](/diagrams/componentDiagrams/views/InformationView.jpg)
+
+#### JobView
+
+![component diagram](/diagrams/componentDiagrams/views/JobView.jpg)
+
+#### LearningInformationView
+
+![component diagram](/diagrams/componentDiagrams/views/LearningInformationView.jpg)
+
+#### LearningView
+
+![component diagram](/diagrams/componentDiagrams/views/LearningView.jpg)
+
+#### ManageDemandView
+
+![component diagram](/diagrams/componentDiagrams/views/ManageDemandView.jpg)
+
+#### NewsView
+
+![component diagram](/diagrams/componentDiagrams/views/NewsView.jpg)
+
+#### ProfileHomePageView
+
+![component diagram](/diagrams/componentDiagrams/views/ProfileHomePageView.jpg)
+
+#### ProfileView
+
+![component diagram](/diagrams/componentDiagrams/views/ProfileView.jpg)
+
+#### ReportTypeView
+
+![component diagram](/diagrams/componentDiagrams/views/ReportTypeView.jpg)
+
+#### ReportsView
+
+![component diagram](/diagrams/componentDiagrams/views/ReportsView.jpg)
+
+#### SelectDetailedOccupationView
+
+![component diagram](/diagrams/componentDiagrams/views/SelectDetailedOccupationView.jpg)
+
+#### SelectMajorAndMinorGroupView
+
+![component diagram](/diagrams/componentDiagrams/views/SelectMajorAndMinorGroupView.jpg)
+
+### Component Catalogue
+#### Breadcrumb
+
+![component diagram](/diagrams/componentDiagrams/Breadcrumb.jpg)
+
+#### Button
+
+![component diagram](/diagrams/componentDiagrams/Button.jpg)
+
+#### CertificationsDetails
+
+![component diagram](/diagrams/componentDiagrams/CertificationsDetails.jpg)
+
+#### CitizenHeatMap
+
+![component diagram](/diagrams/componentDiagrams/CitizenHeatMap.jpg)
+
+#### FormInput
+
+![component diagram](/diagrams/componentDiagrams/FormInput.jpg)
+
+#### JobDetails
+
+![component diagram](/diagrams/componentDiagrams/JobDetails.jpg)
+
+#### LearningDetails
+
+![component diagram](/diagrams/componentDiagrams/LearningDetails.jpg)
+
+#### NewsDetails
+
+![component diagram](/diagrams/componentDiagrams/NewsDetails.jpg)
+
+#### OccupationDataButton
+
+![component diagram](/diagrams/componentDiagrams/OccupationDataButton.jpg)
+
+#### Report
+
+![component diagram](/diagrams/componentDiagrams/Report.jpg)
+
+#### SelectWithTypeahead
+
+![component diagram](/diagrams/componentDiagrams/SelectWithTypeahead.jpg)
+
 ## Application Tier Operations
 
 {% include apidocs.md %}
