@@ -7,8 +7,8 @@ boundary OccupationController
 participant OccupationService
 participant OccupationTrie
 
-UI -> OccupationController : getOccupationsBySocCode
-OccupationController -> OccupationService : getOccupationsBySocCode
+UI -> OccupationController : getOccupation
+OccupationController -> OccupationService : getOccupation
 OccupationService -> OccupationTrie : getBySocCode
 return
 return

@@ -117,11 +117,165 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/EmploymentResponse'
-  /jobs: {}
-  /learning: {}
-  /news: {}
-  /occupations: {}
-  /profile: {}
+  /jobs:
+    get:
+      summary: Get job postings
+      description: '![sequence diagram](/diagrams/JobPostingController-getJobPosting-sequence.svg)'
+      operationId: getJobPosting
+      security:
+        - auth0: [ ]
+      tags:
+        - JobPosting
+      parameters:
+        - name: query
+          in: query
+          description: Filters for job postings
+          schema:
+            $ref: '#/components/schemas/JobPostingQuery'
+      responses:
+        200:
+          description: Job posting response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobPostingResponse'
+  /learning:
+    get:
+      summary: Get learning material
+      description: '![sequence diagram](/diagrams/LearningMaterialController-getLearningMaterial-sequence.svg)'
+      operationId: getLearningMaterial
+      security:
+        - auth0: [ ]
+      tags:
+        - LearningMaterial
+      parameters:
+        - name: query
+          in: query
+          description: Filters for learning material
+          schema:
+            $ref: '#/components/schemas/LearningMaterialQuery'
+      responses:
+        200:
+          description: Learning material response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LearningMaterialResponse'
+  /news:
+    get:
+      summary: Get news
+      description: '![sequence diagram](/diagrams/NewsController-getNews-sequence.svg)'
+      operationId: getNews
+      security:
+        - auth0: [ ]
+      tags:
+        - News
+      parameters:
+        - name: query
+          in: query
+          description: Filters for news
+          schema:
+            $ref: '#/components/schemas/NewsQuery'
+      responses:
+        200:
+          description: News response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NewsResponse'
+  /occupations:
+    get:
+      summary: Get single occupation
+      description: '![sequence diagram](/diagrams/OccupationController-getOccupation-sequence.svg)'
+      operationId: getOccupation
+      security:
+        - auth0: [ ]
+      tags:
+        - Occupation
+      parameters:
+        - name: socCode
+          in: query
+          description: Desired soc code
+          schema:
+            $ref: '#/components/schemas/SocCode'
+      responses:
+        200:
+          description: Occupation response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Occupation'
+  /occupations/children:
+    get:
+      summary: Get child occupations
+      description: '![sequence diagram](/diagrams/OccupationController-getChildOccupations-sequence.svg)'
+      operationId: getChildOccupations
+      security:
+        - auth0: [ ]
+      tags:
+        - Occupation
+      parameters:
+        - name: socCode
+          in: query
+          description: Desired soc code
+          schema:
+            $ref: '#/components/schemas/SocCode'
+      responses:
+        200:
+          description: Occupation response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OccupationResponse'
+  /profile:
+    get:
+      summary: Get signed in user profile
+      description: '![sequence diagram](/diagrams/UserController-getCurrentUserProfile-sequence.svg)'
+      operationId: getCurrentUserProfile
+      security:
+        - auth0: [ ]
+      tags:
+        - User
+      responses:
+        200:
+          description: Profile response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profile'
+    post:
+      summary: Update signed in user profile
+      description: '![sequence diagram](/diagrams/UserController-updateUserProfile-sequence.svg)'
+      operationId: updateUserProfile
+      security:
+        - auth0: [ ]
+      tags:
+        - User
+      requestBody:
+        required: true
+        description: Updated profile
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Profile'
+      responses:
+        200:
+          description: Profile response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profile'
+    delete:
+      summary: Delete currently signed in user profile
+      description: '![sequence diagram](/diagrams/UserController-deleteCurrentUserProfile-sequence.svg)'
+      operationId: deleteCurrentUserProfile
+      security:
+        - auth0: [ ]
+      tags:
+        - User
+      responses:
+        204:
+          description: No content
   /unemployment: {}
 components:
   schemas:
@@ -316,6 +470,13 @@ components:
           $ref: '#/components/schemas/SocCode'
         contentType:
           $ref: '#/components/schemas/LearningContentType'
+    LearningMaterialResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/LearningMaterial'
     LineChart:
       type: object
       properties:

@@ -1,0 +1,17 @@
+@startuml
+
+autoactivate on
+
+actor UI
+boundary OccupationController
+participant OccupationService
+participant OccupationTrie
+
+UI -> OccupationController : getChildOccupations
+OccupationController -> OccupationService : getChildOccupations
+OccupationService -> OccupationTrie : getWithPrefix
+return
+return
+return
+
+@enduml
