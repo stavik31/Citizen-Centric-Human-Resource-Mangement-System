@@ -286,64 +286,6 @@ The data tier of this system consists of a single instance of Postgres managed b
 
 ## Data Tier Design
 
-## Operations
-
-### getCertifications
-
-![getCertifications sequence diagram](/diagrams/CertificationController-getCertifications-sequence.svg)
-
-### notifyEntryPublished
-
-![notifyEntryPublished sequence diagram](/diagrams/ContentfulController-notifyEntryPublished-sequence.svg)
-
-### notifyEntryUnpublished
-
-![notifyEntryUnpublished sequence diagram](/diagrams/ContentfulController-notifyEntryUnpublished-sequence.svg)
-
-### getEmploymentBySocCode
-
-![getEmploymentBySocCode sequence diagram](/diagrams/EmploymentController-getEmploymentBySocCode-sequence.svg)
-
-### getJobPosting
-
-![getJobPosting sequence diagram](/diagrams/JobPostingController-getJobPosting-sequence.svg)
-
-### getLearningMaterial
-
-![getLearningMaterial sequence diagram](/diagrams/LearningMaterialController-getLearningMaterial-sequence.svg)
-
-### getNews
-
-![getNews sequence diagram](/diagrams/NewsController-getNews-sequence.svg)
-
-### getOccupationsBySocCode
-
-![getOccupationsBySocCode sequence diagram](/diagrams/OccupationController-getOccupationsBySocCode-sequence.svg)
-
-### getUnemploymentBySocCode
-
-![getUnemploymentBySocCode sequence diagram](/diagrams/UnemploymentController-getUnemploymentBySocCode-sequence.svg)
-
-### deleteCurrentUserProfile
-
-![deleteCurrentUserProfile sequence diagram](/diagrams/UserController-deleteCurrentUserProfile-sequence.svg)
-
-### getCurrentUserProfile
-
-![getCurrentUserProfile sequence diagram](/diagrams/UserController-getCurrentUserProfile-sequence.svg)
-
-### updateUserProfile
-
-![updateUserProfile sequence diagram](/diagrams/UserController-updateUserProfile-sequence.svg)
-
-### getDemand
-
-![getDemand sequence diagram](/diagrams/DemandController-getDemand-sequence.svg)
-
-### setDemand
-
-![setDemand sequence diagram](/diagrams/DemandController-setDemand-sequence.svg)
-
 ## Accounts / Profiles
 
 ### U1 - Create Account
