@@ -6,25 +6,49 @@ info:
   version: '1.0.0'
 tags:
   - name: Unemployment
-    description: Access unemployment statistics
+    description: |
+      Access unemployment statistics
+
+      ![class diagram](/diagrams/classDiagrams/Unemployment.svg)
   - name: Demand
-    description: Access and set demand targets by occupation
+    description: |
+      Access and set demand targets by occupation
+
+      ![class diagram](/diagrams/classDiagrams/Demand.svg)
   - name: Employment
     description: Access employment statistics by occupation
   - name: JobPosting
     description: Access a list of available jobs by occupation
   - name: Occupation
-    description: Access information about occupations or groups of occupations
+    description: |
+      Access information about occupations or groups of occupations
+
+      ![class diagram](/diagrams/classDiagrams/Occupation.svg)
   - name: News
-    description: Access news related to an occupation
+    description: |
+      Access news related to an occupation
+
+      ![class diagram](/diagrams/classDiagrams/News.svg)
   - name: LearningMaterial
-    description: Access learning material for an occupation
+    description: |
+      Access learning material for an occupation
+
+      ![class diagram](/diagrams/classDiagrams/LearningMaterial.svg)
   - name: Contentful
-    description: Listener for Contentful webhooks
+    description: |
+      Listener for Contentful webhooks
+
+      ![class diagram](/diagrams/classDiagrams/Contentful.svg)
   - name: User
-    description: Access and manage user profiles
+    description: |
+      Access and manage user profiles
+
+      ![class diagram](/diagrams/classDiagrams/User.svg)
   - name: Certification
-    description: Access certifications
+    description: |
+      Access certifications
+
+      ![class diagram](/diagrams/classDiagrams/Certifications.svg)
   - name: Analytics
     description: Access reports and publish clickstream analytics
 paths:

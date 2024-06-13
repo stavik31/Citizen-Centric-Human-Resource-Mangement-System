@@ -2,7 +2,7 @@
 title: NewsController
 ---
 
-Access news related to an occupation
+Access news related to an occupation  ![class diagram](/diagrams/classDiagrams/News.svg) 
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|

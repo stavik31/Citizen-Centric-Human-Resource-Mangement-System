@@ -2,7 +2,7 @@
 title: UserController
 ---
 
-Access and manage user profiles
+Access and manage user profiles  ![class diagram](/diagrams/classDiagrams/User.svg) 
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|

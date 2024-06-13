@@ -2,7 +2,7 @@
 title: LearningMaterialController
 ---
 
-Access learning material for an occupation
+Access learning material for an occupation  ![class diagram](/diagrams/classDiagrams/LearningMaterial.svg) 
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|

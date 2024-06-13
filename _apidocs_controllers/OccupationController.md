@@ -2,7 +2,7 @@
 title: OccupationController
 ---
 
-Access information about occupations or groups of occupations
+Access information about occupations or groups of occupations  ![class diagram](/diagrams/classDiagrams/Occupation.svg) 
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|

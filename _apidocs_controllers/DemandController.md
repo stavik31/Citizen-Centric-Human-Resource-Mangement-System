@@ -2,7 +2,7 @@
 title: DemandController
 ---
 
-Access and set demand targets by occupation
+Access and set demand targets by occupation  ![class diagram](/diagrams/classDiagrams/Demand.svg) 
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|

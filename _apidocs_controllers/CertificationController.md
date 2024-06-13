@@ -2,7 +2,7 @@
 title: CertificationController
 ---
 
-Access certifications
+Access certifications  ![class diagram](/diagrams/classDiagrams/Certifications.svg) 
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
