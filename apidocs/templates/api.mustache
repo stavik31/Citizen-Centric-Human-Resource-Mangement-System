@@ -1,0 +1,47 @@
+---
+title: {{classname}}
+---
+
+{{#operationTagDescription}}{{{.}}}{{/operationTagDescription}}
+
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+{{#operations}}{{#operation}}| **{{operationId}}** | **{{httpMethod}}** {{path}} | {{summary}} |
+{{/operation}}{{/operations}}
+
+{{#operations}}
+{{#operation}}
+
+<hr/>
+#### **{{operationId}}**
+> {{#returnType}}{{.}} {{/returnType}}{{operationId}}({{#allParams}}{{{paramName}}}{{^-last}}, {{/-last}}{{/allParams}})
+
+{{{summary}}}
+
+{{#unescapedNotes}}
+{{{.}}}
+{{/unescapedNotes}}
+
+##### Parameters
+{{^allParams}}This endpoint does not need any parameter.{{/allParams}}{{#allParams}}{{#-last}}
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|{{/-last}}{{/allParams}}
+{{#allParams}}| **{{paramName}}** | {{#isPrimitiveType}}**{{dataType}}**{{/isPrimitiveType}}{{^isPrimitiveType}}{{#isFile}}**{{dataType}}**{{/isFile}}{{^isFile}}{{#generateModelDocs}}**{{dataType}}**{{/generateModelDocs}}{{^generateModelDocs}}**{{dataType}}**{{/generateModelDocs}}{{/isFile}}{{/isPrimitiveType}}| {{description}} |{{^required}} [optional]{{/required}}{{#defaultValue}} [default to {{.}}]{{/defaultValue}}{{#allowableValues}} [enum: {{#values}}{{{.}}}{{^-last}}, {{/-last}}{{/values}}]{{/allowableValues}} |
+{{/allParams}}
+
+##### Return type
+
+{{#returnType}}{{#returnTypeIsPrimitive}}**{{returnType}}**{{/returnTypeIsPrimitive}}{{^returnTypeIsPrimitive}}{{#generateModelDocs}}**{{returnType}}**{{/generateModelDocs}}{{^generateModelDocs}}**{{returnType}}**{{/generateModelDocs}}{{/returnTypeIsPrimitive}}{{/returnType}}{{^returnType}}null (empty response body){{/returnType}}
+
+##### Authorization
+
+{{^authMethods}}No authorization required{{/authMethods}}{{#authMethods}}{{name}}{{^-last}}, {{/-last}}{{/authMethods}}
+
+##### HTTP request headers
+
+- **Content-Type**: {{#consumes}}{{{mediaType}}}{{^-last}}, {{/-last}}{{/consumes}}{{^consumes}}Not defined{{/consumes}}
+- **Accept**: {{#produces}}{{{mediaType}}}{{^-last}}, {{/-last}}{{/produces}}{{^produces}}Not defined{{/produces}}
+
+{{/operation}}
+{{/operations}}
+<hr/>

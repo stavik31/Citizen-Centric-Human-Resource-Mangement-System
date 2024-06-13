@@ -1,0 +1,31 @@
+{
+  "sys": {
+    "type": "DeletedEntry",
+    "id": "5d19lTVZTyCONXM8y2LBkz",
+    "space": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Space",
+        "id": "ai8a3z37eduf"
+      }
+    },
+    "environment": {
+      "sys": {
+        "id": "master",
+        "type": "Link",
+        "linkType": "Environment"
+      }
+    },
+    "contentType": {
+      "sys": {
+        "type": "Link",
+        "linkType": "ContentType",
+        "id": "learningMaterial"
+      }
+    },
+    "revision": 1,
+    "createdAt": "2024-06-10T01:12:08.553Z",
+    "updatedAt": "2024-06-10T01:12:08.553Z",
+    "deletedAt": "2024-06-10T01:12:08.553Z"
+  }
+}

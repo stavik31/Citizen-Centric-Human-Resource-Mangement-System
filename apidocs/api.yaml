@@ -1,0 +1,576 @@
+openapi: 3.0.3
+info:
+  title: Agile HRM System
+  description: |-
+    Insert description here
+  version: '1.0.0'
+tags:
+  - name: Unemployment
+    description: Access unemployment statistics
+  - name: Demand
+    description: Access and set demand targets by occupation
+  - name: Employment
+    description: Access employment statistics by occupation
+  - name: JobPosting
+    description: Access a list of available jobs by occupation
+  - name: Occupation
+    description: Access information about occupations or groups of occupations
+  - name: News
+    description: Access news related to an occupation
+  - name: LearningMaterial
+    description: Access learning material for an occupation
+  - name: Contentful
+    description: Listener for Contentful webhooks
+  - name: User
+    description: Access and manage user profiles
+  - name: Certification
+    description: Access certifications
+  - name: Analytics
+    description: Access reports and publish clickstream analytics
+paths:
+  /analytics: {}
+  /certifications:
+    get:
+      summary: Get certifications
+      description: '![sequence diagram](/diagrams/CertificationController-getCertifications-sequence.svg)'
+      operationId: getCertifications
+      security:
+        - auth0: []
+      tags:
+        - Certification
+      parameters:
+        - name: query
+          in: query
+          description: Filters for certifications
+          schema:
+            $ref: '#/components/schemas/CertificationQuery'
+      responses:
+        200:
+          description: Certification response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CertificationResponse'
+  /demand:
+    get:
+      summary: Get demand for a given SOC code
+      description: '![sequence diagram](/diagrams/DemandController-getDemand-sequence.svg)'
+      operationId: getDemand
+      security:
+        - auth0: []
+      tags:
+        - Demand
+      parameters:
+        - name: query
+          in: query
+          description: Filters for demand
+          schema:
+            $ref: '#/components/schemas/DemandQuery'
+      responses:
+        200:
+          description: Demand response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Demand'
+    post:
+      summary: Update demand for a given SOC code
+      description: '![sequence diagram](/diagrams/DemandController-setDemand-sequence.svg)'
+      operationId: setDemand
+      security:
+        - auth0: [ ]
+      tags:
+        - Demand
+      requestBody:
+        required: true
+        description: Updated demand value
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Demand'
+      responses:
+        200:
+          description: Demand response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Demand'
+  /employment:
+    get:
+      summary: Get employment for a given SOC code
+      description: '![sequence diagram](/diagrams/EmploymentController-getEmploymentBySocCode-sequence.svg)'
+      operationId: getEmploymentBySocCode
+      security:
+        - auth0: [ ]
+      tags:
+        - Employment
+      parameters:
+        - name: socCode
+          in: query
+          description: Desired soc code
+          schema:
+            $ref: '#/components/schemas/SocCode'
+      responses:
+        200:
+          description: Employment response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmploymentResponse'
+  /jobs:
+    get:
+      summary: Get job postings
+      description: '![sequence diagram](/diagrams/JobPostingController-getJobPosting-sequence.svg)'
+      operationId: getJobPosting
+      security:
+        - auth0: [ ]
+      tags:
+        - JobPosting
+      parameters:
+        - name: query
+          in: query
+          description: Filters for job postings
+          schema:
+            $ref: '#/components/schemas/JobPostingQuery'
+      responses:
+        200:
+          description: Job posting response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobPostingResponse'
+  /learning:
+    get:
+      summary: Get learning material
+      description: '![sequence diagram](/diagrams/LearningMaterialController-getLearningMaterial-sequence.svg)'
+      operationId: getLearningMaterial
+      security:
+        - auth0: [ ]
+      tags:
+        - LearningMaterial
+      parameters:
+        - name: query
+          in: query
+          description: Filters for learning material
+          schema:
+            $ref: '#/components/schemas/LearningMaterialQuery'
+      responses:
+        200:
+          description: Learning material response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LearningMaterialResponse'
+  /news:
+    get:
+      summary: Get news
+      description: '![sequence diagram](/diagrams/NewsController-getNews-sequence.svg)'
+      operationId: getNews
+      security:
+        - auth0: [ ]
+      tags:
+        - News
+      parameters:
+        - name: query
+          in: query
+          description: Filters for news
+          schema:
+            $ref: '#/components/schemas/NewsQuery'
+      responses:
+        200:
+          description: News response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NewsResponse'
+  /occupations:
+    get:
+      summary: Get single occupation
+      description: '![sequence diagram](/diagrams/OccupationController-getOccupation-sequence.svg)'
+      operationId: getOccupation
+      security:
+        - auth0: [ ]
+      tags:
+        - Occupation
+      parameters:
+        - name: socCode
+          in: query
+          description: Desired soc code
+          schema:
+            $ref: '#/components/schemas/SocCode'
+      responses:
+        200:
+          description: Occupation response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Occupation'
+  /occupations/children:
+    get:
+      summary: Get child occupations
+      description: '![sequence diagram](/diagrams/OccupationController-getChildOccupations-sequence.svg)'
+      operationId: getChildOccupations
+      security:
+        - auth0: [ ]
+      tags:
+        - Occupation
+      parameters:
+        - name: socCode
+          in: query
+          description: Desired soc code
+          schema:
+            $ref: '#/components/schemas/SocCode'
+      responses:
+        200:
+          description: Occupation response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OccupationResponse'
+  /profile:
+    get:
+      summary: Get signed in user profile
+      description: '![sequence diagram](/diagrams/UserController-getCurrentUserProfile-sequence.svg)'
+      operationId: getCurrentUserProfile
+      security:
+        - auth0: [ ]
+      tags:
+        - User
+      responses:
+        200:
+          description: Profile response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profile'
+    post:
+      summary: Update signed in user profile
+      description: '![sequence diagram](/diagrams/UserController-updateUserProfile-sequence.svg)'
+      operationId: updateUserProfile
+      security:
+        - auth0: [ ]
+      tags:
+        - User
+      requestBody:
+        required: true
+        description: Updated profile
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Profile'
+      responses:
+        200:
+          description: Profile response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profile'
+    delete:
+      summary: Delete currently signed in user profile
+      description: '![sequence diagram](/diagrams/UserController-deleteCurrentUserProfile-sequence.svg)'
+      operationId: deleteCurrentUserProfile
+      security:
+        - auth0: [ ]
+      tags:
+        - User
+      responses:
+        204:
+          description: No content
+  /unemployment: {}
+components:
+  schemas:
+    SocCode:
+      type: string
+    LocalDateTime:
+      type: string
+      format: datetime
+    AnalyticsQuery:
+      type: object
+      properties:
+        start:
+          $ref: '#/components/schemas/LocalDateTime'
+        end:
+          $ref: '#/components/schemas/LocalDateTime'
+        socCode:
+          $ref: '#/components/schemas/SocCode'
+    Certification:
+      type: object
+      properties:
+        id:
+          type: string
+        socCode:
+          $ref: '#/components/schemas/SocCode'
+        title:
+          type: string
+        description:
+          type: string
+        organization:
+          type: string
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/ExternalLink'
+    CertificationQuery:
+      type: object
+      properties:
+        socCode:
+          $ref: '#/components/schemas/SocCode'
+        organization:
+          type: string
+    Chart:
+      type: object
+      properties:
+        title:
+          type: string
+        type:
+          type: string
+      oneOf:
+        - $ref: '#/components/schemas/LineChart'
+        - $ref: '#/components/schemas/PieChart'
+        - $ref: '#/components/schemas/MapChart'
+      discriminator:
+        propertyName: type
+    ClickData:
+      type: object
+      properties:
+        timestamp:
+          type: integer
+          format: int64
+        elementId:
+          type: string
+        elementType:
+          type: string
+        userId:
+          type: string
+        userPostalCode:
+          type: string
+        userCurrentOccupation:
+          type: string
+        userGoalOccupation:
+          type: string
+    Demand:
+      type: object
+      properties:
+        socCode:
+          $ref: '#/components/schemas/SocCode'
+        value:
+          type: integer
+          format: int64
+    DemandQuery:
+      type: object
+      properties:
+        socCode:
+          $ref: '#/components/schemas/SocCode'
+    CertificationResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Certification'
+    Employment:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        socCode:
+          $ref: '#/components/schemas/SocCode'
+        date:
+          $ref: '#/components/schemas/LocalDateTime'
+        value:
+          type: integer
+          format: int64
+        forecasted:
+          type: boolean
+    EmploymentResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Employment'
+    ExternalLink:
+      type: object
+      properties:
+        url:
+          type: string
+        label:
+          type: string
+    JobPosting:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        company:
+          type: string
+        salaryRange:
+          type: string
+        location:
+          type: string
+        deadline:
+          type: string
+        link:
+          $ref: '#/components/schemas/ExternalLink'
+        source:
+          $ref: '#/components/schemas/JobSource'
+    JobPostingQuery:
+      type: object
+      properties:
+        socCode:
+          $ref: '#/components/schemas/SocCode'
+        userQuery:
+          type: string
+        yearlySalaryUpper:
+          type: integer
+          format: int64
+        yearlySalaryLower:
+          type: integer
+          format: int64
+    JobPostingResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/JobPostingQuery'
+    JobSource:
+      type: string
+      enum: [USA_JOBS]
+    LearningContentType:
+      type: string
+      enum: [VIDEO, COURSE, READING]
+    LearningMaterial:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        socCode:
+          $ref: '#/components/schemas/SocCode'
+        organization:
+          type: string
+        contentType:
+          $ref: '#/components/schemas/LearningContentType'
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/ExternalLink'
+    LearningMaterialQuery:
+      type: object
+      properties:
+        socCode:
+          $ref: '#/components/schemas/SocCode'
+        contentType:
+          $ref: '#/components/schemas/LearningContentType'
+    LearningMaterialResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/LearningMaterial'
+    LineChart:
+      type: object
+      properties:
+        x:
+          type: array
+          items:
+            type: number
+        y:
+          type: array
+          items:
+            type: number
+    MapChart:
+      type: object
+    News:
+      type: object
+      properties:
+        id:
+          type: string
+        socCode:
+          $ref: '#/components/schemas/SocCode'
+        title:
+          type: string
+        source:
+          type: string
+        published:
+          $ref: '#/components/schemas/LocalDateTime'
+        link:
+          $ref: '#/components/schemas/ExternalLink'
+    NewsQuery:
+      type: object
+      properties:
+        socCode:
+          $ref: '#/components/schemas/SocCode'
+        source:
+          type: string
+        after:
+          $ref: '#/components/schemas/LocalDateTime'
+        before:
+          $ref: '#/components/schemas/LocalDateTime'
+    NewsResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/News'
+    Occupation:
+      type: object
+      properties:
+        socCode:
+          $ref: '#/components/schemas/SocCode'
+        title:
+          type: string
+        description:
+          type: string
+    OccupationResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Occupation'
+    PieChart:
+      type: object
+    Profile:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        email:
+          type: string
+        postalCode:
+          type: string
+        currentSocCode:
+          $ref: '#/components/schemas/SocCode'
+        goalSocCode:
+          $ref: '#/components/schemas/SocCode'
+        termsOfUseConsent:
+          type: boolean
+    Report:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Chart'
+
+  securitySchemes:
+    auth0:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://dev-2rwfim8h3qzkydvj.us.auth0.com/authorize
+          tokenUrl: https://dev-2rwfim8h3qzkydvj.us.auth0.com/oauth/token
+          scopes: {}

@@ -33,12 +33,19 @@ permalink: pretty
 # Build settings
 theme: just-the-docs
 plugins:
-  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-github-metadata
+  - jekyll-include-cache
+
 favicon_ico: "/favicon.ico"
 color_scheme: dark
 collections:
   notes:
     output: true
+  apidocs_controllers:
+    output: false
+  apidocs_models:
+    output: false
 defaults:
   -
     scope:
@@ -91,7 +98,20 @@ heading_anchors: true
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-# Back to top link
+# Back to top link\
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - apidocs/
+  - .idea/
 
 # Footer "Edit this page on GitHub" link text
 footer_content: "Copyright content goes here"
@@ -108,11 +128,6 @@ gh_edit_repository: "https://github.com/PBL3-2024/PBL3-2024.github.io" # the git
 gh_edit_branch: "main" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
-
-plugins:
-  - jekyll-seo-tag
-  - jekyll-github-metadata
-  - jekyll-include-cache
 
 kramdown:
   syntax_highlighter_opts:

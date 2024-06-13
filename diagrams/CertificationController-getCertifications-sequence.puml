@@ -8,8 +8,8 @@ participant CertificationService
 participant CertificationDAO
 database Database
 
-UI -> CertificationController : getNews
-CertificationController -> CertificationService : getNews
+UI -> CertificationController : getCertifications
+CertificationController -> CertificationService : getCertifications
 CertificationService -> CertificationDAO : getCertificationsBySocCode
 CertificationDAO -> Database
 return
