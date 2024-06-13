@@ -109,77 +109,115 @@ The data tier of this system consists of a single instance of Postgres managed b
 
 #### CertificationInformationView
 
+![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-CertificationInformationViewMockup.svg)
+
 ![component diagram](/diagrams/componentDiagrams/views/CertificationInformationView.jpg)
 
 #### CertificationView
+
+![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-CertificationViewMockup.svg)
 
 ![component diagram](/diagrams/componentDiagrams/views/CertificationView.jpg)
 
 #### DeleteAccountView
 
+![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-DeleteAccountViewMockup.svg)
+
 ![component diagram](/diagrams/componentDiagrams/views/DeleteAccountView.jpg)
 
 #### DownloadReportDataView
+
+![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-DownloadReportDataViewMockup.svg)
 
 ![component diagram](/diagrams/componentDiagrams/views/DownloadReportDataView.jpg)
 
 #### ExploreAllOccupationView
 
+![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-ExploreAllOccupationViewMockup.svg)
+
 ![component diagram](/diagrams/componentDiagrams/views/ExploreAllOccupationView.jpg)
 
 #### ExploreOccupationsView
+
+![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-ExploreOccupationsViewMockup.svg)
 
 ![component diagram](/diagrams/componentDiagrams/views/ExploreOccupationsView.jpg)
 
 #### HomePageView
 
+![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-HomePageViewMockup.svg)
+
 ![component diagram](/diagrams/componentDiagrams/views/HomePageView.jpg)
 
 #### InformationView
+
+![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-InformationViewMockup.svg)
 
 ![component diagram](/diagrams/componentDiagrams/views/InformationView.jpg)
 
 #### JobView
 
+![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-JobViewMockup.svg)
+
 ![component diagram](/diagrams/componentDiagrams/views/JobView.jpg)
 
 #### LearningInformationView
+
+![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-LearningInformationViewMockup.svg)
 
 ![component diagram](/diagrams/componentDiagrams/views/LearningInformationView.jpg)
 
 #### LearningView
 
+![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-LearningViewMockup.svg)
+
 ![component diagram](/diagrams/componentDiagrams/views/LearningView.jpg)
 
 #### ManageDemandView
+
+![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-ManageDemandViewMockup.svg)
 
 ![component diagram](/diagrams/componentDiagrams/views/ManageDemandView.jpg)
 
 #### NewsView
 
+![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-NewsViewMockup.svg)
+
 ![component diagram](/diagrams/componentDiagrams/views/NewsView.jpg)
 
 #### ProfileHomePageView
+
+![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-ProfileHomePageViewMockup.svg)
 
 ![component diagram](/diagrams/componentDiagrams/views/ProfileHomePageView.jpg)
 
 #### ProfileView
 
+![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-ProfileViewMockup.svg)
+
 ![component diagram](/diagrams/componentDiagrams/views/ProfileView.jpg)
 
 #### ReportTypeView
+
+![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-ReportTypeViewMockup.svg)
 
 ![component diagram](/diagrams/componentDiagrams/views/ReportTypeView.jpg)
 
 #### ReportsView
 
+![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-ReportsViewMockup.svg)
+
 ![component diagram](/diagrams/componentDiagrams/views/ReportsView.jpg)
 
 #### SelectDetailedOccupationView
 
+![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-SelectDetailedOccupationViewMockup.svg)
+
 ![component diagram](/diagrams/componentDiagrams/views/SelectDetailedOccupationView.jpg)
 
 #### SelectMajorAndMinorGroupView
+
+![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-SelectMajorAndMinorGroupViewMockup.svg)
 
 ![component diagram](/diagrams/componentDiagrams/views/SelectMajorAndMinorGroupView.jpg)
 
@@ -425,3 +463,17 @@ stateDiagram-v2
 ### U17 - View Analytics Reports
 #### Activity Diagram
 ![View Analytics Reports](/diagrams/ViewAnalyticsReports.jpg)
+
+## Appendix A - Large Format Diagrams
+
+The diagrams in this section are useful for understanding the system's overall design but are difficult to view in a normal document. To view these diagrams, right click on them and open them in a new tab. From there, you can use your browser's zooming and panning capabilities to explore them in detail.
+
+### Composite Application Tier Class Diagram
+
+![Composite class diagram for the application tier](/diagrams/PBL3-2024-Composite-Class-Diagram.png)
+
+### Composite View Mockups / State Transitions
+
+![Composite diagram of view mockups and the transitions between them](/diagrams/PBL3-2024-UI-Mockups.svg)
+
+Note that the colors are strictly for readability and have no specific meaning.
