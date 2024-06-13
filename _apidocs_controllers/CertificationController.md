@@ -2,7 +2,7 @@
 title: CertificationController
 ---
 
-
+Access certifications
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|

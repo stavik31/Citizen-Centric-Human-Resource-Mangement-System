@@ -2,7 +2,7 @@
 title: JobPostingController
 ---
 
-
+Access a list of available jobs by occupation
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|

@@ -2,7 +2,7 @@
 title: UserController
 ---
 
-
+Access and manage user profiles
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|

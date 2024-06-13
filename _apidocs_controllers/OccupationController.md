@@ -2,7 +2,7 @@
 title: OccupationController
 ---
 
-
+Access information about occupations or groups of occupations
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|

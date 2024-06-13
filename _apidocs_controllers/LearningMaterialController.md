@@ -2,7 +2,7 @@
 title: LearningMaterialController
 ---
 
-
+Access learning material for an occupation
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|

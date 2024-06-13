@@ -2,7 +2,7 @@
 title: EmploymentController
 ---
 
-
+Access employment statistics by occupation
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|

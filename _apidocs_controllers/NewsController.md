@@ -2,7 +2,7 @@
 title: NewsController
 ---
 
-
+Access news related to an occupation
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|

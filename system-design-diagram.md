@@ -55,6 +55,7 @@ Due to our relatively wide set of functionality, this system design loosely foll
 | News              | Aggregated news articles from various open RSS feeds.         |
 | Occupations       | Occupation descriptions and metadata from 2018 SOC.           |
 | Unemployment      | Unemployment level for a given year.                          |
+| Users             | User profiles                                                 |
 
 These boundaries span all three of the application tiers, but are most heavily relied upon in the application tier, where they heavily shaped the design of the system.
 
@@ -107,7 +108,21 @@ The data tier of this system consists of a single instance of Postgres managed b
 
 ### View Catalogue
 
+This section includes a complete list of all user interface views provided by the application.
+
 #### CertificationInformationView
+
+Name
+: CertificationInformationView
+
+Description
+: View detailed information and links to external resources relating to a single certification.
+
+Use Cases
+: U11
+
+Requirements
+: FREQ-12
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-CertificationInformationViewMockup.svg)
 
@@ -286,73 +301,187 @@ The data tier of this system consists of a single instance of Postgres managed b
 
 ## Data Tier Design
 
-## Accounts / Profiles
+## Operational Scenarios
+
+This section describes scenarios that show how the system will be utilized to meet its functional requirements. Each scenario is illustrated by a use case.
+
+### Overview
+
+![Use Case Diagram](/diagrams/new-use-case-diagram-SRS.svg)
+
+| Number | Name                            | Description                                                                                                             | Associated FREQ   |
+|--------|---------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------|
+| U1     | Create Account                  | Register an account on the system                                                                                       | FREQ-1            |
+| U2     | Administer Account              | Administer an account and assign a role                                                                                 | FREQ-2            |
+| U3     | Edit Account Profile            | Edit profile to change profile information such as legal name, occupation, location                                     | FREQ-3            |
+| U4     | Reset Account Password          | Reset and recover account's password                                                                                    | FREQ-4            |
+| U5     | Delete Account                  | Delete account from the system                                                                                          | FREQ-5            |
+| U6     | View Occupation Information     | View general information about each occupation, such as a title, description, and illustrative examples                 | FREQ-6 - FREQ-7   |
+| U7     | Select Goal Job                 | Select an occupation as the preferred goal job                                                                          | FREQ-8, FREQ-6    |
+| U8     | View Unemployment Data          | View historical unemployment data                                                                                       | FREQ-9            |
+| U9     | View Occupation Trend           | View historical data and estimated trend forecast for a given occupation                                                | FREQ-10, FREQ-6   |
+| U10    | View Job Postings               | View job postings for a given occupation                                                                                | FREQ-11, FREQ-6   |
+| U11    | View Certifications Information | View applicable certifications for a given occupation                                                                   | FREQ-12, FREQ-6   |
+| U12    | View Learning Material          | View applicable online learning material for a given occupation                                                         | FREQ-13, FREQ-6   |
+| U13    | Manage Learning Material        | Create, update, remove online learning material for a given occupation on the system                                    | FREQ-14, FREQ-6   |
+| U14    | View Occupation Demands         | View the targeted change in employment for a given occupation                                                           | FREQ-16, FREQ-6   |
+| U15    | View Occupation News            | View news from various sources associated with a given occupation                                                       | FREQ-15, FREQ-6   |
+| U16    | Manage Occupation Demands       | Set demand targets for a given occupation                                                                               | FREQ-17, FREQ-6   |
+| U17    | View Analytics Report           | View a generated report on aggregated data of citizens' information and engagement activity with content on the website | FREQ-18 - FREQ-32 |
 
 ### U1 - Create Account
+
 #### Activity Diagram
 ![Create Account](/diagrams/CreateProfile.jpg)
 
 ### U2 - Administer Account
+
 #### Activity Diagram
+
 ![Administer Account](/diagrams/AdministerAccount.jpg)
 
 ### U3 - Edit Account Profile
+
 #### Activity Diagram
+
 ![Edit Account Profile](/diagrams/EditAccountProfile.jpg)
 
 ### U4 - Reset Account Password
 
 ### U5 - Delete Account
+
 #### Activity Diagram
+
 ![Delete Account](/diagrams/DeleteAccount.jpg)
 
-### U7 - Select Job Goal
-#### Activity Diagram
-![Select Job Goal](/diagrams/SelectJobGoal.jpg)
-
-## Occupations
-
 ### U6 - View Occupation Information
+
 #### Activity Diagram
+
 ![View Occupation Information](/diagrams/ViewOcupationalInformation.jpg)
 
-### U8 - View Unemployment Data
+### U7 - Select Job Goal
+
 #### Activity Diagram
+
+![Select Job Goal](/diagrams/SelectJobGoal.jpg)
+
+### U8 - View Unemployment Data
+
+#### Activity Diagram
+
 ![View Unemployment Data](/diagrams/ViewUnemploymentData.jpg)
 
 ### U9 - View Occupation Trend
+
 #### Activity Diagram
+
 ![View Occupation Trend](/diagrams/ViewOccupationTrend.jpg)
 
-### U14 - View Occupation Demand
-#### Activity Diagram
-![View Occupation Demand](/diagrams/ViewOccupationDemand.jpg)
-
-### U16 - Manage Occupation Demand
-#### Activity Diagram
-![Manage Occupation Demand](/diagrams/ManageOccupationDemand.jpg)
-
-## Job Postings
-
 ### U10 - View Job Postings
+
 #### Activity Diagram
+
 ![View Job Postings](/diagrams/ViewJobPosting.jpg)
 
-## Certifications
+### U11 - View Certification Information
 
-### U11 - View Certifications
 #### Activity Diagram
+
 ![View Certifications](/diagrams/ViewCertifications.jpg)
 
-## Learning Material
-
 ### U12 - View Learning Material
+
 #### Activity Diagram
+
 ![View Learning Material](/diagrams/ViewLearningMaterial.jpg)
 
 ### U13 - Manage Learning Material
 
-#### State Diagram
+#### Activity Diagram
+
+![Activity diagram showing the process flow for managing learning content](/diagrams/pbl3-manage-learning-material-activity-diagram.svg)
+
+### U14 - View Occupation Demand
+
+#### Activity Diagram
+
+![View Occupation Demand](/diagrams/ViewOccupationDemand.jpg)
+
+### U15 - View Occupation News
+
+### U16 - Manage Occupation Demand
+
+#### Activity Diagram
+
+![Manage Occupation Demand](/diagrams/ManageOccupationDemand.jpg)
+
+### U17 - View Analytics Reports
+
+#### Activity Diagram
+
+![View Analytics Reports](/diagrams/ViewAnalyticsReports.jpg)
+
+## External Interfaces
+
+### Auth0
+
+Auth0 is an identity and access management (IdAM) provider that manages authentication and authorization using the oauth2 protocol.
+
+#### Integration Details
+
+Auth0 is fully standards compliant - as such we need only follow the procedures defined in [The OAuth2 specification](https://oauth.net/2/).
+
+### BLS Public Data API
+
+The BLS Public Data Application Programming Interface (API) is an application designed to allow third party programmers, developers, and organizations to retrieve published historical time series data in JSON data-interchange format or as an Excel spreadsheet. Using Public Data API signatures, users can consume and manipulate raw data from all of the Bureau’s surveys to create a wide range of applications that conform to W3C standards and accepted practices. The BLS Public Data API does not require registration and is open for public use.
+
+### Contentful
+
+Contentful is a versatile content platform designed to help brands manage and deliver content efficiently. Used by many enterprise brands, it allows developers and creators to independently build, reuse, and connect content, integrating design and scaling projects quickly within a unified system.
+
+Contentful features user-friendly interfaces suited for various contributors, including developers, editors, marketers, and writers, making it easy for teams to collaborate and create engaging experiences.
+
+### RSS (Various Sources)
+
+RSS is a web feed that allows users and applications to access updates to websites in a standardized, computer-readable format. The system will leverage it to pull recent news articles from various sources to be classified and displayed in the application.
+
+#### Integration Details
+
+All streams will operate as described in [the RSS specification](https://www.rssboard.org/rss-specification).
+
+#### List of Feeds
+
+| Source         | URL                                                                  |
+|----------------|----------------------------------------------------------------------|
+| New York Times | https://rss.nytimes.com/services/xml/rss/nyt/Business.xml            |
+| New York Times | https://rss.nytimes.com/services/xml/rss/nyt/EnergyEnvironment.xml   |
+| New York Times | https://rss.nytimes.com/services/xml/rss/nyt/SmallBusiness.xml       |
+| New York Times | https://rss.nytimes.com/services/xml/rss/nyt/Economy.xml             |
+| New York Times | https://rss.nytimes.com/services/xml/rss/nyt/Dealbook.xml            |
+| New York Times | https://rss.nytimes.com/services/xml/rss/nyt/MediaandAdvertising.xml |
+| New York Times | https://rss.nytimes.com/services/xml/rss/nyt/YourMoney.xml           |
+| New York Times | https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml          |
+| New York Times | https://rss.nytimes.com/services/xml/rss/nyt/PersonalTech.xml        |
+| New York Times | https://rss.nytimes.com/services/xml/rss/nyt/Sports.xml              |
+| New York Times | https://rss.nytimes.com/services/xml/rss/nyt/Science.xml             |
+| New York Times | https://rss.nytimes.com/services/xml/rss/nyt/Climate.xml             |
+| DailyMail      | https://www.dailymail.co.uk/articles.rss                             |
+| DailyMail      | https://www.dailymail.co.uk/news/index.rss                           |
+| DailyMail      | https://www.dailymail.co.uk/ushome/index.rss                         |
+| DailyMail      | https://www.dailymail.co.uk/sport/index.rss                          |
+| DailyMail      | https://www.dailymail.co.uk/home/index.rss                           |
+| DailyMail      | https://www.dailymail.co.uk/health/index.rss                         |
+| DailyMail      | https://www.dailymail.co.uk/sciencetech/index.rss                    |
+| DailyMail      | https://www.dailymail.co.uk/money/index.rss                          |
+| DailyMail      | https://www.dailymail.co.uk/tvshowbiz/index.rss                      |
+| DailyMail      | https://www.dailymail.co.uk/video/videos.rss                         |
+
+### USAJobs
+
+USAJobs.gov offers a free API for searching job postings for US federal jobs.
+
+## Placeholder
 
 ```mermaid
 stateDiagram-v2
@@ -369,18 +498,6 @@ stateDiagram-v2
   unsynchronized --> new : after 5 minutes  
 ```
 
-#### Using Contentful
-
-![Activity diagram showing the process flow for managing learning content](/diagrams/pbl3-manage-learning-material-activity-diagram.svg)
-
-## News
-
-### U15 - View Occupation News
-
-### Load News
-
-#### State Diagram
-
 ```mermaid
 stateDiagram-v2
   new : NEW
@@ -396,15 +513,7 @@ stateDiagram-v2
   unclassified --> new : if article changes  
 ```
 
-#### News Classification
-
 ![Activity diagram showing the process flow for news classification using doc2vec](/diagrams/pbl3-news-classification-activity-diagram.svg)
-
-## Reporting
-
-### U17 - View Analytics Reports
-#### Activity Diagram
-![View Analytics Reports](/diagrams/ViewAnalyticsReports.jpg)
 
 ## Appendix A - Large Format Diagrams
 
