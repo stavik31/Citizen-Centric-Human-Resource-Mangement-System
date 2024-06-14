@@ -2,7 +2,7 @@
 title: JobPostingController
 ---
 
-Access a list of available jobs by occupation
+Access a list of available jobs by occupation  ![class diagram](/diagrams/classDiagrams/JobPostings.svg) 
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|

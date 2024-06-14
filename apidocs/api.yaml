@@ -16,9 +16,15 @@ tags:
 
       ![class diagram](/diagrams/classDiagrams/Demand.svg)
   - name: Employment
-    description: Access employment statistics by occupation
+    description: |
+      Access employment statistics by occupation
+
+      ![class diagram](/diagrams/classDiagrams/Employment.svg)
   - name: JobPosting
-    description: Access a list of available jobs by occupation
+    description: |
+      Access a list of available jobs by occupation
+
+      ![class diagram](/diagrams/classDiagrams/JobPostings.svg)
   - name: Occupation
     description: |
       Access information about occupations or groups of occupations
@@ -50,7 +56,10 @@ tags:
 
       ![class diagram](/diagrams/classDiagrams/Certifications.svg)
   - name: Analytics
-    description: Access reports and publish clickstream analytics
+    description: |
+      Access reports and publish clickstream analytics
+
+      ![class diagram](/diagrams/classDiagrams/Analytics.svg)
 paths:
   /analytics: {}
   /certifications:

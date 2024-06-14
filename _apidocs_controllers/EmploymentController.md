@@ -2,7 +2,7 @@
 title: EmploymentController
 ---
 
-Access employment statistics by occupation
+Access employment statistics by occupation  ![class diagram](/diagrams/classDiagrams/Employment.svg) 
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
