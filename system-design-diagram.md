@@ -198,7 +198,7 @@ User Type
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-ExploreOccupationsViewMockup.svg)
 
-![component diagram](/diagrams/componentDiagrams/ExploreOccupationsView.png)
+![component diagram](/diagrams/componentDiagrams/ExploreOccupationView.png)
 
 #### HomePageView
 
