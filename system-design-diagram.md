@@ -574,6 +574,10 @@ This section describes scenarios that show how the system will be utilized to me
 
 ### U4 - Reset Account Password
 
+#### Activity Diagram
+
+![Reset Account Password](/diagrams/ResetAccountPassword.jpg)
+
 ### U5 - Delete Account
 
 #### Activity Diagram
