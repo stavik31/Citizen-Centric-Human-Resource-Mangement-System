@@ -558,19 +558,19 @@ This section describes scenarios that show how the system will be utilized to me
 ### U1 - Create Account
 
 #### Activity Diagram
-![Create Account](/diagrams/CreateProfile.jpg)
+![Create Account](/diagrams/PBL3ActivityDiagrams/CreateProfile.jpg)
 
 ### U2 - Administer Account
 
 #### Activity Diagram
 
-![Administer Account](/diagrams/AdministerAccount.jpg)
+![Administer Account](/diagrams/PBL3ActivityDiagrams/AdministerAccount.jpg)
 
 ### U3 - Edit Account Profile
 
 #### Activity Diagram
 
-![Edit Account Profile](/diagrams/EditAccountProfile.jpg)
+![Edit Account Profile](/diagrams/PBL3ActivityDiagrams/EditAccountProfile.jpg)
 
 ### U4 - Reset Account Password
 
@@ -578,49 +578,49 @@ This section describes scenarios that show how the system will be utilized to me
 
 #### Activity Diagram
 
-![Delete Account](/diagrams/DeleteAccount.jpg)
+![Delete Account](/diagrams/PBL3ActivityDiagrams/DeleteAccount.jpg)
 
 ### U6 - View Occupation Information
 
 #### Activity Diagram
 
-![View Occupation Information](/diagrams/ViewOcupationalInformation.jpg)
+![View Occupation Information](/diagrams/PBL3ActivityDiagrams/ViewOcupationalInformation.jpg)
 
 ### U7 - Select Job Goal
 
 #### Activity Diagram
 
-![Select Job Goal](/diagrams/SelectJobGoal.jpg)
+![Select Job Goal](/diagrams/PBL3ActivityDiagrams/SelectJobGoal.jpg)
 
 ### U8 - View Unemployment Data
 
 #### Activity Diagram
 
-![View Unemployment Data](/diagrams/ViewUnemploymentData.jpg)
+![View Unemployment Data](/diagrams/PBL3ActivityDiagrams/ViewUnemploymentData.jpg)
 
 ### U9 - View Occupation Trend
 
 #### Activity Diagram
 
-![View Occupation Trend](/diagrams/ViewOccupationTrend.jpg)
+![View Occupation Trend](/diagrams/PBL3ActivityDiagrams/ViewOccupationTrend.jpg)
 
 ### U10 - View Job Postings
 
 #### Activity Diagram
 
-![View Job Postings](/diagrams/ViewJobPosting.jpg)
+![View Job Postings](/diagrams/PBL3ActivityDiagrams/ViewJobPosting.jpg)
 
 ### U11 - View Certification Information
 
 #### Activity Diagram
 
-![View Certifications](/diagrams/ViewCertifications.jpg)
+![View Certifications](/diagrams/PBL3ActivityDiagrams/ViewCertifications.jpg)
 
 ### U12 - View Learning Material
 
 #### Activity Diagram
 
-![View Learning Material](/diagrams/ViewLearningMaterial.jpg)
+![View Learning Material](/diagrams/PBL3ActivityDiagrams/ViewLearningMaterial.jpg)
 
 ### U13 - Manage Learning Material
 
@@ -632,7 +632,7 @@ This section describes scenarios that show how the system will be utilized to me
 
 #### Activity Diagram
 
-![View Occupation Demand](/diagrams/ViewOccupationDemand.jpg)
+![View Occupation Demand](/diagrams/PBL3ActivityDiagrams/ViewOccupationDemand.jpg)
 
 ### U15 - View Occupation News
 
@@ -640,13 +640,13 @@ This section describes scenarios that show how the system will be utilized to me
 
 #### Activity Diagram
 
-![Manage Occupation Demand](/diagrams/ManageOccupationDemand.jpg)
+![Manage Occupation Demand](/diagrams/PBL3ActivityDiagrams/ManageOccupationDemand.jpg)
 
 ### U17 - View Analytics Reports
 
 #### Activity Diagram
 
-![View Analytics Reports](/diagrams/ViewAnalyticsReports.jpg)
+![View Analytics Reports](/diagrams/PBL3ActivityDiagrams/ViewAnalyticsReports.jpg)
 
 ## External Interfaces
 
