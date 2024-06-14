@@ -118,11 +118,8 @@ Name
 Description
 : View detailed information and links to external resources relating to a single certification.
 
-Use Cases
-: U11
-
-Requirements
-: FREQ-12
+User Type
+: Smart City Managers, Citizens
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-CertificationInformationViewMockup.svg)
 
@@ -130,11 +127,29 @@ Requirements
 
 #### CertificationView
 
+Name
+: CertificationView
+
+Description
+: View a list of certifications from organizations while being able to sort through each certification
+
+User Type
+: Smart City Managers, Citizens
+
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-CertificationViewMockup.svg)
 
 ![component diagram](/diagrams/componentDiagrams/views/CertificationView.png)
 
 #### DeleteAccountView
+
+Name
+: DeleteAccountView
+
+Description
+: Ensures the capability to delete an account upon request
+
+User Type
+: Citizens, System Administrators
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-DeleteAccountViewMockup.svg)
 
@@ -142,11 +157,29 @@ Requirements
 
 #### DownloadReportDataView
 
+Name
+: DownloadReportDataView
+
+Description
+: Enables the ability to download data for all types of reports
+
+User Type
+: Smart City Managers, Citizens
+
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-DownloadReportDataViewMockup.svg)
 
 ![component diagram](/diagrams/componentDiagrams/views/DownloadReportDataView.png)
 
 #### ExploreAllOccupationView
+
+Name
+: ExploreAllOccupationsView
+
+Description
+: Provide access to data on unemployment, current occupations, and locations of all citizens. Ensures the capability to view employment statistics and the demand for each major occupation.
+
+User Type
+: Smart City Managers, Citizens
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-ExploreAllOccupationViewMockup.svg)
 
@@ -154,11 +187,29 @@ Requirements
 
 #### ExploreOccupationsView
 
+Name
+: ExploreOccupationsView
+
+Description
+: View detailed information on minor groups, broad occupations, and specific occupations, along with related content. Ensures the capability to explore deeper levels of SOC codes when available.
+
+User Type
+: Smart City Managers, Citizens
+
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-ExploreOccupationsViewMockup.svg)
 
 ![component diagram](/diagrams/componentDiagrams/views/ExploreOccupationsView.png)
 
 #### HomePageView
+
+Name
+: HomePageView
+
+Description
+: View information about the application and enables the capability to sign in or register
+
+User Type
+: Smart City Managers, Citizens
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-HomePageViewMockup.svg)
 
@@ -166,11 +217,29 @@ Requirements
 
 #### InformationView
 
+Name
+: InformationView
+
+Description
+: View employment trends, occupational data, and information for major groups, minor groups, or broad occupations
+
+User Type
+: Smart City Managers, Citizens
+
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-InformationViewMockup.svg)
 
 ![component diagram](/diagrams/componentDiagrams/views/InformationView.jpg)
 
 #### JobView
+
+Name
+: JobView
+
+Description
+: View job postings information for occupations while utilizing sorting and filtering capabilities
+
+User Type
+: Smart City Managers, Citizens
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-JobViewMockup.svg)
 
@@ -178,11 +247,29 @@ Requirements
 
 #### LearningInformationView
 
+Name
+: LearningInformationView
+
+Description
+: View detailed information and links to external resources relating to a single learning resource
+
+User Type
+: Smart City Managers, Citizens
+
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-LearningInformationViewMockup.svg)
 
 ![component diagram](/diagrams/componentDiagrams/views/LearningInformationView.jpg)
 
 #### LearningView
+
+Name
+: LearningView
+
+Description
+: View learning resources information for occupations while utilizing sorting and filtering capabilities
+
+User Type
+: Smart City Managers, Citizens
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-LearningViewMockup.svg)
 
@@ -190,11 +277,30 @@ Requirements
 
 #### ManageDemandView
 
+Name
+: ManageDemandView
+
+Description
+: Enable city managers to input required demand for occupations and view current demand and employment trends
+
+User Type
+: Smart City Managers
+
+
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-ManageDemandViewMockup.svg)
 
 ![component diagram](/diagrams/componentDiagrams/views/ManageDemandView.jpg)
 
 #### NewsView
+
+Name
+: NewsView
+
+Description
+: View news information for occupations while utilizing sorting and filtering capabilities
+
+User Type
+: Smart City Managers, Citizens
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-NewsViewMockup.svg)
 
@@ -202,11 +308,29 @@ Requirements
 
 #### ProfileHomePageView
 
+Name
+: ProfileHomePageView
+
+Description
+: Enable users to take various actions regarding their information, such as editing current jobs, exploring occupations, downloading report data, and deleting their account
+
+User Type
+: Smart City Managers, Citizens
+
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-ProfileHomePageViewMockup.svg)
 
 ![component diagram](/diagrams/componentDiagrams/views/ProfileHomePageView.jpg)
 
 #### ProfileView
+
+Name
+: ProfileView
+
+Description
+: Enable users to input or update their personal information and save it
+
+User Type
+: Smart City Managers, Citizens
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-ProfileViewMockup.svg)
 
@@ -214,11 +338,29 @@ Requirements
 
 #### ReportTypeView
 
+Name
+: ReportTypeView
+
+Description
+: View a list of report types related to occupations and associated content
+
+User Type
+: Smart City Managers, Citizens
+
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-ReportTypeViewMockup.svg)
 
 ![component diagram](/diagrams/componentDiagrams/views/ReportTypeView.jpg)
 
 #### ReportsView
+
+Name
+: ReportsView
+
+Description
+: View sub-occupation data, user locations, and heatmaps comparing current and goal occupations for a single occupation
+
+User Type
+: Smart City Managers, Citizens
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-ReportsViewMockup.svg)
 
@@ -226,11 +368,29 @@ Requirements
 
 #### SelectDetailedOccupationView
 
+Name
+: SelectDetailedOccupationView
+
+Description
+: View information on a specific detailed occupation and have the capability to select it as a user's current job, as well as learn more about it
+
+User Type
+: Citizens
+
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-SelectDetailedOccupationViewMockup.svg)
 
 ![component diagram](/diagrams/componentDiagrams/views/SelectDetailedOccupationView.jpg)
 
 #### SelectMajorAndMinorGroupView
+
+Name
+: SelectMajorAndMinorGroupView
+
+Description
+: View and select from a list of major groups, and then choose from minor groups
+
+User Type
+: Citizens
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-SelectMajorAndMinorGroupViewMockup.svg)
 
