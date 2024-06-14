@@ -505,7 +505,7 @@ Name
 Description
 : A graphical method of representing various types of statistical data through formats such as line graphs, pie charts, heatmaps, and maps
 
-![component diagram](/diagrams/componentDiagrams/Chart.jpg)
+![component diagram](/diagrams/Chart.jpg)
 
 ## Application Tier Operations
 
