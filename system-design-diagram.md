@@ -164,7 +164,7 @@ Description
 : Enables the ability to download data for all types of reports
 
 User Type
-: Smart City Managers, Citizens
+: Smart City Managers
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-DownloadReportDataViewMockup.svg)
 
@@ -345,7 +345,7 @@ Description
 : View a list of report types related to occupations and associated content
 
 User Type
-: Smart City Managers, Citizens
+: Smart City Managers
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-ReportTypeViewMockup.svg)
 
@@ -360,7 +360,7 @@ Description
 : View sub-occupation data, user locations, and heatmaps comparing current and goal occupations for a single occupation
 
 User Type
-: Smart City Managers, Citizens
+: Smart City Managers
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-ReportsViewMockup.svg)
 
