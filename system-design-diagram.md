@@ -409,17 +409,41 @@ Description
 
 #### Button
 
+Name
+: Button
+
+Description
+: clickable graphical element that is interactable to trigger actions or navigate from one page to another
+
 ![component diagram](/diagrams/componentDiagrams/Button.jpg)
 
 #### CertificationsDetails
+
+Name
+: CertificationDetails
+
+Description
+: a text both with various information about a single certification such as organization, title, and a button that navigates users to CertificationInformationView
 
 ![component diagram](/diagrams/componentDiagrams/CertificationsDetails.jpg)
 
 #### CitizenHeatMap
 
+Name
+: CitizenHeapMap
+
+Description
+: displays user statistics as a map for each type of report, using color intensity to represent varying levels of activity or engagement
+
 ![component diagram](/diagrams/componentDiagrams/CitizenHeatMap.jpg)
 
 #### FormInput
+
+Name
+: FormInput
+
+Description
+: a field where users enter data, such as text, numbers, or selections, to submit information or perform actions within the application
 
 ![component diagram](/diagrams/componentDiagrams/FormInput.jpg)
 
