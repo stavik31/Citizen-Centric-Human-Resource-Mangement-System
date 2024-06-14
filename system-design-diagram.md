@@ -123,7 +123,7 @@ User Type
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-CertificationInformationViewMockup.svg)
 
-![component diagram](/diagrams/componentDiagrams/views/CertificationInformationView.jpg)
+![component diagram](/diagrams/componentDiagrams/views/CertificationInformationView.png)
 
 #### CertificationView
 
@@ -138,7 +138,7 @@ User Type
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-CertificationViewMockup.svg)
 
-![component diagram](/diagrams/componentDiagrams/views/CertificationView.jpg)
+![component diagram](/diagrams/componentDiagrams/views/CertificationView.png)
 
 #### DeleteAccountView
 
@@ -153,7 +153,7 @@ User Type
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-DeleteAccountViewMockup.svg)
 
-![component diagram](/diagrams/componentDiagrams/views/DeleteAccountView.jpg)
+![component diagram](/diagrams/componentDiagrams/views/DeleteAccountView.png)
 
 #### DownloadReportDataView
 
@@ -168,7 +168,7 @@ User Type
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-DownloadReportDataViewMockup.svg)
 
-![component diagram](/diagrams/componentDiagrams/views/DownloadReportDataView.jpg)
+![component diagram](/diagrams/componentDiagrams/views/DownloadReportDataView.png)
 
 #### ExploreAllOccupationView
 
@@ -183,7 +183,7 @@ User Type
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-ExploreAllOccupationViewMockup.svg)
 
-![component diagram](/diagrams/componentDiagrams/views/ExploreAllOccupationView.jpg)
+![component diagram](/diagrams/componentDiagrams/views/ExploreAllOccupationView.png)
 
 #### ExploreOccupationsView
 
@@ -198,7 +198,7 @@ User Type
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-ExploreOccupationsViewMockup.svg)
 
-![component diagram](/diagrams/componentDiagrams/views/ExploreOccupationsView.jpg)
+![component diagram](/diagrams/componentDiagrams/views/ExploreOccupationsView.png)
 
 #### HomePageView
 
@@ -273,7 +273,7 @@ User Type
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-LearningViewMockup.svg)
 
-![component diagram](/diagrams/componentDiagrams/views/LearningView.jpg)
+![component diagram](/diagrams/componentDiagrams/views/LearningView.png)
 
 #### ManageDemandView
 
