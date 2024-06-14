@@ -104,7 +104,7 @@ The data tier of this system consists of a single instance of Postgres managed b
 
 ### View Transition State Diagram
 
-![view transition state diagram](/diagrams/UI_State_Diagram/UI_State_Diagram.jpg)
+![view transition state diagram](/diagrams/UI_State_Diagram/UI_State_Diagram2.jpg)
 
 ### View Catalogue
 
@@ -398,6 +398,12 @@ User Type
 
 ### Component Catalogue
 #### Breadcrumb
+
+Name
+: Breadcrumb
+
+Description
+: control element used as a navigational aid to sho users which page they currently are in
 
 ![component diagram](/diagrams/componentDiagrams/Breadcrumb.jpg)
 
