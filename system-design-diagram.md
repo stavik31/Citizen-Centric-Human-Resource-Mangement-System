@@ -138,7 +138,7 @@ User Type
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-CertificationViewMockup.svg)
 
-![component diagram](/diagrams/componentDiagrams/views/CertificationView.png)
+![component diagram](/diagrams/componentDiagrams/CertificationView.png)
 
 #### DeleteAccountView
 
@@ -153,7 +153,7 @@ User Type
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-DeleteAccountViewMockup.svg)
 
-![component diagram](/diagrams/componentDiagrams/views/DeleteAccountView.png)
+![component diagram](/diagrams/componentDiagrams/DeleteAccountView.png)
 
 #### DownloadReportDataView
 
@@ -168,7 +168,7 @@ User Type
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-DownloadReportDataViewMockup.svg)
 
-![component diagram](/diagrams/componentDiagrams/views/DownloadReportDataView.png)
+![component diagram](/diagrams/componentDiagrams/DownloadReportDataView.png)
 
 #### ExploreAllOccupationView
 
@@ -183,7 +183,7 @@ User Type
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-ExploreAllOccupationViewMockup.svg)
 
-![component diagram](/diagrams/componentDiagrams/views/ExploreAllOccupationView.png)
+![component diagram](/diagrams/componentDiagrams/ExploreAllOccupationView.png)
 
 #### ExploreOccupationsView
 
@@ -198,7 +198,7 @@ User Type
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-ExploreOccupationsViewMockup.svg)
 
-![component diagram](/diagrams/componentDiagrams/views/ExploreOccupationsView.png)
+![component diagram](/diagrams/componentDiagrams/ExploreOccupationsView.png)
 
 #### HomePageView
 
@@ -273,7 +273,7 @@ User Type
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-LearningViewMockup.svg)
 
-![component diagram](/diagrams/componentDiagrams/views/LearningView.png)
+![component diagram](/diagrams/componentDiagrams/LearningView.png)
 
 #### ManageDemandView
 
