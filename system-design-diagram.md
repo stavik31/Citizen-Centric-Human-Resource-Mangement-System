@@ -490,12 +490,22 @@ Description
 #### SelectWithTypeahead
 
 Name
-: Report
+: SelectWithTypeahead
 
 Description
 : An element that combines a dropdown menu with an autosuggesting feature, allowing users to filter and select options by typing part of the desired item's name
 
 ![component diagram](/diagrams/componentDiagrams/SelectWithTypeahead.jpg)
+
+#### Chart
+
+Name
+: Chart
+
+Description
+: A graphical method of representing various types of statistical data through formats such as line graphs, pie charts, heatmaps, and maps
+
+![component diagram](/diagrams/componentDiagrams/Chart.jpg)
 
 ## Application Tier Operations
 
