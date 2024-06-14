@@ -104,7 +104,7 @@ The data tier of this system consists of a single instance of Postgres managed b
 
 ### View Transition State Diagram
 
-![view transition state diagram](/diagrams/UI_State_Diagram/UI_State_Diagram2.jpg)
+![view transition state diagram](/diagrams/UI_State_Diagram2.jpg)
 
 ### View Catalogue
 
