@@ -403,7 +403,7 @@ Name
 : Breadcrumb
 
 Description
-: control element used as a navigational aid to sho users which page they currently are in
+: Control element used as a navigational aid to sho users which page they currently are in
 
 ![component diagram](/diagrams/componentDiagrams/Breadcrumb.jpg)
 
@@ -413,7 +413,7 @@ Name
 : Button
 
 Description
-: clickable graphical element that is interactable to trigger actions or navigate from one page to another
+: Clickable graphical element that is interactable to trigger actions or navigate from one page to another
 
 ![component diagram](/diagrams/componentDiagrams/Button.jpg)
 
@@ -423,19 +423,9 @@ Name
 : CertificationDetails
 
 Description
-: a text both with various information about a single certification such as organization, title, and a button that navigates users to CertificationInformationView
+: A text box with various information about a single certification such as organization, title, and a button that navigates users to CertificationInformationView
 
 ![component diagram](/diagrams/componentDiagrams/CertificationsDetails.jpg)
-
-#### CitizenHeatMap
-
-Name
-: CitizenHeapMap
-
-Description
-: displays user statistics as a map for each type of report, using color intensity to represent varying levels of activity or engagement
-
-![component diagram](/diagrams/componentDiagrams/CitizenHeatMap.jpg)
 
 #### FormInput
 
@@ -443,31 +433,67 @@ Name
 : FormInput
 
 Description
-: a field where users enter data, such as text, numbers, or selections, to submit information or perform actions within the application
+: A field where users enter data, such as text, numbers, or selections, to submit information or perform actions within the application
 
 ![component diagram](/diagrams/componentDiagrams/FormInput.jpg)
 
 #### JobDetails
 
+Name
+: JobDetails
+
+Description
+: A text box with various information about a single job posting such as salary range, deadline, description, title, company, location, and a button that navigates users to an external source where the job posting is located
+
 ![component diagram](/diagrams/componentDiagrams/JobDetails.jpg)
 
 #### LearningDetails
+
+Name
+: LearningDetails
+
+Description
+: A text box with various information about a single learning material such as organization, content type, title, and a button that nagivates users to LearningInformationView
 
 ![component diagram](/diagrams/componentDiagrams/LearningDetails.jpg)
 
 #### NewsDetails
 
+Name
+: NewsDetails
+
+Description
+: A text box with various information about a single news source such as published date, organization, title, and a button that nagivates users to an external source where the news article is located 
+
 ![component diagram](/diagrams/componentDiagrams/NewsDetails.jpg)
 
 #### OccupationDataButton
+
+Name
+: OccupationDataButton
+
+Description
+: A button that provides information on employment trends and demand requirements, and is clickable to navigate users through the hierarchical levels of SOC codes
 
 ![component diagram](/diagrams/componentDiagrams/OccupationDataButton.jpg)
 
 #### Report
 
+Name
+: Report
+
+Description
+: A webpage displaying various types of reports (Citizen Current Job Report, Citizen Goals Job Report, Job Postings Report, News Engagement Report, Certification Engagement Report, and Learning Material Engagement Report) with Each report containing detailed information such as the number of individuals in specific occupations, sub-occupation breakdowns, and user location heat maps categorized by occupation. Furthermore, these reports are available for users to download.
+
 ![component diagram](/diagrams/componentDiagrams/Report.jpg)
 
 #### SelectWithTypeahead
+
+Name
+: Report
+
+Description
+: An element that combines a dropdown menu with an autosuggesting feature, allowing users to filter and select options by typing part of the desired item's name
 
 ![component diagram](/diagrams/componentDiagrams/SelectWithTypeahead.jpg)
 
