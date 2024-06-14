@@ -123,7 +123,7 @@ User Type
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-CertificationInformationViewMockup.svg)
 
-![component diagram](/diagrams/componentDiagrams/views/CertificationInformationView.png)
+![component diagram](/diagrams/componentDiagrams/CertificationInformationView.png)
 
 #### CertificationView
 
