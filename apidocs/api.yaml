@@ -307,7 +307,7 @@ components:
       type: string
     LocalDateTime:
       type: string
-      format: datetime
+      format: date-time
     AnalyticsQuery:
       type: object
       properties:
@@ -341,6 +341,13 @@ components:
           $ref: '#/components/schemas/SocCode'
         organization:
           type: string
+    CertificationResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Certification'
     Chart:
       type: object
       properties:
@@ -372,6 +379,252 @@ components:
           type: string
         userGoalOccupation:
           type: string
+    ContentfulPublishContentType:
+      type: object
+      properties:
+        sys:
+          $ref: '#/components/schemas/ContentfulPublishLinkContentType'
+    ContentfulPublishDocument:
+      type: object
+      properties:
+        data:
+          type: object
+        content:
+          type: array
+          items:
+            $ref: '#/components/schemas/ContentfulPublishContentNode'
+        nodeType:
+          type: string
+          example: document
+    ContentfulPublishContentNode:
+      type: object
+      properties:
+        data:
+          type: object
+        content:
+          type: array
+          items:
+            $ref: '#/components/schemas/ContentfulPublishContentNode'
+        nodeType:
+          type: string
+          example: paragraph
+        marks:
+          type: array
+          items:
+            type: object
+        value:
+          type: string
+          example: Sample Learning Material
+    ContentfulPublishEntry:
+      type: object
+      properties:
+        metadata:
+          $ref: '#/components/schemas/ContentfulPublishMetadata'
+        fields:
+          $ref: '#/components/schemas/ContentfulPublishFields'
+        sys:
+          $ref: '#/components/schemas/ContentfulPublishSys'
+    ContentfulPublishFields:
+      type: object
+      properties:
+        title:
+          $ref: '#/components/schemas/ContentfulPublishLocalizedString'
+        socCodes:
+          $ref: '#/components/schemas/ContentfulPublishLocalizedArray'
+        description:
+          $ref: '#/components/schemas/ContentfulPublishLocalizedDocument'
+        externalLinks:
+          $ref: '#/components/schemas/ContentfulPublishLocalizedArray'
+    ContentfulPublishLink:
+      type: object
+      properties:
+        type:
+          type: string
+          example: Link
+        linkType:
+          type: string
+          example: Space
+        id:
+          type: string
+          example: ai8a3z37eduf
+    ContentfulPublishLinkContentType:
+      type: object
+      properties:
+        type:
+          type: string
+          example: Link
+        linkType:
+          type: string
+          example: ContentType
+        id:
+          type: string
+          example: learningMaterial
+    ContentfulPublishLinkEnvironment:
+      type: object
+      properties:
+        id:
+          type: string
+          example: master
+        type:
+          type: string
+          example: Link
+        linkType:
+          type: string
+          example: Environment
+    ContentfulPublishLinkUser:
+      type: object
+      properties:
+        type:
+          type: string
+          example: Link
+        linkType:
+          type: string
+          example: User
+        id:
+          type: string
+          example: 4tXOP8kM16rDUICinch1N6
+    ContentfulPublishLocalizedArray:
+      type: object
+      properties:
+        en-US:
+          type: array
+          items:
+            type: string
+            example: "11-1011"
+    ContentfulPublishLocalizedDocument:
+      type: object
+      properties:
+        en-US:
+          $ref: '#/components/schemas/ContentfulPublishDocument'
+    ContentfulPublishLocalizedString:
+      type: object
+      properties:
+        en-US:
+          type: string
+          example: Test Material
+    ContentfulPublishMetadata:
+      type: object
+      properties:
+        tags:
+          type: array
+          items:
+            type: object
+    ContentfulPublishSys:
+      type: object
+      properties:
+        type:
+          type: string
+          example: Entry
+        id:
+          type: string
+          example: 5d19lTVZTyCONXM8y2LBkz
+        space:
+          $ref: '#/components/schemas/ContentfulPublishLink'
+        environment:
+          $ref: '#/components/schemas/ContentfulPublishLinkEnvironment'
+        contentType:
+          $ref: '#/components/schemas/ContentfulPublishLinkContentType'
+        createdBy:
+          $ref: '#/components/schemas/ContentfulPublishLinkUser'
+        updatedBy:
+          $ref: '#/components/schemas/ContentfulPublishLinkUser'
+        revision:
+          type: integer
+          example: 2
+        createdAt:
+          type: string
+          format: date-time
+          example: 2024-06-10T01:08:45.670Z
+        updatedAt:
+          type: string
+          format: date-time
+          example: 2024-06-10T01:12:48.279Z
+    ContentfulUnpublishContentType:
+      type: object
+      properties:
+        sys:
+          $ref: '#/components/schemas/ContentfulUnpublishLinkContentType'
+    ContentfulUnpublishDeletedEntry:
+      type: object
+      properties:
+        sys:
+          $ref: '#/components/schemas/ContentfulUnpublishSys'
+    ContentfulUnpublishEnvironment:
+      type: object
+      properties:
+        sys:
+          $ref: '#/components/schemas/ContentfulUnpublishLinkEnvironment'
+    ContentfulUnpublishLink:
+      type: object
+      properties:
+        type:
+          type: string
+          example: Link
+        linkType:
+          type: string
+          example: Space
+        id:
+          type: string
+          example: ai8a3z37eduf
+    ContentfulUnpublishLinkContentType:
+      type: object
+      properties:
+        type:
+          type: string
+          example: Link
+        linkType:
+          type: string
+          example: ContentType
+        id:
+          type: string
+          example: learningMaterial
+    ContentfulUnpublishLinkEnvironment:
+      type: object
+      properties:
+        id:
+          type: string
+          example: master
+        type:
+          type: string
+          example: Link
+        linkType:
+          type: string
+          example: Environment
+    ContentfulUnpublishSpace:
+      type: object
+      properties:
+        sys:
+          $ref: '#/components/schemas/ContentfulUnpublishLink'
+    ContentfulUnpublishSys:
+      type: object
+      properties:
+        type:
+          type: string
+          example: DeletedEntry
+        id:
+          type: string
+          example: 5d19lTVZTyCONXM8y2LBkz
+        space:
+          $ref: '#/components/schemas/ContentfulUnpublishSpace'
+        environment:
+          $ref: '#/components/schemas/ContentfulUnpublishEnvironment'
+        contentType:
+          $ref: '#/components/schemas/ContentfulUnpublishContentType'
+        revision:
+          type: integer
+          example: 1
+        createdAt:
+          type: string
+          format: date-time
+          example: 2024-06-10T01:12:08.553Z
+        updatedAt:
+          type: string
+          format: date-time
+          example: 2024-06-10T01:12:08.553Z
+        deletedAt:
+          type: string
+          format: date-time
+          example: 2024-06-10T01:12:08.553Z
     Demand:
       type: object
       properties:
@@ -385,13 +638,6 @@ components:
       properties:
         socCode:
           $ref: '#/components/schemas/SocCode'
-    CertificationResponse:
-      type: object
-      properties:
-        data:
-          type: array
-          items:
-            $ref: '#/components/schemas/Certification'
     Employment:
       type: object
       properties:
