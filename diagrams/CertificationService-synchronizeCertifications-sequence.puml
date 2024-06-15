@@ -1,0 +1,24 @@
+@startuml
+
+autoactivate on
+
+actor "System Timer" as timer
+participant CertificationService
+participant CertificationDAO
+database Database
+
+timer -> CertificationService : synchronizeCertifications()
+CertificationService -> CertificationDAO : synchronizeCertifications()
+CertificationDAO -> Database : retrieve
+return
+
+autoactivate off
+CertificationDAO -> CertificationDAO : Map to internal format
+autoactivate on
+
+CertificationDAO -> Database : store
+return
+return
+return
+
+@enduml

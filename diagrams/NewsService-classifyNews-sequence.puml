@@ -1,0 +1,26 @@
+@startuml
+
+autoactivate on
+
+actor "System Timer" as timer
+participant NewsService
+participant NewsDAO
+database Database
+
+timer -> NewsService : classifyNews()
+NewsService -> NewsDAO : getByState(NEW)
+NewsDAO -> Database
+return
+return
+loop until all news classified
+autoactivate off
+NewsService -> NewsService : cosine similarity
+autoactivate on
+end
+NewsService -> NewsDAO : save()
+NewsDAO -> Database
+return
+return
+return
+
+@enduml

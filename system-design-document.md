@@ -57,7 +57,7 @@ Despite these limitations, some benefit can still be obtained by loosely followi
 | Context           | Description                                                   |
 |-------------------|---------------------------------------------------------------|
 | Analytics         | Primarily deals with clickstream analytics and reporting.     |
-| Certifications    | Similar to learning material, utilizes careeronestop dataset. |
+| Certifications    | Similar to learning material, utilizes CareerOneStop dataset. |
 | Demand            | Employment target for a given occupation.                     |
 | Employment        | Number of people employed in an occupation for a given year.  |
 | Job Postings      | Feed of job postings relating to an occupation.               |
@@ -514,23 +514,71 @@ Description
 
 ## Application Tier Design
 
-### Analytics Services
+### Analytics Service
 
-### Certifications Services
+#### Ingestion (saveClickData())
 
-### Demand Services
+Because of the high frequency and low latency requirements of clickstream data in general, this service will utilize a ringbuffer (specifically [LMAX Disruptor](https://lmax-exchange.github.io/disruptor/)) to batch and persist events, minimizing database write contention.
+
+![disruptor execution flow](/diagrams/PBL3-2024-LMAX-disruptor.svg)
+
+Incoming events will be pushed to the ringbuffer which will wake up the consumer. If multiple events come in within a short time window, they will be batched together and written to the database using a single bulk update instead of multiple individual transactions.
+
+#### Querying
+
+Querying will not require any special consideration beyond utilizing the primitives provided by timescaledb.
+
+### Certification Service
+
+![class diagram](/diagrams/classDiagrams/ScheduledCertificationService.svg)
+
+#### Scheduled Synchronization (synchronizeCertifications())
+
+![sequence diagram](/diagrams/CertificationService-synchronizeCertifications-sequence.svg)
+
+Certifications are loaded into the system by dumping the [CareerOneStop dataset](#careeronestop-dataset) (which is provided in sql insert format) into the associated tables in the database. Periodically, this service will execute a synchronization task to pull any newly inserted data from that table, convert it to our internal representation, and push it into the certifications tables.
+
+### Demand Service
+
+This service is simple CRUD and does not require any special consideration.
 
 ### Employment Services
 
-### Job Postings Services
+![class diagram](/diagrams/classDiagrams/PostConstructEmploymentService.svg)
 
-### Learning Material Services
+#### Application Startup (loadEmployment())
 
-### News Services
+![sequence diagram](/diagrams/EmploymentService-loadEmployment-sequence.svg)
 
-#### News States
+At application startup, this service will look for the [SOC Employment Dataset](#soc-employment-dataset) in a predefined location. If it finds it, the service will create an in-memory data structure containing its contents, which it will utilize for other employment-oriented operations.
 
-When a new news article is received by the system, it will first be persisted into the database. A scheduled job will then pick it up and classify it after some time. The state transitions of a single news article are shown below.
+#### Forecasting
+
+ARIMA content here
+
+### Job Postings Service
+
+This service proxies out to one or more job posting APIs to obtain its data. See [the reference implementation, USAJobs.gov](#usajobs) for integration samples and constraints.
+
+### Learning Material Service
+
+This service is simple CRUD and does not require any special consideration on its own. However, an additional Contentful Service exists that receives webhook events from a CMS and loads them using this service. See [the external interface documentation for Contentful](#contentful) for more information.
+
+### News Service
+
+![class diagram](/diagrams/classDiagrams/ScheduledNewsService.svg)
+
+#### Fetching News (fetchRSSFeeds())
+
+![sequence diagram](/diagrams/NewsService-fetchRSSFeeds-sequence.svg)
+
+Periodically, the system will execute this task to reach out to the [configured RSS feeds](#rss--various-sources-) and obtain a list of news articles. These articles will be stored in the database in a `NEW` state. If an article already exists, it will be forcibly transitioned back to the `NEW` state for reclassification.
+
+#### Classifying News (classifyNews())
+
+![sequence diagram](/diagrams/NewsService-classifyNews-sequence.svg)
+
+Periodically, the system will execute a task to classify any `NEW` news articles. The state transitions of a single news article are shown below.
 
 ```mermaid
 stateDiagram-v2
@@ -547,24 +595,44 @@ stateDiagram-v2
   unclassified --> new : if article changes  
 ```
 
-#### News Classification
-
 News classification will be performed using cosine similarity between labeled descriptions of each SOC occupation and the vectorization of the concatenated title, description and categories of the news article. Vectorization will be performed using a pretrained doc2vec model.
 
 ![Activity diagram showing the process flow for news classification using doc2vec](/diagrams/pbl3-news-classification-activity-diagram.svg)
-
-#### doc2vec Training
 
 Due to resource constraints, the corpus used to train doc2vec will be relatively small. Training data will consist of, but not be limited to, at least the following:
 
 * [SOC Definitions (Labeled)](/documents/corpus_soc_definitions.csv)
 * [S&P 500 Company Wikipedia Extracts](/documents/corpus_sp500.csv)
 
-### Occupation Services
+### Occupation Service
 
-### Unemployment Services
+![class diagram](/diagrams/classDiagrams/PostConstructOccupationService.svg)
 
-### User Services
+#### Application Startup (loadOccupationTrie())
+
+![sequence diagram](/diagrams/OccupationService-loadOccupationTrie-sequence.svg)
+
+At application startup, this service will look for the [SOC Definition Dataset](#soc-definition-dataset) in a predefined location. If it finds it, the service will create an in-memory prefix tree (i.e., [a trie](https://en.wikipedia.org/wiki/Trie)) for efficient hierarchical SOC searches.
+
+### Unemployment Service
+
+![class diagram](/diagrams/classDiagrams/ScheduledUnemploymentService.svg)
+
+#### Update Unemployment Data (loadUnemploymentData())
+
+![sequence diagram](/diagrams/UnemploymentService-loadUnemploymentData-sequence.svg)
+
+Periodically, the system will execute this task to reach out to the [BLS Public Data API](#bls-public-data-api) to obtain updated unemployment statistics. This data will be persisted in the database and used for unemployment queries.
+
+### User Service
+
+This service is mostly simple CRUD, but does require special consideration around first time user sign-ins.
+
+#### First-Time User Sign-Ins
+
+![sequence diagram](/diagrams/UserController-getCurrentUserProfile_FirstTime-sequence.svg)
+
+The first time a user signs in to the system, a profile will not be found. In those cases, the spring-security-oauth OIDC UserInfo endpoint integration should be utilized to fetch claims from Auth0, which should then be persisted for future logins.
 
 ## Data Tier Design
 
@@ -1251,6 +1319,12 @@ curl --location 'https://data.usajobs.gov/api/search?Keyword=Software%20Developm
     }
 }
 ```
+
+### SOC Definition Dataset
+
+### SOC Employment Dataset
+
+### CareerOneStop Dataset
 
 ## Appendix A - Large Format Diagrams
 
