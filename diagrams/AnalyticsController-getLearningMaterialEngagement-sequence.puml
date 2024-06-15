@@ -1,0 +1,32 @@
+@startuml
+
+autoactivate on
+
+actor UI
+boundary AnalyticsController
+participant AnalyticsService
+participant AnalyticsDAO
+database Database
+
+UI -> AnalyticsController : getLearningMaterialEngagement
+AnalyticsController -> AnalyticsService : getLearningMaterialEngagement
+par
+    AnalyticsService -> AnalyticsDAO : getLearningMaterialEngagementCurrentOccupationHeatMapChart
+    AnalyticsDAO -> Database
+    return
+    return
+else
+    AnalyticsService -> AnalyticsDAO : getLearningMaterialEngagementGoalOccupationHeatMapChart
+    AnalyticsDAO -> Database
+    return
+    return
+else
+    AnalyticsService -> AnalyticsDAO : getLearningMaterialEngagementMapChart
+    AnalyticsDAO -> Database
+    return
+    return
+end
+return
+return
+
+@enduml

@@ -31,12 +31,13 @@ Get demand for a given SOC code
 
 ##### Authorization
 
-auth0
 
-##### HTTP request headers
+Type
+: auth0
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+Scopes
+: citizen
+: smart_city_manager
 
 
 <hr/>
@@ -59,11 +60,11 @@ Update demand for a given SOC code
 
 ##### Authorization
 
-auth0
 
-##### HTTP request headers
+Type
+: auth0
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+Scopes
+: smart_city_manager
 
 <hr/>

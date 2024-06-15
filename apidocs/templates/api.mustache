@@ -35,12 +35,18 @@ title: {{classname}}
 
 ##### Authorization
 
-{{^authMethods}}No authorization required{{/authMethods}}{{#authMethods}}{{name}}{{^-last}}, {{/-last}}{{/authMethods}}
+{{^authMethods}}No authorization required{{/authMethods}}
+{{#authMethods}}
+Type
+: {{name}}
 
-##### HTTP request headers
-
-- **Content-Type**: {{#consumes}}{{{mediaType}}}{{^-last}}, {{/-last}}{{/consumes}}{{^consumes}}Not defined{{/consumes}}
-- **Accept**: {{#produces}}{{{mediaType}}}{{^-last}}, {{/-last}}{{/produces}}{{^produces}}Not defined{{/produces}}
+{{#isOAuth}}
+Scopes
+{{#scopes}}
+: {{scope}}
+{{/scopes}}
+{{/isOAuth}}
+{{/authMethods}}
 
 {{/operation}}
 {{/operations}}

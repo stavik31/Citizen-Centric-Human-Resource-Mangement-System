@@ -1,5 +1,5 @@
 ---
-title: ContentfulUnpublishDeletedEntry
+title: ContentfulUnpublishEntry
 ---
 
 

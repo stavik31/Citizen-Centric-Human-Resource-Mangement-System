@@ -5,17 +5,12 @@ autoactivate on
 actor Contentful
 boundary ContentfulController
 participant ContentfulService
-boundary ContentfulClient
 participant LearningMaterialService
 participant LearningMaterialDAO
 database Database
 
 Contentful -> ContentfulController : notifyEntryPublished
 ContentfulController -> ContentfulService : putEntry
-ContentfulService -> ContentfulClient : fetchContent
-ContentfulClient -> Contentful
-return
-return
 ContentfulService -> LearningMaterialService : updateLearningMaterial
 LearningMaterialService -> LearningMaterialDAO : save
 LearningMaterialDAO -> Database

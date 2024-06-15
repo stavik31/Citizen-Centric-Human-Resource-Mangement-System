@@ -507,20 +507,13 @@ Description
 
 ![component diagram](/diagrams/Chart1.jpg)
 
-## Application Tier Operations
+## HTTP API Operations
 
 {% include apidocs.md %}
 
 {% for controller in site.apidocs_controllers %}
 ### {{ controller.title }}
 {{ controller.content }}
-{% endfor %}
-
-### Models
-
-{% for model in site.apidocs_models %}
-#### {{ model.title }}
-{{ model.content }}
 {% endfor %}
 
 ## Application Tier Design

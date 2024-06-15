@@ -29,12 +29,12 @@ null (empty response body)
 
 ##### Authorization
 
-auth0
 
-##### HTTP request headers
+Type
+: auth0
 
-- **Content-Type**: Not defined
-- **Accept**: Not defined
+Scopes
+: smart_city_manager
 
 
 <hr/>
@@ -54,12 +54,13 @@ This endpoint does not need any parameter.
 
 ##### Authorization
 
-auth0
 
-##### HTTP request headers
+Type
+: auth0
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+Scopes
+: citizen
+: smart_city_manager
 
 
 <hr/>
@@ -82,11 +83,12 @@ Update signed in user profile
 
 ##### Authorization
 
-auth0
 
-##### HTTP request headers
+Type
+: auth0
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+Scopes
+: citizen
+: smart_city_manager
 
 <hr/>

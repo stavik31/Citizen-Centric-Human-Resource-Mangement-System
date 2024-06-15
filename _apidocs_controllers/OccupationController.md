@@ -31,12 +31,13 @@ Get child occupations
 
 ##### Authorization
 
-auth0
 
-##### HTTP request headers
+Type
+: auth0
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+Scopes
+: citizen
+: smart_city_manager
 
 
 <hr/>
@@ -59,11 +60,12 @@ Get single occupation
 
 ##### Authorization
 
-auth0
 
-##### HTTP request headers
+Type
+: auth0
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+Scopes
+: citizen
+: smart_city_manager
 
 <hr/>
