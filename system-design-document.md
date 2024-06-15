@@ -148,7 +148,7 @@ User Type
 
 ![wireframe mockup](/diagrams/componentDiagrams/mockups/PBL3-2024-DeleteAccountViewMockup.svg)
 
-![component diagram](/diagrams/componentDiagrams/DeleteAccountView.png)
+![component diagram](/diagrams/DeleteAccountView.png)
 
 #### DownloadReportDataView
 
