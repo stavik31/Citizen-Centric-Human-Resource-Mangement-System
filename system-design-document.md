@@ -595,6 +595,10 @@ This section describes scenarios that show how the system will be utilized to me
 | U15    | View Occupation News            | View news from various sources associated with a given occupation                                                       | FREQ-15, FREQ-6   |
 | U16    | Manage Occupation Demands       | Set demand targets for a given occupation                                                                               | FREQ-17, FREQ-6   |
 | U17    | View Analytics Report           | View a generated report on aggregated data of citizens' information and engagement activity with content on the website | FREQ-18 - FREQ-32 |
+| U18    | Load News                       | Automatically pull news from RSS feeds                                                                                  | FREQ-37           |
+| U19    | Load Unemployment               | Automatically pull unemployment data from the BLS public data API                                                       | FREQ-35           |
+| U20    | Load Certifications             | Import the careeronestop certification dataset                                                                          | FREQ-35           |
+| U21    | Load SOC Datasets               | Import SOC definitions and yearly employment statistics                                                                 | FREQ-33, FREQ-34  |
 
 ### U1 - Create Account
 
@@ -726,6 +730,22 @@ This section describes scenarios that show how the system will be utilized to me
 #### Activity Diagram
 
 ![View Analytics Reports](/diagrams/PBL3ActivityDiagrams/ViewAnalyticsReports.jpg)
+
+### U18 - Load News
+
+![use case diagram](/diagrams/usecaseDiagrams/U18%20-%20Load%20News.svg)
+
+### U19 - Load Unemployment
+
+![use case diagram](/diagrams/usecaseDiagrams/U19%20-%20Load%20Unemployment.svg)
+
+### U20 - Load Certifications
+
+![use case diagram](/diagrams/usecaseDiagrams/U20%20-%20Load%20Certifications.svg)
+
+### U21 - Load SOC Data
+
+![use case diagram](/diagrams/usecaseDiagrams/U21%20-%20Load%20SOC%20Data.svg)
 
 ## External Interfaces
 

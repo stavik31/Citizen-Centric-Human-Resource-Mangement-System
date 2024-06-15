@@ -111,6 +111,10 @@ In the context of a smart city, this system is an asset for optimizing human res
 | U15    | View Occupation News            | View news from various sources associated with a given occupation                                                       | FREQ-15, FREQ-6   |
 | U16    | Manage Occupation Demands       | Set demand targets for a given occupation                                                                               | FREQ-17, FREQ-6   |
 | U17    | View Analytics Report           | View a generated report on aggregated data of citizens' information and engagement activity with content on the website | FREQ-18 - FREQ-32 |
+| U18    | Load News                       | Automatically pull news from RSS feeds                                                                                  | FREQ-37           |
+| U19    | Load Unemployment               | Automatically pull unemployment data from the BLS public data API                                                       | FREQ-35           |
+| U20    | Load Certifications             | Import the careeronestop certification dataset                                                                          | FREQ-35           |
+| U21    | Load SOC Datasets               | Import SOC definitions and yearly employment statistics                                                                 | FREQ-33, FREQ-34  |
 
 ## Glossary
 
