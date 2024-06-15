@@ -514,6 +514,58 @@ Description
 
 ## Application Tier Design
 
+### Analytics Services
+
+### Certifications Services
+
+### Demand Services
+
+### Employment Services
+
+### Job Postings Services
+
+### Learning Material Services
+
+### News Services
+
+#### News States
+
+When a new news article is received by the system, it will first be persisted into the database. A scheduled job will then pick it up and classify it after some time. The state transitions of a single news article are shown below.
+
+```mermaid
+stateDiagram-v2
+  new : NEW
+  classified : CLASSIFIED
+  unclassified : UNCLASSIFIED
+  state if_success <<choice>>
+
+  [*] --> new
+  new --> if_success
+  if_success --> classified : if classification successful
+  if_success --> unclassified : if classification failed
+  classified --> new : if article changes
+  unclassified --> new : if article changes  
+```
+
+#### News Classification
+
+News classification will be performed using cosine similarity between labeled descriptions of each SOC occupation and the vectorization of the concatenated title, description and categories of the news article. Vectorization will be performed using a pretrained doc2vec model.
+
+![Activity diagram showing the process flow for news classification using doc2vec](/diagrams/pbl3-news-classification-activity-diagram.svg)
+
+#### doc2vec Training
+
+Due to resource constraints, the corpus used to train doc2vec will be relatively small. Training data will consist of, but not be limited to, at least the following:
+
+* [SOC Definitions (Labeled)](/documents/corpus_soc_definitions.csv)
+* [S&P 500 Company Wikipedia Extracts](/documents/corpus_sp500.csv)
+
+### Occupation Services
+
+### Unemployment Services
+
+### User Services
+
 ## Data Tier Design
 
 ## Operational Scenarios
@@ -1146,50 +1198,18 @@ curl --location 'https://data.usajobs.gov/api/search?Keyword=Software%20Developm
 }
 ```
 
-## Placeholder
-
-```mermaid
-stateDiagram-v2
-  new : NEW
-  synchronized : SYNCHRONIZED
-  unsynchronized : SYNCHRONIZATION_FAILED
-  state if_success <<choice>>
-
-  [*] --> new
-  new --> if_success
-  if_success --> synchronized : received content
-  if_success --> unsynchronized : error
-  synchronized --> new : if content changes
-  unsynchronized --> new : after 5 minutes  
-```
-
-```mermaid
-stateDiagram-v2
-  new : NEW
-  classified : CLASSIFIED
-  unclassified : UNCLASSIFIED
-  state if_success <<choice>>
-
-  [*] --> new
-  new --> if_success
-  if_success --> classified : if classification successful
-  if_success --> unclassified : if classification failed
-  classified --> new : if article changes
-  unclassified --> new : if article changes  
-```
-
-![Activity diagram showing the process flow for news classification using doc2vec](/diagrams/pbl3-news-classification-activity-diagram.svg)
-
 ## Appendix A - Large Format Diagrams
 
 The diagrams in this section are useful for understanding the system's overall design but are difficult to view in a normal document. To view these diagrams, right click on them and open them in a new tab. From there, you can use your browser's zooming and panning capabilities to explore them in detail.
-
-### Composite Application Tier Class Diagram
-
-![Composite class diagram for the application tier](/diagrams/classDiagrams/MainClassDiagram.svg)
 
 ### Composite View Mockups / State Transitions
 
 ![Composite diagram of view mockups and the transitions between them](/diagrams/PBL3-2024-UI-Mockups.svg)
 
 Note that the colors are strictly for readability and have no specific meaning.
+
+### Composite Application Tier Class Diagram
+
+![Composite class diagram for the application tier](/diagrams/classDiagrams/MainClassDiagram.svg)
+
+Note that the colors denote different types of class (e.g., controller vs service vs dao).
