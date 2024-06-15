@@ -598,10 +598,14 @@ This section describes scenarios that show how the system will be utilized to me
 
 ### U1 - Create Account
 
+![use case diagram](/diagrams/usecaseDiagrams/U1%20-%20Create%20Account.svg)
+
 #### Activity Diagram
 ![Create Account](/diagrams/PBL3ActivityDiagrams/CreateProfile.jpg)
 
 ### U2 - Administer Account
+
+![use case diagram](/diagrams/usecaseDiagrams/U2%20-%20Administer%20Account.svg)
 
 #### Activity Diagram
 
@@ -609,11 +613,15 @@ This section describes scenarios that show how the system will be utilized to me
 
 ### U3 - Edit Account Profile
 
+![use case diagram](/diagrams/usecaseDiagrams/U3%20-%20Edit%20Account%20Profile.svg)
+
 #### Activity Diagram
 
 ![Edit Account Profile](/diagrams/PBL3ActivityDiagrams/EditAccountProfile.jpg)
 
 ### U4 - Reset Account Password
+
+![use case diagram](/diagrams/usecaseDiagrams/U4%20-%20Reset%20Account%20Password.svg)
 
 #### Activity Diagram
 
@@ -621,11 +629,15 @@ This section describes scenarios that show how the system will be utilized to me
 
 ### U5 - Delete Account
 
+![use case diagram](/diagrams/usecaseDiagrams/U5%20-%20Delete%20Account.svg)
+
 #### Activity Diagram
 
 ![Delete Account](/diagrams/PBL3ActivityDiagrams/DeleteAccount.jpg)
 
 ### U6 - View Occupation Information
+
+![use case diagram](/diagrams/usecaseDiagrams/U6%20-%20View%20Occupation%20Information.svg)
 
 #### Activity Diagram
 
@@ -633,11 +645,15 @@ This section describes scenarios that show how the system will be utilized to me
 
 ### U7 - Select Job Goal
 
+![use case diagram](/diagrams/usecaseDiagrams/U7%20-%20Select%20Job%20Goal.svg)
+
 #### Activity Diagram
 
-![Select Job Goal](/diagrams/PBL3ActivityDiagrams/SelectJobGoal.jpg)
+![Select Job Goal](/diagrams/PBL3ActivityDiagrams/%20SelectJobGoal.jpg)
 
 ### U8 - View Unemployment Data
+
+![use case diagram](/diagrams/usecaseDiagrams/U8%20-%20View%20Unemployment%20Data.svg)
 
 #### Activity Diagram
 
@@ -645,11 +661,15 @@ This section describes scenarios that show how the system will be utilized to me
 
 ### U9 - View Occupation Trend
 
+![use case diagram](/diagrams/usecaseDiagrams/U9%20-%20View%20Occupation%20Trend.svg)
+
 #### Activity Diagram
 
 ![View Occupation Trend](/diagrams/PBL3ActivityDiagrams/ViewOccupationTrend.jpg)
 
 ### U10 - View Job Postings
+
+![use case diagram](/diagrams/usecaseDiagrams/U10%20-%20View%20Job%20Postings.svg)
 
 #### Activity Diagram
 
@@ -657,11 +677,15 @@ This section describes scenarios that show how the system will be utilized to me
 
 ### U11 - View Certification Information
 
+![use case diagram](/diagrams/usecaseDiagrams/U11%20-%20View%20Certification%20Information.svg)
+
 #### Activity Diagram
 
 ![View Certifications](/diagrams/PBL3ActivityDiagrams/ViewCertifications.jpg)
 
 ### U12 - View Learning Material
+
+![use case diagram](/diagrams/usecaseDiagrams/U12%20-%20View%20Learning%20Material.svg)
 
 #### Activity Diagram
 
@@ -669,11 +693,15 @@ This section describes scenarios that show how the system will be utilized to me
 
 ### U13 - Manage Learning Material
 
+![use case diagram](/diagrams/usecaseDiagrams/U13%20-%20Manage%20Learning%20Material.svg)
+
 #### Activity Diagram
 
 ![Activity diagram showing the process flow for managing learning content](/diagrams/pbl3-manage-learning-material-activity-diagram.svg)
 
 ### U14 - View Occupation Demand
+
+![use case diagram](/diagrams/usecaseDiagrams/U14%20-%20View%20Occupation%20Demands.svg)
 
 #### Activity Diagram
 
@@ -681,13 +709,19 @@ This section describes scenarios that show how the system will be utilized to me
 
 ### U15 - View Occupation News
 
+![use case diagram](/diagrams/usecaseDiagrams/U15%20-%20View%20Occupation%20News.svg)
+
 ### U16 - Manage Occupation Demand
+
+![use case diagram](/diagrams/usecaseDiagrams/U16%20-%20Manage%20Occupation%20Demands.svg)
 
 #### Activity Diagram
 
 ![Manage Occupation Demand](/diagrams/PBL3ActivityDiagrams/ManageOccupationDemand.jpg)
 
 ### U17 - View Analytics Reports
+
+![use case diagram](/diagrams/usecaseDiagrams/U17%20-%20View%20Analytics%20Report.svg)
 
 #### Activity Diagram
 
