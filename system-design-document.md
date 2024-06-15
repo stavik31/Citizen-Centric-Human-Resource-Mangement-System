@@ -50,7 +50,7 @@ The data tier will consist of an instance of Postgres with the `timescaledb` ext
 
 ### Vertical Slicing
 
-Due to the wide array of domain objects needed to meet the functional requirements of the system, treating individual tiers as monolithic blocks presents significant organizational challenges in the implementation and maintenance of the system. While the presentation tier is able to achieve loose coupling due to its component-based architecture, the same cannot be said for the application tier. Were it to be designed as a single model, significant time would be lost to inter-developer interference. Traditionally, a microservice architecture could be utilized to work around these constraints, but due to the limited development period afforded to this project it is impossible to achieve the process maturity required to deploy and monitor a large number of services.
+Due to the wide array of domain objects needed to meet the functional requirements of the system, treating individual tiers as monolithic blocks presents significant organizational challenges in the implementation and maintenance of the system. While the presentation tier is able to achieve loose coupling due to its component-based architecture, the same cannot be said for the application tier. Were it to be designed as a single model, significant time would be lost to inter-developer interference. A microservice architecture could be utilized to work around these constraints, but due to the limited development period afforded to this project it is impossible to achieve the process maturity required to deploy and monitor a large number of services.
 
 Despite these limitations, some benefit can still be obtained by loosely following the practices of **Domain-Driven-Design**. Instead of treating the application tier as a single, unified model, this system design instead splits the domain into a set of bounded contexts, each of which is isolated in its own **vertical slice**.
 
@@ -513,6 +513,20 @@ Description
 {% endfor %}
 
 ## Application Tier Design
+
+### Cross-Cutting Concerns
+
+#### Security
+
+Security will be implemented using Spring Security primitives. Operation controls will be enforced in a global `HttpSecurity` configuration, while operations that are secured at the individual user level will utilize method security annotations.
+
+#### Logging
+
+Application logging will be implemented using [Slf4j](https://slf4j.org/) to decouple the services from a particular logging implementation.
+
+#### Error Handling
+
+All error handling should be performed using Spring's default error handling mechanism. Exceptions should be allowed to bubble up to the controller, from which they will be mapped to an appropriate error response.
 
 ### Analytics Service
 
