@@ -1,0 +1,17 @@
+@startuml
+
+autoactivate on
+
+actor "ApplicationReadyEvent" as ready
+participant OccupationService
+collections "SOC Definition Dataset" as SOC
+participant OccupationTrie
+
+ready -> OccupationService : loadOccupationTrie
+OccupationService -> SOC : Read files
+return
+OccupationService -> OccupationTrie : addAll
+return
+return
+
+@enduml

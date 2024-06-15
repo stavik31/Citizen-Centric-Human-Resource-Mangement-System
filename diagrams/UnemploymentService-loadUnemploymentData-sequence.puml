@@ -1,0 +1,23 @@
+@startuml
+
+autoactivate on
+
+actor "System Timer" as timer
+participant UnemploymentService
+boundary BLSClient
+actor "BLS Public\nData API" as BLS
+participant UnemploymentDAO
+database Database
+
+timer -> UnemploymentService : loadUnemploymentData()
+UnemploymentService -> BLSClient : fetchBLSSeries()
+BLSClient -> BLS
+return
+return
+UnemploymentService -> UnemploymentDAO : save()
+UnemploymentDAO -> Database
+return
+return
+return
+
+@enduml
