@@ -1186,7 +1186,7 @@ The diagrams in this section are useful for understanding the system's overall d
 
 ### Composite Application Tier Class Diagram
 
-![Composite class diagram for the application tier](/diagrams/PBL3-2024-Composite-Class-Diagram.png)
+![Composite class diagram for the application tier](/diagrams/classDiagrams/MainClassDiagram.svg)
 
 ### Composite View Mockups / State Transitions
 
