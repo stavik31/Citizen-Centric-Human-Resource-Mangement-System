@@ -526,7 +526,7 @@ Application logging will be implemented using [Slf4j](https://slf4j.org/) to dec
 
 #### Error Handling
 
-All error handling should be performed using Spring's default error handling mechanism. Exceptions should be allowed to bubble up to the controller, from which they will be mapped to an appropriate error response.
+All error handling should be performed using Spring's default error handling mechanism. Exceptions should be allowed to bubble up to the framework, from which they will be mapped to an appropriate error response.
 
 ### Analytics Service
 
