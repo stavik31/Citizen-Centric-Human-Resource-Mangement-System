@@ -2,7 +2,7 @@
 title: UserController
 ---
 
-Access and manage user profiles  ![class diagram](/diagrams/classDiagrams/User.svg) 
+The UserController provides operations for querying and managing the current user profile. This is determined by the sid value in the bearer token provided by the client on each operation request. For more information, see the Authorization section of this document or the Auth0 integration details.  ![class diagram](/diagrams/classDiagrams/User.svg) 
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|

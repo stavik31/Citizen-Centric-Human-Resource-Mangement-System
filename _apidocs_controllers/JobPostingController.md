@@ -2,7 +2,7 @@
 title: JobPostingController
 ---
 
-Access a list of available jobs by occupation  ![class diagram](/diagrams/classDiagrams/JobPostings.svg) 
+The JobPostingController provides operations for querying job postings relating to a given occupation. Internally, this delegates out to one or more third-party job posting APIs.  ![class diagram](/diagrams/classDiagrams/JobPostings.svg) 
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|

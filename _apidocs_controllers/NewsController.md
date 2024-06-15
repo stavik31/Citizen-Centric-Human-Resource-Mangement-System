@@ -2,7 +2,7 @@
 title: NewsController
 ---
 
-Access news related to an occupation  ![class diagram](/diagrams/classDiagrams/News.svg) 
+The NewsController provides operations for querying news for a specific SOC code. Internally, this news is retrieved from a set of RSS feeds maintained in the application configuration and is internally mapped to one or more SOC codes using doc2vec and cosine similarity. See the News section of the application tier design for more information.  ![class diagram](/diagrams/classDiagrams/News.svg) 
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|

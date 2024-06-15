@@ -2,7 +2,7 @@
 title: AnalyticsController
 ---
 
-Access reports and publish clickstream analytics  ![class diagram](/diagrams/classDiagrams/Analytics.svg) 
+The AnalyticsController presents a set of operations for publishing and querying clickstream data.  ![class diagram](/diagrams/classDiagrams/Analytics.svg) 
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
@@ -238,6 +238,6 @@ Type
 : auth0
 
 Scopes
-: smart_city_manager
+: citizen
 
 <hr/>

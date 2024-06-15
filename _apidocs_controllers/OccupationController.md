@@ -2,7 +2,7 @@
 title: OccupationController
 ---
 
-Access information about occupations or groups of occupations  ![class diagram](/diagrams/classDiagrams/Occupation.svg) 
+The OccupationController provides operations for querying occupations based on a given SOC code. This data is managed in-memory and is sourced from the most recent SOC specification at application startup.  ![class diagram](/diagrams/classDiagrams/Occupation.svg) 
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|

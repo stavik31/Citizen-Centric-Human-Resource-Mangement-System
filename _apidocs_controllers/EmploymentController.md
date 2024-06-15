@@ -2,7 +2,7 @@
 title: EmploymentController
 ---
 
-Access employment statistics by occupation  ![class diagram](/diagrams/classDiagrams/Employment.svg) 
+The EmploymentController provides operations for querying employment trends and statistics for a given occupation.  ![class diagram](/diagrams/classDiagrams/Employment.svg) 
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|

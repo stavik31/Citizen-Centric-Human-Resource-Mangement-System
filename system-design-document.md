@@ -1,5 +1,5 @@
 ---
-title: System Design Diagrams
+title: System Design Document
 nav_order: 3
 ---
 
@@ -32,17 +32,27 @@ This document is written as a Software Design Document for the "System for Citiz
 
 ## System Architecture
 
-The system will follow a three-tier architecture, splitting the user interface (presentation tier), backend services (application tier), and database (data tier) across three different logical host groups. Communication between the presentation and application tiers will take place using REST over HTTP.
+This section of the document describes the general architecture of the system and lists architectural patterns that the overarching design or specific components will follow. It takes a high-level view of the system and is suitable for orientation; more specific details are available in the documentation for the individual tiers.
+
+### System Tiers and General Architecture
+
+The system will follow a three-tier architecture, splitting the user interface (presentation tier), backend services (application tier), and database (data tier) across three different logical host groups.
+
+The presentation tier will consist of a single page application (SPA) written primarily using Vue.js. It will be structured following a **component-based architecture**, wherein interactable elements are defined as reusable **Components**, which are then composed into **Views** that implement one or more use cases.
+
+Between the presentation and application tiers, a virtual tier henceforth referred to as the HTTP Application Programming Interface (API) exists. While this is physically part of the application tier, it can logically be considered the bridge between the presentation and application tiers. It provides a set of **Operations** that are implemented by the application tier and consumed by the presentation tier to power the various views and components of the latter.
+
+The application tier will consist of a modular monolith written primarily using Spring Boot. Internally, it will follow a **three-layer architecture**: a presentation layer utilizing spring-web-mvc, an application layer written primarily in plain Java, and a data-access layer implemented via spring-data.
+
+The data tier will consist of an instance of Postgres with the `timescaledb` extension enabled to facilitate high-performance analytics ingestion and processing.
 
 ![Three-tier architecture](/diagrams/PBL3-three-tier-architecture.svg)
 
-Additionally, the system will interact with a variety of external actors and systems. This document contains a detailed description of each of these integrations, but the following diagram may be used as a summary view.
+### Vertical Slicing
 
-![System container diagram](/diagrams/PBL3-2024-system-container-diagram.svg)
+Due to the wide array of domain objects needed to meet the functional requirements of the system, treating individual tiers as monolithic blocks presents significant organizational challenges in the implementation and maintenance of the system. While the presentation tier is able to achieve loose coupling due to its component-based architecture, the same cannot be said for the application tier. Were it to be designed as a single model, significant time would be lost to inter-developer interference. Traditionally, a microservice architecture could be utilized to work around these constraints, but due to the limited development period afforded to this project it is impossible to achieve the process maturity required to deploy and monitor a large number of services.
 
-### Bounded Contexts
-
-Due to our relatively wide set of functionality, this system design loosely follows the practices of Domain-Driven-Design (DDD) to avoid the complexities presented by using a single unified model. The system is structured as a series of "vertical slices", each one dealing primarily with a single bounded context. The following table documents these bounded contexts.
+Despite these limitations, some benefit can still be obtained by loosely following the practices of **Domain-Driven-Design**. Instead of treating the application tier as a single, unified model, this system design instead splits the domain into a set of bounded contexts, each of which is isolated in its own **vertical slice**.
 
 | Context           | Description                                                   |
 |-------------------|---------------------------------------------------------------|
@@ -57,48 +67,33 @@ Due to our relatively wide set of functionality, this system design loosely foll
 | Unemployment      | Unemployment level for a given year.                          |
 | Users             | User profiles                                                 |
 
-These boundaries span all three of the application tiers, but are most heavily relied upon in the application tier, where they heavily shaped the design of the system.
-
-### Presentation Tier
-
-The presentation tier of this system consists of a Vue single page application deployed to and served directly from a CDN.
-
-| Purpose              | Library or Framework |
-|----------------------|----------------------|
-| Programming Language | Typescript           |
-| App Framework        | Vue                  |
-| Test Framework       | Vitest               |
-| Build System         | Vite                 |
-
-#### Component Architecture
-
-The presentation tier is structured as a set of reusable components, which are composed into individual views that the user may interact with. A complete catalogue of components and views is available in the UI section of this document.
-
-### Application Tier
-
-The application tier of this system consists of a single Spring Boot service bundled as an OCI image and deployed to a managed kubernetes-based container orchestration platform.
-
-| Purpose              | Library or Framework |
-|----------------------|----------------------|
-| Programming Language | Java                 |
-| App Framework        | Spring + Spring Boot |
-| Test Framework       | JUnit                |
-| Build System         | Apache Maven         |
-
-#### Vertical Slice Architecture
-
-Mirroring the bounded contexts described above, the application tier will be composed of a series of "vertical slices", each of which spans the traditional presentation, business, and data layers. This aims to reduce dependencies between each bounded context to allow for independent development and testing.
+To achieve the full benefits of domain-driven-design, it is important to enforce design constraints around inter-domain communication to limit coupling. Each vertical slice may only interact with its peers at a particular layer, in this case the application business layer.
 
 ![Architecture diagram displaying vertical slice architecture](/diagrams/PBL3-vertical-slice-architecture.svg)
 
-### Data Tier
+By siloing each bounded context and providing strict guidelines around inter-domain communication, the system can be effectively developed in parallel; each domain is small enough to be implemented by a single developer and can be tested completely in isolation.
 
-The data tier of this system consists of a single instance of Postgres managed by a cloud provider. Schema migrations will be handled using a code-based approach; the database structure will be embedded in the application-tier container and automatically applied at startup using liquibase.
+### Illustrative Example
 
-| Purpose           | Library or Framework |
-|-------------------|----------------------|
-| Database Platform | Postgres             |
-| Management Tool   | Liquibase            |
+To better understand the design language used in the remainder of this document, let's look at an illustrative example. This example will show the full end-to-end structure of a single operation within the fictitious *Example* bounded context and the process we could take to learn more about specific parts of it.
+
+As mentioned above, the presentation tier consists of a set of loosely coupled **Components** which are composed into **Views**. In this case, we will focus on the *ExampleView*, which has a dependency on the **Operation** *getExample()*. Were this a real view, it could be found in the [View Catalogue](#view-catalog) and would be diagrammed similar to the following:
+
+![Example of a view component](/diagrams/PBL3-2024-operation-architecture-presentation-tier.svg)
+
+To trace this into the application tier, we will next look to the [HTTP API](#http-api) section. Within this section, we will look for the *ExampleController* subsection (these will generally follow the pattern `<BoundedContext>Controller`), which will contain a UML class diagram showing the structure of the application tier implementation of this **Operation**. Scrolling down to the specific operation, in this case `getExample()`, we will find a UML sequence diagram showing how these classes interact. Putting this all together, we reach the following structure:
+
+![Example of a full operation end-to-end](/diagrams/PBL3-2024-operation-architecture.svg)
+
+Having read these sections, we should now have a good understanding of how the operation is defined both structurally and procedurally, but we may not yet have a full understanding of the internal behaviour of the classes. If a bounded context is non-trivial, additional implementation details will be available in the [Application Tier Design](#application-tier-design) and [Data Tier Design](#data-tier-design) sections of the document.
+
+### System Boundaries and External Interfaces
+
+The boundary of the system contains all three physical tiers of the application, as well as the virtual HTTP API tier. The system provides two interfaces through which external systems and entities can interact with it; a visual interface referred to as the **Web Frontend** for consumption by humans, and a machine-to-machine interface referred to as the **HTTP API** for consumption by external systems.
+
+Additionally, the system integrates with a variety of third party services using their APIs. Details about these integrations can be found in the [External Interfaces](#external-interfaces) section of this document.
+
+![System container diagram](/diagrams/PBL3-2024-system-container-diagram.svg)
 
 ## Presentation Tier Design
 
@@ -106,7 +101,7 @@ The data tier of this system consists of a single instance of Postgres managed b
 
 ![view transition state diagram](/diagrams/UI_State_Diagram2.jpg)
 
-### View Catalogue
+### View Catalog
 
 This section includes a complete list of all user interface views provided by the application.
 
@@ -396,7 +391,8 @@ User Type
 
 ![component diagram](/diagrams/componentDiagrams/views/SelectMajorAndMinorGroupView.jpg)
 
-### Component Catalogue
+### Component Catalog
+
 #### Breadcrumb
 
 Name
@@ -507,7 +503,7 @@ Description
 
 ![component diagram](/diagrams/Chart1.jpg)
 
-## HTTP API Operations
+## HTTP API
 
 {% include apidocs.md %}
 

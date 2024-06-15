@@ -2,7 +2,7 @@
 title: LearningMaterialController
 ---
 
-Access learning material for an occupation  ![class diagram](/diagrams/classDiagrams/LearningMaterial.svg) 
+The LearningMaterialController provides operations for querying learning material for a specific SOC code. For  details on how the learning material is managed, see ContentfulController.  ![class diagram](/diagrams/classDiagrams/LearningMaterial.svg) 
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|

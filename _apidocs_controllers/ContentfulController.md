@@ -2,7 +2,7 @@
 title: ContentfulController
 ---
 
-Listener for Contentful webhooks  ![class diagram](/diagrams/classDiagrams/Contentful.svg) 
+The ContentfulController implements the webhook format defined by Contentful for receiving notifications of newly published or unpublished entries in the CMS. Internally, this populates the tables used by the LearningMaterialController.  ![class diagram](/diagrams/classDiagrams/Contentful.svg) 
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|

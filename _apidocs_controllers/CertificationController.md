@@ -2,7 +2,7 @@
 title: CertificationController
 ---
 
-Access certifications  ![class diagram](/diagrams/classDiagrams/Certifications.svg) 
+The CertificationController presents a set of operations for querying certifications. Certification management is handled by system administrators through direct database injection; that process is described in the application tier documentation.  ![class diagram](/diagrams/classDiagrams/Certifications.svg) 
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|

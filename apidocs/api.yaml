@@ -1,63 +1,84 @@
 openapi: 3.0.3
 info:
   title: Agile HRM System
-  description: |-
-    Insert description here
+  description: |
+    The HTTP Application Programming Interface (API) provides a collection of services (referred to as operations
+    in this document) that can be utilized by the presentation tier to power its various user experiences and views.
+    The API is broken up into "Controllers", each of which bundles together all of the operations for its
+    respective bounded context (with additional controllers for third-party integrations as needed).
+    
+    For reference, each controller section includes a UML class diagram demonstrating the internal structure of
+    the controller and its dependencies. Additionally, each operation provides a UML sequence diagram showing how
+    those dependencies interact in the flow of that specific request type.
   version: '1.0.0'
 tags:
   - name: Analytics
     description: |
-      Access reports and publish clickstream analytics
+      The AnalyticsController presents a set of operations for publishing and querying clickstream data.
 
       ![class diagram](/diagrams/classDiagrams/Analytics.svg)
   - name: Certification
     description: |
-      Access certifications
+      The CertificationController presents a set of operations for querying certifications. Certification management
+      is handled by system administrators through direct database injection; that process is described in the application
+      tier documentation.
 
       ![class diagram](/diagrams/classDiagrams/Certifications.svg)
   - name: Contentful
     description: |
-      Listener for Contentful webhooks
+      The ContentfulController implements the webhook format defined by Contentful for receiving notifications of
+      newly published or unpublished entries in the CMS. Internally, this populates the tables used by the
+      LearningMaterialController.
 
       ![class diagram](/diagrams/classDiagrams/Contentful.svg)
   - name: Demand
     description: |
-      Access and set demand targets by occupation
+      The DemandController provides a minimal set of read/write operations for managing demand targets for a given
+      occupation.
 
       ![class diagram](/diagrams/classDiagrams/Demand.svg)
   - name: Employment
     description: |
-      Access employment statistics by occupation
+      The EmploymentController provides operations for querying employment trends and statistics for a given occupation.
 
       ![class diagram](/diagrams/classDiagrams/Employment.svg)
   - name: JobPosting
     description: |
-      Access a list of available jobs by occupation
+      The JobPostingController provides operations for querying job postings relating to a given occupation. Internally,
+      this delegates out to one or more third-party job posting APIs.
 
       ![class diagram](/diagrams/classDiagrams/JobPostings.svg)
   - name: LearningMaterial
     description: |
-      Access learning material for an occupation
+      The LearningMaterialController provides operations for querying learning material for a specific SOC code. For 
+      details on how the learning material is managed, see ContentfulController.
 
       ![class diagram](/diagrams/classDiagrams/LearningMaterial.svg)
   - name: News
     description: |
-      Access news related to an occupation
+      The NewsController provides operations for querying news for a specific SOC code. Internally, this news is
+      retrieved from a set of RSS feeds maintained in the application configuration and is internally mapped to one
+      or more SOC codes using doc2vec and cosine similarity. See the News section of the application tier design
+      for more information.
 
       ![class diagram](/diagrams/classDiagrams/News.svg)
   - name: Occupation
     description: |
-      Access information about occupations or groups of occupations
+      The OccupationController provides operations for querying occupations based on a given SOC code. This data is
+      managed in-memory and is sourced from the most recent SOC specification at application startup.
 
       ![class diagram](/diagrams/classDiagrams/Occupation.svg)
   - name: Unemployment
     description: |
-      Access unemployment statistics
+      The UnemploymentController provides operations for querying unemployment based on a given SOC code (or globally
+      if the root SOC code 00-0000 is provided). Internally, this utilized the BLS Public Data API series LNU04000000.
 
       ![class diagram](/diagrams/classDiagrams/Unemployment.svg)
   - name: User
     description: |
-      Access and manage user profiles
+      The UserController provides operations for querying and managing the current user profile. This is determined
+      by the sid value in the bearer token provided by the client on each operation request. For more information, see
+      the Authorization section of this document or the Auth0 integration details.
 
       ![class diagram](/diagrams/classDiagrams/User.svg)
 paths:
@@ -87,7 +108,7 @@ paths:
       description: '![sequence diagram](/diagrams/AnalyticsController-saveClickData-sequence.svg)'
       operationId: saveClickData
       security:
-        - auth0: [smart_city_manager]
+        - auth0: [citizen]
       tags:
         - Analytics
       requestBody:

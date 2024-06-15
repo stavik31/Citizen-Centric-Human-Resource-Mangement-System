@@ -2,7 +2,7 @@
 title: DemandController
 ---
 
-Access and set demand targets by occupation  ![class diagram](/diagrams/classDiagrams/Demand.svg) 
+The DemandController provides a minimal set of read/write operations for managing demand targets for a given occupation.  ![class diagram](/diagrams/classDiagrams/Demand.svg) 
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
