@@ -650,6 +650,26 @@ The first time a user signs in to the system, a profile will not be found. In th
 
 ## Data Tier Design
 
+![ERD](/diagrams/system-erd.png)
+
+### General Table Structure
+
+Bounded contexts that require long term persistence will each receive their own table with a name matching that of the context. One-to-many and many-to-many relationships (e.g., soc code mappings), will be persisted in separate tables and queried via joins to shape them to fit our system model. Each bounded context table will have a surrogate identifier.
+
+[Click here to download the reference schema for the ERD.](/documents/reference_schema.sql)
+
+### Analytics / TimeseriesDB
+
+Clickstream data will be persisted in a timescaledb [hypertable](https://docs.timescale.com/use-timescale/latest/hypertables/), initialized using the following:
+
+```sql
+CREATE EXTENSION timescaledb;
+    
+SELECT create_hypertable('click_data', 'timestamp');
+```
+
+[Continuous aggregates](https://docs.timescale.com/use-timescale/latest/continuous-aggregates/) will be utilized for read queries as performance needs dictate.
+
 ## Operational Scenarios
 
 This section describes scenarios that show how the system will be utilized to meet its functional requirements. Each scenario is illustrated by a use case.
