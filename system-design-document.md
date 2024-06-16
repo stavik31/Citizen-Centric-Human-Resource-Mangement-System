@@ -763,6 +763,8 @@ Description
 
 ## Application Tier Design
 
+![package diagram](/diagrams/classDiagrams/PackageDiagram.svg)
+
 ### Languages
 
 * Java
