@@ -656,7 +656,7 @@ This section describes scenarios that show how the system will be utilized to me
 
 ### Overview
 
-![Use Case Diagram](/diagrams/new-use-case-diagram-SRS.svg)
+![Use Case Diagram](/diagrams/use-case-diagram-SRS.svg)
 
 | Number | Name                            | Description                                                                                                             | Associated FREQ   |
 |--------|---------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------|
@@ -1339,6 +1339,102 @@ curl --location 'https://data.usajobs.gov/api/search?Keyword=Software%20Developm
 ### SOC Employment Dataset
 
 ### CareerOneStop Dataset
+
+![careeronestop erd](/diagrams/careeronestop-erd.png)
+
+CareerOneStop exports their certification dataset as a set of Oracle sql migration files. While the provided insert statements can be run against postgres as-is, the schema cannot. The following sections define postgres-compatible equivalents.
+
+#### CERT_ORGS PostgresQL Converted Schema
+
+```sql
+CREATE TABLE CERT_ORGS
+(
+  ORG_ID           CHAR(4) CONSTRAINT ORG_ID_NN NOT NULL PRIMARY KEY,
+  ORG_NAME         VARCHAR(150) CONSTRAINT ORG_NAME_NN NOT NULL,
+  ORG_ADDRES       VARCHAR(200),
+  ORG_PHONE1       VARCHAR(30),
+  EXT              VARCHAR(10),
+  ORG_PHONE2       VARCHAR(30),
+  ORG_FAX          VARCHAR(30),
+  ORG_EMAIL        VARCHAR(50),
+  ORG_WEBPAG       VARCHAR(2000),
+  ACRONYM          VARCHAR(20),
+  ORG_LAST_UPDATE  DATE,
+  SUPPRESS         VARCHAR(1),
+  DATEADDED        DATE                         DEFAULT 'now'::timestamp,
+  VERIFIED         VARCHAR(1),
+  UPDATEDBY        VARCHAR(2),
+  DELETED          DECIMAL(1)                    DEFAULT 0
+);
+```
+
+#### CERTIFICATIONS PostgresQL Converted Schema
+
+```sql
+CREATE TABLE CERTIFICATIONS
+(
+  CERT_ID           VARCHAR(5) CONSTRAINT CERT_ID_NN NOT NULL PRIMARY KEY,
+  CERT_NAME         VARCHAR(200) CONSTRAINT CERT_NAME_NN NOT NULL,
+  ORG_ID            CHAR(4),
+  TRAINING          decimal(1),
+  EXPERIENCE        decimal(1),
+  EITHER            decimal(1),
+  EXAM              decimal(1),
+  RENEWAL           CHAR(2),
+  CEU               decimal(1),
+  REEXAM            decimal(1),
+  CPD               decimal(1),
+  CERT_ANY          decimal(1),
+  URL               VARCHAR(254),
+  ACRONYM           VARCHAR(16),
+  NSSB_URL          VARCHAR(254),
+  CERT_URL          VARCHAR(254),
+  CERT_LAST_UPDATE  DATE,
+  KEYWORD1          VARCHAR(64),
+  KEYWORD2          VARCHAR(64),
+  KEYWORD3          VARCHAR(64),
+  SUPPRESS          VARCHAR(1),
+  DATEADDED         DATE                        DEFAULT 'now'::timestamp,
+  COMMENTS          VARCHAR(1000),
+  VERIFIED          VARCHAR(1),
+  UPDATEDBY         VARCHAR(2),
+  CERT_DESCRIPTION  VARCHAR(2000),
+  DELETED           decimal(1)                   DEFAULT 0,
+  EXAM_DETAILS      VARCHAR(2000)
+);
+
+ALTER TABLE CERTIFICATIONS ADD CONSTRAINT CERTIFICATIONS_ORG_ID_FK FOREIGN KEY (ORG_ID) REFERENCES CERT_ORGS (ORG_ID);
+```
+
+#### CERT_ONET_ASSIGN PostgresQL Converted Schema
+
+```sql
+CREATE TABLE CERT_ONET_ASSIGN
+(
+    ID         DECIMAL(7)                          NOT NULL PRIMARY KEY,
+    CERT_ID    VARCHAR(5)                   NOT NULL,
+    ONETCODE   VARCHAR(10)                  NOT NULL,
+    ACTIVE_YN  CHAR(1)                       NOT NULL,
+    RELATION   CHAR(1)
+);
+
+ALTER TABLE CERT_ONET_ASSIGN ADD CONSTRAINT CERT_ONET_ASSIGN_CERT_FK FOREIGN KEY (CERT_ID) REFERENCES CERTIFICATIONS (CERT_ID);
+```
+
+#### Converting to System Format
+
+```sql
+SELECT 
+	c.cert_id as id, 
+	c.cert_name as title, 
+	c.cert_description as description, 
+	c.url as url, 
+	o.org_name as organization,
+	s.onetcode as soc
+FROM certifications c
+LEFT JOIN cert_orgs o ON c.org_id = o.org_id
+LEFT JOIN cert_onet_assign s ON s.cert_id = c.cert_id;
+```
 
 ## Appendix A - Large Format Diagrams
 
