@@ -1355,3 +1355,47 @@ Note that the colors are strictly for readability and have no specific meaning.
 ![Composite class diagram for the application tier](/diagrams/classDiagrams/MainClassDiagram.svg)
 
 Note that the colors denote different types of class (e.g., controller vs service vs dao).
+
+## Appendix B - Time Series Forecasting Analysis
+
+### ARIMA
+
+![chart](/diagrams/forecasting/arima-00-0000.png)
+
+![chart](/diagrams/forecasting/arima-11-0000.png)
+
+![chart](/diagrams/forecasting/arima-11-1000.png)
+
+![chart](/diagrams/forecasting/arima-11-1010.png)
+
+![chart](/diagrams/forecasting/arima-11-1011.png)
+
+These five graphs shows the number of total employees in each occ-code and forecast number of 2024 and 2025. To forecasting we use ARIMA model.
+
+| Year/OCC-code | Forecasted number  | Real number |
+|---------------|--------------------|-------------|
+| 2023/00-0000  | 153140175.48817983 | 151853870   |
+| 2022/25-1031  | 6187.588626263153  | 6420        |
+| 2021/41-1000  | 1295681.9752079758 | 1387190     |
+| 2020/15-1220  | 39020.965173350225 | 30220       |
+| 2019/19-4061  | 28550.854023546708 | 35580       |
+
+### SARIMA
+
+![chart](/diagrams/forecasting/sarima-00-0000.png)
+
+![chart](/diagrams/forecasting/sarima-11-0000.png)
+
+![chart](/diagrams/forecasting/sarima-11-1000.png)
+
+![chart](/diagrams/forecasting/sarima-11-1010.png)
+
+![chart](/diagrams/forecasting/sarima-11-1011.png)
+
+| Year/OCC-code | Forecast number    | Real number |
+|---------------|--------------------|-------------|
+| 2023/00-0000  | 218148308.14718592 | 151853870   |
+| 2022/41-1011  | 1694665.303387348  | 1097160     |
+| 2021/29-2052  | 641625.0906724547  | 436630      |
+| 2020/17-3030  | 80025.01198749401  | 53370       |
+| 2019/49-9070  | 2127690.312269844  | 1418990     |
