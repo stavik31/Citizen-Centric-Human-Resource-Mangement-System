@@ -138,7 +138,7 @@ System allows for users to start the signup process by collecting their email, p
 
 ### U2 - Administer Account
 
-System allows for system administrators to create new user accounts and can link these accounts to an email, legal name, and optionally a postal code. Administrative users can also assign roles such as "citizen" or "smart city manager." Once an account has been administered, a one-time password reset link is send for users to change their password.
+System allows for system administrators to create new user accounts and can link these accounts to an email, legal name, and optionally a postal code. Administrative users can also assign roles such as "citizen" or "smart city manager." Once an account has been created in this way, a one-time password reset link is send for users to change their password.
 
 ![use case diagram](/diagrams/usecaseDiagrams/U2%20-%20Administer%20Account.svg)
 
@@ -312,7 +312,7 @@ The system implements functionality to load certification data from a government
 
 ### U21 - Load SOC Data
 
-The system provides functionality to load SOC definitions, descriptions, and employment data from the Bureau of Labor Statistics by pulling SOC occupation definitions data and employment data on the first day of each month.
+The system provides functionality to load SOC definitions, descriptions, and employment data from the Bureau of Labor Statistics by parsing files deployed alongside the application tier servivces.
 
 ![use case diagram](/diagrams/usecaseDiagrams/U21%20-%20Load%20SOC%20Data.svg)
 
@@ -761,6 +761,13 @@ Description
 {{ controller.content }}
 {% endfor %}
 
+## HTTP API Models
+
+{% for model in site.apidocs_models %}
+### {{ model.title }}
+{{ model.content }}
+{% endfor %}
+
 ## Application Tier Design
 
 ![package diagram](/diagrams/classDiagrams/PackageDiagram.svg)
@@ -847,7 +854,7 @@ At application startup, this service will look for the [SOC Employment Dataset](
 
 #### Forecasting
 
-ARIMA content here
+![activity diagram](/diagrams/arima-activity.svg)
 
 ### Job Postings Service
 

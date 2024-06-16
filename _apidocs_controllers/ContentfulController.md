@@ -13,7 +13,7 @@ The ContentfulController implements the webhook format defined by Contentful for
 
 <hr/>
 #### **notifyEntryPublished**
-> notifyEntryPublished(ContentfulPublishEntry)
+> notifyEntryPublished(ContentfulPublishedRequest)
 
 Webhook for new learning material notification from contentful
 
@@ -23,7 +23,7 @@ Webhook for new learning material notification from contentful
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **ContentfulPublishEntry** | **ContentfulPublishEntry**| Event | |
+| **ContentfulPublishedRequest** | **ContentfulPublishedRequest**| Event | |
 
 ##### Return type
 
@@ -39,7 +39,7 @@ Type
 
 <hr/>
 #### **notifyEntryUnpublished**
-> notifyEntryUnpublished(ContentfulUnpublishEntry)
+> notifyEntryUnpublished(ContentfulUnpublishedRequest)
 
 Webhook for deleted learning material notification from contentful
 
@@ -49,7 +49,7 @@ Webhook for deleted learning material notification from contentful
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **ContentfulUnpublishEntry** | **ContentfulUnpublishEntry**| Event | |
+| **ContentfulUnpublishedRequest** | **ContentfulUnpublishedRequest**| Event | |
 
 ##### Return type
 

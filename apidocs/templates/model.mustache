@@ -2,10 +2,11 @@
 title: {{{classname}}}
 ---
 
+
 {{#models}}
 {{#model}}
 {{#isEnum}}
-##### Allowed Values
+#### Allowed Values
 
 {{#allowableValues}}
 {{#values}}
@@ -15,6 +16,8 @@ title: {{{classname}}}
 {{/isEnum}}
 {{^isEnum}}
 
+{{{unescapedDescription}}}
+
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 {{#parent}}
@@ -22,7 +25,7 @@ title: {{{classname}}}
 | **{{name}}** | {{{datatypeWithEnum}}} | {{description}} | {{^required}}[optional] {{/required}}{{#readOnly}}[readonly] {{/readOnly}}{{#defaultValue}}[default to {{{.}}}]{{/defaultValue}} |
 {{/parentVars}}
 {{/parent}}
-{{#vars}}| **{{name}}** | {{{datatypeWithEnum}}}{{#isArray}}&lt;{{{items.datatypeWithEnum}}}&gt;{{/isArray}} | {{description}} | {{^required}}[optional] {{/required}}{{#readOnly}}[readonly] {{/readOnly}}{{#defaultValue}}[default to {{{.}}}]{{/defaultValue}} |
+{{#vars}}| **{{name}}** | {{{datatypeWithEnum}}}{{#isArray}}&lt;{{{items.datatypeWithEnum}}}&gt;{{/isArray}} | {{description}} | {{^required}}[optional] {{/required}}{{#required}}[required] {{/required}}{{#readOnly}}[readonly] {{/readOnly}}{{#pattern}}[regex `{{.}}`] {{/pattern}} |
 {{/vars}}
 {{/isEnum}}
 {{/model}}

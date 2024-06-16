@@ -1,5 +1,5 @@
 ---
-title: LineChart
+title: MapChart
 ---
 
 
@@ -13,5 +13,6 @@ title: LineChart
 | **height** | Integer | Height of the chart | [optional]  |
 | **type** | ChartType |  | [required]  |
 | **data** | List&lt;Tuple&gt; | Contents of the chart | [required]  |
-| **xAxisLabel** | String | Label for the x axis | [optional]  |
-| **yAxisLabel** | String | Label for the y axis | [optional]  |
+| **region** | String | Geographic region of the chart | [required]  |
+| **colorAxis** | Integer | Color axis for the chart | [optional]  |
+| **displayMode** | String | Display mode for the chart | [optional]  |

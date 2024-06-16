@@ -1,5 +1,5 @@
 ---
-title: LineChart
+title: HeatMapChart
 ---
 
 

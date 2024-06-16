@@ -1,10 +1,10 @@
 ---
-title: LineChart
+title: BarChart
 ---
 
 
 
-
+Represents a bar chart
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
@@ -15,3 +15,4 @@ title: LineChart
 | **data** | List&lt;Tuple&gt; | Contents of the chart | [required]  |
 | **xAxisLabel** | String | Label for the x axis | [optional]  |
 | **yAxisLabel** | String | Label for the y axis | [optional]  |
+| **markerType** | String | Hint for the point marker types | [optional]  |

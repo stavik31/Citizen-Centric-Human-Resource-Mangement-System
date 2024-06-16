@@ -3,6 +3,9 @@ title: JobPostingResponse
 ---
 
 
+
+A collection of job postings
+
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **data** | List&lt;JobPostingQuery&gt; |  | [optional] [default to null] |
+| **data** | List&lt;JobPosting&gt; | One or more JobPosting objects | [required]  |

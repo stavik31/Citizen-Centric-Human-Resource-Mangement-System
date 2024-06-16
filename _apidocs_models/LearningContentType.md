@@ -2,7 +2,8 @@
 title: LearningContentType
 ---
 
-##### Allowed Values
+
+#### Allowed Values
 
 * VIDEO
 * COURSE

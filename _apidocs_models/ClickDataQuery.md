@@ -3,11 +3,14 @@ title: ClickDataQuery
 ---
 
 
+
+Query object for clickstream analytics
+
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **start** | Date |  | [optional] [default to null] |
-| **end** | Date |  | [optional] [default to null] |
-| **elementType** | String |  | [optional] [default to null] |
-| **userPostalCode** | String |  | [optional] [default to null] |
-| **userCurrentOccupation** | String |  | [optional] [default to null] |
-| **userGoalOccupation** | String |  | [optional] [default to null] |
+| **start** | Date | A date and time in UTC | [required]  |
+| **end** | Date | A date and time in UTC | [required]  |
+| **elementType** | String | The type of content being interacted with | [required]  |
+| **userPostalCode** | String | The postal code of the current user, if set | [optional]  |
+| **userCurrentOccupation** | String | The current occupation of the current user, if set | [optional]  |
+| **userGoalOccupation** | String | The goal occupation of the current user, if set | [optional]  |
