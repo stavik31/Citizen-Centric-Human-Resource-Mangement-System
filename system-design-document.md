@@ -95,6 +95,185 @@ Additionally, the system integrates with a variety of third party services using
 
 ![System container diagram](/diagrams/PBL3-2024-system-container-diagram.svg)
 
+## Operational Scenarios
+
+This section describes scenarios that show how the system will be utilized to meet its functional requirements. Each scenario is illustrated by a use case.
+
+### Overview
+
+![Use Case Diagram](/diagrams/use-case-diagram-SRS.svg)
+
+| Number | Name                            | Description                                                                                                             | Associated FREQ   |
+|--------|---------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------|
+| U1     | Create Account                  | Register an account on the system                                                                                       | FREQ-1            |
+| U2     | Administer Account              | Administer an account and assign a role                                                                                 | FREQ-2            |
+| U3     | Edit Account Profile            | Edit profile to change profile information such as legal name, occupation, location                                     | FREQ-3            |
+| U4     | Reset Account Password          | Reset and recover account's password                                                                                    | FREQ-4            |
+| U5     | Delete Account                  | Delete account from the system                                                                                          | FREQ-5            |
+| U6     | View Occupation Information     | View general information about each occupation, such as a title, description, and illustrative examples                 | FREQ-6 - FREQ-7   |
+| U7     | Select Goal Job                 | Select an occupation as the preferred goal job                                                                          | FREQ-8, FREQ-6    |
+| U8     | View Unemployment Data          | View historical unemployment data                                                                                       | FREQ-9            |
+| U9     | View Occupation Trend           | View historical data and estimated trend forecast for a given occupation                                                | FREQ-10, FREQ-6   |
+| U10    | View Job Postings               | View job postings for a given occupation                                                                                | FREQ-11, FREQ-6   |
+| U11    | View Certifications Information | View applicable certifications for a given occupation                                                                   | FREQ-12, FREQ-6   |
+| U12    | View Learning Material          | View applicable online learning material for a given occupation                                                         | FREQ-13, FREQ-6   |
+| U13    | Manage Learning Material        | Create, update, remove online learning material for a given occupation on the system                                    | FREQ-14, FREQ-6   |
+| U14    | View Occupation Demands         | View the targeted change in employment for a given occupation                                                           | FREQ-16, FREQ-6   |
+| U15    | View Occupation News            | View news from various sources associated with a given occupation                                                       | FREQ-15, FREQ-6   |
+| U16    | Manage Occupation Demands       | Set demand targets for a given occupation                                                                               | FREQ-17, FREQ-6   |
+| U17    | View Analytics Report           | View a generated report on aggregated data of citizens' information and engagement activity with content on the website | FREQ-18 - FREQ-32 |
+| U18    | Load News                       | Automatically pull news from RSS feeds                                                                                  | FREQ-37           |
+| U19    | Load Unemployment               | Automatically pull unemployment data from the BLS public data API                                                       | FREQ-35           |
+| U20    | Load Certifications             | Import the careeronestop certification dataset                                                                          | FREQ-36           |
+| U21    | Load SOC Datasets               | Import SOC definitions and yearly employment statistics                                                                 | FREQ-33, FREQ-34  |
+
+### U1 - Create Account
+
+![use case diagram](/diagrams/usecaseDiagrams/U1%20-%20Create%20Account.svg)
+
+#### Activity Diagram
+![Create Account](/diagrams/PBL3ActivityDiagrams/CreateProfile.jpg)
+
+### U2 - Administer Account
+
+![use case diagram](/diagrams/usecaseDiagrams/U2%20-%20Administer%20Account.svg)
+
+#### Activity Diagram
+
+![Administer Account](/diagrams/PBL3ActivityDiagrams/AdministerAccount.jpg)
+
+### U3 - Edit Account Profile
+
+![use case diagram](/diagrams/usecaseDiagrams/U3%20-%20Edit%20Account%20Profile.svg)
+
+#### Activity Diagram
+
+![Edit Account Profile](/diagrams/PBL3ActivityDiagrams/EditAccountProfile.jpg)
+
+### U4 - Reset Account Password
+
+![use case diagram](/diagrams/usecaseDiagrams/U4%20-%20Reset%20Account%20Password.svg)
+
+#### Activity Diagram
+
+![Reset Account Password](/diagrams/ResetAccountPassword.jpg)
+
+### U5 - Delete Account
+
+![use case diagram](/diagrams/usecaseDiagrams/U5%20-%20Delete%20Account.svg)
+
+#### Activity Diagram
+
+![Delete Account](/diagrams/PBL3ActivityDiagrams/DeleteAccount.jpg)
+
+### U6 - View Occupation Information
+
+![use case diagram](/diagrams/usecaseDiagrams/U6%20-%20View%20Occupation%20Information.svg)
+
+#### Activity Diagram
+
+![View Occupation Information](/diagrams/PBL3ActivityDiagrams/ViewOcupationalInformation.jpg)
+
+### U7 - Select Job Goal
+
+![use case diagram](/diagrams/usecaseDiagrams/U7%20-%20Select%20Job%20Goal.svg)
+
+#### Activity Diagram
+
+![Select Job Goal](/diagrams/PBL3ActivityDiagrams/%20SelectJobGoal.jpg)
+
+### U8 - View Unemployment Data
+
+![use case diagram](/diagrams/usecaseDiagrams/U8%20-%20View%20Unemployment%20Data.svg)
+
+#### Activity Diagram
+
+![View Unemployment Data](/diagrams/PBL3ActivityDiagrams/ViewUnemploymentData.jpg)
+
+### U9 - View Occupation Trend
+
+![use case diagram](/diagrams/usecaseDiagrams/U9%20-%20View%20Occupation%20Trend.svg)
+
+#### Activity Diagram
+
+![View Occupation Trend](/diagrams/PBL3ActivityDiagrams/ViewOccupationTrend.jpg)
+
+### U10 - View Job Postings
+
+![use case diagram](/diagrams/usecaseDiagrams/U10%20-%20View%20Job%20Postings.svg)
+
+#### Activity Diagram
+
+![View Job Postings](/diagrams/PBL3ActivityDiagrams/ViewJobPosting.jpg)
+
+### U11 - View Certification Information
+
+![use case diagram](/diagrams/usecaseDiagrams/U11%20-%20View%20Certification%20Information.svg)
+
+#### Activity Diagram
+
+![View Certifications](/diagrams/PBL3ActivityDiagrams/ViewCertifications.jpg)
+
+### U12 - View Learning Material
+
+![use case diagram](/diagrams/usecaseDiagrams/U12%20-%20View%20Learning%20Material.svg)
+
+#### Activity Diagram
+
+![View Learning Material](/diagrams/PBL3ActivityDiagrams/ViewLearningMaterial.jpg)
+
+### U13 - Manage Learning Material
+
+![use case diagram](/diagrams/usecaseDiagrams/U13%20-%20Manage%20Learning%20Material.svg)
+
+#### Activity Diagram
+
+![Activity diagram showing the process flow for managing learning content](/diagrams/pbl3-manage-learning-material-activity-diagram.svg)
+
+### U14 - View Occupation Demand
+
+![use case diagram](/diagrams/usecaseDiagrams/U14%20-%20View%20Occupation%20Demands.svg)
+
+#### Activity Diagram
+
+![View Occupation Demand](/diagrams/PBL3ActivityDiagrams/ViewOccupationDemand.jpg)
+
+### U15 - View Occupation News
+
+![use case diagram](/diagrams/usecaseDiagrams/U15%20-%20View%20Occupation%20News.svg)
+
+### U16 - Manage Occupation Demand
+
+![use case diagram](/diagrams/usecaseDiagrams/U16%20-%20Manage%20Occupation%20Demands.svg)
+
+#### Activity Diagram
+
+![Manage Occupation Demand](/diagrams/PBL3ActivityDiagrams/ManageOccupationDemand.jpg)
+
+### U17 - View Analytics Reports
+
+![use case diagram](/diagrams/usecaseDiagrams/U17%20-%20View%20Analytics%20Report.svg)
+
+#### Activity Diagram
+
+![View Analytics Reports](/diagrams/PBL3ActivityDiagrams/ViewAnalyticsReports.jpg)
+
+### U18 - Load News
+
+![use case diagram](/diagrams/usecaseDiagrams/U18%20-%20Load%20News.svg)
+
+### U19 - Load Unemployment
+
+![use case diagram](/diagrams/usecaseDiagrams/U19%20-%20Load%20Unemployment.svg)
+
+### U20 - Load Certifications
+
+![use case diagram](/diagrams/usecaseDiagrams/U20%20-%20Load%20Certifications.svg)
+
+### U21 - Load SOC Data
+
+![use case diagram](/diagrams/usecaseDiagrams/U21%20-%20Load%20SOC%20Data.svg)
+
 ## Presentation Tier Design
 
 ### View Transition State Diagram
@@ -670,185 +849,6 @@ SELECT create_hypertable('click_data', 'timestamp');
 
 [Continuous aggregates](https://docs.timescale.com/use-timescale/latest/continuous-aggregates/) will be utilized for read queries as performance needs dictate.
 
-## Operational Scenarios
-
-This section describes scenarios that show how the system will be utilized to meet its functional requirements. Each scenario is illustrated by a use case.
-
-### Overview
-
-![Use Case Diagram](/diagrams/use-case-diagram-SRS.svg)
-
-| Number | Name                            | Description                                                                                                             | Associated FREQ   |
-|--------|---------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------|
-| U1     | Create Account                  | Register an account on the system                                                                                       | FREQ-1            |
-| U2     | Administer Account              | Administer an account and assign a role                                                                                 | FREQ-2            |
-| U3     | Edit Account Profile            | Edit profile to change profile information such as legal name, occupation, location                                     | FREQ-3            |
-| U4     | Reset Account Password          | Reset and recover account's password                                                                                    | FREQ-4            |
-| U5     | Delete Account                  | Delete account from the system                                                                                          | FREQ-5            |
-| U6     | View Occupation Information     | View general information about each occupation, such as a title, description, and illustrative examples                 | FREQ-6 - FREQ-7   |
-| U7     | Select Goal Job                 | Select an occupation as the preferred goal job                                                                          | FREQ-8, FREQ-6    |
-| U8     | View Unemployment Data          | View historical unemployment data                                                                                       | FREQ-9            |
-| U9     | View Occupation Trend           | View historical data and estimated trend forecast for a given occupation                                                | FREQ-10, FREQ-6   |
-| U10    | View Job Postings               | View job postings for a given occupation                                                                                | FREQ-11, FREQ-6   |
-| U11    | View Certifications Information | View applicable certifications for a given occupation                                                                   | FREQ-12, FREQ-6   |
-| U12    | View Learning Material          | View applicable online learning material for a given occupation                                                         | FREQ-13, FREQ-6   |
-| U13    | Manage Learning Material        | Create, update, remove online learning material for a given occupation on the system                                    | FREQ-14, FREQ-6   |
-| U14    | View Occupation Demands         | View the targeted change in employment for a given occupation                                                           | FREQ-16, FREQ-6   |
-| U15    | View Occupation News            | View news from various sources associated with a given occupation                                                       | FREQ-15, FREQ-6   |
-| U16    | Manage Occupation Demands       | Set demand targets for a given occupation                                                                               | FREQ-17, FREQ-6   |
-| U17    | View Analytics Report           | View a generated report on aggregated data of citizens' information and engagement activity with content on the website | FREQ-18 - FREQ-32 |
-| U18    | Load News                       | Automatically pull news from RSS feeds                                                                                  | FREQ-37           |
-| U19    | Load Unemployment               | Automatically pull unemployment data from the BLS public data API                                                       | FREQ-35           |
-| U20    | Load Certifications             | Import the careeronestop certification dataset                                                                          | FREQ-36           |
-| U21    | Load SOC Datasets               | Import SOC definitions and yearly employment statistics                                                                 | FREQ-33, FREQ-34  |
-
-### U1 - Create Account
-
-![use case diagram](/diagrams/usecaseDiagrams/U1%20-%20Create%20Account.svg)
-
-#### Activity Diagram
-![Create Account](/diagrams/PBL3ActivityDiagrams/CreateProfile.jpg)
-
-### U2 - Administer Account
-
-![use case diagram](/diagrams/usecaseDiagrams/U2%20-%20Administer%20Account.svg)
-
-#### Activity Diagram
-
-![Administer Account](/diagrams/PBL3ActivityDiagrams/AdministerAccount.jpg)
-
-### U3 - Edit Account Profile
-
-![use case diagram](/diagrams/usecaseDiagrams/U3%20-%20Edit%20Account%20Profile.svg)
-
-#### Activity Diagram
-
-![Edit Account Profile](/diagrams/PBL3ActivityDiagrams/EditAccountProfile.jpg)
-
-### U4 - Reset Account Password
-
-![use case diagram](/diagrams/usecaseDiagrams/U4%20-%20Reset%20Account%20Password.svg)
-
-#### Activity Diagram
-
-![Reset Account Password](/diagrams/ResetAccountPassword.jpg)
-
-### U5 - Delete Account
-
-![use case diagram](/diagrams/usecaseDiagrams/U5%20-%20Delete%20Account.svg)
-
-#### Activity Diagram
-
-![Delete Account](/diagrams/PBL3ActivityDiagrams/DeleteAccount.jpg)
-
-### U6 - View Occupation Information
-
-![use case diagram](/diagrams/usecaseDiagrams/U6%20-%20View%20Occupation%20Information.svg)
-
-#### Activity Diagram
-
-![View Occupation Information](/diagrams/PBL3ActivityDiagrams/ViewOcupationalInformation.jpg)
-
-### U7 - Select Job Goal
-
-![use case diagram](/diagrams/usecaseDiagrams/U7%20-%20Select%20Job%20Goal.svg)
-
-#### Activity Diagram
-
-![Select Job Goal](/diagrams/PBL3ActivityDiagrams/%20SelectJobGoal.jpg)
-
-### U8 - View Unemployment Data
-
-![use case diagram](/diagrams/usecaseDiagrams/U8%20-%20View%20Unemployment%20Data.svg)
-
-#### Activity Diagram
-
-![View Unemployment Data](/diagrams/PBL3ActivityDiagrams/ViewUnemploymentData.jpg)
-
-### U9 - View Occupation Trend
-
-![use case diagram](/diagrams/usecaseDiagrams/U9%20-%20View%20Occupation%20Trend.svg)
-
-#### Activity Diagram
-
-![View Occupation Trend](/diagrams/PBL3ActivityDiagrams/ViewOccupationTrend.jpg)
-
-### U10 - View Job Postings
-
-![use case diagram](/diagrams/usecaseDiagrams/U10%20-%20View%20Job%20Postings.svg)
-
-#### Activity Diagram
-
-![View Job Postings](/diagrams/PBL3ActivityDiagrams/ViewJobPosting.jpg)
-
-### U11 - View Certification Information
-
-![use case diagram](/diagrams/usecaseDiagrams/U11%20-%20View%20Certification%20Information.svg)
-
-#### Activity Diagram
-
-![View Certifications](/diagrams/PBL3ActivityDiagrams/ViewCertifications.jpg)
-
-### U12 - View Learning Material
-
-![use case diagram](/diagrams/usecaseDiagrams/U12%20-%20View%20Learning%20Material.svg)
-
-#### Activity Diagram
-
-![View Learning Material](/diagrams/PBL3ActivityDiagrams/ViewLearningMaterial.jpg)
-
-### U13 - Manage Learning Material
-
-![use case diagram](/diagrams/usecaseDiagrams/U13%20-%20Manage%20Learning%20Material.svg)
-
-#### Activity Diagram
-
-![Activity diagram showing the process flow for managing learning content](/diagrams/pbl3-manage-learning-material-activity-diagram.svg)
-
-### U14 - View Occupation Demand
-
-![use case diagram](/diagrams/usecaseDiagrams/U14%20-%20View%20Occupation%20Demands.svg)
-
-#### Activity Diagram
-
-![View Occupation Demand](/diagrams/PBL3ActivityDiagrams/ViewOccupationDemand.jpg)
-
-### U15 - View Occupation News
-
-![use case diagram](/diagrams/usecaseDiagrams/U15%20-%20View%20Occupation%20News.svg)
-
-### U16 - Manage Occupation Demand
-
-![use case diagram](/diagrams/usecaseDiagrams/U16%20-%20Manage%20Occupation%20Demands.svg)
-
-#### Activity Diagram
-
-![Manage Occupation Demand](/diagrams/PBL3ActivityDiagrams/ManageOccupationDemand.jpg)
-
-### U17 - View Analytics Reports
-
-![use case diagram](/diagrams/usecaseDiagrams/U17%20-%20View%20Analytics%20Report.svg)
-
-#### Activity Diagram
-
-![View Analytics Reports](/diagrams/PBL3ActivityDiagrams/ViewAnalyticsReports.jpg)
-
-### U18 - Load News
-
-![use case diagram](/diagrams/usecaseDiagrams/U18%20-%20Load%20News.svg)
-
-### U19 - Load Unemployment
-
-![use case diagram](/diagrams/usecaseDiagrams/U19%20-%20Load%20Unemployment.svg)
-
-### U20 - Load Certifications
-
-![use case diagram](/diagrams/usecaseDiagrams/U20%20-%20Load%20Certifications.svg)
-
-### U21 - Load SOC Data
-
-![use case diagram](/diagrams/usecaseDiagrams/U21%20-%20Load%20SOC%20Data.svg)
-
 ## External Interfaces
 
 ### Auth0
@@ -1195,7 +1195,7 @@ All streams will operate as described in [the RSS specification](https://www.rss
 
 USAJobs.gov offers a free API for searching job postings for US federal jobs.
 
-#### Integration Details
+[Click here to access the developer documentation](https://developer.usajobs.gov/)
 
 #### Request Sample
 
@@ -1356,13 +1356,63 @@ curl --location 'https://data.usajobs.gov/api/search?Keyword=Software%20Developm
 
 ### SOC Definition Dataset
 
+The US Bureau of Labor Statistics (BLS) maintains a dataset of occupations classified with a standard occupation code (SOC) identifier. This dataset is distributed in XLSX format; the columns relevant to the system are shown below:
+
+| SOC Group | SOC Code | SOC Title                                                                  | SOC Definition           |
+|-----------|----------|----------------------------------------------------------------------------|--------------------------|
+| Major     | 11-0000  | Management Occupations                                                     |                          |
+| Minor     | 11-1000  | Top Executives                                                             |                          |
+| Broad     | 11-1010  | Chief Executives                                                           |                          |
+| Detailed  | 11-1011  | Chief Executives                                                           | Truncated for brevity... |
+| Broad     | 11-1020  | General and Operations Managers                                            |                          |
+| Detailed  | 11-1021  | General and Operations Managers                                            | Truncated for brevity... |
+| Broad     | 11-1030  | Legislators                                                                |                          |
+| Detailed  | 11-1031  | Legislators                                                                | Truncated for brevity... |
+| Minor     | 11-2000  | Advertising, Marketing,   Promotions, Public Relations, and Sales Managers |                          |
+| Broad     | 11-2010  | Advertising and Promotions   Managers                                      |                          |
+| Detailed  | 11-2011  | Advertising and Promotions   Managers                                      | Truncated for brevity... |
+
+For ingestion into the system, this data should be converted to CSV format and embedded in the application container. This dataset is released very infrequently and as such there is no need to store it externally.
+
+[Click here to download this dataset](https://www.bls.gov/soc/2018/soc_2018_definitions.xlsx)
+
+[Click here for additional SOC material](https://www.bls.gov/soc/2018/)
+
 ### SOC Employment Dataset
+
+The US Bureau of Labor Statistics (BLS) maintains a dataset of employment broken down by SOC code. This dataset is distributed in XLS format; the columns relevant to the system are shown below:
+
+| OCC_CODE |            OCC_TITLE            | O_GROUP  |   TOT_EMP   |
+|:--------:|:-------------------------------:|:--------:|:-----------:|
+| 00-0000  |         All Occupations         |  total   | 151,853,870 |
+| 11-0000  |     Management Occupations      |  major   | 10,495,770  |
+| 11-1000  |         Top Executives          |  minor   |  3,751,510  |
+| 11-1010  |        Chief Executives         |  broad   |   211,230   |
+| 11-1011  |        Chief Executives         | detailed |   211,230   |
+| 11-1020  | General and Operations Managers |  broad   |  3,507,810  |
+| 11-1021  | General and Operations Managers | detailed |  3,507,810  |
+
+For ingestion into the system, this data should be converted to CSV format and renamed to match the following format.
+
+```
+yyyy-MM-dd-employment.csv
+```
+
+This should be included in a volume mounted to the application tier hosts and the application tier services should be configured with the location of the directory containing these files.
+
+[Click here to download this dataset](https://www.bls.gov/oes/tables.htm)
 
 ### CareerOneStop Dataset
 
 ![careeronestop erd](/diagrams/careeronestop-erd.png)
 
 CareerOneStop exports their certification dataset as a set of Oracle sql migration files. While the provided insert statements can be run against postgres as-is, the schema cannot. The following sections define postgres-compatible equivalents.
+
+For ingestion into the system, the system administrator should truncate these three tables and then execute the provided insert statements. These should be performed in the following order to maintain foreign key integrity:
+
+* CERT_ORGS (organizations that own the certification)
+* CERTIFICATIONS (the actual certification data)
+* CERT_ONET_ASSIGN (certification to onet extended soc codes)
 
 [Click here to download this dataset](https://www.careeronestop.org/Developers/Data/certifications.aspx)
 
@@ -1457,6 +1507,10 @@ FROM certifications c
 LEFT JOIN cert_orgs o ON c.org_id = o.org_id
 LEFT JOIN cert_onet_assign s ON s.cert_id = c.cert_id;
 ```
+
+#### On ONET Extended SOC Codes
+
+ONET utilizes SOC extensions to provide additional granularity; to map to standard SOC codes simply truncate anything past the first 7 characters and deduplicate the remainders.
 
 ## Appendix A - Large Format Diagrams
 
