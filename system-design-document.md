@@ -129,12 +129,16 @@ This section describes scenarios that show how the system will be utilized to me
 
 ### U1 - Create Account
 
+System allows for users to start the signup process by collecting their email, password, full name, and postal code. Password strength is used while users receive feedback on password strength as they enter it. Finally, user consent is received as their account is created by redirecting them to the systems home page.
+
 ![use case diagram](/diagrams/usecaseDiagrams/U1%20-%20Create%20Account.svg)
 
 #### Activity Diagram
 ![Create Account](/diagrams/PBL3ActivityDiagrams/CreateProfile.jpg)
 
 ### U2 - Administer Account
+
+System allows for system administrators to create new user accounts and can link these accounts to an email, legal name, and optionally a postal code. Administrative users can also assign roles such as "citizen" or "smart city manager." Once an account has been administered, a one-time password reset link is send for users to change their password.
 
 ![use case diagram](/diagrams/usecaseDiagrams/U2%20-%20Administer%20Account.svg)
 
@@ -144,6 +148,8 @@ This section describes scenarios that show how the system will be utilized to me
 
 ### U3 - Edit Account Profile
 
+System allows existing users to modify their legal name, current occupation, postal code, and password.
+
 ![use case diagram](/diagrams/usecaseDiagrams/U3%20-%20Edit%20Account%20Profile.svg)
 
 #### Activity Diagram
@@ -151,6 +157,8 @@ This section describes scenarios that show how the system will be utilized to me
 ![Edit Account Profile](/diagrams/PBL3ActivityDiagrams/EditAccountProfile.jpg)
 
 ### U4 - Reset Account Password
+
+System allows users to select a “Forgot Password” link on the login page for users who need to recover their password. Clicking this link directs users to a password recovery page, where auth0 takes resposibility in leading users in the password reset/recovery process.
 
 ![use case diagram](/diagrams/usecaseDiagrams/U4%20-%20Reset%20Account%20Password.svg)
 
@@ -160,6 +168,8 @@ This section describes scenarios that show how the system will be utilized to me
 
 ### U5 - Delete Account
 
+System allows users to select "delete account" where auth0 takes responsibility in leading the deletion process and notifying users of success or failure
+
 ![use case diagram](/diagrams/usecaseDiagrams/U5%20-%20Delete%20Account.svg)
 
 #### Activity Diagram
@@ -167,6 +177,8 @@ This section describes scenarios that show how the system will be utilized to me
 ![Delete Account](/diagrams/PBL3ActivityDiagrams/DeleteAccount.jpg)
 
 ### U6 - View Occupation Information
+
+System allows users to navigate SOC occupation levels starting from a broad overview of all occupations and narrowing down to detailed occupations. Each level would include titles, descriptions, examples, and additional content relevant to the user's role while displaying statistical content (InformationView)
 
 ![use case diagram](/diagrams/usecaseDiagrams/U6%20-%20View%20Occupation%20Information.svg)
 
@@ -176,6 +188,8 @@ This section describes scenarios that show how the system will be utilized to me
 
 ### U7 - Select Job Goal
 
+System allows users to set their career goal by navigating through all SOC occupation levels (Major Group, Minor Group, Broad Occupation, Detailed Occupation). When a user decides on a goal and selects a occupation, the chosen career goal is saved to their profile.
+
 ![use case diagram](/diagrams/usecaseDiagrams/U7%20-%20Select%20Job%20Goal.svg)
 
 #### Activity Diagram
@@ -183,6 +197,8 @@ This section describes scenarios that show how the system will be utilized to me
 ![Select Job Goal](/diagrams/PBL3ActivityDiagrams/%20SelectJobGoal.jpg)
 
 ### U8 - View Unemployment Data
+
+Smart city managers have the capability to access historical unemployment data as a line graph through exploring all occupations listed on the system.
 
 ![use case diagram](/diagrams/usecaseDiagrams/U8%20-%20View%20Unemployment%20Data.svg)
 
@@ -192,6 +208,8 @@ This section describes scenarios that show how the system will be utilized to me
 
 ### U9 - View Occupation Trend
 
+System allows users to view employment trends by exploring the SOC occupational levels.
+
 ![use case diagram](/diagrams/usecaseDiagrams/U9%20-%20View%20Occupation%20Trend.svg)
 
 #### Activity Diagram
@@ -199,6 +217,8 @@ This section describes scenarios that show how the system will be utilized to me
 ![View Occupation Trend](/diagrams/PBL3ActivityDiagrams/ViewOccupationTrend.jpg)
 
 ### U10 - View Job Postings
+
+System allows users to view job postings by exploring the SOC occupational levels and each job listing is clickable, redirecting users to an external webpage for more information.
 
 ![use case diagram](/diagrams/usecaseDiagrams/U10%20-%20View%20Job%20Postings.svg)
 
@@ -208,6 +228,8 @@ This section describes scenarios that show how the system will be utilized to me
 
 ### U11 - View Certification Information
 
+System allows users to view certification information by exploring the SOC occupational levels and displays essential information about each certification, including a title and description. Addtionally, users can click on each certification to be redirected to a separate page where more information and an external webpage url for the certification is given.
+
 ![use case diagram](/diagrams/usecaseDiagrams/U11%20-%20View%20Certification%20Information.svg)
 
 #### Activity Diagram
@@ -215,6 +237,8 @@ This section describes scenarios that show how the system will be utilized to me
 ![View Certifications](/diagrams/PBL3ActivityDiagrams/ViewCertifications.jpg)
 
 ### U12 - View Learning Material
+
+System allows users to view learning materials by exploring the SOC occupational levels and clicking on any material allows users to be redirected to a webpage where more information and an external url for the learning material is given.
 
 ![use case diagram](/diagrams/usecaseDiagrams/U12%20-%20View%20Learning%20Material.svg)
 
@@ -224,6 +248,8 @@ This section describes scenarios that show how the system will be utilized to me
 
 ### U13 - Manage Learning Material
 
+System allows smart city managers have control over online learning materials within the system, including the ability to create, update, and delete learning meterials through a content management system (Contentful).
+
 ![use case diagram](/diagrams/usecaseDiagrams/U13%20-%20Manage%20Learning%20Material.svg)
 
 #### Activity Diagram
@@ -231,6 +257,8 @@ This section describes scenarios that show how the system will be utilized to me
 ![Activity diagram showing the process flow for managing learning content](/diagrams/pbl3-manage-learning-material-activity-diagram.svg)
 
 ### U14 - View Occupation Demand
+
+System allows users can view the demand for each detailed occupation within the system, as defined by smart city managers. Optionally, the system may display demand values for higher levels provided that the lower level occupations have demand values themselves
 
 ![use case diagram](/diagrams/usecaseDiagrams/U14%20-%20View%20Occupation%20Demands.svg)
 
@@ -240,9 +268,13 @@ This section describes scenarios that show how the system will be utilized to me
 
 ### U15 - View Occupation News
 
+System allows users to view news articles by exploring the SOC occupational levels while displaying specific information about each article such as title, organization, and published date
+
 ![use case diagram](/diagrams/usecaseDiagrams/U15%20-%20View%20Occupation%20News.svg)
 
 ### U16 - Manage Occupation Demand
+
+System allows smart city managers to have the capability to set demand targets directly in the system for specific detailed occupations.
 
 ![use case diagram](/diagrams/usecaseDiagrams/U16%20-%20Manage%20Occupation%20Demands.svg)
 
@@ -252,6 +284,8 @@ This section describes scenarios that show how the system will be utilized to me
 
 ### U17 - View Analytics Reports
 
+System allows city managers to have access to various report types Shown in the activity diagram shows viewing citizens' current occupations, retrieving occupational data from the existing database. Viewing all other types of reports follows the same flow as shown.
+
 ![use case diagram](/diagrams/usecaseDiagrams/U17%20-%20View%20Analytics%20Report.svg)
 
 #### Activity Diagram
@@ -260,17 +294,25 @@ This section describes scenarios that show how the system will be utilized to me
 
 ### U18 - Load News
 
+The system automatically scrapes news sources daily for articles posted within the last 24 hours and stores links to these articles along with their related SOC occupations
+
 ![use case diagram](/diagrams/usecaseDiagrams/U18%20-%20Load%20News.svg)
 
 ### U19 - Load Unemployment
+
+The system loads unemployment data from a government dataset by pulling data from the Bureau of Labor Statistics API on the first day of each month and stores the data in the system
 
 ![use case diagram](/diagrams/usecaseDiagrams/U19%20-%20Load%20Unemployment.svg)
 
 ### U20 - Load Certifications
 
+The system implements functionality to load certification data from a government partner dataset while allowing system administrators to upload the dataset into the database
+
 ![use case diagram](/diagrams/usecaseDiagrams/U20%20-%20Load%20Certifications.svg)
 
 ### U21 - Load SOC Data
+
+The system provides functionality to load SOC definitions, descriptions, and employment data from the Bureau of Labor Statistics by pulling SOC occupation definitions data and employment data on the first day of each month.
 
 ![use case diagram](/diagrams/usecaseDiagrams/U21%20-%20Load%20SOC%20Data.svg)
 
