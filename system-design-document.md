@@ -1344,6 +1344,8 @@ curl --location 'https://data.usajobs.gov/api/search?Keyword=Software%20Developm
 
 CareerOneStop exports their certification dataset as a set of Oracle sql migration files. While the provided insert statements can be run against postgres as-is, the schema cannot. The following sections define postgres-compatible equivalents.
 
+[Click here to download this dataset](https://www.careeronestop.org/Developers/Data/certifications.aspx)
+
 #### CERT_ORGS PostgresQL Converted Schema
 
 ```sql
