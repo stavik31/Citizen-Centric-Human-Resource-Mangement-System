@@ -785,6 +785,9 @@ Description
 * [timeseries-forecast](https://github.com/Workday/timeseries-forecast) - ARIMA
 * [okta-spring-boot-starter](https://auth0.com/docs/quickstart/backend/java-spring-security5/01-authorization) - Auth0 Integration
 * [Commons Collections](https://commons.apache.org/proper/commons-collections/) - Trie Implementation
+* [Slf4j](https://slf4j.org/) - Logging API
+* [Logback](https://logback.qos.ch/) - Logging
+* [LMAX Disruptor](https://lmax-exchange.github.io/disruptor/) - Analytics thread coordination
 
 ### Build System
 
@@ -1005,7 +1008,6 @@ Integration guide can be found in the [BLS developer documentation](https://www.
 ```shell
 curl --location 'https://api.bls.gov/publicAPI/v1/timeseries/data/' \
 --header 'Content-Type: application/json' \
---header 'Cookie: JSESSIONID=5F4C27616F7BDF9BE4EEAF5A245DA9C0' \
 --data '{
   "seriesid": ["LNU04000000"],
   "startyear": "2024",
