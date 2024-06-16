@@ -733,6 +733,7 @@ Description
 * [Deeplearning4j](https://deeplearning4j.konduit.ai/) - Text Vectorization / Cosine Similarity
 * [timeseries-forecast](https://github.com/Workday/timeseries-forecast) - ARIMA
 * [okta-spring-boot-starter](https://auth0.com/docs/quickstart/backend/java-spring-security5/01-authorization) - Auth0 Integration
+* [Commons Collections](https://commons.apache.org/proper/commons-collections/) - Trie Implementation
 
 ### Build System
 
