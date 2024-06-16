@@ -276,6 +276,34 @@ This section describes scenarios that show how the system will be utilized to me
 
 ## Presentation Tier Design
 
+### Languages
+
+* Typescript
+* TSX
+
+### Frameworks / Libraries
+
+* [VueJS](https://vuejs.org/) - Primary Framework
+* [PrimeVue](https://github.com/Workday/timeseries-forecast) - Component Framework
+* [ChartJS](https://www.chartjs.org/) - Visualizations (Primary)
+* [ApexCharts](https://apexcharts.com/docs/vue-charts/) - Visualizations (Heatmap)
+* [Google Charts](https://developers.google.com/chart) - Visualizations (Geo Charts)
+* [auth0-vue](https://auth0.com/docs/quickstart/spa/vuejs/01-login) - Auth0 SDK
+
+### Build System
+
+* [Vite](https://vitejs.dev/) - Build Automation
+* [NPM](https://www.npmjs.com/) - Package Management
+
+### Testing
+
+* [Vitest](https://vitest.dev/) - Unit Testing
+* [Selenium](https://www.selenium.dev/) - Integration Testing
+
+### Development Tools
+
+* [VSCode](https://code.visualstudio.com/) - Text Editor
+
 ### View Transition State Diagram
 
 ![view transition state diagram](/diagrams/UI_State_Diagram2.jpg)
@@ -692,6 +720,33 @@ Description
 {% endfor %}
 
 ## Application Tier Design
+
+### Languages
+
+* Java
+* SQL
+
+### Frameworks / Libraries
+
+* [Spring](https://spring.io/projects) - IoC Container, Web Framework, Data Access Framework
+* [Liquibase](https://www.liquibase.com/) - Database Migrations
+* [Deeplearning4j](https://deeplearning4j.konduit.ai/) - Text Vectorization / Cosine Similarity
+* [timeseries-forecast](https://github.com/Workday/timeseries-forecast) - ARIMA
+* [okta-spring-boot-starter](https://auth0.com/docs/quickstart/backend/java-spring-security5/01-authorization) - Auth0 Integration
+
+### Build System
+
+* [Maven](https://maven.apache.org/) - Build Automation and Package Management
+
+### Testing
+
+* [JUnit](https://junit.org/junit5/) - Unit and Simulated Integration Testing
+* [Testcontainers](https://testcontainers.com/) - Test Container Orchestration
+
+### Development Tools
+
+* [IntelliJ IDEA](https://www.jetbrains.com/idea/) - IDE
+* [Docker](https://www.docker.com/) - Local Container Orchestration Tool
 
 ### Cross-Cutting Concerns
 
