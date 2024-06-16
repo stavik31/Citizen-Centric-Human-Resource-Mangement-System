@@ -849,6 +849,32 @@ SELECT create_hypertable('click_data', 'timestamp');
 
 [Continuous aggregates](https://docs.timescale.com/use-timescale/latest/continuous-aggregates/) will be utilized for read queries as performance needs dictate.
 
+## Builds and Deployment
+
+![UML Deployment Diagram](/diagrams/Deployment%20Diagram1.svg)
+
+### Presentation Tier
+
+The presentation tier of the system will be hosted on Netlify's "Starter" plan. Netlify provides excellent tooling for automated continuous integration and deployment of Vue applications that does not require a large amount of setup. Additionally, they have a datacenter in Tokyo, providing low latency for users of the application that happen to be TA'ing at Ritsumeikan.
+
+![deployment pipeline diagram](/diagrams/PBL3-2024-netlify-cicd.svg)
+
+The source code for the presentation tier will be hosted in GitHub with the Netlify app installed. On commit, Netlify will pull the latest source code, bundle it, and publish the resulting bundle to its CDN. From there, it will be accessible to the public.
+
+### Application Tier
+
+The application tier of the system will be hosted on Digital Ocean using their App Platform service.
+
+![deployment pipeline diagram](/diagrams/PBL3-2024-digitalocean-cicd.svg)
+
+The source code for the application tier will be hosted in GitHub with the Digital Ocean app installed. On commit, Digital Ocean will pull the latest source code, build it into an OCI image, and publish it to a private container registry. App Platform will detect a change to the latest tag in that registry, pull the image, and deploy it to the app cluster. A configuration volume will be mounted; this volume will contain SOC employment information, pretrained model files, and any other semi-dynamic configuration. Additionally, a secret vault and environment variables will be exposed to the application from which it can pull secrets, database urls and credentials, and other sensitive runtime information.
+
+### Data Tier
+
+The data tier of the system will be hosted on Digital Ocean's managed database platform. This route was chosen to minimize effort spent towards setting up and maintaining the database.
+
+Database schema migrations will be performed using Spring's [Liquibase](https://www.liquibase.com/) support at application startup. The migration file will be embedded in the application image.
+
 ## External Interfaces
 
 ### Auth0
