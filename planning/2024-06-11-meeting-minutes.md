@@ -14,3 +14,6 @@ Jesse & Satvik
 
 Jesse & Andi
 - Check all class diagrams that each class has all the methods needed and follows exactly what we want the system to do (from systems requirements document)
+
+Everyone else
+- Continue working on diagrams and finalize them as much as possible
