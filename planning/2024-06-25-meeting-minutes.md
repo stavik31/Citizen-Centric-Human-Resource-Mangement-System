@@ -1,7 +1,7 @@
 ---
 title: June 25th Meeting Minutes
 parent: Schedule and Planning
-nav_order: 22
+nav_order: 24
 ---
 
 Objectives: Continue working on implementation and start on architecture design
