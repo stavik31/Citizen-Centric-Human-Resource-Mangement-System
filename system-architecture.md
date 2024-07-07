@@ -40,9 +40,29 @@ The "System for Citizen-centric Human Resource Management in Smart Cities" serve
 | News API                       | Provide a stream of news sources to show citizens               | New York Times, DailyMail     |
 | Jobs API                       | Provide an API via which the system can search for job openings | USAJobs.gov                   |
 
+## Business Domains
+
+![Business domains](/diagrams/pbl3-2024-business-domains.svg)
+
+The system is split into a collection of business domains that span its functional and non-functional requirements. These domains represent the core functionalities of the system and are the basis upon which the rest of the system's architecture was decided.
+
+| Domain            | Description                                                   |
+|-------------------|---------------------------------------------------------------|
+| Analytics         | Primarily deals with clickstream analytics and reporting.     |
+| Certifications    | Similar to learning material, utilizes CareerOneStop dataset. |
+| Demand            | Employment target for a given occupation.                     |
+| Employment        | Number of people employed in an occupation for a given year.  |
+| Job Postings      | Feed of job postings relating to an occupation.               |
+| Learning Material | CMS-managed learning content for citizen consumption.         |
+| News              | Aggregated news articles from various open RSS feeds.         |
+| Occupations       | Occupation descriptions and metadata from 2018 SOC.           |
+| Unemployment      | Unemployment level for a given year.                          |
+| Users             | User profiles                                                 |
+
+
 ## Three-Tier Deployment Architecture
 
-The system will follow a three-_tier_ architecture, splitting the user interface (presentation tier), backend services (application tier), and database (data tier) across three different logical host groups. This pattern was chosen for its simplicity; serverless or microservice-based architectures could lead to lower hosting costs, but the technical sophistication required to manage such infrastructure may put the system out of reach of some smaller municipalities.
+The system will follow a three-_tier_ architecture, splitting the user interface (presentation tier), backend services (application tier), and database (data tier) across three different logical host groups. This pattern was chosen for its simplicity; cloud-native or microservice-based architectures could lead to lower hosting costs, but the technical sophistication required to manage such infrastructure may put the system out of reach of smaller municipalities.
 
 The presentation and application tiers of the system are mostly stateless (completely stateless in regard to transactional data; some state is held in memory to improve performance). This allows some level of performance tuning by individually scaling each tier that would not be possible with a monolithic deployment.
 
@@ -74,8 +94,28 @@ The ViewModel serves as a mediation layer between the View and the Model. It con
 
 ## Application Tier
 
-The application tier consist of a modular monolith implemented using Spring Boot. It is split into a series of vertical slices mirroring the business domains of the application, each of which internally follows a layered architecture.
+The application tier consist of a modular monolith implemented using Spring Boot. It is split into a series of vertical slices mirroring the business subdomains of the application, each of which internally follows a layered architecture.
 
 ![Vertical slices and internal layers of the application tier](/diagrams/pbl3-2024-application-tier-architecture.svg)
 
 ### Vertical Slice Architecture
+
+The application tier is split into vertical slices, each of which represents a business domain of the application. Each vertical slice can be considered a full service; while the application is deployed monolithically, the slices are independent and can be easily extracted into separate deployable artifacts if the need arises. Communication between slices is restricted to a well-defined interface at the business layer (see Layered Architecture below), preventing implementation details from leaking between slices.
+
+This pattern was chosen to mitigate the inherent weaknesses of a monolithic deployment. By treating our backend as a set of independent, connected slices, we can achieve many of the organizational benefits of microservices without needing to accommodate the increased difficulty of deploying and managing them. Because each slice can be developed and tested in isolation, with minimal requirements on the other slices, this pattern enables the system's development to be easily parallelized.
+
+![Vertical slice architecture diagram](/diagrams/PBL3-vertical-slice-architecture.svg)
+
+### Layered Architecture
+
+Each vertical slice of the application tier follows a traditional layered architecture. Every slice contains a presentation layer built on spring-webmvc. This presentation layer is responsible for mapping between HTTP requests and Java method invocations. Each slice also contains a business layer, which is written in pure Java and is responsible for the business logic of the system. Finally, slices that require persistent storage also contain a data access layer, which is responsible for interacting with the data tier via JDBC.
+
+![Layered architecture](/diagrams/pbl3-2024-layered-architecture.svg)
+
+## Data Tier
+
+The data tier consists of a postgres database with the timescaledb extension enabled to facilitate efficient analytics ingestion and aggregation.
+
+It contains two schemas. The `public` schema is used for standard system operation and contains all of the data generated by the system. The `careeronestop` schema mirrors the structure of the careeronestop certification dataset (described in further detail in the [System Design Document](/system-design-document.md)) and is used as a staging area to import new certifications into the system.
+
+![Database architecture](/diagrams/pbl3-2024-database-architecture.svg)
