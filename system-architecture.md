@@ -96,7 +96,7 @@ The ViewModel serves as a mediation layer between the View and the Model. It con
 
 The application tier consist of a modular monolith implemented using Spring Boot. It is split into a series of vertical slices mirroring the business subdomains of the application, each of which internally follows a layered architecture.
 
-![Vertical slices and internal layers of the application tier](/diagrams/pbl3-2024-application-tier-architecture.svg)
+![Vertical slices and internal layers of the application tier](/diagrams/pbl3-2024-application-tier-architecture.png)
 
 ### Vertical Slice Architecture
 
