@@ -13,6 +13,7 @@ nav_order: 2
 | Version | Date       | Description      |
 |---------|------------|------------------|
 | 1.0     | 2024-05-20 | Initial revision |
+| 1.1     | 2024-07-08 | Gamification     |
 
 ### Document Conventions
 
@@ -115,6 +116,7 @@ In the context of a smart city, this system is an asset for optimizing human res
 | U19    | Load Unemployment               | Automatically pull unemployment data from the BLS public data API                                                       | FREQ-35           |
 | U20    | Load Certifications             | Import the careeronestop certification dataset                                                                          | FREQ-36           |
 | U21    | Load SOC Datasets               | Import SOC definitions and yearly employment statistics                                                                 | FREQ-33, FREQ-34  |
+| U22    | Gamification                    | Incentivize the user to interact with site elements                                                                     | FREQ-38 - FREQ-39 |
 
 ## Glossary
 
@@ -994,6 +996,47 @@ FREQ-37.3
 : The system MUST persist links to each news article along with their SOC mappings.
 
 ---
+
+### FREQ-38 - Achievements
+
+The system SHOULD implement gamification by awarding achievements to citizens for completing certain tasks without the system, described in the following table.
+
+| Achievement      | Description                                                                                          |
+|------------------|------------------------------------------------------------------------------------------------------|
+| Welcome          | Awarded when a user finishes setting up their account                                                |
+| First Job Search | Awarded when a user views their first detailed occupation                                            |
+| Beginner         | Awarded when a user views 10 different detailed occupations                                          |
+| Intermediate     | Awarded when a user views 50 different detailed occupations                                          |
+| Expert           | Awarded when a user views 100 different detailed occupations                                         |
+| Job Hopper       | Awarded when a user changes their current career to their goal career                                |
+| Competer         | Awarded when a user selects a high demand (+30%) occupation as their goal                            |
+| Explorer         | Awarded when a user views their first news article, certification, job posting, or learning material |
+
+#### System Requirements
+
+FREQ-38.1
+: The system SHOULD keep track of key statistics regarding site usage: such as number of views for each page, and store them in the user profile.
+
+FREQ-38.2
+: The system SHOULD display a toast when the user meets the requirements for an achievement telling them that they have unlocked it.
+
+FREQ-38.3
+: The system SHOULD display unlocked achievements on the ProfileHomePage view.
+
+### FREQ-39 - Tutorialized Onboarding
+
+The system SHOULD implement gamification by tutorializing the account creation and onboarding process.
+
+#### System Requirements
+
+FREQ-39.1
+: The system SHOULD display a progress indicator on the ProfileHomePage view showing the user what they still need to do to complete their profile
+
+FREQ-39.2
+: The system SHOULD offer the user a call to action for each step to help them navigate to the correct view to complete it.
+
+FREQ-39.3
+: The system SHOULD award the user an achievement after they complete the onboarding tutorial.
 
 ## Non-Functional Requirements
 

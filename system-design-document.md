@@ -13,6 +13,7 @@ nav_order: 3
 | Version | Date       | Description      |
 |---------|------------|------------------|
 | 1.0     | 2024-06-17 | Initial revision |
+| 1.1     | 2024-07-08 | Gamification     |
 
 ## Table of Contents
 {: .no_toc }
@@ -126,6 +127,7 @@ This section describes scenarios that show how the system will be utilized to me
 | U19    | Load Unemployment               | Automatically pull unemployment data from the BLS public data API                                                       | FREQ-35           |
 | U20    | Load Certifications             | Import the careeronestop certification dataset                                                                          | FREQ-36           |
 | U21    | Load SOC Datasets               | Import SOC definitions and yearly employment statistics                                                                 | FREQ-33, FREQ-34  |
+| U22    | Gamification                    | Incentivize the user to interact with site elements                                                                     | FREQ-38 - FREQ-39 |
 
 ### U1 - Create Account
 
@@ -315,6 +317,14 @@ The system implements functionality to load certification data from a government
 The system provides functionality to load SOC definitions, descriptions, and employment data from the Bureau of Labor Statistics by parsing files deployed alongside the application tier servivces.
 
 ![use case diagram](/diagrams/usecaseDiagrams/U21%20-%20Load%20SOC%20Data.svg)
+
+### U22 - Gamification
+
+The system gamifies certain site interactions via achievements and tutorialization to encourage the user to continue interacting with it.
+
+#### Activity Diagram
+
+![use case diagram](/diagrams/Gamification%20activity%20diagram.png)
 
 ## Presentation Tier Design
 
