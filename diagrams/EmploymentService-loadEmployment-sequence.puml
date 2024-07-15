@@ -1,0 +1,19 @@
+@startuml
+
+autoactivate on
+
+actor "ApplicationReadyEvent" as ready
+participant EmploymentService
+collections "SOC Employment Dataset" as SOC
+
+ready -> EmploymentService : loadEmployment()
+EmploymentService -> SOC : Read files
+return
+
+autoactivate off
+EmploymentService -> EmploymentService : Build employment index
+autoactivate on
+
+return
+
+@enduml

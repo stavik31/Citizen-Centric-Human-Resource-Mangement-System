@@ -1,0 +1,30 @@
+@startuml
+
+autoactivate on
+
+actor UI
+boundary UserController
+participant UserService
+participant ProfileDAO
+database Database
+boundary SpringSecurity
+actor Auth0
+
+UI -> UserController : getCurrentUserProfile
+UserController -> UserService : getUserProfile
+UserService -> ProfileDAO : getProfileById
+ProfileDAO -> Database
+return null
+return null
+UserService -> SpringSecurity : getUserInfo
+SpringSecurity -> Auth0 : OIDC UserInfo Request
+return
+return
+UserService -> ProfileDAO : save
+ProfileDAO -> Database
+return
+return
+return
+return
+
+@enduml

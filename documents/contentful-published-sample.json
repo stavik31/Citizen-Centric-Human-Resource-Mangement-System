@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "tags": []
+  },
+  "fields": {
+    "title": {
+      "en-US": "Test Material"
+    },
+    "socCodes": {
+      "en-US": [
+        "11-1011"
+      ]
+    },
+    "description": {
+      "en-US": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Sample Learning Material",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "heading-2"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Here's some content! Yay!",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          },
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      }
+    },
+    "externalLinks": {
+      "en-US": []
+    }
+  },
+  "sys": {
+    "type": "Entry",
+    "id": "5d19lTVZTyCONXM8y2LBkz",
+    "space": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Space",
+        "id": "ai8a3z37eduf"
+      }
+    },
+    "environment": {
+      "sys": {
+        "id": "master",
+        "type": "Link",
+        "linkType": "Environment"
+      }
+    },
+    "contentType": {
+      "sys": {
+        "type": "Link",
+        "linkType": "ContentType",
+        "id": "learningMaterial"
+      }
+    },
+    "createdBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "4tXOP8kM16rDUICinch1N6"
+      }
+    },
+    "updatedBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "4tXOP8kM16rDUICinch1N6"
+      }
+    },
+    "revision": 2,
+    "createdAt": "2024-06-10T01:08:45.670Z",
+    "updatedAt": "2024-06-10T01:12:48.279Z"
+  }
+}

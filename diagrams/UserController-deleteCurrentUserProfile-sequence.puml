@@ -1,0 +1,26 @@
+@startuml
+
+autoactivate on
+
+actor UI
+boundary UserController
+participant UserService
+participant ProfileDAO
+database Database
+boundary Auth0Client
+actor Auth0
+
+UI -> UserController : deleteCurrentUserProfile
+UserController -> UserService : deleteUserProfile
+UserService -> ProfileDAO : deleteById
+ProfileDAO -> Database
+return
+return
+UserService -> Auth0Client : deleteUserProfile
+Auth0Client -> Auth0
+return
+return
+return
+return
+
+@enduml

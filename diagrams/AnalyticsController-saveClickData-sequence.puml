@@ -1,0 +1,20 @@
+@startuml
+
+autoactivate on
+
+actor UI
+boundary AnalyticsController
+participant AnalyticsService
+participant AnalyticsDAO
+database Database
+
+UI -> AnalyticsController : saveClickData
+AnalyticsController -> AnalyticsService : saveClickData
+AnalyticsService -> AnalyticsDAO : saveClickData
+AnalyticsDAO -> Database
+return
+return
+return
+return
+
+@enduml

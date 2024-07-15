@@ -1,4 +1,15 @@
 .mermaid .tick > text {
-  rotate: -45deg; 
+  rotate: -45deg;
   text-anchor: end !important;
+}
+
+h4, .text-delta {
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 1.1rem !important;
+}
+
+img {
+  display: block;
+  width: 100%;
 }

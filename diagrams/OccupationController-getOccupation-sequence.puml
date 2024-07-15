@@ -1,0 +1,17 @@
+@startuml
+
+autoactivate on
+
+actor UI
+boundary OccupationController
+participant OccupationService
+participant OccupationTrie
+
+UI -> OccupationController : getOccupation
+OccupationController -> OccupationService : getOccupation
+OccupationService -> OccupationTrie : getBySocCode
+return
+return
+return
+
+@enduml

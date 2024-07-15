@@ -1,0 +1,1308 @@
+openapi: 3.0.3
+info:
+  title: Agile HRM System
+  description: |
+    The HTTP Application Programming Interface (API) provides a collection of services (referred to as operations
+    in this document) that can be utilized by the presentation tier to power its various user experiences and views.
+    The API is broken up into "Controllers", each of which bundles together all of the operations for its
+    respective bounded context (with additional controllers for third-party integrations as needed).
+    
+    For reference, each controller section includes a UML class diagram demonstrating the internal structure of
+    the controller and its dependencies. Additionally, each operation provides a UML sequence diagram showing how
+    those dependencies interact in the flow of that specific request type.
+  version: '1.0.0'
+tags:
+  - name: Analytics
+    description: |
+      The AnalyticsController presents a set of operations for publishing and querying clickstream data.
+
+      ![class diagram](/diagrams/classDiagrams/Analytics.svg)
+  - name: Certification
+    description: |
+      The CertificationController presents a set of operations for querying certifications. Certification management
+      is handled by system administrators through direct database injection; that process is described in the application
+      tier documentation.
+
+      ![class diagram](/diagrams/classDiagrams/Certifications.svg)
+  - name: Contentful
+    description: |
+      The ContentfulController implements the webhook format defined by Contentful for receiving notifications of
+      newly published or unpublished entries in the CMS. Internally, this populates the tables used by the
+      LearningMaterialController.
+
+      ![class diagram](/diagrams/classDiagrams/Contentful.svg)
+  - name: Demand
+    description: |
+      The DemandController provides a minimal set of read/write operations for managing demand targets for a given
+      occupation.
+
+      ![class diagram](/diagrams/classDiagrams/Demand.svg)
+  - name: Employment
+    description: |
+      The EmploymentController provides operations for querying employment trends and statistics for a given occupation.
+
+      ![class diagram](/diagrams/classDiagrams/Employment.svg)
+  - name: JobPosting
+    description: |
+      The JobPostingController provides operations for querying job postings relating to a given occupation. Internally,
+      this delegates out to one or more third-party job posting APIs.
+
+      ![class diagram](/diagrams/classDiagrams/JobPostings.svg)
+  - name: LearningMaterial
+    description: |
+      The LearningMaterialController provides operations for querying learning material for a specific SOC code. For 
+      details on how the learning material is managed, see ContentfulController.
+
+      ![class diagram](/diagrams/classDiagrams/LearningMaterial.svg)
+  - name: News
+    description: |
+      The NewsController provides operations for querying news for a specific SOC code. Internally, this news is
+      retrieved from a set of RSS feeds maintained in the application configuration and is internally mapped to one
+      or more SOC codes using doc2vec and cosine similarity. See the News section of the application tier design
+      for more information.
+
+      ![class diagram](/diagrams/classDiagrams/News.svg)
+  - name: Occupation
+    description: |
+      The OccupationController provides operations for querying occupations based on a given SOC code. This data is
+      managed in-memory and is sourced from the most recent SOC specification at application startup.
+
+      ![class diagram](/diagrams/classDiagrams/Occupation.svg)
+  - name: Unemployment
+    description: |
+      The UnemploymentController provides operations for querying unemployment based on a given SOC code (or globally
+      if the root SOC code 00-0000 is provided). Internally, this utilized the BLS Public Data API series LNU04000000.
+
+      ![class diagram](/diagrams/classDiagrams/Unemployment.svg)
+  - name: User
+    description: |
+      The UserController provides operations for querying and managing the current user profile. This is determined
+      by the sid value in the bearer token provided by the client on each operation request. For more information, see
+      the Authorization section of this document or the Auth0 integration details.
+
+      ![class diagram](/diagrams/classDiagrams/User.svg)
+paths:
+  /analytics:
+    get:
+      summary: "Get raw clickstream data"
+      description: '![sequence diagram](/diagrams/AnalyticsController-getClickData-sequence.svg)'
+      operationId: getClickData
+      security:
+        - auth0: [smart_city_manager]
+      tags:
+        - Analytics
+      parameters:
+        - name: query
+          in: query
+          description: Filters for analytics
+          required: true
+          schema:
+            $ref: '#/components/schemas/ClickDataQuery'
+      responses:
+        200:
+          description: A csv containing raw clickstream data
+          content:
+            application/octet-stream: {}
+    post:
+      summary: "Submit clickstream data event"
+      description: '![sequence diagram](/diagrams/AnalyticsController-saveClickData-sequence.svg)'
+      operationId: saveClickData
+      security:
+        - auth0: [citizen]
+      tags:
+        - Analytics
+      requestBody:
+        required: true
+        description: Click event
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ClickData'
+      responses:
+        202:
+          description: Received event
+  /analytics/currentOccupation:
+    get:
+      summary: "Get report containing information about users' current occupations and general locations."
+      description: '![sequence diagram](/diagrams/AnalyticsController-getUserCurrentOccupationReport-sequence.svg)'
+      operationId: getUserCurrentOccupationReport
+      security:
+        - auth0: [smart_city_manager]
+      tags:
+        - Analytics
+      parameters:
+        - name: query
+          in: query
+          description: Filters for analytics
+          required: true
+          schema:
+            $ref: '#/components/schemas/AnalyticsQuery'
+      responses:
+        200:
+          description: A report containing one or more charts
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Report'
+  /analytics/goalOccupation:
+    get:
+      summary: "Get report containing information about users' goal occupations."
+      description: '![sequence diagram](/diagrams/AnalyticsController-getUserGoalOccupationReport-sequence.svg)'
+      operationId: getUserGoalOccupationReport
+      security:
+        - auth0: [smart_city_manager]
+      tags:
+        - Analytics
+      parameters:
+        - name: query
+          in: query
+          description: Filters for analytics
+          required: true
+          schema:
+            $ref: '#/components/schemas/AnalyticsQuery'
+      responses:
+        200:
+          description: A report containing one or more charts
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Report'
+  /analytics/jobPostingEngagement:
+    get:
+      summary: "Get report containing information about engagement for job postings."
+      description: '![sequence diagram](/diagrams/AnalyticsController-getJobPostingEngagement-sequence.svg)'
+      operationId: getJobPostingEngagement
+      security:
+        - auth0: [smart_city_manager]
+      tags:
+        - Analytics
+      parameters:
+        - name: query
+          in: query
+          description: Filters for analytics
+          required: true
+          schema:
+            $ref: '#/components/schemas/AnalyticsQuery'
+      responses:
+        200:
+          description: A report containing one or more charts
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Report'
+  /analytics/newsEngagement:
+    get:
+      summary: "Get report containing information about engagement for news."
+      description: '![sequence diagram](/diagrams/AnalyticsController-getNewsEngagement-sequence.svg)'
+      operationId: getNewsEngagement
+      security:
+        - auth0: [smart_city_manager]
+      tags:
+        - Analytics
+      parameters:
+        - name: query
+          in: query
+          description: Filters for analytics
+          required: true
+          schema:
+            $ref: '#/components/schemas/AnalyticsQuery'
+      responses:
+        200:
+          description: A report containing one or more charts
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Report'
+  /analytics/certificationEngagement:
+    get:
+      summary: "Get report containing information about engagement for certifications."
+      description: '![sequence diagram](/diagrams/AnalyticsController-getCertificationEngagement-sequence.svg)'
+      operationId: getCertificationEngagement
+      security:
+        - auth0: [smart_city_manager]
+      tags:
+        - Analytics
+      parameters:
+        - name: query
+          in: query
+          description: Filters for analytics
+          required: true
+          schema:
+            $ref: '#/components/schemas/AnalyticsQuery'
+      responses:
+        200:
+          description: A report containing one or more charts
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Report'
+  /analytics/learningMaterialEngagement:
+    get:
+      summary: "Get report containing information about engagement for learning material."
+      description: '![sequence diagram](/diagrams/AnalyticsController-getLearningMaterialEngagement-sequence.svg)'
+      operationId: getLearningMaterialEngagement
+      security:
+        - auth0: [smart_city_manager]
+      tags:
+        - Analytics
+      parameters:
+        - name: query
+          in: query
+          description: Filters for analytics
+          required: true
+          schema:
+            $ref: '#/components/schemas/AnalyticsQuery'
+      responses:
+        200:
+          description: A report containing one or more charts
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Report'
+  /certifications:
+    get:
+      summary: Get certifications
+      description: '![sequence diagram](/diagrams/CertificationController-getCertifications-sequence.svg)'
+      operationId: getCertifications
+      security:
+        - auth0: [citizen, smart_city_manager]
+      tags:
+        - Certification
+      parameters:
+        - name: query
+          in: query
+          description: Filters for certifications
+          schema:
+            $ref: '#/components/schemas/CertificationQuery'
+      responses:
+        200:
+          description: Certification response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CertificationResponse'
+  /contentful/publish:
+    post:
+      summary: "Webhook for new learning material notification from contentful"
+      description: '![sequence diagram](/diagrams/ContentfulController-notifyEntryPublished-sequence.svg)'
+      operationId: notifyEntryPublished
+      security:
+        - basic: []
+      tags:
+        - Contentful
+      requestBody:
+        required: true
+        description: Event
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ContentfulPublishedRequest'
+      responses:
+        202:
+          description: Received event
+  /contentful/unpublish:
+    post:
+      summary: "Webhook for deleted learning material notification from contentful"
+      description: '![sequence diagram](/diagrams/ContentfulController-notifyEntryUnpublished-sequence.svg)'
+      operationId: notifyEntryUnpublished
+      security:
+        - basic: []
+      tags:
+        - Contentful
+      requestBody:
+        required: true
+        description: Event
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ContentfulUnpublishedRequest'
+      responses:
+        202:
+          description: Received event
+  /demand:
+    get:
+      summary: Get demand for a given SOC code
+      description: '![sequence diagram](/diagrams/DemandController-getDemand-sequence.svg)'
+      operationId: getDemand
+      security:
+        - auth0: [citizen, smart_city_manager]
+      tags:
+        - Demand
+      parameters:
+        - name: query
+          in: query
+          description: Filters for demand
+          schema:
+            $ref: '#/components/schemas/DemandQuery'
+      responses:
+        200:
+          description: Demand response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Demand'
+    post:
+      summary: Update demand for a given SOC code
+      description: '![sequence diagram](/diagrams/DemandController-setDemand-sequence.svg)'
+      operationId: setDemand
+      security:
+        - auth0: [smart_city_manager]
+      tags:
+        - Demand
+      requestBody:
+        required: true
+        description: Updated demand value
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Demand'
+      responses:
+        200:
+          description: Demand response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Demand'
+  /employment:
+    get:
+      summary: Get employment for a given SOC code
+      description: '![sequence diagram](/diagrams/EmploymentController-getEmploymentBySocCode-sequence.svg)'
+      operationId: getEmploymentBySocCode
+      security:
+        - auth0: [citizen, smart_city_manager]
+      tags:
+        - Employment
+      parameters:
+        - name: socCode
+          in: query
+          description: Desired soc code
+          schema:
+            $ref: '#/components/schemas/SocCode'
+      responses:
+        200:
+          description: Employment response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmploymentResponse'
+  /jobs:
+    get:
+      summary: Get job postings
+      description: '![sequence diagram](/diagrams/JobPostingController-getJobPosting-sequence.svg)'
+      operationId: getJobPosting
+      security:
+        - auth0: [citizen, smart_city_manager]
+      tags:
+        - JobPosting
+      parameters:
+        - name: query
+          in: query
+          description: Filters for job postings
+          schema:
+            $ref: '#/components/schemas/JobPostingQuery'
+      responses:
+        200:
+          description: Job posting response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobPostingResponse'
+  /learning:
+    get:
+      summary: Get learning material
+      description: '![sequence diagram](/diagrams/LearningMaterialController-getLearningMaterial-sequence.svg)'
+      operationId: getLearningMaterial
+      security:
+        - auth0: [citizen, smart_city_manager]
+      tags:
+        - LearningMaterial
+      parameters:
+        - name: query
+          in: query
+          description: Filters for learning material
+          schema:
+            $ref: '#/components/schemas/LearningMaterialQuery'
+      responses:
+        200:
+          description: Learning material response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LearningMaterialResponse'
+  /news:
+    get:
+      summary: Get news
+      description: '![sequence diagram](/diagrams/NewsController-getNews-sequence.svg)'
+      operationId: getNews
+      security:
+        - auth0: [citizen, smart_city_manager]
+      tags:
+        - News
+      parameters:
+        - name: query
+          in: query
+          description: Filters for news
+          schema:
+            $ref: '#/components/schemas/NewsQuery'
+      responses:
+        200:
+          description: News response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NewsResponse'
+  /occupations:
+    get:
+      summary: Get single occupation
+      description: '![sequence diagram](/diagrams/OccupationController-getOccupation-sequence.svg)'
+      operationId: getOccupation
+      security:
+        - auth0: [citizen, smart_city_manager]
+      tags:
+        - Occupation
+      parameters:
+        - name: socCode
+          in: query
+          description: Desired soc code
+          schema:
+            $ref: '#/components/schemas/SocCode'
+      responses:
+        200:
+          description: Occupation response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Occupation'
+  /occupations/children:
+    get:
+      summary: Get child occupations
+      description: '![sequence diagram](/diagrams/OccupationController-getChildOccupations-sequence.svg)'
+      operationId: getChildOccupations
+      security:
+        - auth0: [citizen, smart_city_manager]
+      tags:
+        - Occupation
+      parameters:
+        - name: socCode
+          in: query
+          description: Desired soc code
+          schema:
+            $ref: '#/components/schemas/SocCode'
+      responses:
+        200:
+          description: Occupation response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OccupationResponse'
+  /profile:
+    get:
+      summary: Get signed in user profile
+      description: '![sequence diagram](/diagrams/UserController-getCurrentUserProfile-sequence.svg)'
+      operationId: getCurrentUserProfile
+      security:
+        - auth0: [citizen, smart_city_manager]
+      tags:
+        - User
+      responses:
+        200:
+          description: Profile response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profile'
+    post:
+      summary: Update signed in user profile
+      description: '![sequence diagram](/diagrams/UserController-updateUserProfile-sequence.svg)'
+      operationId: updateUserProfile
+      security:
+        - auth0: [citizen, smart_city_manager]
+      tags:
+        - User
+      requestBody:
+        required: true
+        description: Updated profile
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Profile'
+      responses:
+        200:
+          description: Profile response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profile'
+    delete:
+      summary: Delete currently signed in user profile
+      description: '![sequence diagram](/diagrams/UserController-deleteCurrentUserProfile-sequence.svg)'
+      operationId: deleteCurrentUserProfile
+      security:
+        - auth0: [smart_city_manager]
+      tags:
+        - User
+      responses:
+        204:
+          description: No content
+  /unemployment:
+    get:
+      summary: Get unemployment
+      description: '![sequence diagram](/diagrams/UnemploymentController-getUnemploymentBySocCode-sequence.svg)'
+      operationId: getUnemploymentBySocCode
+      security:
+        - auth0: [ citizen, smart_city_manager ]
+      tags:
+        - Unemployment
+      parameters:
+        - name: socCode
+          in: query
+          description: Desired soc code
+          schema:
+            $ref: '#/components/schemas/SocCode'
+      responses:
+        200:
+          description: Unemployment response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnemploymentResponse'
+components:
+  schemas:
+    SocCode:
+      type: string
+      description: 'SOC code (see [SOC definition dataset](#soc-definition-dataset))'
+      pattern: \d{2}-\d{4}
+    LocalDateTime:
+      type: string
+      description: 'A date and time in UTC'
+      format: date-time
+    AnalyticsQuery:
+      type: object
+      description: Query object for analytics reports.
+      properties:
+        start:
+          $ref: '#/components/schemas/LocalDateTime'
+        end:
+          $ref: '#/components/schemas/LocalDateTime'
+        socCode:
+          $ref: '#/components/schemas/SocCode'
+      required:
+        - socCode
+    BarChart:
+      type: object
+      description: Represents a bar chart
+      properties:
+        title:
+          type: string
+          description: Title of the chart
+        width:
+          type: integer
+          format: int32
+          description: Width of the chart
+        height:
+          type: integer
+          format: int32
+          description: Height of the chart
+        type:
+          $ref: '#/components/schemas/ChartType'
+        data:
+          type: array
+          description: Contents of the chart
+          items:
+            $ref: '#/components/schemas/Tuple'
+        xAxisLabel:
+          type: string
+          description: Label for the x axis
+        yAxisLabel:
+          type: string
+          description: Label for the y axis
+        markerType:
+          type: string
+          description: Hint for the point marker types
+      required:
+        - title
+        - type
+        - data
+    Certification:
+      type: object
+      description: A certification hosted by an external entity.
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the certification
+        socCode:
+          $ref: '#/components/schemas/SocCode'
+        title:
+          type: string
+          description: The title of the certification
+        description:
+          type: string
+          description: A brief description of the certification contents
+        organization:
+          type: string
+          description: The organization hosting the certification
+        links:
+          type: array
+          description: URLs for external pages related to this certification
+          items:
+            $ref: '#/components/schemas/ExternalLink'
+      required:
+        - id
+        - socCode
+        - title
+    CertificationQuery:
+      type: object
+      description: Query object for certifications.
+      properties:
+        socCode:
+          $ref: '#/components/schemas/SocCode'
+        organization:
+          type: string
+          description: The organization hosting the certification
+      required:
+        - socCode
+    CertificationResponse:
+      type: object
+      description: Wrapper for multiple certifications
+      properties:
+        data:
+          type: array
+          description: 0 or more Certification objects
+          items:
+            $ref: '#/components/schemas/Certification'
+      required:
+        - data
+    Chart:
+      type: object
+      description: |
+        A generic chart. For specific implementations, see:
+        
+        * [BarChart](#barchart)
+        * [HeatMapChart](#heatmapchart)
+        * [LineChart](#linechart)
+        * [MapChart](#mapchart)
+        * [PieChart](#piechart)
+        
+        Note that this is an interface; the fields below are all possible fields for its children.
+      oneOf:
+        - $ref: '#/components/schemas/LineChart'
+        - $ref: '#/components/schemas/PieChart'
+        - $ref: '#/components/schemas/MapChart'
+        - $ref: '#/components/schemas/HeatMapChart'
+        - $ref: '#/components/schemas/BarChart'
+      discriminator:
+        propertyName: type
+    ChartType:
+      type: string
+      description: A specific type of chart, used as a discriminator for polymorphic deserialization.
+      enum: [PIE, BAR, LINE, HEATMAP, MAP]
+    ClickData:
+      type: object
+      description: A single click event generated by a user interacting with content.
+      properties:
+        timestamp:
+          type: integer
+          description: Unix timestamp of the event
+          format: int64
+        elementId:
+          type: string
+          description: 'The `id` field of the element interacted with'
+        elementType:
+          type: string
+          description: The type of content being interacted with
+        userId:
+          type: string
+          description: The id of the current user
+        userPostalCode:
+          type: string
+          description: The postal code of the current user, if set
+        userCurrentOccupation:
+          type: string
+          description: The current occupation of the current user, if set
+        userGoalOccupation:
+          type: string
+          description: The goal occupation of the current user, if set
+      required:
+        - timestamp
+        - elementId
+        - elementType
+    ClickDataQuery:
+      type: object
+      description: Query object for clickstream analytics
+      properties:
+        start:
+          $ref: '#/components/schemas/LocalDateTime'
+        end:
+          $ref: '#/components/schemas/LocalDateTime'
+        elementType:
+          type: string
+          description: The type of content being interacted with
+        userPostalCode:
+          type: string
+          description: The postal code of the current user, if set
+        userCurrentOccupation:
+          type: string
+          description: The current occupation of the current user, if set
+        userGoalOccupation:
+          type: string
+          description: The goal occupation of the current user, if set
+      required:
+        - start
+        - end
+        - elementType
+    ContentfulPublishedRequest:
+      type: object
+      description: A notification that content has been published in contentful
+      properties:
+        metadata:
+          $ref: '#/components/schemas/ContentfulMetadata'
+    ContentfulMetadata:
+      type: object
+      description: Metadata about the published content
+      properties:
+        tags:
+          type: array
+          description: Tags associated with the published content
+          items:
+            type: string
+            description: A single tag associated with the published content
+    ContentfulFields:
+      type: object
+      description: The new values for the fields on the published content
+      properties:
+        title:
+          type: string
+          description: Title of the content
+        socCodes:
+          type: array
+          description: SOC codes to which the content is applicable
+          items:
+            $ref: '#/components/schemas/SocCode'
+        externalLinks:
+          type: array
+          description: External links for the content
+          items:
+            $ref: '#/components/schemas/ExternalLink'
+        description:
+          $ref: '#/components/schemas/ContentfulDescription'
+    ContentfulDescription:
+      type: object
+      description: 'A multipart description'
+      properties:
+        content:
+          type: array
+          items:
+            $ref: '#/components/schemas/ContentfulContent'
+    ContentfulContent:
+      type: object
+      description: A block of content
+      properties:
+        content:
+          type: array
+          description: Nested content
+          items:
+            $ref: '#/components/schemas/ContentfulContent'
+        marks:
+          type: array
+          items:
+            type: string
+        value:
+          type: string
+        nodeType:
+          type: string
+    ContentfulUnpublishedRequest:
+      type: object
+      description: A notification that content has been unpublished in contentful
+      properties:
+        sys:
+          $ref: '#/components/schemas/ContentfulSys'
+    ContentfulSys:
+      type: object
+      description: Request details
+      properties:
+        id:
+          type: string
+          description: The id for the content being removed
+        type:
+          type: string
+          description: The type of event
+    Demand:
+      type: object
+      description: Demand for a given occupation
+      properties:
+        socCode:
+          $ref: '#/components/schemas/SocCode'
+        value:
+          type: integer
+          format: int64
+          description: The desired employment amount
+      required:
+        - socCode
+    DemandQuery:
+      type: object
+      description: Query object for demand
+      properties:
+        socCode:
+          $ref: '#/components/schemas/SocCode'
+      required:
+        - socCode
+    Employment:
+      type: object
+      description: Amount of employment at a given date
+      properties:
+        id:
+          type: string
+          description: Unique identifier
+        socCode:
+          $ref: '#/components/schemas/SocCode'
+        date:
+          $ref: '#/components/schemas/LocalDateTime'
+        value:
+          type: integer
+          format: int64
+          description: The amount of employment at this point in time for this occupation
+        forecasted:
+          type: boolean
+          description: True if predicted by time series forecasting, false if historical
+      required:
+        - id
+        - socCode
+        - date
+        - value
+        - forecasted
+    EmploymentResponse:
+      type: object
+      description: A container for one or more Employment objects
+      properties:
+        data:
+          type: array
+          description: One or more Employment objects
+          items:
+            $ref: '#/components/schemas/Employment'
+      required:
+        - data
+    ExternalLink:
+      type: object
+      description: A link to an external system
+      properties:
+        url:
+          type: string
+          description: The url of the external page
+        label:
+          type: string
+          description: The display text for the URL
+      required:
+        - url
+    HeatMapChart:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Title of the chart
+        width:
+          type: integer
+          format: int32
+          description: Width of the chart
+        height:
+          type: integer
+          format: int32
+          description: Height of the chart
+        type:
+          $ref: '#/components/schemas/ChartType'
+        data:
+          type: array
+          description: Contents of the chart
+          items:
+            $ref: '#/components/schemas/Tuple'
+        xAxisLabel:
+          type: string
+          description: Label for the x axis
+        yAxisLabel:
+          type: string
+          description: Label for the y axis
+      required:
+        - title
+        - type
+        - data
+    JobPosting:
+      type: object
+      description: A job posting
+      properties:
+        id:
+          type: string
+          description: A unique identifier for the job posting
+        title:
+          type: string
+          description: The title of the job posting
+        description:
+          type: string
+          description: A brief description of the job
+        company:
+          type: string
+          description: The company offering the job
+        salaryRange:
+          type: string
+          description: A textual range of salaries to be expected for the position in no particular format
+        location:
+          type: string
+          description: The location of the job
+        deadline:
+          type: string
+          description: The application deadline
+        link:
+          $ref: '#/components/schemas/ExternalLink'
+        source:
+          $ref: '#/components/schemas/JobSource'
+      required:
+        - id
+        - title
+        - link
+        - source
+    JobPostingQuery:
+      type: object
+      description: A query for job postings
+      properties:
+        socCode:
+          $ref: '#/components/schemas/SocCode'
+        userQuery:
+          type: string
+          description: A query string entered by the user
+        yearlySalaryUpper:
+          type: integer
+          format: int64
+          description: An upper limit on salary for the position
+        yearlySalaryLower:
+          type: integer
+          format: int64
+          description: A lower limit on salary for the position
+      required:
+        - socCode
+    JobPostingResponse:
+      type: object
+      description: A collection of job postings
+      properties:
+        data:
+          type: array
+          description: One or more JobPosting objects
+          items:
+            $ref: '#/components/schemas/JobPosting'
+      required:
+        - data
+    JobSource:
+      type: string
+      description: The source from which JobPostings were obtained
+      enum: [USA_JOBS]
+    LearningContentType:
+      type: string
+      description: The type of learning material
+      enum: [VIDEO, COURSE, READING]
+    LearningMaterial:
+      type: object
+      description: A piece of external learning material for a given occupation
+      properties:
+        id:
+          type: string
+          description: A unique identifier for the content
+        title:
+          type: string
+          description: The title of the content
+        description:
+          type: string
+          description: A brief description of the content
+        socCode:
+          $ref: '#/components/schemas/SocCode'
+        organization:
+          type: string
+          description: The organization managing the content
+        contentType:
+          $ref: '#/components/schemas/LearningContentType'
+        links:
+          type: array
+          description: A list of external pages the content can be accessed on
+          items:
+            $ref: '#/components/schemas/ExternalLink'
+      required:
+        - id
+        - socCode
+        - contentType
+    LearningMaterialQuery:
+      type: object
+      description: A query for learning material
+      properties:
+        socCode:
+          $ref: '#/components/schemas/SocCode'
+        contentType:
+          $ref: '#/components/schemas/LearningContentType'
+      required:
+        - socCode
+    LearningMaterialResponse:
+      type: object
+      description: A container for one or more pieces of learning material
+      properties:
+        data:
+          type: array
+          description: One or more pieces of learning material
+          items:
+            $ref: '#/components/schemas/LearningMaterial'
+      required:
+        - data
+    LineChart:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Title of the chart
+        width:
+          type: integer
+          format: int32
+          description: Width of the chart
+        height:
+          type: integer
+          format: int32
+          description: Height of the chart
+        type:
+          $ref: '#/components/schemas/ChartType'
+        data:
+          type: array
+          description: Contents of the chart
+          items:
+            $ref: '#/components/schemas/Tuple'
+        xAxisLabel:
+          type: string
+          description: Label for the x axis
+        yAxisLabel:
+          type: string
+          description: Label for the y axis
+      required:
+        - title
+        - type
+        - data
+    MapChart:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Title of the chart
+        width:
+          type: integer
+          format: int32
+          description: Width of the chart
+        height:
+          type: integer
+          format: int32
+          description: Height of the chart
+        type:
+          $ref: '#/components/schemas/ChartType'
+        data:
+          type: array
+          description: Contents of the chart
+          items:
+            $ref: '#/components/schemas/Tuple'
+        region:
+          type: string
+          description: Geographic region of the chart
+        colorAxis:
+          type: integer
+          format: int32
+          description: Color axis for the chart
+        displayMode:
+          type: string
+          description: Display mode for the chart
+      required:
+        - title
+        - type
+        - data
+        - region
+    News:
+      type: object
+      description: A news article
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the news article, typically the source url
+        socCode:
+          $ref: '#/components/schemas/SocCode'
+        title:
+          type: string
+          description: Title of the news article
+        source:
+          type: string
+          description: The organization or website publishing the news
+        published:
+          $ref: '#/components/schemas/LocalDateTime'
+        link:
+          $ref: '#/components/schemas/ExternalLink'
+      required:
+        - id
+        - title
+        - link
+    NewsQuery:
+      type: object
+      description: A query object for news
+      properties:
+        socCode:
+          $ref: '#/components/schemas/SocCode'
+        source:
+          type: string
+          description: The organization or website publishing the news
+        after:
+          $ref: '#/components/schemas/LocalDateTime'
+        before:
+          $ref: '#/components/schemas/LocalDateTime'
+      required:
+        - socCode
+    NewsResponse:
+      type: object
+      description: A container object for one or more pieces of news
+      properties:
+        data:
+          type: array
+          description: One or more pieces of news
+          items:
+            $ref: '#/components/schemas/News'
+      required:
+        - data
+    Occupation:
+      type: object
+      description: A SOC occupation
+      properties:
+        socCode:
+          $ref: '#/components/schemas/SocCode'
+        title:
+          type: string
+          description: The SOC standard name for the occupation
+        description:
+          type: string
+          description: A brief description of the occupation
+      required:
+        - socCode
+        - title
+    OccupationResponse:
+      type: object
+      description: A container object for one or more occupations
+      properties:
+        data:
+          type: array
+          description: One or more occupations
+          items:
+            $ref: '#/components/schemas/Occupation'
+      required:
+        - data
+    PieChart:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Title of the chart
+        width:
+          type: integer
+          format: int32
+          description: Width of the chart
+        height:
+          type: integer
+          format: int32
+          description: Height of the chart
+        type:
+          $ref: '#/components/schemas/ChartType'
+        data:
+          type: array
+          description: Contents of the chart
+          items:
+            $ref: '#/components/schemas/Tuple'
+      required:
+        - title
+        - type
+        - data
+    Profile:
+      type: object
+      description: A user profile
+      properties:
+        id:
+          type: string
+          description: Unique identifier
+        name:
+          type: string
+          description: Legal name of the user
+        email:
+          type: string
+          description: Email address of the user
+        postalCode:
+          type: string
+          description: Postal code of the user
+        currentSocCode:
+          $ref: '#/components/schemas/SocCode'
+        goalSocCode:
+          $ref: '#/components/schemas/SocCode'
+        termsOfUseConsent:
+          type: boolean
+          description: If the user consented to the system terms of use
+      required:
+        - id
+        - termsOfUseConsent
+    Report:
+      type: object
+      description: A collection of Chart objects
+      properties:
+        data:
+          type: array
+          description: One or more charts
+          items:
+            $ref: '#/components/schemas/Chart'
+      required:
+        - data
+    Tuple:
+      type: object
+      description: A key-value pair
+      properties:
+        key:
+          type: string
+          description: Key
+        value:
+          type: number
+          description: Value
+      required:
+        - key
+        - value
+    Unemployment:
+      type: object
+      description: Unemployment value at a given time
+      properties:
+        id:
+          type: string
+          description: Unique identifier
+        socCode:
+          $ref: '#/components/schemas/SocCode'
+        date:
+          $ref: '#/components/schemas/LocalDateTime'
+        value:
+          type: number
+          description: Value at that time
+      required:
+        - id
+        - socCode
+        - date
+        - value
+    UnemploymentResponse:
+      type: object
+      description: A collection of Unemployment data
+      properties:
+        data:
+          type: array
+          description: One or more points of unemployment data
+          items:
+            $ref: '#/components/schemas/Unemployment'
+      required:
+        - data
+  securitySchemes:
+    auth0:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://dev-2rwfim8h3qzkydvj.us.auth0.com/authorize
+          tokenUrl: https://dev-2rwfim8h3qzkydvj.us.auth0.com/oauth/token
+          scopes:
+            citizen: A regular citizen user of the application
+            smart_city_manager: A smart city manager
+    basic:
+      type: http
+      scheme: basic

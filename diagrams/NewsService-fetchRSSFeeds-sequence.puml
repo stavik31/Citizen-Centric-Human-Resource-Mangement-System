@@ -1,0 +1,24 @@
+@startuml
+
+autoactivate on
+
+actor "System Timer" as timer
+participant NewsService
+boundary RSSClient
+actor "RSS Feeds" as feeds
+participant NewsDAO
+database Database
+
+timer -> NewsService : fetchRSSFeeds()
+loop until all feeds read
+NewsService -> RSSClient : fetchRSSFeed()
+RSSClient -> feeds
+return
+return
+end
+NewsService -> NewsDAO : save()
+NewsDAO -> Database
+return
+return
+
+@enduml

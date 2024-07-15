@@ -1,0 +1,27 @@
+@startuml
+
+autoactivate on
+
+actor UI
+boundary NewsController
+participant NewsService
+participant NewsDAO
+database Database
+
+UI -> NewsController : getNews
+NewsController -> NewsService : getNews
+alt query contains source
+    NewsService -> NewsDAO : getBySocCodeAndSource
+    NewsDAO -> Database
+    return
+    return
+else query does not contain source
+    NewsService -> NewsDAO : getBySocCode
+    NewsDAO -> Database
+    return
+    return
+end
+return
+return
+
+@enduml

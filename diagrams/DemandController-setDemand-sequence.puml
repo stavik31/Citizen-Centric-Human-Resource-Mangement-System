@@ -1,0 +1,20 @@
+@startuml
+
+autoactivate on
+
+actor UI
+boundary DemandController
+participant DemandService
+participant DemandDAO
+database Database
+
+UI -> DemandController : setDemand
+DemandController -> DemandService : setDemand
+DemandService -> DemandDAO : setDemand
+DemandDAO -> Database
+return
+return
+return
+return
+
+@enduml

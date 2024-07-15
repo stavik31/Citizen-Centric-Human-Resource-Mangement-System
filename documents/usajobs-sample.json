@@ -1,0 +1,259 @@
+{
+  "LanguageCode": "EN",
+  "SearchParameters": {},
+  "SearchResult": {
+    "SearchResultCount": 25,
+    "SearchResultCountAll": 178,
+    "SearchResultItems": [
+      {
+        "MatchedObjectId": "794441100",
+        "MatchedObjectDescriptor": {
+          "PositionID": "24-BPA40376-12437752-MP",
+          "PositionTitle": "IT Specialist (SYSADMIN/SYSANALYSIS)",
+          "PositionURI": "https://www.usajobs.gov:443/GetJob/ViewDetails/794441100",
+          "ApplyURI": [
+            "https://www.usajobs.gov:443/GetJob/ViewDetails/794441100?PostingChannelID="
+          ],
+          "PositionLocationDisplay": "Portland, Oregon",
+          "PositionLocation": [
+            {
+              "LocationName": "Portland, Oregon",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "Oregon",
+              "CityName": "Portland, Oregon",
+              "Longitude": -122.67563,
+              "Latitude": 45.511795
+            }
+          ],
+          "OrganizationName": "Bonneville Power Administration",
+          "DepartmentName": "Department of Energy",
+          "JobCategory": [
+            {
+              "Name": "Information Technology Management",
+              "Code": "2210"
+            }
+          ],
+          "JobGrade": [
+            {
+              "Code": "GS"
+            }
+          ],
+          "PositionSchedule": [
+            {
+              "Name": "",
+              "Code": "1"
+            }
+          ],
+          "PositionOfferingType": [
+            {
+              "Name": "",
+              "Code": "15317"
+            }
+          ],
+          "QualificationSummary": "BASIC REQUIREMENT: Experience must be IT related; the experience may be demonstrated by paid or unpaid experience and/or completion of specific, intensive training (for example, IT certification), as appropriate. For all positions individuals must have IT-related experience demonstrating each of the four competencies listed below. The employing agency is responsible for identifying the specific level of proficiency required for each competency at each grade level based on the requirements of the position being filled. 1. Attention to Detail - Is thorough when performing work and conscientious about attending to detail. 2. Customer Service - Works with clients and customers (that is, any individuals who use or receive the services or products that your work unit produces, including the general public, individuals who work in the agency, other agencies, or organizations outside the Government) to assess their needs, provide information or assistance, resolve their problems, or satisfy their expectations; knows about available products and services; is committed to providing quality products and services. 3. Oral Communication - Expresses information (for example, ideas or facts) to individuals or groups effectively, taking into account the audience and nature of the information (for example, technical, sensitive, controversial); makes clear and convincing oral presentations; listens to others, attends to nonverbal cues, and responds appropriately. 4. Problem Solving - Identifies problems; determines accuracy and relevance of information; uses sound judgment to generate and evaluate alternatives, and to make recommendations. To meet this requirement you must demonstrate proficiency in each of the four competencies listed above as follows: GS-13: Advanced - You can perform the actions associated with each of these competencies without assistance. You are recognized within your immediate organization as \"a person to ask\" when difficult questions arise regarding each of these competencies. Focus is on broad organizational/professional issues; You have consistently provided practical/relevant ideas and perspectives on process or practice improvements which may easily be implemented; You are capable of coaching others in the application of each of these competencies by translating complex nuances relating to each competency into easy to understand terms; You participate in senior level discussions regarding these competencies; You assist in the development of reference and resource materials in these competencies. SPECIALIZED EXPERIENCE REQUIREMENTS: A qualified candidate's online application and resume must demonstrate at least one year of specialized experience equivalent to the next lower grade level GS-12 in the Federal service. Specialized experience for this position is defined as: 1) Performing server systems administration capacities in support of new and existing Enterprise Resource Planning (ERP) enterprise-wide applications: (2) Independently support, maintain, perform upgrade, and integrate existing applications for an Enterprise Resource Planning (ERP) system (e.g. Oracle PeopleSoft, Hitachi Asset Suite). (3) Modifying, adapting, and refining broad IT guidelines to resolve issues and problems that result in new policies and practices. (4) Installing, testing, troubleshooting, and maintaining middle-tier server hardware and software. (5) Coordinating projects that involve multiple stages in the systems development life cycle management process, including systems analysis, software development, data base administration, and customer support. Time-in-Grade: Current Federal employees must meet time-in-grade requirements by the closing date of this announcement to receive consideration. CTAP/ICTAP candidates: To be considered \"well qualified\" you must meet all of the requirements as described in this section. You must meet all qualifications and eligibility requirements by the closing date of this announcement.",
+          "PositionRemuneration": [
+            {
+              "MinimumRange": "111234.0",
+              "MaximumRange": "144608.0",
+              "RateIntervalCode": "PA",
+              "Description": "Per Year"
+            }
+          ],
+          "PositionStartDate": "2024-06-06T00:00:00.0000",
+          "PositionEndDate": "2024-06-16T23:59:59.9970",
+          "PublicationStartDate": "2024-06-06T00:00:00.0000",
+          "ApplicationCloseDate": "2024-06-16T23:59:59.9970",
+          "PositionFormattedDescription": [
+            {
+              "Label": "Dynamic Teaser",
+              "LabelDescription": "Hit highlighting for keyword searches."
+            }
+          ],
+          "UserArea": {
+            "Details": {
+              "JobSummary": "This position is located with Bonneville Power Administration in the Enterprise Applications Support (JLSP) of Software Development and Operations (JLS), Enterprise Shared Services (JL), Information Technology (J), Bonneville Power Administration (BPA). A successful candidate in the IT Specialist (SYSADMIN/SYSANALYSIS) position will be independently responsible for performing duties associated with the Systems Administration (SYSADMIN) and Systems Analysis (SYSANALYSIS) IT specialty areas.",
+              "WhoMayApply": {
+                "Name": "",
+                "Code": ""
+              },
+              "LowGrade": "13",
+              "HighGrade": "13",
+              "PromotionPotential": "None",
+              "OrganizationCodes": "DN/DN03",
+              "Relocation": "False",
+              "HiringPath": [
+                "fed-transition",
+                "fed-competitive",
+                "disability",
+                "land",
+                "mspouse",
+                "peace",
+                "special-authorities",
+                "vet"
+              ],
+              "TotalOpenings": "1",
+              "AgencyMarketingStatement": "We are truly honored that DOE has been named America's #1 Best Employer for Veterans in 2023 by Forbes-not only among Government agencies, but among employers across the U.S. We are so proud of this ranking which reflects our commitment to the employment of veterans. As so many veterans at DOE renew their service to our Nation, we are deeply committed to their success and advancement. Veterans shape the future of energy The Bonneville Power Administration is a nonprofit federal power marketing administration based in the Pacific Northwest. Although BPA is part of the U.S. Department of Energy, it is self-funding and covers its costs by selling its products and services. BPA markets wholesale electrical power from 31 federal hydroelectric projects in the Northwest, one nonfederal nuclear plant and several small nonfederal power plants.",
+              "TravelCode": "1",
+              "ApplyOnlineUrl": "https://apply.usastaffing.gov/Application/Apply",
+              "DetailStatusUrl": "https://apply.usastaffing.gov/Application/ApplicationStatus",
+              "MajorDuties": [
+                "As a IT Specialist (SYSADMIN/SYSANALYS), you will: Plan and coordinate the installation, configuration, maintenance, and upgrade of enterprise management software and related enterprise-level changes to the systems infrastructure. Lead/conduct studies designed to identify potential improvements in the way information technology is applied to key Enterprise-wide business functions. Develop BPA-wide procedures for responding to new threats to systems confidentiality, integrity, and availability, e.g., checking key files for problems and reviewing running operations to ensure only authorized processes are running. Oversee the BPA-wide implementation of new procedures for responding to systems threats and interprets procedures in response to questions received from systems administrators. Generate and run simulation models for future applications. Evaluates and verifies impacts on the current and planned enterprise IT architecture. Develop new standards, methods, and techniques; evaluates the impact of technological change; and/or conceives of solutions to highly complex technical issues."
+              ],
+              "Education": "There are no specific education requirements or substitution of education for experience for this position.",
+              "Requirements": "",
+              "Evaluations": "You will be evaluated for this job based on how well you meet the eligibility and qualification requirements above. Once the announcement closes, we will conduct a review of your application package to verify your eligibility and qualifications. If you are found qualified, your application will move forward to additional phases of the review process. Merit Promotion & VEOA Procedures: If you are minimally qualified for this job, your responses to the self-assessment questions (True/False, Yes/ No, Multiple Choice questions) will be evaluated to determine if you are a best qualified candidate. If you rate yourself higher than is supported by your application materials, your responses may be adjusted and/or you may be excluded from consideration for this job. Due weight will also be given to federal employees, when applicable, for performance appraisals and awards in accordance with 5 CFR § 335.103(b)(3). Federal employees must meet time-in-grade requirements and current employees must have at least a fully successful or equivalent performance rating to receive consideration. Your qualifications will be evaluated on the following competencies (knowledge, skills, abilities, and other characteristics): Process Control Software Development Technology Awareness Non-competitive Procedures: If you are applying under a non-competitive or special hiring authority, you will still be required to answer the assessment questions. However, you will not be evaluated against the rating and ranking criteria. Your resume and supporting documentation will be used to determine if you are minimally qualified for this job. Veterans' Preference will be applied when required by the hiring authority (e.g., VRA, Schedule A). All qualified Non-competitive applicants and the best qualified Merit Promotion and VEOA applicants will be referred to the hiring manager for consideration. Career Transition Assistance Programs: To receive selection priority for this position, you must: 1) meet the eligibility criteria; and 2) be rated \"well-qualified\", which is defined as having a score of 85 or better. You must meet all qualifications and eligibility requirements by the closing date ( 06/16/2024) of this announcement. To preview the Assessment Questionnaire, click https://apply.usastaffing.gov/ViewQuestionnaire/12437752.",
+              "HowToApply": "Please read the entire announcement and all the instructions before you begin an application. To apply for this position, you must complete the initial online application, to include submission of the required documentation specified in the Required Documents section. A complete application package must be submitted by 11:59 PM (EST) on the announcement closing date to receive consideration. The application process is as follows: You must have a login.gov account to sign into USAJOBS: https://www.usajobs.gov/Help/how-to/account/. To begin the application process in USAJOBS, click the Apply Online button. Answer the questions presented in the application and attach all required and supporting documentation. You must click the Submit Application button prior to 11:59 pm (ET) on the announcement closing date. You may update your application, including supporting documentation, at any time during the announcement open period by returning to your USAJOBS account, select Update Application: https://my.usajobs.gov/Account/Login. This option will no longer be available once the announcement has closed. To verify the status of your application, during and after the announcement open period, log into your USAJOBS account; applications will appear on the Welcome screen. The Application Status will appear along with the date your application was last updated. For information on what each application status means, visit: https://www.usajobs.gov/Help/how-to/application/status/. If you need help with login.gov or USAJOBS (e.g., account access, Resume Builder) visit the USAJOBS Help Center: https://www.usajobs.gov/Help/ If you experience difficulty applying on USAJOBS, after clicking the Apply Online button, or you are experiencing a significant hardship hindering your ability to apply online, the Agency Contact listed in the announcement can assist you during normal business hours. If you receive any system error messages, take screenshots if possible, to aid technical support.",
+              "WhatToExpectNext": "Once your online application is submitted you will receive a confirmation notification by email. The status of your application will be updated in USAJOBS as it is evaluated. You can check the status by logging into USAJOBS. You may also sign up to receive automatic emails anytime the status of your application changes by logging into your USAJobs Account and editing the Notification Settings. You will be contacted directly if an interview is required.",
+              "RequiredDocuments": "To apply for this position, you MUST provide a complete application package which includes: Your RESUME showing all relevant work experience (paid and unpaid) including: duties performed; full name and address of the each employer; start and end dates (month/day/year); work schedule (part-time, full-time, number of hours if intermittent); salary; and any completed education and training (program title, subject area, number of hours completed, and completion date). Cover Letter, optional, expressing additional information not covered in your resume. Transcripts, if specific educational requirements are indicated in this job announcement. Unofficial transcripts or any report listing institution, course title, credits earned (semester or quarter hour) and final grade is acceptable. It is your responsibility to provide adequate proof that you meet the educational requirements. Submit one or more of the following to support your eligibility(s) to apply to this job announcement: SF-50, \"Notification of Personnel Action\" (current/former federal employees): Most recent Promotion, Within Rate Increase (WRI/WGI), or Appointment/Conversion SF-50 or Notification of Personnel Action showing you are/were in the competitive service and the highest grade or promotion potential held. Veterans: DD-214 Member Copy 4 showing type of discharge/character of service; current active duty members- certification of expected discharge or release from active duty under honorable conditions dated within 120 days; SF-15 Form and related documentation; VA letter. For more information visit the USAJOBS Help Center & OPM CHCOC website for VOW information. Individuals with Disabilities: Schedule A letter from a physician, local, state or federal rehabilitation office citing your eligibility under 5 CFR 213.3102 (u). For more information visit the USAJOBS Help Center. Certain Military Spouses: Permanent Change of Station (PCS) orders authorizing you to accompany the Military member to the new duty permanent station; OR verification of the member's 100% disability (VA Letter); and/or verification of the member's death while on active duty (DD-1300 and Death Certificate) AND verification of the marriage to the service member (i.e., a marriage license or other legal documentation verifying marriage). For more information visit the USAJOBS Help Center. Other non-competitive or special appointing authorities: provide documentation which supports your eligibility. Career Transition Assistance Program/Interagency Career Transition Assistance Program documentation, if applicable (e.g., Certification of Expected Separation, Reduction-In-Force Separation Notice, or Notice of Proposed Removal; SF-50 that documents the RIF separation action; and most recent performance appraisal.) For more information see the OPM Guide to Career Transition. Failure to submit any of the above mentioned required documents may result in loss of consideration due to an incomplete application package. It is your responsibility to ensure all required documents have been submitted. If selected for the position you MUST submit: A copy of your most recent performance appraisal/evaluation and incentive awards, you received in the last 5 years. The assigned HR Specialist will verify review this documentation to ensure selectee has at least a satisfactory performance rating before setting the entrance on duty date. If you do not have your most recent performance appraisal/evaluation, you will be asked to submit a statement as to why it is not available.",
+              "Benefits": "",
+              "BenefitsUrl": "https://help.usajobs.gov/index.php/Pay_and_Benefits",
+              "BenefitsDisplayDefaultText": true,
+              "OtherInformation": "About the Position - Portland This position is located in Portland, OR which boasts huge spans of amazing trees, foliage, landscape, and everywhere you look you can appreciate beautiful greenery! It is known as the most bike-friendly city in America, has a train system that greets you at the airport spanning across the city, and is home to the Portland International Rose Garden, the oldest in the country! Portland is the one place where you will find lively festivals, energetic music, mouthwatering food, and for you basketball fans, the Portland Trail Blazers are a 7 minute walk from the HQs building! There is always something new to experience in this eco-friendly town! The U.S. Department of Energy fosters a diverse and inclusive workplace and is an Equal Opportunity Employer. This job opportunity announcement may be used to fill additional similar vacancies across DOE. For general information on government-wide Telework polices visit: www.telework.gov Information on how to create a federal resume https://www.usa.gov/government-jobs https://www.usajobs.gov/Help/how-to/account/documents/resume/ https://www.youtube.com/watch?v=8YX7o1PBoFk Veterans and persons with disabilities are encouraged to apply. For more information, please visit the links at the bottom of this page or visit the FedsHireVets website. If you believe that you are eligible for the Interagency Career Transition Assistance Program (ICTAP), please visit the OPM ICTAP/CTAP website for more information. In order to be considered under the ICTAP program, your application must score within the pre-established \"well qualified\" category as stated in the Qualifications section. Some positions may require completion of a probationary period of up to 1 (one) year. Many positions require successful completion of a background investigation. All males born after December 31st 1959 must abide by laws regarding Selective Service registration. To learn more about this law, visit the Selective Service web page, Who Must Register. If you are not registered and don't have an approved exemption, you will not be eligible for employment with the Federal government. EEO Policy: http://www.usajobs.gov/eeo Reasonable Accommodation Policy: http://www.usajobs.gov/raps Veterans Information: http://www.usajobs.gov/vi Telework: www.telework.gov Selective Service Registration: http://www.sss.gov/ Hiring incentives may be authorized for a highly qualified candidate based on budget availability and in accordance with federal regulations. BPA strives to ensure a safe, positive, inclusive work environment, supported by Leadership Behaviors. For more information on Leadership Behaviors visit: www.bpa.gov/goto/LeadershipBehaviors We also understand the importance of work/life balance and offer a variety of programs and policies designed to create more flexible, responsive work environments supportive of commitments to community, home and family members. BPA also supports employees' overall wellness through its Be Well program, which helps employees adopt healthier lifestyles and feel better about their work/life balance. The program supports five key areas of life: career, community, financial, physical and social.",
+              "KeyRequirements": [],
+              "WithinArea": "False",
+              "CommuteDistance": "0",
+              "ServiceType": "01",
+              "AnnouncementClosingType": "01",
+              "AgencyContactEmail": "jddumaplin@bpa.gov",
+              "AgencyContactPhone": "503-230-3289",
+              "SecurityClearance": "Not Required",
+              "DrugTestRequired": "False",
+              "PositionSensitivitiy": "Non-sensitive (NS)/Low Risk",
+              "AdjudicationType": [
+                "Credentialing",
+                "Suitability/Fitness"
+              ],
+              "TeleworkEligible": true,
+              "RemoteIndicator": false
+            },
+            "IsRadialSearch": false
+          }
+        },
+        "RelevanceRank": 0
+      },
+      {
+        "MatchedObjectId": "794441400",
+        "MatchedObjectDescriptor": {
+          "PositionID": "24-BPA40376-12437753-DE",
+          "PositionTitle": "IT Specialist (SYSADMIN/SYSANALYSIS)",
+          "PositionURI": "https://www.usajobs.gov:443/GetJob/ViewDetails/794441400",
+          "ApplyURI": [
+            "https://www.usajobs.gov:443/GetJob/ViewDetails/794441400?PostingChannelID="
+          ],
+          "PositionLocationDisplay": "Portland, Oregon",
+          "PositionLocation": [
+            {
+              "LocationName": "Portland, Oregon",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "Oregon",
+              "CityName": "Portland, Oregon",
+              "Longitude": -122.67563,
+              "Latitude": 45.511795
+            }
+          ],
+          "OrganizationName": "Bonneville Power Administration",
+          "DepartmentName": "Department of Energy",
+          "JobCategory": [
+            {
+              "Name": "Information Technology Management",
+              "Code": "2210"
+            }
+          ],
+          "JobGrade": [
+            {
+              "Code": "GS"
+            }
+          ],
+          "PositionSchedule": [
+            {
+              "Name": "",
+              "Code": "1"
+            }
+          ],
+          "PositionOfferingType": [
+            {
+              "Name": "",
+              "Code": "15317"
+            }
+          ],
+          "QualificationSummary": "BASIC REQUIREMENT: Experience must be IT related; the experience may be demonstrated by paid or unpaid experience and/or completion of specific, intensive training (for example, IT certification), as appropriate. For all positions individuals must have IT-related experience demonstrating each of the four competencies listed below. The employing agency is responsible for identifying the specific level of proficiency required for each competency at each grade level based on the requirements of the position being filled. 1. Attention to Detail - Is thorough when performing work and conscientious about attending to detail. 2. Customer Service - Works with clients and customers (that is, any individuals who use or receive the services or products that your work unit produces, including the general public, individuals who work in the agency, other agencies, or organizations outside the Government) to assess their needs, provide information or assistance, resolve their problems, or satisfy their expectations; knows about available products and services; is committed to providing quality products and services. 3. Oral Communication - Expresses information (for example, ideas or facts) to individuals or groups effectively, taking into account the audience and nature of the information (for example, technical, sensitive, controversial); makes clear and convincing oral presentations; listens to others, attends to nonverbal cues, and responds appropriately. 4. Problem Solving - Identifies problems; determines accuracy and relevance of information; uses sound judgment to generate and evaluate alternatives, and to make recommendations. To meet this requirement you must demonstrate proficiency in each of the four competencies listed above as follows: GS-13: Advanced - You can perform the actions associated with each of these competencies without assistance. You are recognized within your immediate organization as \"a person to ask\" when difficult questions arise regarding each of these competencies. Focus is on broad organizational/professional issues; You have consistently provided practical/relevant ideas and perspectives on process or practice improvements which may easily be implemented; You are capable of coaching others in the application of each of these competencies by translating complex nuances relating to each competency into easy to understand terms; You participate in senior level discussions regarding these competencies; You assist in the development of reference and resource materials in these competencies. SPECIALIZED EXPERIENCE REQUIREMENTS: A qualified candidate's online application and resume must demonstrate at least one year of specialized experience equivalent to the next lower grade level GS-12 in the Federal service. Specialized experience for this position is defined as: 1) Performing server systems administration capacities in support of new and existing Enterprise Resource Planning (ERP) enterprise-wide applications: (2) Independently support, maintain, perform upgrade, and integrate existing applications for an Enterprise Resource Planning (ERP) system (e.g. Oracle PeopleSoft, Hitachi Asset Suite). (3) Modifying, adapting, and refining broad IT guidelines to resolve issues and problems that result in new policies and practices. (4) Installing, testing, troubleshooting, and maintaining middle-tier server hardware and software. (5) Coordinating projects that involve multiple stages in the systems development life cycle management process, including systems analysis, software development, data base administration, and customer support. CTAP/ICTAP candidates: To be considered \"well qualified\" you must meet all of the requirements as described in this section. You must meet all qualifications and eligibility requirements by the closing date of this announcement.",
+          "PositionRemuneration": [
+            {
+              "MinimumRange": "111234.0",
+              "MaximumRange": "144608.0",
+              "RateIntervalCode": "PA",
+              "Description": "Per Year"
+            }
+          ],
+          "PositionStartDate": "2024-06-06T00:00:00.0000",
+          "PositionEndDate": "2024-06-16T23:59:59.9970",
+          "PublicationStartDate": "2024-06-06T00:00:00.0000",
+          "ApplicationCloseDate": "2024-06-16T23:59:59.9970",
+          "PositionFormattedDescription": [
+            {
+              "Label": "Dynamic Teaser",
+              "LabelDescription": "Hit highlighting for keyword searches."
+            }
+          ],
+          "UserArea": {
+            "Details": {
+              "JobSummary": "This position is located with Bonneville Power Administration in the Enterprise Applications Support (JLSP) of Software Development and Operations (JLS), Enterprise Shared Services (JL), Information Technology (J), Bonneville Power Administration (BPA). A successful candidate in the IT Specialist (SYSADMIN/SYSANALYSIS) position will be independently responsible for performing duties associated with the Systems Administration (SYSADMIN) and Systems Analysis (SYSANALYSIS) IT specialty areas.",
+              "WhoMayApply": {
+                "Name": "",
+                "Code": ""
+              },
+              "LowGrade": "13",
+              "HighGrade": "13",
+              "PromotionPotential": "None",
+              "OrganizationCodes": "DN/DN03",
+              "Relocation": "False",
+              "HiringPath": [
+                "public"
+              ],
+              "TotalOpenings": "1",
+              "AgencyMarketingStatement": "We are truly honored that DOE has been named America's #1 Best Employer for Veterans in 2023 by Forbes-not only among Government agencies, but among employers across the U.S. We are so proud of this ranking which reflects our commitment to the employment of veterans. As so many veterans at DOE renew their service to our Nation, we are deeply committed to their success and advancement. Veterans shape the future of energy The Bonneville Power Administration is a nonprofit federal power marketing administration based in the Pacific Northwest. Although BPA is part of the U.S. Department of Energy, it is self-funding and covers its costs by selling its products and services. BPA markets wholesale electrical power from 31 federal hydroelectric projects in the Northwest, one nonfederal nuclear plant and several small nonfederal power plants.",
+              "TravelCode": "1",
+              "ApplyOnlineUrl": "https://apply.usastaffing.gov/Application/Apply",
+              "DetailStatusUrl": "https://apply.usastaffing.gov/Application/ApplicationStatus",
+              "MajorDuties": [
+                "As a IT Specialist (SYSADMIN/SYSANALYS), you will: Plan and coordinate the installation, configuration, maintenance, and upgrade of enterprise management software and related enterprise-level changes to the systems infrastructure. Lead/conduct studies designed to identify potential improvements in the way information technology is applied to key Enterprise-wide business functions. Develop BPA-wide procedures for responding to new threats to systems confidentiality, integrity, and availability, e.g., checking key files for problems and reviewing running operations to ensure only authorized processes are running. Oversee the BPA-wide implementation of new procedures for responding to systems threats and interprets procedures in response to questions received from systems administrators. Generate and run simulation models for future applications. Evaluates and verifies impacts on the current and planned enterprise IT architecture. Develop new standards, methods, and techniques; evaluates the impact of technological change; and/or conceives of solutions to highly complex technical issues."
+              ],
+              "Education": "There are no specific education requirements or substitution of education for experience for this position.",
+              "Requirements": "",
+              "Evaluations": "The Department of Energy uses an application tracking system to evaluate the responses you provide in the applicant assessment questionnaire to place you into an initial quality category via OPM's Category Rating procedures. These categories are \"Best Qualified\", \"Well Qualified\", and \"Qualified. Then, the HR Office and/or Subject Matter Expert (SME) will conduct a quality review of your application and supporting documentation to ensure you have been placed into the appropriate quality category. Your application is rated based on the extent and quality of your experience, education (when applicable), and training as described in your resume and applicant assessment. Your credentials are measured against the established duties of the position at the grade level(s) being advertised. If you are eligible for career transition assistance plans such as ICTAP or CTAP, you must meet the definition of \"well qualified\" which is defined as scoring in the Well Qualified category (or higher). If you are a Veteran Preference eligible candidate, you will be listed at the top of whichever quality category your rating places you in. CP/CPS veterans are placed at the top of the highest category for all positions except professional and scientific positions at GS-9 and higher. If your resume is incomplete or does not support the responses you provided in your online questionnaire, or if you fail to submit all required documentation before the vacancy closes, you may be rated 'ineligible', 'not qualified', or your score may be adjusted accordingly You will be evaluated for this job based on how well you meet the qualifications above. Once the application process is complete, your resume and supporting documentation will be used to determine whether you meet the job qualifications. If you are minimally qualified for this job, your responses to the self-assessment questions (True/False, Yes/ No, Multiple Choice questions) will be evaluated and you will be placed into one of three pre-defined quality categories under Category Rating procedures. These categories are \"Best Qualified\", \"Well Qualified\", and \"Qualified. If you rate yourself higher than is supported by your application materials, your responses may be adjusted and/or you may be excluded from consideration for this job. Your qualifications will be evaluated on the following competencies (knowledge, skills, abilities and other characteristics): Process Control Software Development Technology Awareness Application of Veterans' Preference: If you are a preference eligible candidate, you will be listed at the top of whichever quality category your rating places you in. CP/CPS veterans are placed at the top of the highest category for all positions except professional and scientific positions at GS-9 and higher. Career Transition Assistance Programs: To receive selection priority for this position, you must: 1) meet the eligibility criteria; and 2) be rated \"well-qualified\", which is defined as scoring 85.0 or higher. You must meet all qualifications and eligibility requirements by the closing date (06/16/2024) of this announcement. To preview the Assessment Questionnaire, click https://apply.usastaffing.gov/ViewQuestionnaire/12437753",
+              "HowToApply": "Please read the entire announcement and all the instructions before you begin an application. To apply for this position, you must complete the initial online application, to include submission of the required documentation specified in the Required Documents section. A complete application package must be submitted by 11:59 PM (EST) on the announcement closing date to receive consideration. The application process is as follows: You must have a login.gov account to sign into USAJOBS: https://www.usajobs.gov/Help/how-to/account/. To begin the application process in USAJOBS, click the Apply Online button. Answer the questions presented in the application and attach all required and supporting documentation. You must click the Submit Application button prior to 11:59 pm (ET) on the announcement closing date. You may update your application, including supporting documentation, at any time during the announcement open period by returning to your USAJOBS account, select Update Application: https://my.usajobs.gov/Account/Login. This option will no longer be available once the announcement has closed. To verify the status of your application, during and after the announcement open period, log into your USAJOBS account; applications will appear on the Welcome screen. The Application Status will appear along with the date your application was last updated. For information on what each application status means, visit: https://www.usajobs.gov/Help/how-to/application/status/. If you need help with login.gov or USAJOBS (e.g., account access, Resume Builder) visit the USAJOBS Help Center: https://www.usajobs.gov/Help/ If you experience difficulty applying on USAJOBS, after clicking the Apply Online button, or you are experiencing a significant hardship hindering your ability to apply online, the Agency Contact listed in the announcement can assist you during normal business hours. If you receive any system error messages, take screenshots if possible, to aid technical support.",
+              "WhatToExpectNext": "Once your online application is submitted you will receive a confirmation notification by email. The status of your application will be updated in USAJOBS as it is evaluated. You can check the status by logging into USAJOBS. You may also sign up to receive automatic emails anytime the status of your application changes by logging into your USAJobs Account and editing the Notification Settings. You will be contacted directly if an interview is required. Please check that your USAJOBS profile contact information is current and correct each time you apply to a job--this will ensure we are able to contact you as quickly as possible. In addition to changing your status online, we will send you e-mail notifications at each major step in the process, to include: application received, eligible or not eligible, referred or not referred, selected or not selected.",
+              "RequiredDocuments": "To apply for this position, you MUST provide a complete application package which includes: Your RESUME showing all relevant work experience (paid and unpaid) including: duties performed; full name and address of the each employer; start and end dates (month/day/year); work schedule (part-time, full-time, number of hours if intermittent); salary; and any completed education and training (program title, subject area, number of hours completed, and completion date). Cover Letter, optional, expressing additional information not covered in your resume. Transcripts, if specific educational requirements are indicated in this job announcement. Unofficial transcripts or any report listing institution, course title, credits earned (semester or quarter hour) and final grade is acceptable. It is your responsibility to provide adequate proof that you meet the educational requirements. Veterans' Preference documentation, if applicable, DD-214 Member Copy 4 showing type of discharge/character of service; current active duty members- certification of expected discharge or release from active duty under honorable conditions dated within 120 days; SF-15 Form and related documentation; VA letter. For more information visit the USAJOBS Help Center & OPM CHCOC website for VOW information. Career Transition Assistance Program/Interagency Career Transition Assistance Program documentation, if applicable (e.g., Certification of Expected Separation, Reduction-In-Force Separation Notice, or Notice of Proposed Removal; SF-50 that documents the RIF separation action; and most recent performance appraisal.) For more information see the OPM Guide to Career Transition. Failure to submit any of the above mentioned required documents may result in loss of consideration due to an incomplete application package. It is your responsibility to ensure all required documents have been submitted.",
+              "Benefits": "",
+              "BenefitsUrl": "https://help.usajobs.gov/index.php/Pay_and_Benefits",
+              "BenefitsDisplayDefaultText": true,
+              "OtherInformation": "About the Position - Portland This position is located in Portland, OR which boasts huge spans of amazing trees, foliage, landscape, and everywhere you look you can appreciate beautiful greenery! It is known as the most bike-friendly city in America, has a train system that greets you at the airport spanning across the city, and is home to the Portland International Rose Garden, the oldest in the country! Portland is the one place where you will find lively festivals, energetic music, mouthwatering food, and for you basketball fans, the Portland Trail Blazers are a 7 minute walk from the HQs building! There is always something new to experience in this eco-friendly town! The U.S. Department of Energy fosters a diverse and inclusive workplace and is an Equal Opportunity Employer. This job opportunity announcement may be used to fill additional similar vacancies across DOE. For general information on government-wide Telework polices visit: www.telework.gov Information on how to create a federal resume https://www.usa.gov/government-jobs https://www.usajobs.gov/Help/how-to/account/documents/resume/ https://www.youtube.com/watch?v=8YX7o1PBoFk EEO Policy: http://www.usajobs.gov/eeo Reasonable Accommodation Policy: http://www.usajobs.gov/raps Veterans Information: http://www.usajobs.gov/vi Telework: www.telework.gov Selective Service Registration: http://www.sss.gov/ Hiring incentives may be authorized for a highly qualified candidate based on budget availability and in accordance with federal regulations. BPA strives to ensure a safe, positive, inclusive work environment, supported by Leadership Behaviors. For more information on Leadership Behaviors visit: www.bpa.gov/goto/LeadershipBehaviors We also understand the importance of work/life balance and offer a variety of programs and policies designed to create more flexible, responsive work environments supportive of commitments to community, home and family members. BPA also supports employees' overall wellness through its Be Well program, which helps employees adopt healthier lifestyles and feel better about their work/life balance. The program supports five key areas of life: career, community, financial, physical and social.",
+              "KeyRequirements": [],
+              "WithinArea": "False",
+              "CommuteDistance": "0",
+              "ServiceType": "01",
+              "AnnouncementClosingType": "01",
+              "AgencyContactEmail": "jddumaplin@bpa.gov",
+              "AgencyContactPhone": "503-230-3289",
+              "SecurityClearance": "Not Required",
+              "DrugTestRequired": "False",
+              "PositionSensitivitiy": "Non-sensitive (NS)/Low Risk",
+              "AdjudicationType": [
+                "Credentialing",
+                "Suitability/Fitness"
+              ],
+              "TeleworkEligible": true,
+              "RemoteIndicator": false
+            },
+            "IsRadialSearch": false
+          }
+        },
+        "RelevanceRank": 0
+      }
+    ],
+    "UserArea": {
+      "NumberOfPages": "8",
+      "IsRadialSearch": false
+    }
+  }
+}

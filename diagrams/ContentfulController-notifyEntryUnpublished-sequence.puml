@@ -1,0 +1,23 @@
+@startuml
+
+autoactivate on
+
+actor Contentful
+boundary ContentfulController
+participant ContentfulService
+participant LearningMaterialService
+participant LearningMaterialDAO
+database Database
+
+Contentful -> ContentfulController : notifyEntryUnpublished
+ContentfulController -> ContentfulService : removeEntry
+ContentfulService -> LearningMaterialService : deleteLearningMaterial
+LearningMaterialService -> LearningMaterialDAO : deleteById
+LearningMaterialDAO -> Database
+return
+return
+return
+return
+return
+
+@enduml

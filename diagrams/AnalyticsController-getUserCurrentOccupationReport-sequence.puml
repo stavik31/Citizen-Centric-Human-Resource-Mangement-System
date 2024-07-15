@@ -1,0 +1,27 @@
+@startuml
+
+autoactivate on
+
+actor UI
+boundary AnalyticsController
+participant AnalyticsService
+participant AnalyticsDAO
+database Database
+
+UI -> AnalyticsController : getUserCurrentOccupationReport
+AnalyticsController -> AnalyticsService : getUserCurrentOccupationReport
+par
+    AnalyticsService -> AnalyticsDAO : getUserCurrentOccupationPieChart
+    AnalyticsDAO -> Database
+    return
+    return
+else
+    AnalyticsService -> AnalyticsDAO : getUserCurrentOccupationMapChart
+    AnalyticsDAO -> Database
+    return
+    return
+end
+return
+return
+
+@enduml

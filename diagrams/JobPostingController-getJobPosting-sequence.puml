@@ -1,0 +1,26 @@
+@startuml
+
+autoactivate on
+
+actor UI
+boundary JobPostingController
+participant JobPostingService
+participant OccupationService
+participant OccupationTrie
+boundary JobPostingClient
+actor JobPostingApi
+
+UI -> JobPostingController : getJobPosting
+JobPostingController -> JobPostingService : getJobPosting
+JobPostingService -> OccupationService : getOccupationsBySocCode
+OccupationService -> OccupationTrie : getBySocCode
+return
+return
+JobPostingService -> JobPostingClient : getJobPosting
+JobPostingClient -> JobPostingApi
+return
+return
+return
+return
+
+@enduml
