@@ -59,14 +59,18 @@ just_the_docs:
       name: Notes and References Kitchen Sink
       nav_fold: true
 nav_external_links:
-  - title: Midterm Presentation
+  - title: Midterm Presentation (Download)
     url: /documents/Midterm_PBL3.pptx
+    hide_icon: true
+    opens_in_new_tab: false
+  - title: Final Presentation (Download)
+    url: /documents/Final-PBL-Slides.pptx
     hide_icon: true
     opens_in_new_tab: false
   - title: GitHub
     url: https://github.com/PBL3-2024
     hide_icon: false
-    opens_in_new_tab: false
+    opens_in_new_tab: true
 mermaid:
   version: "10.9.0"
 
