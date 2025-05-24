@@ -1,13 +1,11 @@
-# Team Agile Project Website
+# Project Contributions
 
-[April 9th Meeting Minutes](/2024-04-09-meeting-minutes.md)
+-Led weekly meeting minutes to ensure all group members stayed aligned on project progress and upcoming tasks.
 
-[April 10th Meeting Minutes](/2024-04-10-meeting-minutes.md)
+-Defined a comprehensive set of user requirements and provided written documentation to guide development.
 
-[April 12th Meeting Minutes](/2024-04-12-meeting-minutes.md)
+-Designed UML diagrams for all user requirements, including activity diagrams and component diagrams, to support system planning and architecture.
 
-[Job Suggestion System Intial Research](/job-suggestion-system-initial-research.md)
+-Contributed to front-end development using Vue.js and PrimeVue to build and refine the user interface.
 
-[Smart Train Route Suggestion System](/Smart-Train-Route-Suggestion-system.md)
-
-[Job Suggestion System Project Proposal Draft](/job-suggestion-system-project-proposal-draft.md)
+# Project Docomentation Website
