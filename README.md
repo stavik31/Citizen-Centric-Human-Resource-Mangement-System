@@ -1,6 +1,6 @@
 # Project Contributions
 
-- [Project Documentation Wesbite](pbl3-2024.github.io/)
+- [Project Documentation Wesbite](([https://pbl3-2024.github.io/)](https://pbl3-2024.github.io/))
 
 - Led weekly meeting minutes to ensure all group members stayed aligned on project progress and upcoming tasks.
 
