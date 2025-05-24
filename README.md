@@ -1,4 +1,4 @@
-# Project Contributions
+# Personal Project Contributions
 
 - 📄 [Project Documentation Website](https://pbl3-2024.github.io/)
 
